@@ -1,0 +1,820 @@
+
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr"
+	  class='com_content view-article itemid-519 j31 mm-hover '>
+
+<head>
+	<base href="../index/index.html" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="bbd, bbds, bucket, brigade, devices, circuit, schematic, analysis, signal, clock, delay, frequency, mn3007, mn3207, echo, flanger, chorus, driver, topology, tetrode, dual" />
+	<meta name="rights" content="Creative Commons: Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0) " />
+	<meta name="author" content="JR" />
+	<meta name="description" content=" Functionality, BBD Internal Circuit Topologies, Basic Topology, Tetrode Isolation Topology, Complementary Output Topology, Dual Topology, Tapped Output Topology, BBD Chips Comparison, Bucket Brigade Device Clock Drivers, BBD Clock Limitations, BBD Circui" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>ElectroSmash - Bucket Brigade Devices: MN3007</title>
+	<link href="index.html" rel="canonical" />
+	<link href="../_assets/d87243966412.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../_assets/26f5cf410b61.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/15ff046a2fe3.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/dd09f39c1b89.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"a0530e3f5ee49366e810b45f17b0ee39","system.paths":{"root":"","base":""}}</script>
+	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+	<script src="../_assets/323c609448d2.js" type="text/javascript"></script>
+	<script src="../_assets/b8bcbb2f005c.js" type="text/javascript" async="async"></script>
+	<script type="text/javascript">
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });	if(typeof acymailingModule == 'undefined'){
+				var acymailingModule = [];
+			}
+			
+			acymailingModule['emailRegex'] = /^[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+)*\@([a-z0-9-]+\.)+[a-z0-9]{2,10}$/i;
+
+			acymailingModule['NAMECAPTION'] = 'Name';
+			acymailingModule['NAME_MISSING'] = 'Please enter your name';
+			acymailingModule['EMAILCAPTION'] = 'example@email.com';
+			acymailingModule['VALID_EMAIL'] = 'Please enter a valid e-mail address';
+			acymailingModule['ACCEPT_TERMS'] = 'Please check the Terms and Conditions';
+			acymailingModule['CAPTCHA_MISSING'] = 'The captcha is invalid, please try again';
+			acymailingModule['NO_LIST_SELECTED'] = 'Please select the lists you want to subscribe to';
+		
+acymailingModule['excludeValuesformAcymailing90111'] = [];
+acymailingModule['excludeValuesformAcymailing90111']['name'] = 'Name';
+acymailingModule['excludeValuesformAcymailing90111']['email'] = 'example@email.com';
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });
+	</script>
+
+	
+<!-- META FOR IOS & HANDHELD -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<style type="text/stylesheet">
+		@-webkit-viewport   { width: device-width; }
+		@-moz-viewport      { width: device-width; }
+		@-ms-viewport       { width: device-width; }
+		@-o-viewport        { width: device-width; }
+		@viewport           { width: device-width; }
+	</style>
+	<script type="text/javascript">
+		//<![CDATA[
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement("style");
+			msViewportStyle.appendChild(
+				document.createTextNode("@-ms-viewport{width:auto!important}")
+			);
+			document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+		}
+		//]]>
+	</script>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="apple-mobile-web-app-capable" content="YES"/>
+<!-- //META FOR IOS & HANDHELD -->
+
+
+
+
+<!-- Le HTML5 shim and media query for IE8 support -->
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script type="text/javascript" src="../_assets/010a3c86157d.js"></script>
+<![endif]-->
+
+<!-- You can add Google Analytics here or use T3 Injection feature -->
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="../_assets/76d3e1341c39.css" type="text/css" />
+<![endif]-->
+	</head>
+
+<body>
+
+<div class="t3-wrapper corporate"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
+
+	
+<!-- MAIN NAVIGATION -->
+<header id="t3-mainnav" class="wrap navbar navbar-default navbar-fixed-top t3-mainnav">
+
+	<!-- OFF-CANVAS -->
+		<!-- //OFF-CANVAS -->
+
+	<div class="container">
+
+		<!-- NAVBAR HEADER -->
+		<div class="navbar-header">
+
+			<!-- LOGO -->
+			<div class="logo logo-image">
+				<div class="logo-image">
+					<a href="/" title="ElectroSmash">
+													<img class="logo-img" src="../_assets/115794d6d5b8.png" alt="ElectroSmash" />
+						
+												
+						<span>ElectroSmash</span>
+					</a>
+				</div>
+			</div>
+			<!-- //LOGO -->
+
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-collapse">
+					<i class="fa fa-bars"></i>
+				</button>
+			
+	    
+		</div>
+		<!-- //NAVBAR HEADER -->
+
+		<!-- NAVBAR MAIN -->
+				<nav class="t3-navbar-collapse navbar-collapse collapse"></nav>
+		
+		<nav class="t3-navbar navbar-collapse collapse">
+			<div  class="t3-megamenu"  data-responsive="true">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav navbar-nav level0">
+<li itemprop='name'  data-id="435" data-level="1">
+<a itemprop='url' class=""  href="/"   data-target="#">Home </a>
+
+</li>
+<li itemprop='name' class="active dropdown mega" data-id="510" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Chips<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="492" data-level="2">
+<a itemprop='url' class=""  href="../jrc4558-analysis/index.html"   data-target="#">JRC4558  </a>
+
+</li>
+<li itemprop='name' class="current active" data-id="519" data-level="2">
+<a itemprop='url' class=""  href="index.html"   data-target="#">MN3007 BBDs </a>
+
+</li>
+<li itemprop='name'  data-id="468" data-level="2">
+<a itemprop='url' class=""  href="../lm386-analysis/index.html"   data-target="#">LM386 </a>
+
+</li>
+<li itemprop='name'  data-id="1643" data-level="2">
+<a itemprop='url' class=""  href="../pt2399-analysis/index.html"   data-target="#">PT2399 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="444" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Amps<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="993" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="489" data-level="2">
+<a itemprop='url' class=""  href="../little-gem-analysis/index.html"   data-target="#">Little Gem Amp </a>
+
+</li>
+<li itemprop='name'  data-id="526" data-level="2">
+<a itemprop='url' class=""  href="../marshall-mg10/index.html"   data-target="#">Marshall MG10 </a>
+
+</li>
+<li itemprop='name'  data-id="491" data-level="2">
+<a itemprop='url' class=""  href="../noisy-cricket-analysis/index.html"   data-target="#">Noisy Cricket  </a>
+
+</li>
+<li itemprop='name'  data-id="490" data-level="2">
+<a itemprop='url' class=""  href="../ruby-amp-analysis/index.html"   data-target="#">Ruby Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="488" data-level="2">
+<a itemprop='url' class=""  href="../smokey-amp-analysis/index.html"   data-target="#">Smokey Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="746" data-level="2">
+<a itemprop='url' class=""  href="http://www.electrosmash.com/schematics#amps"   data-target="#">Amps Schematics.</a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="511" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Pedals<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  style="width: 600px"  data-width="600"><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="515" data-level="2">
+<a itemprop='url' class=""  href="../back-talk-analysis/index.html"   data-target="#">Back Talk Reverse Delay </a>
+
+</li>
+<li itemprop='name'  data-id="518" data-level="2">
+<a itemprop='url' class=""  href="../big-muff-pi-analysis/index.html"   data-target="#">Big Muff Pi  </a>
+
+</li>
+<li itemprop='name'  data-id="524" data-level="2">
+<a itemprop='url' class=""  href="../boss-ce-2-analysis/index.html"   data-target="#">Boss CE-2 Chorus </a>
+
+</li>
+<li itemprop='name'  data-id="1088" data-level="2">
+<a itemprop='url' class=""  href="../boss-ds1-analysis/index.html"   data-target="#">Boss DS-1 Distortion </a>
+
+</li>
+<li itemprop='name'  data-id="1713" data-level="2">
+<a itemprop='url' class=""  href="../dallas-rangemaster/index.html"   data-target="#">Dallas Rangemaster </a>
+
+</li>
+<li itemprop='name'  data-id="905" data-level="2">
+<a itemprop='url' class=""  href="../crybaby-gcb-95/index.html"   data-target="#">Dunlop CryBaby GCB-95  </a>
+
+</li>
+<li itemprop='name'  data-id="842" data-level="2">
+<a itemprop='url' class=""  href="../fuzz-face/index.html"   data-target="#">Fuzz Face </a>
+
+</li>
+<li itemprop='name'  data-id="1664" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="512" data-level="2">
+<a itemprop='url' class=""  href="../tube-screamer-analysis/index.html"   data-target="#">Ibanez Tube Screamer </a>
+
+</li>
+<li itemprop='name'  data-id="1433" data-level="2">
+<a itemprop='url' class=""  href="../klon-centaur-analysis/index.html"   data-target="#">Klon Centaur </a>
+
+</li>
+</ul>
+</div></div>
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="548" data-level="2">
+<a itemprop='url' class=""  href="../mxr-microamp/index.html"   data-target="#">MXR MicroAmp </a>
+
+</li>
+<li itemprop='name'  data-id="1667" data-level="2">
+<a itemprop='url' class=""  href="../marshall-guvnor-analysis/index.html"   data-target="#">Marshall Guvnor </a>
+
+</li>
+<li itemprop='name'  data-id="1632" data-level="2">
+<a itemprop='url' class=""  href="../mxr-distortion-plus-analysis/index.html"   data-target="#">MXR Distortion + </a>
+
+</li>
+<li itemprop='name'  data-id="1244" data-level="2">
+<a itemprop='url' class=""  href="../mxr-dyna-comp-analysis/index.html"   data-target="#">MXR Dyna Comp </a>
+
+</li>
+<li itemprop='name'  data-id="573" data-level="2">
+<a itemprop='url' class=""  href="../mxr-phase90/index.html"   data-target="#">MXR Phase 90 </a>
+
+</li>
+<li itemprop='name'  data-id="553" data-level="2">
+<a itemprop='url' class=""  href="../proco-rat/index.html"   data-target="#">ProCo Rat </a>
+
+</li>
+<li itemprop='name'  data-id="520" data-level="2">
+<a itemprop='url' class=""  href="../sitar-swami-analysis/index.html"   data-target="#">Sitar Swami </a>
+
+</li>
+<li itemprop='name'  data-id="525" data-level="2">
+<a itemprop='url' class=""  href="../vox-v847-analysis/index.html"   data-target="#">Vox V847 Wah Wah </a>
+
+</li>
+<li itemprop='name'  data-id="547" data-level="2">
+<a itemprop='url' class=""  href="../emg81/index.html"   data-target="#">EMG81 Pickup </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="796" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Projects<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="1108" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-uno/index.html"   data-target="#">pedalSHIELD UNO </a>
+
+</li>
+<li itemprop='name'  data-id="797" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield/index.html"   data-target="#">pedalSHIELD DUE </a>
+
+</li>
+<li itemprop='name'  data-id="1437" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-mega/index.html"   data-target="#">pedalSHIELD MEGA </a>
+
+</li>
+<li itemprop='name'  data-id="1312" data-level="2">
+<a itemprop='url' class=""  href="../pedal-pi/index.html"   data-target="#">Pedal-Pi </a>
+
+</li>
+<li itemprop='name'  data-id="1662" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="1663" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="1668" data-level="2">
+<a itemprop='url' class=""  href="../time-manipulator/index.html"   data-target="#">Time Manipulator </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name'  data-id="745" data-level="1">
+<a itemprop='url' class=""  href="../forum-electrosmash/index.html"   data-target="#">Forum </a>
+
+</li>
+<li itemprop='name'  data-id="816" data-level="1">
+<a itemprop='url' class=""  href="../shop/index.html"   data-target="#">Shop</a>
+
+</li>
+</ul>
+</div>
+
+		</nav>
+    <!-- //NAVBAR MAIN -->
+
+	</div>
+</header>
+<!-- //MAIN NAVIGATION -->
+
+
+
+
+
+
+  
+
+
+  
+
+
+	
+<div id="t3-mainbody" class="container t3-mainbody">
+	<div class="row">
+
+		<!-- MAIN CONTENT -->
+		<div id="t3-content" class="t3-content col-xs-12 col-sm-8  col-md-9">
+						<div class="item-page clearfix">
+
+
+<!-- Article -->
+<article>
+	<meta itemprop="inLanguage" content="en-GB" />
+	<meta itemprop="url" content="index.html" />
+
+      
+<header class="article-header clearfix">
+	<h1 class="article-title" itemprop="headline">
+					<a href="index.html" itemprop="url" title="Bucket Brigade Devices: MN3007">
+				Bucket Brigade Devices: MN3007</a>
+			</h1>
+
+			</header>
+    
+    
+  <!-- Aside -->
+    <!-- //Aside -->
+
+  
+  
+  
+	
+  
+	
+	<section class="article-content clearfix">
+		<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">The Bucket Brigade Device <em>BBD</em> chip was invented by F. Sangster and K. Teer at the Philips Research Labs between 1968-1969. This affordable solid state device provides signal delay and soon found many applications in a wide range of products,&nbsp;especially guitar effects being a midpoint between the bulky old <em>pure analog</em> delay circuits based on magnetic tape&nbsp;and the modern<em>&nbsp;digital</em> systems based in Analog to Digital converters and signal processors.</span><img src="../_assets/6755a5828a71.jpg" alt="MN3007" width="156" height="163" style="display: block; margin-left: auto; margin-right: auto;" /></span></p>
+ 
+<h1><span style="font-family: verdana, geneva;"><strong><span style="font-size: 14pt; color: #000000;"><span style="background-color: #ffffff;">Table</span> of Contents.</span></strong></span></h1>
+<p style="padding-left: 30px;"><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="/mn3007-bucket-brigade-devices#link1">1. BBD Functionality.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="/mn3007-bucket-brigade-devices#link2">2. BBD Internal Circuit Topologies.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp;<a href="/mn3007-bucket-brigade-devices#link21">2.1 Basic Topology.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp;<a href="/mn3007-bucket-brigade-devices#link22">2.2 Tetrode Isolation Topology.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp;<a href="/mn3007-bucket-brigade-devices#link23">2.3 Complementary Output Topology.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp;<a href="/mn3007-bucket-brigade-devices#link24">2.4 Dual Topology.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp;<a href="/mn3007-bucket-brigade-devices#link25">2.5 Tapped Output Topology.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="/mn3007-bucket-brigade-devices#link3">3. BBD Chips Comparison. </a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="/mn3007-bucket-brigade-devices#link4">4. Bucket Brigade Device Clock Drivers.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp;<a href="/mn3007-bucket-brigade-devices#link41">4.1 BBD Clock Limitations.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="/mn3007-bucket-brigade-devices#link5">5. BBD Circuits Architecture.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp; &nbsp; <a href="/mn3007-bucket-brigade-devices#link51"> 5.1 Filter Implementation.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="/mn3007-bucket-brigade-devices#link6">6. The MN3007.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp; &nbsp;&nbsp; <a href="/mn3007-bucket-brigade-devices#link61">6.1 MN3007 VS MN3207.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="/mn3007-bucket-brigade-devices#link7">7. Resources.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp; &nbsp;&nbsp; <a href="/mn3007-bucket-brigade-devices#link71">7.1 BBDs Datasheets.</a></span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<h1><span style="font-size: 14pt; color: #000000; font-family: verdana, geneva;"><a id="link1" name="link1"></a><strong>1. BBD Functionality.</strong></span></h1>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt;"><span style="color: #333333;">BBDs are given their name because of the similarity in their functionality to a line of people passing buckets of water to fight a fire. <span style="font-size: 10pt;">The chip was licensed to Matsushita from mid-70s, Roland/Boss was the first customer and they used it in the Roland JC120 Amplifier, the Chorus CE-1 pedal and later on&nbsp;</span></span></span><span style="font-size: 10pt;"><span style="color: #333333;"><span style="font-size: 10pt;">the<a href="../boss-ce-2-analysis/index.html"> Chorus CE-2</a>.</span></span></span></span></p>
+<p><span style="font-family: verdana, geneva;"><a href="http://www.stepneyct.org/history/ht/stop17.html"><img src="../_assets/49e35ca2da22.jpg" alt="Fire Bucket Brigade" width="430" height="211" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/d14579952629.png"><img src="../_assets/d6b35654fe34.png" alt="Bucket Brigade Device Silicon" width="500" height="122" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<p style="text-align: left;"><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">They consist of a series of capacitors sections which carry the analog signal. The charge in each cap stage is passed into the subsequent stage using&nbsp;</span><span style="font-size: 10pt;">transistors as switches at a rate determined by an external clock. </span></span><br /><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">In this way, the output delayed signal is discrete in time due to the external clock sampling and analog in </span><span style="font-size: 10pt;">amplitude because of the capacitor storage element.</span></span></p>
+<p>&nbsp;</p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva;"><a href="../_assets/d053dbc97d81.png"><img src="../_assets/d053dbc97d81.png" alt="Bucket Brigade Device Explanation" width="445" height="181" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 10pt;">With the high level of CLK2, the input signal is gated through Q<sub>0</sub> to the capacitor C<sub>0</sub>. At the next clock transition</span><span style="color: #333333; font-family: verdana, geneva;">, </span><span style="font-size: 10pt;">C<sub>0</sub> is isolated and the last voltage applied to C<sub>0</sub> is held. As CLK2 goes down, CLK1 rises allowing the charge on C<sub>0</sub></span><span style="color: #333333; font-family: verdana, geneva;"> </span><span style="font-size: 10pt;">to be gated to the storage capacitor C<sub>1</sub>. On the next clock transition, gating transistor Q<sub>1</sub> is disabled and Q<sub>2</sub> is </span><span style="color: #333333; font-family: verdana, geneva;">enabled to allow the charge in C</span><sub style="color: #333333; font-family: verdana, geneva;">1</sub><span style="color: #333333; font-family: verdana, geneva;"> to pass the next stage C</span><sub style="color: #333333; font-family: verdana, geneva;">2</sub><span style="color: #333333; font-family: verdana, geneva;">. The process is repeated through the circuit until the </span><span style="font-size: 10pt;">same voltage appears at the output.</span></p>
+<p style="text-align: left;"><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;"></span></span></p>
+<h1 style="text-align: left;"><span style="font-family: verdana, geneva;"><a id="link2" name="link2"></a><span style="color: #000000;"><strong><span style="font-size: 14pt; color: #000000;">2. BBD Internal Circuit Topologies.</span></strong></span></span></h1>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">The basic BBD internal schematic is made of a series of typically thousands of capacitors and MOS transistor switches. The design suffered</span>&nbsp;<span style="font-size: 10pt; color: #333333;">some modifications to enhance its performance:</span></span></p>
+<h2><span style="color: #000000; font-size: 12pt; font-family: verdana, geneva;"><a id="link21" name="link21"></a><strong>2.1 The Basic Topology.</strong></span></h2>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">The basic model invented by Sangster at Philips in 1968. It was the first attempt to make&nbsp;a practical implementation of an analog delay structure. This initial design had a poor transfer efficiency being limited to</span>&nbsp;<span style="font-size: 10pt; color: #333333;">few stages and low-frequency applications.</span></span><br /><a href="../_assets/d14579952629.png"><span style="font-family: verdana, geneva;"><img src="../_assets/d14579952629.png" alt="Bucket Brigade Basic Topology." width="440" height="179" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+<p><span style="font-size: 12pt; color: #000000; font-family: verdana, geneva;"><a id="link22" name="link22"></a><strong>2.2 The Tetrode Isolation Topology.</strong></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">The first major advance also by Sangster at Reticon Corporation, introduces an isolation of tetrode structure with a DC biased gate NMOS transistor separating</span>&nbsp;<span style="font-size: 10pt; color: #333333;">each clock element.</span>&nbsp;</span></p>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">Two out of phase clk lines are required: one to govern the even-numbered caps and </span><span style="font-size: 10pt; color: #333333;">the other to drive the odd-numbered ones. The performance was enhanced being able to use it in audio applications.</span><a href="../_assets/758503d5e56e.png"><img src="../_assets/758503d5e56e.png" alt="Bucket Brigade Devices Tetrode Isolation Topology" width="629" height="186" style="display: block; margin-left: auto; margin-right: auto;" /></a><span style="font-size: 10pt; color: #333333;">Between each of this switch transistors, there is a capacitor (charge-holding element) which is separated by a DC-biased gate transistor, </span><span style="font-size: 10pt; color: #333333;">which greatly improves transfer efficiency. Only half of the caps carry information, the other half remain charged</span></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"></span></p>
+<h2><span style="font-size: 12pt; color: #000000; font-family: verdana, geneva;"><a id="link23" name="link23"></a><strong>2.3 The Complementary Output Topology.</strong></span></h2>
+<p><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">The output architecture was enhanced using two source follower transistors connected to the last two consecutive capacitors,&nbsp;</span><span style="font-size: 10pt;">resulting in a full wave output. Mixing these two outputs a more continuous output waveform is generated, providing a means</span>&nbsp;<span style="font-size: 10pt;">of improved suppression of clocking glitches.</span></span><br /><span style="font-family: verdana, geneva;"><a href="../_assets/5d012cc0e019.png"><img src="../_assets/5d012cc0e019.png" alt="Bucket Brigade Devices Complementary Outputs Topology" width="657" height="211" style="display: block; margin-left: auto; margin-right: auto;" /></a><span style="font-size: 10pt; color: #333333;">Some designs use a trim-pot to vary the load termination between the two output followers to minimize clock frequency component due to V<sub>GS</sub> between them.&nbsp;</span><span style="font-size: 10pt; color: #333333;">This could be useful if running very low clock frequencies, and tight filter skirts to passband.&nbsp;</span></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"></span></p>
+<h2><span style="color: #000000; font-family: verdana, geneva;"><a id="link24" name="link24"></a><strong><span style="font-size: 12pt;">2.4 Dual Topology.</span></strong></span></h2>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Another well-known topology is the <em>Dual Delay Line</em> which is made of two delay sections running in parallel:</span><br /><a href="../_assets/953c0fecd9e3.png"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"><img src="../_assets/953c0fecd9e3.png" alt="Bucket Brigade Devices Dual Topology" width="663" height="313" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">This approach offers flexible performance: </span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Each section can be used independently, only sharing the power supply.</span></li>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Each section can be connected in series to get double delay time for a given sample rate.</span></li>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Each section can be multiplexed to double the sample rate.</span></li>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Each section can be operated in differential mode in order to reduce even harmonic distortion.</span></li>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Several devices can be connected in series.</span></li>
+</ul>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">For more details about these configurations check the <a href="#link71">Reticon SAD1024 datasheet.</a></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"></span></p>
+<h2><span style="font-size: 12pt; color: #000000; font-family: verdana, geneva;"><a id="link25" name="link25"></a><strong>2.5 The Tapped Output Topology.</strong></span></h2>
+<p><span style="font-family: verdana, geneva;"><span style="color: #333333;"><span style="font-size: 10pt;">A buffer amplifier (NMOS source follower) can be used for non-destructive sampling of the capacitors. These measure points or <em>taps</em> permit to have</span>&nbsp;<span style="font-size: 10pt;">multiple outputs with a different delay, which is very interesting in order to model reverb effects, mixing the different delayed output signals properly.</span></span><a href="../_assets/bb89a1799cff.png"><img src="../_assets/bb89a1799cff.png" alt="Bucket Brigade Devices Tapper Output Topology" width="607" height="270" style="display: block; margin-left: auto; margin-right: auto;" /></a></span><br /><span style="color: #000000;"><strong><span style="font-family: verdana, geneva;"> <a id="link3" style="color: #000000;" name="link3"></a><span style="font-size: 14pt; color: #000000;">3. BBD Chips Comparison.</span></span></strong></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The most common BBD chips come from Panasonic/Matsushita MN3xxx series, with variants for high/low supply voltage and the number of stages. </span></p>
+<p><a href="../_assets/22d0f25a3c1c.png"><span style="font-size: 8pt; font-family: verdana, geneva;"><img src="../_assets/22d0f25a3c1c.png" alt="BBDs Panasonic Matsushita Table" width="299" height="210" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">Besides Panasonic/Matsushita, other companies were licensed to make BBD clones like </span><span style="font-size: 10pt; color: #333333;">Behringer which bankroll Coolaudio and started producing MN3207/3208/3205 clones for their own production needs.</span>&nbsp;<span style="font-size: 10pt; color: #333333;">Visual Sound recommissioned production of MN3102/MN3207 in 2009.&nbsp;</span><span style="font-size: 10pt; color: #333333;">Shangai Beilling Co LTD manufactures pin compatible parts with Panasonic/Matsushita chips, labeled with BL instead of MN.</span></span><br /><span style="font-family: verdana, geneva;"><a href="../_assets/689f67b6914a.png"><img src="../_assets/689f67b6914a.png" alt="Bucket Brigade Devices Comparison Table" width="800" height="400" style="display: block; margin-left: auto; margin-right: auto;" /></a><span style="font-size: 10pt; color: #333333;">Reticon manufactured the popular BBD chips SAD512, SAD1024 and SAD4096, whose suffix represents the number of BBD stages. </span></span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Less common chips include the Reticon R51xx and RD51xx series and the Philips TDA1022.</span></p>
+<h1><strong><span style="font-size: 14pt; color: #000000; font-family: verdana, geneva;"><a id="link4" name="link4"></a>4. Bucket Brigade Devices Clock Drivers.</span></strong></h1>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">In order to make a BBD system fully working, a complementary clock signal generator driver is needed. Matsushita/Panasonic MN31xx series have</span>&nbsp;<span style="font-size: 10pt; color: #333333;">a convenient small footprint package designed to match with their respective BBD and providing:</span></span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">A two-phase clock with low impedance and the proper capacitance. The frequency value is selected by a simple RC network.</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Stable V<sub>GG</sub> power supply used to DC bias the base of the charge-holding elements, which greatly improves transfer efficiency, V<sub>GG</sub> = 4/15 * V<sub>CC.</sub></span></li>
+</ul>
+<p><a href="../_assets/22752d0dcd39.gif"><span style="font-family: verdana, geneva;"><img src="../_assets/22752d0dcd39.gif" alt="BBD Clock BD3101" width="294" height="233" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">The usage of these devices is not mandatory, some designers in order to reduce costs, have more flexibility or achieve higher clock rates</span>&nbsp;<span style="font-size: 10pt; color: #333333;">use simple voltage dividers to get V<sub>GG</sub> and oscillator parts like CD4046 (used in Zombie Chorus), CD4047 (used in Small Clone, Carbon Copy, and A/DA Flanger)</span>&nbsp;<span style="font-size: 10pt; color: #333333;">or 4013 (used in Electric Mistress) to generate the double clock signal.</span></span></p>
+<h2><strong><span style="font-size: 12pt; color: #000000; font-family: verdana, geneva;"><a id="link41" name="link41"></a>4.1 BBD Clock Limitations.</span></strong></h2>
+<p><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">Following the datasheet recommendations, BBDs guaranteed a correct behavior under a certain clock frequency (100~200KHz). It is because the input capacitance </span><span style="color: #333333; font-size: 10pt;">of the clock pins causes progressive degradation of clock pulses above the frequency limit: The clock pulses change from square to a trapezoidal/sawtooth waveform.&nbsp;</span><span style="color: #333333; font-size: 10pt;">When that happens the switching action is not perfectly synchronized resulting in a signal degradation.</span></span><br /><br /><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">The clock frequency limitation is the reason why the Reticon SAD1024 chip was a largely preferred choice for flangers effects which involve short delay</span>&nbsp;<span style="color: #333333; font-size: 10pt;">and fast clock: the input capacitance on the clock pins was much lower (110pF) than on the MN3007 (700pF), allowing it to be clocked at much higher frequencies.</span></span><br /><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">When suitably buffered, though, there are reports of it clocking MN3xxx chips up well past 1MHz, which takes the device close the zero-delay zone, being convenient for fine</span>&nbsp;<span style="color: #333333; font-size: 10pt;">flanger effects.</span></span></p>
+<p><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;"><span style="background-color: #ffffff; color: #000000;">BBD Sampling Time Limitations</span>:</span>&nbsp;<span style="font-size: 10pt;">For any BBD, the total delay time can be calculated as:</span></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"><img src="http://latex.codecogs.com/gif.latex?time_{delay}=\frac{N}{2\cdot f_{clock}}" alt="" title="time_{delay}=\frac{N}{2\cdot f_{clock}}" /></span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">where:</span></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">N: is the number of stages.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">f<sub>clock</sub>: is the circuit clock frequency.</span></p>
+<p><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">The clock signals applied to the BBD will determine the signal sampling time, this</span>&nbsp;<span style="font-size: 10pt;">sampling time should respect the Nyquist-Shannon Theorem:</span></span></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"><img src="http://latex.codecogs.com/gif.latex?f_{sampling}&lt; 2 \cdot f_{signal}" alt="" title="f_{sampling}&lt; 2 \cdot f_{signal}" /></span></p>
+<ul>
+<li><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">For short delay effects like flanging, the input signal can be oversampled, there is no penalty in&nbsp;</span><span style="font-size: 10pt;">terms of signal degradation. If the clock signal goes beyond the BBD clock boundary, the clk signal&nbsp;</span><span style="font-size: 10pt;">can be degraded as explained above and the audio waveform corrupted.&nbsp;</span></span></li>
+<li><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">For long delay effects like delay, the input signal is can be undersampled, the resulting processed&nbsp;</span><span style="font-size: 10pt;">signal will be degraded but the total delay time is extended.</span></span></li>
+</ul>
+<p><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;"></span></span></p>
+<h1><span style="font-family: verdana, geneva;"><a id="link5" name="link5"></a><strong><span style="color: #000000; font-size: 14pt;">5. Typical Circuit with BBD Architecture.</span></strong></span></h1>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The BBDs are found in delay based effects such as echo, chorus, reverb, vibrato, flanging or delay all of them share the same general circuit architecture:</span><br /><a href="../_assets/7c96576b42b2.png"><span style="font-family: verdana, geneva;"><img src="../_assets/7c96576b42b2.png" alt="Bucket Bridage Devices Architecture" width="800" height="188" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Part of the input signal is processed through the BBD chain. Depending on the clock circuit the specific effect is created:&nbsp;<span style="color: #333333; font-size: 13px; line-height: 18px;">the Low-Frequency Oscillator&nbsp;</span><em style="color: #333333; font-size: 13px; line-height: 18px;">LFO</em><span style="color: #333333; font-size: 13px; line-height: 18px;">&nbsp;is used for flanger/chorus/vibrato effects to automatically modify the delay time. For other effects like a simple delay, it is not needed.</span></span></p>
+<p><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The output of the delay line or part of it can be feedbacked into the input with variable gain, generating trailing echoes.</span><br /><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">Before and after the BBD action, there are some stages needed to avoid signal degradation: Dynamic Range compression/expansion, Anti-Aliasing Filter and </span><span style="font-size: 10pt; color: #333333;">Reconstruction Filter:</span></span></p>
+<ul>
+<li><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;"><strong><span style="color: #000000;">Dynamic Range <em>Companding</em> (compression + expansion):</span></strong> These circuits allow wider dynamic range signals to be processed at the cost of altering the&nbsp;</span><span style="color: #333333; font-size: 10pt;">signal dynamics. In order to obtain low THD and good Signal to Noise ratio, the input signal has to be close to the maximum input level of the BBD.</span></span></li>
+</ul>
+<p style="margin-left: 30px;"><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">In some cases, the compression and expansion take place outside of the anti-aliasing and reconstruction filters, while in others, the</span>&nbsp;<span style="font-size: 10pt; color: #333333;">compander is implemented directly at the input and output of the BBD. Some BBD systems that require companding utilize the 570/571 series chips. This integrated circuit consists</span></span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">of a pair of variable gain amplifiers and signal level averagers.</span></p>
+<ul>
+<li><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;"><strong><span style="color: #000000;">Anti-Aliasing Filter:</span></strong>&nbsp;</span><span style="color: #333333; font-size: 10pt;">It is low pass filter used before a signal sampler, to restrict the bandwidth of a signal to approximately satisfy the Nyquist-Shannon sampling theorem.&nbsp;</span><span style="color: #333333; font-size: 10pt;">The sampled input signal must be bandlimited to prevent aliasing (meaning waves of higher frequency being recorded as a lower frequency).</span></span></li>
+</ul>
+<ul>
+<li><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;"><strong><span style="color: #000000;">Reconstruction Filter:</span></strong>&nbsp;</span><span style="color: #333333; font-size: 10pt;">Also called <em>Anti-Imaging Filter</em> is again a low pass filter used to construct a smooth analog signal from a sampled input.&nbsp;</span><span style="color: #333333; font-size: 10pt;">The output signal must be bandlimited, to prevent aliasing (meaning Fourier coefficients being reconstructed as low-frequency waves, not as higher frequency aliases).</span></span></li>
+</ul>
+<ul>
+<li><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;"><strong><span style="color: #000000;">Feedback path</span></strong>: The feedback path also varies from system to system; different circuits place it inside or outside of the compression and</span>&nbsp;<span style="font-size: 10pt; color: #333333;">expansion circuitry.</span></span></li>
+</ul>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">Finally, the<em> wet</em> or processed signal is mixed with the <em>dry</em> original one, depending on this mix ratio the effect over the original signal will be more or</span>&nbsp;<span style="font-size: 10pt; color: #333333;">less dramatic.</span></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"><strong><span style="color: #000000;"></span></strong></span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;"><strong><span style="color: #000000;">Drawbacks of Bucket Brigade Devices:</span></strong><br /></span><span style="color: #333333;"><span style="font-size: 10pt;">First of all, there is degradation of the capacitors charge as it passes through the bucket brigade, these losses deteriorate the quality of the delayed signal by introducing noise and distortion. The signal is slightly modified, but this is not a drawback necessarily, some players consider that this feature is unique in BBDs and contribute to create a warm or organic tone.</span><span style="font-size: 10pt;"><br />&nbsp; &nbsp;<br />The process of passing the charge from bucket to bucket creates clocking noise in the signal. The output signal, therefore, looks like the audio signal, but there are &ldquo;spikes&rdquo; in the wave that corresponds to the clock frequency. The solution to this problem is to remove the spikes with a low pass filter, typically 30 or 36 dB per octave with a &ndash;3 dB point of around 3 kHz.</span></span></span></p>
+<h2><span style="font-size: 12pt; color: #000000; font-family: verdana, geneva;"><a id="link51" name="link51"></a><strong>5.1 Filter Implementation.</strong></span></h2>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The low pass filters used for Anti-Aliasing and Reconstruction must be strict to avoid signal distortion and keep the clock signal out of the audio path. Common configurations implement high order (2nd, 3rd, 4th)&nbsp;active filters using op-amps or transistors in Sallen-key configuration because of their simplicity. </span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">In this, so called, <em>standard strategy </em>the cut-off frequency of the filters before and after the BBD is fixed according to the effect delay time:</span><br /><span style="font-family: verdana, geneva;"><a href="../_assets/1de68251f6e6.png"><img src="../_assets/1de68251f6e6.png" alt="Bucket Brigade Devices Sallen-Key Low Pass Filters" width="585" height="184" style="display: block; margin-left: auto; margin-right: auto;" /></a><span style="font-size: 10pt; color: #333333;">Another less common technique use switched capacitor filters, controlling the cut-off frequency by the signal clock frequency and therefore limiting the&nbsp;pass-band only to the necessary for a given clock frequency and improving the signal fidelity for shorter delay times.</span></span></p>
+<h1><span style="font-size: 14pt; font-family: verdana, geneva;"><a id="link6" name="link6"></a><strong><span style="color: #000000;">6. The MN3007.</span></strong></span></h1>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The MN3007 core is based on the Bucket Brigade Delay circuit with an isolated triode and a differential output. It was included in popular designs like the DM-1 and<a href="../boss-ce-2-analysis/index.html"> CE-2 by Boss</a>, Small Clone and Memory Man by Electro-Harmonix, AD-999 by Maxon or Analog Delay by MXR:</span><br /><span style="font-family: verdana, geneva;"><a href="../_assets/7e82a2f4a09c.png"><img src="../_assets/7e82a2f4a09c.png" alt="MN3007 Internal Circuit" width="631" height="164" style="display: block; margin-left: auto; margin-right: auto;" /></a><span style="font-size: 10pt; color: #333333;">It consists of a 1024 PMOS silicon stage that provides a signal delay from 5.12 to 51.2ms. The S/N is 80dB typ, THD of 0.5% typ (V<sub>IN</sub>=0.78Vrms), supporting a clock frequency range from 10 to 100KHz. The supply voltage range is from -10 to -15V.</span></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;"><a id="link61" name="link61"></a></span><strong><span style="font-size: 12pt; color: #000000;">6.1 MN3007 vs MN3207.</span></strong></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">There is some controversy among the MN3007 and MN3207 BBDs: some designers prefer to use the MN3007 because it has more headroom (higher levels/dynamic range without signal clipping) and therefore less distortion.</span></p>
+<table border="0" style="margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="text-align: center;"><span style="font-size: 10pt; font-family: verdana, geneva;"></span></td>
+<td style="text-align: center;"><span style="font-size: 10pt; color: #000000; font-family: verdana, geneva;">MN3007</span></td>
+<td style="text-align: center;"><span style="font-size: 10pt; color: #000000; font-family: verdana, geneva;">MN3207</span></td>
+</tr>
+<tr>
+<td style="text-align: right;"><span style="font-size: 10pt; color: #000000; font-family: verdana, geneva;">Technology</span></td>
+<td style="text-align: center;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">PMos</span></td>
+<td style="text-align: center;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">NMos</span></td>
+</tr>
+<tr>
+<td style="text-align: right;"><span style="font-size: 10pt; color: #000000; font-family: verdana, geneva;">S/N Ratio</span></td>
+<td style="text-align: center;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">&nbsp;80dB</span></td>
+<td style="text-align: center;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">73dB&nbsp;</span></td>
+</tr>
+<tr>
+<td style="text-align: right;"><span style="font-size: 10pt; color: #000000; font-family: verdana, geneva;">THD &nbsp;</span></td>
+<td style="text-align: center;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">&nbsp;&nbsp;&nbsp; &nbsp; 0.5% (V<sub>in</sub>=0.78V<sub>rms</sub>)&nbsp; <br /></span></td>
+<td style="text-align: center;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; 0.4%&nbsp;<span style="text-align: center; background-color: #ffffff;">(V<sub>in</sub>=0.25V<sub>rms</sub>)</span></span></td>
+</tr>
+<tr>
+<td style="text-align: right;"><span style="font-size: 10pt; color: #000000; font-family: verdana, geneva;">Max. Freq.</span></td>
+<td style="text-align: center;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">&nbsp;100KHz</span></td>
+<td style="text-align: center;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">200KHz&nbsp;</span></td>
+</tr>
+<tr>
+<td style="text-align: right;"><span style="font-size: 10pt; color: #000000; font-family: verdana, geneva;">Delay Time&nbsp;</span></td>
+<td style="text-align: center;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">5.12 ~ 51.2ms&nbsp;</span></td>
+<td style="text-align: center;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">2.56 ~ 51.2ms&nbsp;</span></td>
+</tr>
+<tr>
+<td style="text-align: right;"><span style="font-size: 10pt; color: #000000; font-family: verdana, geneva;">Power Supply</span></td>
+<td style="text-align: center;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">&nbsp;-10 to -15V</span></td>
+<td style="text-align: center;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">+5 to +10V&nbsp;</span></td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;">&nbsp;</p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">MN3207 is based in NMOS technology while MN3007 is PMOS (that is why it needs negative supply). Both are 1024-stage BBDs sharing the same internal circuit. </span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"><span style="color: #000000;">S/N ratio</span> is slightly better in MN3007 (80 vs 73dB).</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"><span style="color: #000000;">THD levels</span> are similar 0.4-0.5% under different input V<sub>rms</sub> (0.25V vs 0.78V), MN3007 accept input signals 3 times wider, having, in fact,&nbsp;better dynamic range and less noise.</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"><span style="color: #000000;">Maximum Clock frequency</span> is better in MN3207 200 vs 100KHz, allowing shorter delays 2.56 vs 5.12ms.</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"><span style="color: #000000;">Regarding the power supply</span>, the 3007 is made for high voltage (10 to 15V) and in a usual 9V pedals supply is below the ideal voltage and then ends up not with the performance which it was designed to work. The 3207 operates from 4 to 10V, being suitable for 9V powered effects and within the optimal supply range and also the 9V can be easily regulated to 5V giving a reliable standard behavior under all conditions.</span></li>
+</ul>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">Summarizing, using MN3007 will provide light advantages in terms of THD, and more dynamic headroom. In a guitar pedal, the chip will work at 9V, below the optimum supply range. </span><span style="font-size: 10pt; color: #333333;">So far seems that the performance in this conditions is good and preferred over the MN3207.</span></span><br /><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">However, in BBD circuit design there are many other other factors that can improve the performance more than the chip itself:</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The use of compander circuitry to keep a ceiling on input signal levels.</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The bias voltage fine adjustment.</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The filtering applied, and the support circuitry (quality of clock pulse, mixing of complementary outputs, etc.)</span></li>
+</ul>
+<h1><span style="font-size: 14pt; font-family: verdana, geneva;"><a id="link7" name="link7"></a><strong><span style="color: #000000;">7. Resources:</span></strong></span></h1>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="http://www.sdiy.org/BBDHell/">Official Panasonic Bucket Brigade Devices Databook</a> <span style="color: #333333;">by Harry Bissell. </span></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="http://dafx10.iem.at/papers/RaffelSmith_DAFx10_P42.pdf">Practical Modeling of Bucket Brigade Device Circuits</a> <span style="color: #333333;">by Raffael &amp; Smith. </span></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="http://ww1.microchip.com/downloads/en/AppNotes/00699b.pdf">Anti-Aliasing Filters Application Note</a>&nbsp; <span style="color: #333333;">by Microchip. </span></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="http://hammer.ampage.org/files/PAiA_Phlanger.PDF">PAiA Phlanger</a> <span style="color: #333333;">in Hammer AmpPage. </span></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="http:/www.uk-electronic.de/PDF/mn3004.pdf">Bucket Brigade Delay Line Application Note</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">Bucket-brigade electronics - new possibilities for delay, time-axis conversion, and scanning <span style="color: #333333;">by F. L. J. Sangster and K. Teer. (IEEE Journal vol. 4, no. 3, pp. 131&ndash;136, 1969.)</span></span><br /><span style="font-family: verdana, geneva;"><span style="font-size: 10pt;"><a href="http://www.imagesensors.org/Past%20Workshops/Marvin%20White%20Collection/1977%20Short%20Course/1977%203%20Weckler.pdf">Bucket Brigade Devices Circa 1977.</a></span> - <span style="font-size: 10pt;"><a href="http://www.imagesensors.org/Past%20Workshops/Marvin%20White%20Collection/1977%20Short%20Course/1977%203%20Weckler.pdf">Bucket Brigade Devices Circa 1976.</a></span></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="http://www.generalguitargadgets.com/effects-projects/modulationecho/pt-80-delay/">The PT-80 Digital Delay</a> <span style="color: #333333;">by General Guitar Gadgets.</span></span><br /><span style="font-family: verdana, geneva;"><span style="font-size: 10pt;"><span style="font-size: 10pt; color: #333333;"><a href="http://www.CircularScience.com">www.CircularScience.com </a></span></span><span style="font-size: 10pt;"><span style="font-size: 10pt; color: #333333;">by John Roberts.</span></span></span><br /><br /><span style="font-family: verdana, geneva;"></span></p>
+<h2><span style="font-size: 12pt; color: #000000; font-family: verdana, geneva;"><a id="link71" name="link71"></a><strong>7.1 Datasheets:</strong></span></h2>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="http://www.experimentalistsanonymous.com/diy/Datasheets/">All MN3XXX, SAD512-1024-4096 and TDA1022 Datasheets</a> by ExperimentalistAnonymous. </span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="http://hammer.ampage.org/files/BBDementia.zip">All MN3XXX, SAD512-1024-4096 and TDA1022 Datasheets</a> by Mark Hammer.&nbsp;</span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;"></span></p>
+<p style="text-align: right;"><span style="font-size: 10pt; font-family: verdana, geneva;"><span style="font-size: 12pt; color: #000000;"><span style="color: #333333; font-size: 10pt;">Thanks for reading, all feedback is appreciated&nbsp;&nbsp;<img src="../_assets/26a349a17744.jpg" alt="jr(at)ElectroSmash.com " style="float: right;" /></span></span></span></p>	</section>
+  
+  <!-- footer -->
+    <!-- //footer -->
+
+			<hr class="divider-vertical" /><ul class="pager pagenav">
+	<li class="next">
+		<a class="hasTooltip" title="LM386 Audio Amplifier Analysis" aria-label="Next article: LM386 Audio Amplifier Analysis" href="../lm386-analysis/index.html" rel="next">
+			<span aria-hidden="true">Next</span> <span class="icon-chevron-right" aria-hidden="true"></span>		</a>
+	</li>
+</ul>
+	
+	
+	</article>
+<!-- //Article -->
+
+
+</div><div><a href="http://www.artio.net" style="font-size: 8px; visibility: visible; display: inline;" title="Web development, Joomla, CMS, CRM, Online shop software, databases">Joomla SEF URLs by Artio</a></div>
+		</div>
+		<!-- //MAIN CONTENT -->
+
+		<!-- SIDEBAR RIGHT -->
+		<div class="t3-sidebar t3-sidebar-right col-xs-12 col-sm-4  col-md-3 ">
+			<div class="t3-module module " id="Mod28"><div class="module-inner"><h3 class="module-title "><span>New Updates</span></h3><div class="module-ct"><ul class="latestnews mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../arduino-audio-meter/index.html" itemprop="url">
+			<span itemprop="name">
+				Arduino Audio Meter			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../dallas-rangemaster/index.html" itemprop="url">
+			<span itemprop="name">
+				Dallas Rangemaster Treble Booster Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../time-manipulator/index.html" itemprop="url">
+			<span itemprop="name">
+				Time Manipulator - Arduino Delay/Echo/Reverb			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../marshall-guvnor-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Marshall The Guvnor Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../germanium-fuzz/index.html" itemprop="url">
+			<span itemprop="name">
+				You Can Build the Perfect Germanium Fuzz			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../mxr-distortion-plus-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				MXR Distortion + Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod29"><div class="module-inner"><h3 class="module-title "><span>Most Visited</span></h3><div class="module-ct"><ul class="mostread mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../tube-screamer-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Tube Screamer Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../fuzz-face/index.html" itemprop="url">
+			<span itemprop="name">
+				Fuzz Face Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../proco-rat/index.html" itemprop="url">
+			<span itemprop="name">
+				Pro Co Rat Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../boss-ds1-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Boss DS-1 Distortion Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../klon-centaur-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Klon Centaur Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../big-muff-pi-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Big Muff Pi Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod184"><div class="module-inner"><h3 class="module-title "><span>Follow us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><span style="font-size: 10pt; color: #333333;">You can also follow us on:</span></p>
+<p><a href="https://www.facebook.com/ElectroSmash"><img src="../_assets/df34a2b41b54.png" alt="facebook" /></a>&nbsp;&nbsp; <a href="https://plus.google.com/+Electrosmash/about"><img src="../_assets/3ffc52860091.png" alt="google" /></a>&nbsp;&nbsp; <a href="https://www.instagram.com/electro.smash/"><img src="../_assets/45b0b0fe2d4b.png" alt="instagram" /></a></p>
+<p><a href="https://www.pinterest.com/electrosmash/"><img src="../_assets/05310d9fcf2a.png" alt="pinterest" /></a>&nbsp;&nbsp; <a href="https://www.youtube.com/user/ElectroSmashTV"><img src="../_assets/d920883b3613.png" alt="youtube" /></a>&nbsp;&nbsp; <a href="https://twitter.com/electro_smash"><img src="../_assets/52581f7264eb.png" alt="twitter" /></a></p></div>
+</div></div></div>
+		</div>
+		<!-- //SIDEBAR RIGHT -->
+
+	</div>
+</div> 
+
+
+
+  
+
+
+  
+
+
+	
+<!-- BACK TOP TOP BUTTON -->
+<div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top hidden-xs hidden-sm affix-top">
+  <button class="btn btn-primary" title="Back to Top"><i class="fa fa-caret-up"></i></button>
+</div>
+<script type="text/javascript">
+(function($) {
+	// Back to top
+	$('#back-to-top').on('click', function(){
+		$("html, body").animate({scrollTop: 0}, 500);
+		return false;
+	});
+    $(window).on('load', function(){
+        // hide button to top if the document height not greater than window height*2;using window load for more accurate calculate.    
+        if ((parseInt($(window).height())*2)>(parseInt($(document).height()))) {
+            $('#back-to-top').hide();
+        } 
+    });
+})(jQuery);
+</script>
+<!-- BACK TO TOP BUTTON -->
+
+<!-- FOOTER -->
+<footer id="t3-footer" class="wrap t3-footer">
+
+			<!-- FOOTER SPOTLIGHT -->
+		<div class="container hidden-xs">
+				<!-- SPOTLIGHT -->
+	<div class="t3-spotlight t3-footer-sl  row">
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod185"><div class="module-inner"><h3 class="module-title "><span>About us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../about-us/index.html">&nbsp;&nbsp;<img src="../_assets/420f9f181bc0.jpg" alt="smash electro" /></a></p>
+<p><a href="../about-us/index.html"><span style="font-size: 10pt; color: #333333;">Smashing audio electronics since MMXIII</span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod183"><div class="module-inner"><h3 class="module-title "><span>Email Newsletter</span></h3><div class="module-ct"><div class="acymailing_module" id="acymailing_module_formAcymailing90111">
+	<div class="acymailing_fulldiv" id="acymailing_fulldiv_formAcymailing90111"  >
+		<form id="formAcymailing90111" action="index.html" onsubmit="return submitacymailingform('optin','formAcymailing90111')" method="post" name="formAcymailing90111"  >
+		<div class="acymailing_module_form" >
+						<table class="acymailing_form">
+				<tr>
+												<td class="acyfield_email acy_requiredField">
+								<input id="user_email_formAcymailing90111"  onfocus="if(this.value == 'example@email.com') this.value = '';" onblur="if(this.value=='') this.value='example@email.com';" class="inputbox" type="text" name="user[email]" style="width:90%" value="example@email.com" title="example@email.com"/>
+							</td> </tr><tr>
+					
+					<td  class="acysubbuttons">
+												<input class="button subbutton btn btn-primary" type="submit" value="Subscribe" name="Submit" onclick="try{ return submitacymailingform('optin','formAcymailing90111'); }catch(err){alert('The form could not be submitted '+err);return false;}"/>
+											</td>
+				</tr>
+			</table>
+						<input type="hidden" name="ajax" value="0" />
+			<input type="hidden" name="acy_source" value="module_183" />
+			<input type="hidden" name="ctrl" value="sub"/>
+			<input type="hidden" name="task" value="notask"/>
+			<input type="hidden" name="redirect" value="https%3A%2F%2Fwww.electrosmash.com%2Fmn3007-bucket-brigade-devices"/>
+			<input type="hidden" name="redirectunsub" value="https%3A%2F%2Fwww.electrosmash.com%2Fmn3007-bucket-brigade-devices"/>
+			<input type="hidden" name="option" value="com_acymailing"/>
+						<input type="hidden" name="hiddenlists" value="1"/>
+			<input type="hidden" name="acyformname" value="formAcymailing90111" />
+									</div>
+		</form>
+	</div>
+	</div>
+
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod186"><div class="module-inner"><h3 class="module-title "><span>Contact us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../contact-us/index.html"><span style="font-size: 10pt; color: #333333;">e-mail us at <span id="cloakd3103a17163162073ecdd9fad7ab0a9b">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
+				document.getElementById('cloakd3103a17163162073ecdd9fad7ab0a9b').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyd3103a17163162073ecdd9fad7ab0a9b = '&#105;nf&#111;' + '&#64;';
+				addyd3103a17163162073ecdd9fad7ab0a9b = addyd3103a17163162073ecdd9fad7ab0a9b + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';
+				var addy_textd3103a17163162073ecdd9fad7ab0a9b = '&#105;nf&#111;' + '&#64;' + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';document.getElementById('cloakd3103a17163162073ecdd9fad7ab0a9b').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyd3103a17163162073ecdd9fad7ab0a9b + '\'>'+addy_textd3103a17163162073ecdd9fad7ab0a9b+'<\/a>';
+		</script></span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod188"><div class="module-inner"><h3 class="module-title "><span>Rights</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p style="text-align: left;">&nbsp;&nbsp;<a href="https://creativecommons.org/licenses/by-nc/3.0/"><img src="../_assets/b0e99d439c44.png" alt="88x31" /></a></p>
+<p style="text-align: left;"><img src="../_assets/fe2636cdea5c.png" alt="open source logo" width="180" height="38" /></p>
+<p style="text-align: left;"><img src="../_assets/8281c4ec3a3b.png" alt="open hardware logo" width="180" height="38" /></p>
+<p style="text-align: left;">&nbsp;</p></div>
+</div></div></div>
+							</div>
+			</div>
+<!-- SPOTLIGHT -->
+		</div>
+		<!-- //FOOTER SPOTLIGHT -->
+	
+	<section class="t3-copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 copyright ">
+					
+          <small>
+            <a href="http://twitter.github.io/bootstrap/" title="Bootstrap by Twitter" target="_blank">Bootstrap</a> is a front-end framework of Twitter, Inc. Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" title="MIT License" target="_blank">MIT License.</a>
+          </small>
+          <small>
+            <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> font licensed under <a href="http://scripts.sil.org/OFL">SIL OFL 1.1</a>.
+          </small>
+				</div>
+							</div>
+		</div>
+	</section>
+
+</footer>
+<!-- //FOOTER -->
+
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29544239-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

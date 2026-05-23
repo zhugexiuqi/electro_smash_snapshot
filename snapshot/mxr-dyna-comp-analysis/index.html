@@ -1,0 +1,825 @@
+
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr"
+	  class='com_content view-article itemid-435 home j31 mm-hover '>
+
+<head>
+	<base href="../index/index.html" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="mxr, dyna, comp, compressor, guitar, pedal, analysis, schematic, circuit, study, technology, ross, input, buffer, ca3080, 3080, ota, amplifier, envelope, detector, filter, output, low pass, high pass, frequency response, electrosmash" />
+	<meta name="rights" content="Creative Commons: Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0) " />
+	<meta name="author" content="Ray" />
+	<meta name="description" content="MXR Dyna Comp guitar pedal analysis by ElectroSmash." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>ElectroSmash - MXR Dyna Comp Analysis</title>
+	<link href="index.html" rel="canonical" />
+	<link href="../_assets/d87243966412.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../_assets/26f5cf410b61.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/15ff046a2fe3.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/dd09f39c1b89.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"6ea13af5f263c0edf2f3eb7bc8cdda07","system.paths":{"root":"","base":""}}</script>
+	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+	<script src="../_assets/323c609448d2.js" type="text/javascript"></script>
+	<script src="../_assets/b8bcbb2f005c.js" type="text/javascript" async="async"></script>
+	<script type="text/javascript">
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });	if(typeof acymailingModule == 'undefined'){
+				var acymailingModule = [];
+			}
+			
+			acymailingModule['emailRegex'] = /^[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+)*\@([a-z0-9-]+\.)+[a-z0-9]{2,10}$/i;
+
+			acymailingModule['NAMECAPTION'] = 'Name';
+			acymailingModule['NAME_MISSING'] = 'Please enter your name';
+			acymailingModule['EMAILCAPTION'] = 'example@email.com';
+			acymailingModule['VALID_EMAIL'] = 'Please enter a valid e-mail address';
+			acymailingModule['ACCEPT_TERMS'] = 'Please check the Terms and Conditions';
+			acymailingModule['CAPTCHA_MISSING'] = 'The captcha is invalid, please try again';
+			acymailingModule['NO_LIST_SELECTED'] = 'Please select the lists you want to subscribe to';
+		
+acymailingModule['excludeValuesformAcymailing28721'] = [];
+acymailingModule['excludeValuesformAcymailing28721']['name'] = 'Name';
+acymailingModule['excludeValuesformAcymailing28721']['email'] = 'example@email.com';
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });
+	</script>
+
+	
+<!-- META FOR IOS & HANDHELD -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<style type="text/stylesheet">
+		@-webkit-viewport   { width: device-width; }
+		@-moz-viewport      { width: device-width; }
+		@-ms-viewport       { width: device-width; }
+		@-o-viewport        { width: device-width; }
+		@viewport           { width: device-width; }
+	</style>
+	<script type="text/javascript">
+		//<![CDATA[
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement("style");
+			msViewportStyle.appendChild(
+				document.createTextNode("@-ms-viewport{width:auto!important}")
+			);
+			document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+		}
+		//]]>
+	</script>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="apple-mobile-web-app-capable" content="YES"/>
+<!-- //META FOR IOS & HANDHELD -->
+
+
+
+
+<!-- Le HTML5 shim and media query for IE8 support -->
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script type="text/javascript" src="../_assets/010a3c86157d.js"></script>
+<![endif]-->
+
+<!-- You can add Google Analytics here or use T3 Injection feature -->
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="../_assets/76d3e1341c39.css" type="text/css" />
+<![endif]-->
+	</head>
+
+<body>
+
+<div class="t3-wrapper corporate"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
+
+	
+<!-- MAIN NAVIGATION -->
+<header id="t3-mainnav" class="wrap navbar navbar-default navbar-fixed-top t3-mainnav">
+
+	<!-- OFF-CANVAS -->
+		<!-- //OFF-CANVAS -->
+
+	<div class="container">
+
+		<!-- NAVBAR HEADER -->
+		<div class="navbar-header">
+
+			<!-- LOGO -->
+			<div class="logo logo-image">
+				<div class="logo-image">
+					<a href="/" title="ElectroSmash">
+													<img class="logo-img" src="../_assets/115794d6d5b8.png" alt="ElectroSmash" />
+						
+												
+						<span>ElectroSmash</span>
+					</a>
+				</div>
+			</div>
+			<!-- //LOGO -->
+
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-collapse">
+					<i class="fa fa-bars"></i>
+				</button>
+			
+	    
+		</div>
+		<!-- //NAVBAR HEADER -->
+
+		<!-- NAVBAR MAIN -->
+				<nav class="t3-navbar-collapse navbar-collapse collapse"></nav>
+		
+		<nav class="t3-navbar navbar-collapse collapse">
+			<div  class="t3-megamenu"  data-responsive="true">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav navbar-nav level0">
+<li itemprop='name' class="current active" data-id="435" data-level="1">
+<a itemprop='url' class=""  href="/"   data-target="#">Home </a>
+
+</li>
+<li itemprop='name' class="dropdown mega" data-id="510" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Chips<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="492" data-level="2">
+<a itemprop='url' class=""  href="../jrc4558-analysis/index.html"   data-target="#">JRC4558  </a>
+
+</li>
+<li itemprop='name'  data-id="519" data-level="2">
+<a itemprop='url' class=""  href="../mn3007-bucket-brigade-devices/index.html"   data-target="#">MN3007 BBDs </a>
+
+</li>
+<li itemprop='name'  data-id="468" data-level="2">
+<a itemprop='url' class=""  href="../lm386-analysis/index.html"   data-target="#">LM386 </a>
+
+</li>
+<li itemprop='name'  data-id="1643" data-level="2">
+<a itemprop='url' class=""  href="../pt2399-analysis/index.html"   data-target="#">PT2399 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="444" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Amps<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="993" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="489" data-level="2">
+<a itemprop='url' class=""  href="../little-gem-analysis/index.html"   data-target="#">Little Gem Amp </a>
+
+</li>
+<li itemprop='name'  data-id="526" data-level="2">
+<a itemprop='url' class=""  href="../marshall-mg10/index.html"   data-target="#">Marshall MG10 </a>
+
+</li>
+<li itemprop='name'  data-id="491" data-level="2">
+<a itemprop='url' class=""  href="../noisy-cricket-analysis/index.html"   data-target="#">Noisy Cricket  </a>
+
+</li>
+<li itemprop='name'  data-id="490" data-level="2">
+<a itemprop='url' class=""  href="../ruby-amp-analysis/index.html"   data-target="#">Ruby Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="488" data-level="2">
+<a itemprop='url' class=""  href="../smokey-amp-analysis/index.html"   data-target="#">Smokey Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="746" data-level="2">
+<a itemprop='url' class=""  href="http://www.electrosmash.com/schematics#amps"   data-target="#">Amps Schematics.</a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="511" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Pedals<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  style="width: 600px"  data-width="600"><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="515" data-level="2">
+<a itemprop='url' class=""  href="../back-talk-analysis/index.html"   data-target="#">Back Talk Reverse Delay </a>
+
+</li>
+<li itemprop='name'  data-id="518" data-level="2">
+<a itemprop='url' class=""  href="../big-muff-pi-analysis/index.html"   data-target="#">Big Muff Pi  </a>
+
+</li>
+<li itemprop='name'  data-id="524" data-level="2">
+<a itemprop='url' class=""  href="../boss-ce-2-analysis/index.html"   data-target="#">Boss CE-2 Chorus </a>
+
+</li>
+<li itemprop='name'  data-id="1088" data-level="2">
+<a itemprop='url' class=""  href="../boss-ds1-analysis/index.html"   data-target="#">Boss DS-1 Distortion </a>
+
+</li>
+<li itemprop='name'  data-id="1713" data-level="2">
+<a itemprop='url' class=""  href="../dallas-rangemaster/index.html"   data-target="#">Dallas Rangemaster </a>
+
+</li>
+<li itemprop='name'  data-id="905" data-level="2">
+<a itemprop='url' class=""  href="../crybaby-gcb-95/index.html"   data-target="#">Dunlop CryBaby GCB-95  </a>
+
+</li>
+<li itemprop='name'  data-id="842" data-level="2">
+<a itemprop='url' class=""  href="../fuzz-face/index.html"   data-target="#">Fuzz Face </a>
+
+</li>
+<li itemprop='name'  data-id="1664" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="512" data-level="2">
+<a itemprop='url' class=""  href="../tube-screamer-analysis/index.html"   data-target="#">Ibanez Tube Screamer </a>
+
+</li>
+<li itemprop='name'  data-id="1433" data-level="2">
+<a itemprop='url' class=""  href="../klon-centaur-analysis/index.html"   data-target="#">Klon Centaur </a>
+
+</li>
+</ul>
+</div></div>
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="548" data-level="2">
+<a itemprop='url' class=""  href="../mxr-microamp/index.html"   data-target="#">MXR MicroAmp </a>
+
+</li>
+<li itemprop='name'  data-id="1667" data-level="2">
+<a itemprop='url' class=""  href="../marshall-guvnor-analysis/index.html"   data-target="#">Marshall Guvnor </a>
+
+</li>
+<li itemprop='name'  data-id="1632" data-level="2">
+<a itemprop='url' class=""  href="../mxr-distortion-plus-analysis/index.html"   data-target="#">MXR Distortion + </a>
+
+</li>
+<li itemprop='name'  data-id="1244" data-level="2">
+<a itemprop='url' class=""  href="index.html"   data-target="#">MXR Dyna Comp </a>
+
+</li>
+<li itemprop='name'  data-id="573" data-level="2">
+<a itemprop='url' class=""  href="../mxr-phase90/index.html"   data-target="#">MXR Phase 90 </a>
+
+</li>
+<li itemprop='name'  data-id="553" data-level="2">
+<a itemprop='url' class=""  href="../proco-rat/index.html"   data-target="#">ProCo Rat </a>
+
+</li>
+<li itemprop='name'  data-id="520" data-level="2">
+<a itemprop='url' class=""  href="../sitar-swami-analysis/index.html"   data-target="#">Sitar Swami </a>
+
+</li>
+<li itemprop='name'  data-id="525" data-level="2">
+<a itemprop='url' class=""  href="../vox-v847-analysis/index.html"   data-target="#">Vox V847 Wah Wah </a>
+
+</li>
+<li itemprop='name'  data-id="547" data-level="2">
+<a itemprop='url' class=""  href="../emg81/index.html"   data-target="#">EMG81 Pickup </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="796" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Projects<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="1108" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-uno/index.html"   data-target="#">pedalSHIELD UNO </a>
+
+</li>
+<li itemprop='name'  data-id="797" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield/index.html"   data-target="#">pedalSHIELD DUE </a>
+
+</li>
+<li itemprop='name'  data-id="1437" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-mega/index.html"   data-target="#">pedalSHIELD MEGA </a>
+
+</li>
+<li itemprop='name'  data-id="1312" data-level="2">
+<a itemprop='url' class=""  href="../pedal-pi/index.html"   data-target="#">Pedal-Pi </a>
+
+</li>
+<li itemprop='name'  data-id="1662" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="1663" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="1668" data-level="2">
+<a itemprop='url' class=""  href="../time-manipulator/index.html"   data-target="#">Time Manipulator </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name'  data-id="745" data-level="1">
+<a itemprop='url' class=""  href="../forum-electrosmash/index.html"   data-target="#">Forum </a>
+
+</li>
+<li itemprop='name'  data-id="816" data-level="1">
+<a itemprop='url' class=""  href="../shop/index.html"   data-target="#">Shop</a>
+
+</li>
+</ul>
+</div>
+
+		</nav>
+    <!-- //NAVBAR MAIN -->
+
+	</div>
+</header>
+<!-- //MAIN NAVIGATION -->
+
+
+
+
+
+
+  
+
+
+  
+
+
+	
+<div id="t3-mainbody" class="container t3-mainbody">
+	<div class="row">
+
+		<!-- MAIN CONTENT -->
+		<div id="t3-content" class="t3-content col-xs-12 col-sm-8  col-md-9">
+						<div class="item-page clearfix">
+
+
+<!-- Article -->
+<article>
+	<meta itemprop="inLanguage" content="en-GB" />
+	<meta itemprop="url" content="index.html" />
+
+      
+<header class="article-header clearfix">
+	<h1 class="article-title" itemprop="headline">
+					<a href="index.html" itemprop="url" title="MXR Dyna Comp Analysis">
+				MXR Dyna Comp Analysis</a>
+			</h1>
+
+			</header>
+    
+    
+  <!-- Aside -->
+    <!-- //Aside -->
+
+  
+  
+  
+	
+  
+	
+	<section class="article-content clearfix">
+		<p><span style="font-size: 10pt; font-family: verdana, geneva;"><span style="color: #333333;">The MXR 102 Dyna Comp is a compressor effect guitar pedal, released in 1972 by MXR and rapidly becoming popular because of its price and ease of use. The electronic circuit was also used as a reference design on many other compressor effects like the Ross Compressor, T-Rex CompNova, Ibanez/Maxon CP5/CP9/CP10 and boutique pedals. This model is neither the most silent nor the most hi-definition piece of gear but it has real character and it's easy to find.</span><span style="color: #333333;"><br /></span></span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/9b61b545bbf8.jpeg"><span style="font-size: 10pt; color: #000000;"><img src="../_assets/9b61b545bbf8.jpeg" alt="mxr dyna comp pedal" width="490" height="309" style="display: block; margin-right: auto; margin-left: auto;" /></span></a><span style="font-size: 10pt;"><span style="color: #333333;">This pedal&nbsp;produces dynamic range compression, this is basically smooth out volume differences between notes; giving more body and level to weak notes so the sound does not change drastically no matter what the real signal level is, <span style="color: #333333;"> giving better articulation and sustain to the guitar</span>. The pedal also adds its own coloring and tone to the signal.</span></span></span></p>
+ 
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p><span style="font-size: 14pt; font-family: verdana, geneva;"><strong><span style="font-size: 10pt;"></span><span style="color: #333333; font-size: 10pt;"><span style="font-size: 14pt; color: #000000;">Table of Contents:</span></span></strong></span></p>
+<table style="border-color: #ffffff; background-color: #ffffff; border-style: solid;">
+<tbody>
+<tr>
+<td><span style="font-size: 10pt; color: #333399; font-family: verdana, geneva;"><a href="/mxr-dyna-comp-analysis#schematic" style="color: #333399;"><img src="../_assets/92ce6285abb9.png" alt="mxr dyna comp circuit electrosmash" /></a></span></td>
+<td><span style="font-family: verdana, geneva;"></span></td>
+<td><span style="font-family: verdana, geneva;"></span></td>
+<td>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p><span style="font-size: 10pt; color: #333399; font-family: verdana, geneva;"><a href="/mxr-dyna-comp-analysis#schematic" style="color: #333399;">1. MXR Dyna Comp Schematic.</a><br />&nbsp;&nbsp; &nbsp;<a href="/mxr-dyna-comp-analysis#bom" style="color: #333399;">1.2 MXR Dyna Comp Part List / Bill of Materials.</a><br />&nbsp;&nbsp; &nbsp;<a href="/mxr-dyna-comp-analysis#layout" style="color: #333399;">1.3 MXR Dyna Comp PCB Layout. </a><br /><a href="/mxr-dyna-comp-analysis#power" style="color: #333399;">2. Power Supply Stage.</a><br /><a href="/mxr-dyna-comp-analysis#input" style="color: #333399;">3. Input Buffer.</a><br />&nbsp;&nbsp; &nbsp;<a href="/mxr-dyna-comp-analysis#input_frequency" style="color: #333399;">3.1 Input Buffer Frequency Response.</a><br /><a href="/mxr-dyna-comp-analysis#OTA" style="color: #333399;">4. The OTA Amplifier.</a><br />&nbsp;&nbsp; &nbsp;<a href="/mxr-dyna-comp-analysis#ca3080" style="color: #333399;">4.1 The OTA Chip: CA3080.</a><br /><a href="/mxr-dyna-comp-analysis#envelope" style="color: #333399;">5. Envelope Detector Block.</a><br /><a href="/mxr-dyna-comp-analysis#output" style="color: #333399;">6. Output Stage.</a><br /><a href="/mxr-dyna-comp-analysis#resources" style="color: #333399;">7. Resources.</a></span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p><span style="font-family: verdana, geneva;">&nbsp;<span style="color: #333333; font-size: 10pt;">&nbsp; </span><span style="color: #333333; font-size: 10pt;"><span style="color: #000000; font-size: 14pt;"><a id="schematic" name="schematic"></a><strong>1.&nbsp; MXR Dyna Comp Schematic.</strong></span></span></span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">To make the circuit easier to understand, it is divided into 5 blocks: Input Buffer, OTA Amplifier, Envelope Detector, Output Stage and Power Supply:</span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="../_assets/21632e39e22c.png"><img src="../_assets/1cdfec37fba7.png" alt="mxr dyna comp schematic parts small" style="display: block; margin-left: auto; margin-right: auto;" /></a><span style="color: #333333;"></span></span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The main design idea is this: The Input and Output Buffers isolate the circuit, keeping good signal integrity. The core of the circuit is the OTA amplifier, this part will give higher or lower amplification to the signal. In order to decide the amount of amplification, the Envelope Detector will measure how big or small the guitar signal is at a time and gives to the OTA a current feedback proportional to the guitar level, amplifying weak signals.The simple Power Supply provides energy and bias points to all the circuit parts.</span></p>
+<p style="text-align: left;"><span style="font-size: 10pt; font-family: verdana, geneva;"><span style="color: #333333;"><span style="color: #333333;"><strong><span style="text-decoration: underline;">note</span>:</strong> The circuit is redrawn trying to make it simpler. Usually, the <em>Envelope Detector</em></span><span style="color: #333333;"> stage is represented in parallel looking like a</span><span style="color: #333333;"> <a href="https://www.google.co.uk/search?q=long+tailed+pair&amp;client=firefox-b&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ved=0ahUKEwi046Lxk-rPAhXhB8AKHbe_BvsQ_AUICSgC&amp;biw=1366&amp;bih=696" style="color: #333333;"><span style="color: #0000ff;">Long Tailed Pair or a Differential Amplifier</span></a> </span></span><span style="color: #333333;">that could be misleading.</span></span></p>
+<p><span style="font-size: 10pt; color: #000000; font-family: verdana, geneva;"></span></p>
+<h2><span style="font-family: verdana, geneva;"><a id="bom"><span style="font-size: 10pt; color: #000000;"><span style="font-size: 10pt; color: #000000;">&nbsp; </span></span></a><strong><span style="color: #000000;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 12pt;">1.2 MXR Dyna Comp </span></span></span><span style="font-size: 10pt;"><span style="font-size: 12pt;">Part List / Bill of Materials.</span></span></span></strong><span style="font-size: 10pt; color: #000000;"><span style="font-size: 12pt;"><br /></span></span></span></h2>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The parts in the design are not critical, you can use substitutes for the transistors (2N3904) or the silicon diodes (1N914). The only part which is not so easy to find nowadays is the CA3080 IC.</span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;"></span></p>
+<p style="padding-left: 30px;"><span style="font-size: 10pt; font-family: verdana, geneva;">C1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.01uF</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">C2,C3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1uF</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">C4,C6,C7&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10nF</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">C5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1nf</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">C8,C10,C11&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10uF</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">C9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50nF</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">Q1,Q2,Q3,Q4,Q5&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 2N3904</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">D1,D2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1N914</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">D3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1N4148</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">RV1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 500K</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">RV2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 50K</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">Rtrimmer&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2K</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">R1,R3,R9,R10,R14&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; 10K</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">R2,R4,R6,R11,R12&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; 1M</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">R5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 470K</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">R7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 15K</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">R8,R13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 150K</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">R17&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;27K</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">R15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 56K</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">R16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 22K</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">U1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CA3080</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">J1, J2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Audio Jacks</span></p>
+<p><span style="color: #000000; font-family: verdana, geneva;"></span></p>
+<h2><span style="font-family: verdana, geneva;"><span style="color: #000000;"><a id="layout"></a></span><span style="font-size: 12pt;"><strong><span style="color: #000000;">1.3 MXR Dyna Comp PCB Layout.</span> </strong><br /></span></span></h2>
+<p><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">The original MXR Script model which is not available nowadays uses the classic MXR white/yellow PCB with a distinctive shape. It was a one layer PCB with all the components on one side. When Dunlop acquired MXR in 1987, the PCB was progressively redesigned using modern materials/components and a double-sided PCB with red solder mask.&nbsp;</span><span style="color: #333333; font-size: 10pt;"> </span></span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/6ff551d83370.jpg"><img src="../_assets/1ffbdd76615f.jpg" alt="mxr dyna comp pcb" style="display: block; margin-left: auto; margin-right: auto;" title="mxr dyna comp pcb" /></a></span></p>
+<p><span style="font-family: verdana, geneva;">&nbsp;<span style="font-size: 12pt; color: #000000;"><a id="power" name="power"> </a><strong><span style="font-size: 14pt;">2. Power Supply Stage.</span></strong></span></span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The Power Supply block provides +9V supply to the circuit components and also an unusual bias of +2.5V with resistor divider (R15 and R16) to be used as a virtual ground to the CA3080 and also as a bias voltage for the transistor stages:</span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/1df026d61f50.png"><img src="../_assets/1df026d61f50.png" alt="mxr dyna comp power supply" width="393" height="268" style="display: block; margin-left: auto; margin-right: auto;" title="mxr dyna comp power supply" /></a><span style="font-size: 10pt; color: #333333;"></span></span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Seems that the original design did not include decoupling caps in the power supply, but a moderate-high value 10uF caps (C10 and C11) could be included to remove noise from the power supply line.</span></li>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">A protection diode D3 helps against reverse polarity connection. Some schematics include this diode in series and some in parallel with the 9V source, both ideas will work fine.</span></li>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">A stereo guitar input jack could be used as an on-off switch, connecting the battery (-) pin to ground when the mono guitar jack is plugged.</span></li>
+</ul>
+<h2><span style="font-family: verdana, geneva;"><strong><span style="font-size: 12pt; color: #000000;"><a id="input" name="input"></a><span style="font-size: 14pt;">3. Input Buffer.</span></span></strong></span></h2>
+<p><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">The Input Buffer is implemented using a basic Common Collector (Emitter Follower) transistor circuit. It provides high input impedance and unity gain in order to preserve signal integrity avoiding high-frequency signal loss (tone sucking)</span><span style="color: #333333; font-size: 10pt;">.</span></span><br /><span style="font-family: verdana, geneva;"><a href="../_assets/39b79b95126b.png"><span style="font-size: 10pt;"><img src="../_assets/39b79b95126b.png" alt="mxr dyna comp input buffer" width="464" height="331" style="display: block; margin-left: auto; margin-right: auto;" title="mxr dyna comp input buffer" /></span></a></span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The base of the transistor is biased to 2.54V through a high-value resistor R2 (1M&Omega;).</span></li>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The input series resistor R1 (10K&Omega;) will limit the amount of current into the base of the transistor, protecting Q1 against electrostatic discharges and making the pedal more robust.</span></li>
+<li><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">The input capacitor C1 (10nF) gives DC isolation and together with R2 (1M&Omega;) - <span style="font-size: 10pt;">R1 is ignored because 10K is much smaller than 1M - </span></span><span style="font-size: 10pt;">and the input impedance of the Emitter Follower (equal to 1M&Omega; and calculated in the next point) creates a high pass filter:&nbsp;</span><span style="font-size: 10pt;"> </span></span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">fc= 1/2&pi;RC =&nbsp; 1/(2 x 3.14 x (1M&Omega;//1M&Omega;) x 10nF) = 31.8Hz</span></li>
+<li>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The output of this buffer is DC isolated through the capacitor C2 (1uF). This C2 and R4 form again a high-pass filter with a cut frequency of fc=1/2&pi;RC = 1/(2&pi; x 1uF x 1M&Omega;) = 0.15Hz. This filter will DC-isolate the next stage without modifying the audio levels.</span></p>
+</li>
+</ul>
+<p><br /><span style="font-size: 10pt; color: #000000; font-family: verdana, geneva;"><strong>MXR Dyna Comp - Input Impedance Calculation:</strong></span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">In order to calculate the input impedance of the Emitter Follower, the hybrid-pi model can be used to analyze the small signal behavior. If you want to get all the details, please check the <a href="/tube-screamer-analysis#impedance">Tube Screamer Input Impedance Calculation</a>, it is basically the same circuit with some changes in the components values, otherwise just stick to the general formula:</span></p>
+<p style="padding-left: 60px;"><br /><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Zin = R1 + ( R2 // [r&pi; + (&beta;+1) x R3])</span><br /><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Zin = 10K + 1M // [r&pi; + (300+1) x 10K]</span><br /><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Zin = 1M&Omega;</span></p>
+<p style="padding-left: 30px;"><br /><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"><strong><span style="text-decoration: underline;">note:</span></strong> The value of &beta; is 300 (taken from the 2N5088 datasheet), the value of r&pi; is very small compared with the value of (&beta;+1)xR3 and can be considered as 0 (ignored).</span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Therefore, the MXR Dyna Comp input resistance is 1M&Omega; (almost the value of the biasing resistor R2) which accounts for almost the entire signal loading at the input and can be considered a good/high input impedance.</span></p>
+<h2><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #000000;"><span style="font-size: 12pt;"><a id="input_frequency"></a></span></span><strong><span style="font-size: 10pt;"><span style="font-size: 12pt;">3.1 Input Buffer Frequency Response.</span></span></strong><span style="font-size: 10pt; color: #000000;"><br /></span></span></h2>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">The plot of the Input Stage freq response shows a unity gain and a filtering of the excess of bass (dc-level), preserving a good flat response between 20Hz and 20KHz.</span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/da9dbbbc14e8.png"><img src="../_assets/da9dbbbc14e8.png" alt="mxr dyna comp input buffer frequency response" width="707" height="243" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">The low frequencies area is dominated by the high-pass filters that place two poles on 3.1Hz and 0.15Hz creating a roll-off for the low harmonics. This filters will just remove DC-offset at the input and between stages, the audio band (20Hz to 20KHz) is not touched.</span><span style="font-size: 10pt; color: #333333;"><br /></span></span></p>
+<h1><span style="color: #000000; font-family: verdana, geneva;"><a id="OTA" style="color: #000000;"><span style="font-size: 10pt;"></span></a><strong><span style="font-size: 12pt;"><span style="font-size: 14pt;">4. The</span></span><span style="font-size: 12pt;"><span style="font-size: 14pt;"> OTA </span></span><span style="font-size: 12pt;"><span style="font-size: 14pt;">Amplifier.</span></span></strong></span></h1>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;">The OTA Amplifier is the heart of this effect.</span></span><br /><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;">To understand its functionality, it is important to understand the concept of how an audio compressor works:</span></span></span></span></span></span><br /></span></span></p>
+<ul>
+<li><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;">The principle of an audio compressor is to modify the volume of the guitar signal, attenuating the peaks and reducing the span between the softest and loudest sounds. </span></span><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;">There is a defined point <em>threshold</em> above which the signal gets reduced (contrary to distortion effects where the signal gets clipped/squashed and distorted).</span></span></span></span></span></span><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;"><br /><a href="../_assets/494b15c2242b.png"><img src="../_assets/494b15c2242b.png" alt="compressed signal waveform electrosmash" width="521" height="201" style="display: block; margin-left: auto; margin-right: auto;" title="compressed signal waveform electrosmash" /></a><br /></span></span></span></li>
+</ul>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;">The aim of the OTA is to apply a variable gain to the original guitar signal, giving more amplification to weak signals and less to the hi-level waveforms. This amount of gain is set by the current bias pin 5 of the CA3080 and generated in the next stage (Envelope Detector)</span></span><a href="../_assets/af6580bdf1a5.png"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;"><img src="../_assets/af6580bdf1a5.png" alt="mxr dyna comp ota amplifier" width="523" height="311" style="display: block; margin-left: auto; margin-right: auto;" title="mxr dyna comp CA3080 ota amplifier" /></span></span></span></span></a></span></p>
+<p><span style="font-size: 8pt; font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;"></span></span><span style="color: #333333;"><span style="color: #333333;"></span></span></span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The CA3080 has a differential input, it amplifies the current differences between the inverting (-) and non-inverting (+) inputs.</span></li>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The 2K trimmer resistor adjusts the bias currents of the OTA differential inputs, trying to make a perfectly balanced OTA. Imbalances in the + and - input pins can make the OTA noisy as the signal change levels. In practice, this trimmer is adjusted to the middle position and in very very very rare occasions it is adjusted to any other value.</span></li>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The bias point for the inverting and non-inverting input is around 4V, the image below can help to understand how to calculate this bias point:</span></li>
+</ul>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/cea0ec95273a.png"><img src="../_assets/cea0ec95273a.png" alt="mxr dyna comp CA3080 ota amplifier bias points" width="873" height="230" style="display: block; margin-left: auto; margin-right: auto;" title="mxr dyna comp CA3080 ota amplifier bias points" /></a><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;"> </span></span></span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The input resistance of the CA3080 inputs (Zin) depends on the amplifier bias current, looking at the "input resistance VS amplifier bias current" it can be seen that the Zin has a middle value of around 1M.</span></li>
+</ul>
+<p style="padding-left: 60px;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">With the simplified middle circuit, the bias at the input of the CA3080 (Vx) can be calculated as:</span></p>
+<p style="padding-left: 60px;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Vx= R5 *[9V/(R5+(R4//Zin//Zin//R6))] = 470 * [9V/(1M//1M//1M//1M)] = 3.1V</span></p>
+<p style="padding-left: 60px;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"><span style="text-decoration: underline;">note:</span> The Rtrimmer is ignored because its value is much smaller than R4, R5, R6 or Zin.</span></p>
+<p style="padding-left: 60px;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Usually, the bias point sits around 3~4V (depending on the CA3080 current bias pin)</span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p><span style="color: #000000; font-family: verdana, geneva;"><strong><span style="font-size: 10pt;">CA3080 input Filter.</span></strong></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">There is a filter in the non-inverting input: R7(15K&Omega;), C3(1uF) and C4(10nF) that creates a low pass filter making the frequency response to be different in each input:</span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/240905edbb54.png"><img src="../_assets/240905edbb54.png" alt="mxr dyna comp ota amplifier input signals" width="704" height="243" style="display: block; margin-left: auto; margin-right: auto;" title="mxr dyna comp ota amplifier input signals" /></a></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The blue line (CA3080 positive input) level is slightly smaller (~1dB) than the negative input, it is due to a small signal bleed through the Rtrimmer and R5/R6. This OTA chip amplifies the voltage difference at its input pins:</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The freq response at pin 2 (-) is flat.</span></li>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The freq response signal at pin 3 (+) reduces the high-frequency harmonics because of the filter created by C3 (1uF), C4 (10nF) and R7 (150K).</span></li>
+</ul>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">This frequency response is very important because it tailors the tone character of the pedal. It is important to understand that the CA3080 will amplify the difference between the red and the blue line. At mid/low freqs (let's say 300Hz) the difference is small (1dB) but at high freqs (let's say 10KHz) the difference is bigger (4dB) so the output generated will be also bigger.</span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">In the image below you can see the input voltages VS the output voltage:</span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/42927f338fde.png"><img src="../_assets/42927f338fde.png" alt="mxr dyna comp ota amplifier input vs outputs" width="703" height="247" style="display: block; margin-left: auto; margin-right: auto;" title="mxr dyna comp ota amplifier input vs outputs" /></a></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">As mentioned before, the output of the CA3080 will be bigger at high frequencies because the voltage difference of its inputs is also bigger at high freqs. This will give a general high freq boost to the tone of the effect.</span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The C5 cap (1nF) cap placed at the output of the OTA will smooth out the excess of hash high harmonics, in orange and red the difference can be observed.</span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">This equalization is often attributed to a pre-emphasis / de-emphasis method to reduce noise (the CA3080 is a pretty noisy part) and also will give some signature to the sound of the pedal.</span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="color: #008000;"><strong><span style="text-decoration: underline;">MOD</span><span style="text-decoration: underline;">:</span> </strong></span><span style="font-size: 10pt; color: #333333;">Some users lower or remove the 0.001uF C5 cap to give the circuit full or emphasized top end response (values between 100pF to 470pF or completely removing it).</span></span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;"><strong><span class="h2" style="font-size: 12pt; color: #000000;"><a id="ca3080"></a></span></strong></span></span><strong><span style="font-size: 12pt; color: #000000;">4.1 The OTA Chip: CA3080.</span></strong><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;"><br /></span></span><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;">The OTA is implemented using the CA3080, this part was the first commercially available OTA by RCA in 1969, manufactured also by Intersil/Harris and discontinued nowadays. </span></span><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;"><br />Transconductance is a way to measure the gain of an amplifier relating the input voltage with the output current and usually designated with the letter <em>gm</em> and measured in Siemens. In a nutshell, the CA3080 is basically an amplifier whose differential input voltage produces an output current.</span></span></span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/4784c223f8a0.png"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;"><img src="../_assets/4784c223f8a0.png" alt="ca3080 internal circuit" style="display: block; margin-left: auto; margin-right: auto;" title="ca3080 internal circuit" /></span></span></a></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;"><br /></span></span><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;">We are not describing in detail how everything works inside the CA3080, there is a fantastic application note by Intersill that describes how it works, and some other works that can give you more details about the internal electronics of the IC.</span></span></span></p>
+<h1><span style="font-size: 14pt; font-family: verdana, geneva;">&nbsp;<a id="envelope"></a><strong><span style="color: #000000;">5. Envelope Detector Block.</span></strong></span></h1>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">This block provides the current feedback to the OTA amplifier in order to create the compression effect:</span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/43b01603ac78.png"><span style="font-size: 10pt;"><img src="../_assets/43b01603ac78.png" alt="mxr dyna comp envelope detector" width="554" height="485" style="display: block; margin-left: auto; margin-right: auto;" title="mxr dyna comp envelope detector" /></span></a></span></p>
+<ul>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The base of the Q2 transistor is biased to 2.5V through the R8 transistor.</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The C5 (1nF) capacitor removes the excess of treble, rounding the sound, there are more details in the previous <em>OTA Amplifier</em> block.</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">After the OTA amplifier, the guitar signal is <em>doubled</em> using a common collector transistor in a <em>phase splitter</em> topology, so at the points <em>OUT_1</em> and <em>OUT_2</em> the input signal is doubled with the same amplitude (gain=1) and opposite phase.</span></li>
+</ul>
+<p style="padding-left: 60px;"><span style="font-family: verdana, geneva;"><a href="../_assets/f7d7711ef58b.png"><span style="font-size: 10pt;"><img src="../_assets/f7d7711ef58b.png" alt="mxr dyna comp phase splitter" width="381" height="276" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></span></p>
+<ul>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">After the phase splitter, 2 networks in parallel will average out the guitar signal, both the positive/negative semi cycles creating a unipolar signal (because it goes from 0 to 9V). This averaged value will indicate how loud the guitar signal is:</span></li>
+</ul>
+<p style="padding-left: 90px;"><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="../_assets/f70abc2665ef.gif"><img src="../_assets/f70abc2665ef.gif" alt="mxr dyna comp ota amp working" width="716" height="254" style="display: block; margin-left: auto; margin-right: auto;" title="mxr dyna comp ota amp working" /></a><span style="color: #333333;"></span></span></p>
+<p style="padding-left: 30px;"><span style="background-color: #ffffff; font-size: 10pt; font-family: verdana, geneva;">Above image: the averaged signal in blue color (measured at the C8 cap) changes following the amplitude of the guitar signal in purple/green colors (measured after the phase-splitter at R11 and R12):</span></p>
+<ul style="list-style-type: square;">
+<li><span style="background-color: #ffffff; font-size: 10pt; font-family: verdana, geneva;">When the level of the guitar signal starts to rise (at around 1Vpp), the blue averaged signal decreases from 9V to 0V, giving less current feedback to the OTA.</span></li>
+</ul>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;"></span></p>
+<ul>
+<li><span style="background-color: #ffffff; font-size: 10pt; font-family: verdana, geneva;">The signal is high pass filtered in parallel with C6 &amp; R11 and C7 &amp; R12 and the diodes D1 and D2 will protect the base of the transistor from negative voltages (the diodes are just clamping diodes that ground the base of the transistor under damaging negative voltages).</span></li>
+</ul>
+<p style="padding-left: 60px;"><span style="font-family: verdana, geneva;"><span style="font-size: 10pt;"><span style="color: #008000;"><span style="text-decoration: underline;"><strong><span style="color: #339966;">MOD</span></strong></span><span style="text-decoration: underline;"><span style="text-decoration: underline;"><strong><span style="color: #339966;">:</span></strong></span></span></span><span style="color: #333333;"><span style="color: #339966;"> </span></span></span><span style="font-size: 10pt;"><span style="color: #333333;">Disconnecting C7: If you check the full schematic the output of the pedal is also connected to the emitter of Q2. The D2 diode could clip the output signal making the signal distorted, this is why some people decide to remove the bottom envelope detector (by disconnecting C7) and just use the top one. The side effect is the fact that using half-wave rectification leads to some envelope ripple on lower notes during the decay of held notes</span></span><span style="font-size: 10pt;"><span style="color: #333333;"><br /></span></span></span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;"></span></p>
+<ul>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The transistors Q4 and Q5 work as switches, when the voltage at their bases is over the Vbe (0.6V typ), the transistor will conduct allowing the current to flow through the R13 resistor (150K). The big C8 capacitor (10uF) will act as a low pass filter, making the voltage at the base of Q5 to change slowly and follow the general envelope of the guitar signal.</span></li>
+</ul>
+<p style="padding-left: 60px;"><span style="font-size: 10pt; font-family: verdana, geneva;"><span style="text-decoration: underline;"><strong><span style="color: #339966;">MOD:</span></strong></span><span style="color: #333333;"> The attack mod makes the effect more flexible to play different styles of music. It can be done replacing the 150K<span class="_Tgc">&Omega;</span> R13 resistor with a 10k+150k pair in series or using a toggle switch to select different values i.e 150K<span class="_Tgc">&Omega;</span> or 10K<span class="_Tgc">&Omega;</span>.</span></span></p>
+<h1><span style="font-size: 14pt; color: #000000; font-family: verdana, geneva;"><a id="output" style="color: #000000;"></a><strong>6. Output Stage.</strong></span></h1>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;"><span style="color: #333333;">The output signal is taken from the emitter of the phase splitter Q2 simplifying the circuit and using less parts.</span> </span><br /><span style="font-family: verdana, geneva;"><a href="../_assets/6a29028156c0.png"><img src="../_assets/6a29028156c0.png" alt="mxr dyna comp output stage" width="494" height="400" style="display: block; margin-left: auto; margin-right: auto;" title="mxr dyna comp output stage" /></a></span></p>
+<ul>
+<li><span style="font-size: 10pt; font-family: verdana, geneva;">The output series capacitor C9 (0.05uF) will remove all the DC voltage. It also forms a high past filter together with the resistor R14 and VR2.</span></li>
+<li><span style="font-size: 8pt; font-family: verdana, geneva;"><span style="font-size: 10pt;">The cut frequency of the output low-pass filter changes slightly with the level potentiometer (RV2). This fc calculation is not easy because the interaction between R14 and RV2 does not allow to use the simple formula fc=1/2piRC. However, in the real application this fc is:</span> <span style="font-size: 10pt;"></span></span>
+<ul>
+<li><span style="font-size: 10pt; font-family: verdana, geneva;">fc min with (RV2 max 50K<span class="_Tgc">&Omega;</span>) = 52Hz</span></li>
+<li><span style="font-size: 10pt; font-family: verdana, geneva;">fc max with (RV2 min 1) = 310Hz</span></li>
+</ul>
+</li>
+</ul>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/c5fe1f43ea74.png"><img src="../_assets/c5fe1f43ea74.png" alt="mxr dyna comp output stage frequency response" width="705" height="245" style="display: block; margin-left: auto; margin-right: auto;" title="mxr dyna comp output stage frequency response" /></a></span></p>
+<p style="padding-left: 30px;"><span style="font-family: verdana, geneva;"><strong><span style="color: #339966;"><span style="text-decoration: underline;">MOD</span>: </span></strong><span style="font-size: 10pt;">The output series 0.05uF capacitor C9 can be enlarged to a 1uF to give to the effect a full bottom end response.</span></span></p>
+<h1><span style="font-size: 14pt; color: #000000; font-family: verdana, geneva;"><a id="resources"></a>&nbsp;<strong>7. Resources.</strong></span></h1>
+<p style="padding-left: 30px;"><span style="font-size: 10pt; color: #333399; font-family: verdana, geneva;"><a href="../_assets/f4f0829c04b9.pdf" style="color: #333399;">CA3080 Datasheet.</a></span><br /><span style="font-size: 10pt; color: #333399; font-family: verdana, geneva;"><a href="../_assets/863fa7572b77.pdf" style="color: #333399;">CA3080 Application Note (AN6668).</a></span><br /><span style="font-size: 10pt; color: #333399; font-family: verdana, geneva;"><a href="http://www.till.com/blog/archives/2005/06/last_of_the_ota.html" style="color: #333399;">Don Tillman great article about the CA3080 background.</a> <a href="../_assets/24bcbf0799d0.pdf" style="color: #333399;">(Mirror)</a></span><br /><span style="font-size: 10pt; color: #333399; font-family: verdana, geneva;"><a href="../_assets/d20a8fda0322.pdf" style="color: #333399;">MXR Dynacomp mods by JC Maillet</a></span><br /><span style="font-size: 10pt; color: #333399; font-family: verdana, geneva;"><a href="http://www.pisotones.com/Articulos/DynaMod/DynaMod.htm" style="color: #333399;">Dyna/Ross Clones and Variations.</a> <a href="../_assets/707642f98446.pdf" style="color: #333399;">(Mirror)</a></span></p>
+<p style="text-align: left;"><span style="font-family: verdana, geneva;"></span></p>
+<p style="text-align: left;"><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"><span style="color: #333333; font-size: 13.3333px; text-align: right;">Thanks for reading, all feedback is appreciated.&nbsp;</span>My sincere appreciation to Eric (<a href="http://ontheroadeffects.com">ontheroadeffects</a>), C. Chiuchiolo and Dror S. for your support.</span></p>
+<p style="text-align: left;"><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"></span></p>
+<p style="text-align: left;"><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"></span></p>
+<p style="text-align: left;"><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"></span></p>
+<p style="text-align: left;"><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"></span></p>
+<p><span style="font-family: verdana, geneva;"><img src="../_assets/26a349a17744.jpg" alt="jr(at)ElectroSmash.com " style="float: left;" /></span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p style="text-align: center;"><span style="font-family: verdana, geneva;"><span style="color: #555555; font-size: 15px; text-align: center;"></span><span style="text-align: center; color: #808080; font-size: 8pt;"><span style="color: #0000ff;"><a href="../rights/index.html" style="background-color: transparent; color: #0063e1; font-weight: bold;"><span style="color: #0000ff;">Some Rights Reserved</span></a></span>, you are free to copy, share, remix and use all material.<br />Trademarks, brand names and logos are the property of their respective owners.</span></span></p>	</section>
+  
+  <!-- footer -->
+    <!-- //footer -->
+
+			<hr class="divider-vertical" /><ul class="pager pagenav">
+	<li class="previous">
+		<a class="hasTooltip" title="Klon Centaur Analysis" aria-label="Previous article: Klon Centaur Analysis" href="../klon-centaur-analysis/index.html" rel="prev">
+			<span class="icon-chevron-left" aria-hidden="true"></span> <span aria-hidden="true">Prev</span>		</a>
+	</li>
+	<li class="next">
+		<a class="hasTooltip" title="Boss DS-1 Distortion Analysis" aria-label="Next article: Boss DS-1 Distortion Analysis" href="../boss-ds1-analysis/index.html" rel="next">
+			<span aria-hidden="true">Next</span> <span class="icon-chevron-right" aria-hidden="true"></span>		</a>
+	</li>
+</ul>
+	
+	
+	</article>
+<!-- //Article -->
+
+
+</div><div><a href="http://www.artio.net" style="font-size: 8px; visibility: visible; display: inline;" title="Web development, Joomla, CMS, CRM, Online shop software, databases">Joomla SEF URLs by Artio</a></div>
+		</div>
+		<!-- //MAIN CONTENT -->
+
+		<!-- SIDEBAR RIGHT -->
+		<div class="t3-sidebar t3-sidebar-right col-xs-12 col-sm-4  col-md-3 ">
+			<div class="t3-module module " id="Mod28"><div class="module-inner"><h3 class="module-title "><span>New Updates</span></h3><div class="module-ct"><ul class="latestnews mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../arduino-audio-meter/index.html" itemprop="url">
+			<span itemprop="name">
+				Arduino Audio Meter			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../dallas-rangemaster/index.html" itemprop="url">
+			<span itemprop="name">
+				Dallas Rangemaster Treble Booster Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../time-manipulator/index.html" itemprop="url">
+			<span itemprop="name">
+				Time Manipulator - Arduino Delay/Echo/Reverb			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../marshall-guvnor-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Marshall The Guvnor Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../germanium-fuzz/index.html" itemprop="url">
+			<span itemprop="name">
+				You Can Build the Perfect Germanium Fuzz			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../mxr-distortion-plus-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				MXR Distortion + Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod29"><div class="module-inner"><h3 class="module-title "><span>Most Visited</span></h3><div class="module-ct"><ul class="mostread mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../tube-screamer-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Tube Screamer Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../fuzz-face/index.html" itemprop="url">
+			<span itemprop="name">
+				Fuzz Face Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../proco-rat/index.html" itemprop="url">
+			<span itemprop="name">
+				Pro Co Rat Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../boss-ds1-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Boss DS-1 Distortion Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../klon-centaur-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Klon Centaur Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../big-muff-pi-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Big Muff Pi Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod184"><div class="module-inner"><h3 class="module-title "><span>Follow us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><span style="font-size: 10pt; color: #333333;">You can also follow us on:</span></p>
+<p><a href="https://www.facebook.com/ElectroSmash"><img src="../_assets/df34a2b41b54.png" alt="facebook" /></a>&nbsp;&nbsp; <a href="https://plus.google.com/+Electrosmash/about"><img src="../_assets/3ffc52860091.png" alt="google" /></a>&nbsp;&nbsp; <a href="https://www.instagram.com/electro.smash/"><img src="../_assets/45b0b0fe2d4b.png" alt="instagram" /></a></p>
+<p><a href="https://www.pinterest.com/electrosmash/"><img src="../_assets/05310d9fcf2a.png" alt="pinterest" /></a>&nbsp;&nbsp; <a href="https://www.youtube.com/user/ElectroSmashTV"><img src="../_assets/d920883b3613.png" alt="youtube" /></a>&nbsp;&nbsp; <a href="https://twitter.com/electro_smash"><img src="../_assets/52581f7264eb.png" alt="twitter" /></a></p></div>
+</div></div></div>
+		</div>
+		<!-- //SIDEBAR RIGHT -->
+
+	</div>
+</div> 
+
+
+
+  
+
+
+  
+
+
+	
+<!-- BACK TOP TOP BUTTON -->
+<div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top hidden-xs hidden-sm affix-top">
+  <button class="btn btn-primary" title="Back to Top"><i class="fa fa-caret-up"></i></button>
+</div>
+<script type="text/javascript">
+(function($) {
+	// Back to top
+	$('#back-to-top').on('click', function(){
+		$("html, body").animate({scrollTop: 0}, 500);
+		return false;
+	});
+    $(window).on('load', function(){
+        // hide button to top if the document height not greater than window height*2;using window load for more accurate calculate.    
+        if ((parseInt($(window).height())*2)>(parseInt($(document).height()))) {
+            $('#back-to-top').hide();
+        } 
+    });
+})(jQuery);
+</script>
+<!-- BACK TO TOP BUTTON -->
+
+<!-- FOOTER -->
+<footer id="t3-footer" class="wrap t3-footer">
+
+			<!-- FOOTER SPOTLIGHT -->
+		<div class="container hidden-xs">
+				<!-- SPOTLIGHT -->
+	<div class="t3-spotlight t3-footer-sl  row">
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod185"><div class="module-inner"><h3 class="module-title "><span>About us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../about-us/index.html">&nbsp;&nbsp;<img src="../_assets/420f9f181bc0.jpg" alt="smash electro" /></a></p>
+<p><a href="../about-us/index.html"><span style="font-size: 10pt; color: #333333;">Smashing audio electronics since MMXIII</span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod183"><div class="module-inner"><h3 class="module-title "><span>Email Newsletter</span></h3><div class="module-ct"><div class="acymailing_module" id="acymailing_module_formAcymailing28721">
+	<div class="acymailing_fulldiv" id="acymailing_fulldiv_formAcymailing28721"  >
+		<form id="formAcymailing28721" action="/" onsubmit="return submitacymailingform('optin','formAcymailing28721')" method="post" name="formAcymailing28721"  >
+		<div class="acymailing_module_form" >
+						<table class="acymailing_form">
+				<tr>
+												<td class="acyfield_email acy_requiredField">
+								<input id="user_email_formAcymailing28721"  onfocus="if(this.value == 'example@email.com') this.value = '';" onblur="if(this.value=='') this.value='example@email.com';" class="inputbox" type="text" name="user[email]" style="width:90%" value="example@email.com" title="example@email.com"/>
+							</td> </tr><tr>
+					
+					<td  class="acysubbuttons">
+												<input class="button subbutton btn btn-primary" type="submit" value="Subscribe" name="Submit" onclick="try{ return submitacymailingform('optin','formAcymailing28721'); }catch(err){alert('The form could not be submitted '+err);return false;}"/>
+											</td>
+				</tr>
+			</table>
+						<input type="hidden" name="ajax" value="0" />
+			<input type="hidden" name="acy_source" value="module_183" />
+			<input type="hidden" name="ctrl" value="sub"/>
+			<input type="hidden" name="task" value="notask"/>
+			<input type="hidden" name="redirect" value="https%3A%2F%2Fwww.electrosmash.com%2Fmxr-dyna-comp-analysis"/>
+			<input type="hidden" name="redirectunsub" value="https%3A%2F%2Fwww.electrosmash.com%2Fmxr-dyna-comp-analysis"/>
+			<input type="hidden" name="option" value="com_acymailing"/>
+						<input type="hidden" name="hiddenlists" value="1"/>
+			<input type="hidden" name="acyformname" value="formAcymailing28721" />
+									</div>
+		</form>
+	</div>
+	</div>
+
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod186"><div class="module-inner"><h3 class="module-title "><span>Contact us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../contact-us/index.html"><span style="font-size: 10pt; color: #333333;">e-mail us at <span id="cloak31baa9b9174042ee09419a67e27e9a27">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
+				document.getElementById('cloak31baa9b9174042ee09419a67e27e9a27').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy31baa9b9174042ee09419a67e27e9a27 = '&#105;nf&#111;' + '&#64;';
+				addy31baa9b9174042ee09419a67e27e9a27 = addy31baa9b9174042ee09419a67e27e9a27 + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';
+				var addy_text31baa9b9174042ee09419a67e27e9a27 = '&#105;nf&#111;' + '&#64;' + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';document.getElementById('cloak31baa9b9174042ee09419a67e27e9a27').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy31baa9b9174042ee09419a67e27e9a27 + '\'>'+addy_text31baa9b9174042ee09419a67e27e9a27+'<\/a>';
+		</script></span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod188"><div class="module-inner"><h3 class="module-title "><span>Rights</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p style="text-align: left;">&nbsp;&nbsp;<a href="https://creativecommons.org/licenses/by-nc/3.0/"><img src="../_assets/b0e99d439c44.png" alt="88x31" /></a></p>
+<p style="text-align: left;"><img src="../_assets/fe2636cdea5c.png" alt="open source logo" width="180" height="38" /></p>
+<p style="text-align: left;"><img src="../_assets/8281c4ec3a3b.png" alt="open hardware logo" width="180" height="38" /></p>
+<p style="text-align: left;">&nbsp;</p></div>
+</div></div></div>
+							</div>
+			</div>
+<!-- SPOTLIGHT -->
+		</div>
+		<!-- //FOOTER SPOTLIGHT -->
+	
+	<section class="t3-copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 copyright ">
+					
+          <small>
+            <a href="http://twitter.github.io/bootstrap/" title="Bootstrap by Twitter" target="_blank">Bootstrap</a> is a front-end framework of Twitter, Inc. Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" title="MIT License" target="_blank">MIT License.</a>
+          </small>
+          <small>
+            <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> font licensed under <a href="http://scripts.sil.org/OFL">SIL OFL 1.1</a>.
+          </small>
+				</div>
+							</div>
+		</div>
+	</section>
+
+</footer>
+<!-- //FOOTER -->
+
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29544239-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

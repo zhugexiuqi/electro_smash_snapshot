@@ -1,0 +1,873 @@
+
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr"
+	  class='com_content view-article itemid-435 home j31 mm-hover '>
+
+<head>
+	<base href="../index/index.html" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="boss, ds1, ds-1, distortion, circuit, analysis, schematic, calculation, TA7136AP, BA728N, MA223AL, NJM29404L, ds1a, toggle, bypass, true, clipping, diodes, d1n4148, 1n4004 opamp, filter, signature, myth, original, mojo, 2sc2240, hard clipping, transistors" />
+	<meta name="rights" content="Creative Commons: Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0) " />
+	<meta name="author" content="JR" />
+	<meta name="description" content="The Boss DS-1 is a distortion guitar pedal released in 1978 by Boss. It was the first distortion pedal made by Boss with a distinctive hard-clipping sound perfect for high gain rock and metal still keeping the character of the original guitar." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>ElectroSmash - Boss DS1 Distortion Analysis</title>
+	<link href="index.html" rel="canonical" />
+	<link href="../_assets/d87243966412.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../_assets/26f5cf410b61.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/15ff046a2fe3.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/dd09f39c1b89.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"6fb9945064d9987b86ecd447542dee6d","system.paths":{"root":"","base":""}}</script>
+	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+	<script src="../_assets/323c609448d2.js" type="text/javascript"></script>
+	<script src="../_assets/b8bcbb2f005c.js" type="text/javascript" async="async"></script>
+	<script type="text/javascript">
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });	if(typeof acymailingModule == 'undefined'){
+				var acymailingModule = [];
+			}
+			
+			acymailingModule['emailRegex'] = /^[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+)*\@([a-z0-9-]+\.)+[a-z0-9]{2,10}$/i;
+
+			acymailingModule['NAMECAPTION'] = 'Name';
+			acymailingModule['NAME_MISSING'] = 'Please enter your name';
+			acymailingModule['EMAILCAPTION'] = 'example@email.com';
+			acymailingModule['VALID_EMAIL'] = 'Please enter a valid e-mail address';
+			acymailingModule['ACCEPT_TERMS'] = 'Please check the Terms and Conditions';
+			acymailingModule['CAPTCHA_MISSING'] = 'The captcha is invalid, please try again';
+			acymailingModule['NO_LIST_SELECTED'] = 'Please select the lists you want to subscribe to';
+		
+acymailingModule['excludeValuesformAcymailing98131'] = [];
+acymailingModule['excludeValuesformAcymailing98131']['name'] = 'Name';
+acymailingModule['excludeValuesformAcymailing98131']['email'] = 'example@email.com';
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });
+	</script>
+
+	
+<!-- META FOR IOS & HANDHELD -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<style type="text/stylesheet">
+		@-webkit-viewport   { width: device-width; }
+		@-moz-viewport      { width: device-width; }
+		@-ms-viewport       { width: device-width; }
+		@-o-viewport        { width: device-width; }
+		@viewport           { width: device-width; }
+	</style>
+	<script type="text/javascript">
+		//<![CDATA[
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement("style");
+			msViewportStyle.appendChild(
+				document.createTextNode("@-ms-viewport{width:auto!important}")
+			);
+			document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+		}
+		//]]>
+	</script>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="apple-mobile-web-app-capable" content="YES"/>
+<!-- //META FOR IOS & HANDHELD -->
+
+
+
+
+<!-- Le HTML5 shim and media query for IE8 support -->
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script type="text/javascript" src="../_assets/010a3c86157d.js"></script>
+<![endif]-->
+
+<!-- You can add Google Analytics here or use T3 Injection feature -->
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="../_assets/76d3e1341c39.css" type="text/css" />
+<![endif]-->
+	</head>
+
+<body>
+
+<div class="t3-wrapper corporate"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
+
+	
+<!-- MAIN NAVIGATION -->
+<header id="t3-mainnav" class="wrap navbar navbar-default navbar-fixed-top t3-mainnav">
+
+	<!-- OFF-CANVAS -->
+		<!-- //OFF-CANVAS -->
+
+	<div class="container">
+
+		<!-- NAVBAR HEADER -->
+		<div class="navbar-header">
+
+			<!-- LOGO -->
+			<div class="logo logo-image">
+				<div class="logo-image">
+					<a href="/" title="ElectroSmash">
+													<img class="logo-img" src="../_assets/115794d6d5b8.png" alt="ElectroSmash" />
+						
+												
+						<span>ElectroSmash</span>
+					</a>
+				</div>
+			</div>
+			<!-- //LOGO -->
+
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-collapse">
+					<i class="fa fa-bars"></i>
+				</button>
+			
+	    
+		</div>
+		<!-- //NAVBAR HEADER -->
+
+		<!-- NAVBAR MAIN -->
+				<nav class="t3-navbar-collapse navbar-collapse collapse"></nav>
+		
+		<nav class="t3-navbar navbar-collapse collapse">
+			<div  class="t3-megamenu"  data-responsive="true">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav navbar-nav level0">
+<li itemprop='name' class="current active" data-id="435" data-level="1">
+<a itemprop='url' class=""  href="/"   data-target="#">Home </a>
+
+</li>
+<li itemprop='name' class="dropdown mega" data-id="510" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Chips<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="492" data-level="2">
+<a itemprop='url' class=""  href="../jrc4558-analysis/index.html"   data-target="#">JRC4558  </a>
+
+</li>
+<li itemprop='name'  data-id="519" data-level="2">
+<a itemprop='url' class=""  href="../mn3007-bucket-brigade-devices/index.html"   data-target="#">MN3007 BBDs </a>
+
+</li>
+<li itemprop='name'  data-id="468" data-level="2">
+<a itemprop='url' class=""  href="../lm386-analysis/index.html"   data-target="#">LM386 </a>
+
+</li>
+<li itemprop='name'  data-id="1643" data-level="2">
+<a itemprop='url' class=""  href="../pt2399-analysis/index.html"   data-target="#">PT2399 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="444" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Amps<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="993" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="489" data-level="2">
+<a itemprop='url' class=""  href="../little-gem-analysis/index.html"   data-target="#">Little Gem Amp </a>
+
+</li>
+<li itemprop='name'  data-id="526" data-level="2">
+<a itemprop='url' class=""  href="../marshall-mg10/index.html"   data-target="#">Marshall MG10 </a>
+
+</li>
+<li itemprop='name'  data-id="491" data-level="2">
+<a itemprop='url' class=""  href="../noisy-cricket-analysis/index.html"   data-target="#">Noisy Cricket  </a>
+
+</li>
+<li itemprop='name'  data-id="490" data-level="2">
+<a itemprop='url' class=""  href="../ruby-amp-analysis/index.html"   data-target="#">Ruby Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="488" data-level="2">
+<a itemprop='url' class=""  href="../smokey-amp-analysis/index.html"   data-target="#">Smokey Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="746" data-level="2">
+<a itemprop='url' class=""  href="http://www.electrosmash.com/schematics#amps"   data-target="#">Amps Schematics.</a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="511" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Pedals<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  style="width: 600px"  data-width="600"><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="515" data-level="2">
+<a itemprop='url' class=""  href="../back-talk-analysis/index.html"   data-target="#">Back Talk Reverse Delay </a>
+
+</li>
+<li itemprop='name'  data-id="518" data-level="2">
+<a itemprop='url' class=""  href="../big-muff-pi-analysis/index.html"   data-target="#">Big Muff Pi  </a>
+
+</li>
+<li itemprop='name'  data-id="524" data-level="2">
+<a itemprop='url' class=""  href="../boss-ce-2-analysis/index.html"   data-target="#">Boss CE-2 Chorus </a>
+
+</li>
+<li itemprop='name'  data-id="1088" data-level="2">
+<a itemprop='url' class=""  href="index.html"   data-target="#">Boss DS-1 Distortion </a>
+
+</li>
+<li itemprop='name'  data-id="1713" data-level="2">
+<a itemprop='url' class=""  href="../dallas-rangemaster/index.html"   data-target="#">Dallas Rangemaster </a>
+
+</li>
+<li itemprop='name'  data-id="905" data-level="2">
+<a itemprop='url' class=""  href="../crybaby-gcb-95/index.html"   data-target="#">Dunlop CryBaby GCB-95  </a>
+
+</li>
+<li itemprop='name'  data-id="842" data-level="2">
+<a itemprop='url' class=""  href="../fuzz-face/index.html"   data-target="#">Fuzz Face </a>
+
+</li>
+<li itemprop='name'  data-id="1664" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="512" data-level="2">
+<a itemprop='url' class=""  href="../tube-screamer-analysis/index.html"   data-target="#">Ibanez Tube Screamer </a>
+
+</li>
+<li itemprop='name'  data-id="1433" data-level="2">
+<a itemprop='url' class=""  href="../klon-centaur-analysis/index.html"   data-target="#">Klon Centaur </a>
+
+</li>
+</ul>
+</div></div>
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="548" data-level="2">
+<a itemprop='url' class=""  href="../mxr-microamp/index.html"   data-target="#">MXR MicroAmp </a>
+
+</li>
+<li itemprop='name'  data-id="1667" data-level="2">
+<a itemprop='url' class=""  href="../marshall-guvnor-analysis/index.html"   data-target="#">Marshall Guvnor </a>
+
+</li>
+<li itemprop='name'  data-id="1632" data-level="2">
+<a itemprop='url' class=""  href="../mxr-distortion-plus-analysis/index.html"   data-target="#">MXR Distortion + </a>
+
+</li>
+<li itemprop='name'  data-id="1244" data-level="2">
+<a itemprop='url' class=""  href="../mxr-dyna-comp-analysis/index.html"   data-target="#">MXR Dyna Comp </a>
+
+</li>
+<li itemprop='name'  data-id="573" data-level="2">
+<a itemprop='url' class=""  href="../mxr-phase90/index.html"   data-target="#">MXR Phase 90 </a>
+
+</li>
+<li itemprop='name'  data-id="553" data-level="2">
+<a itemprop='url' class=""  href="../proco-rat/index.html"   data-target="#">ProCo Rat </a>
+
+</li>
+<li itemprop='name'  data-id="520" data-level="2">
+<a itemprop='url' class=""  href="../sitar-swami-analysis/index.html"   data-target="#">Sitar Swami </a>
+
+</li>
+<li itemprop='name'  data-id="525" data-level="2">
+<a itemprop='url' class=""  href="../vox-v847-analysis/index.html"   data-target="#">Vox V847 Wah Wah </a>
+
+</li>
+<li itemprop='name'  data-id="547" data-level="2">
+<a itemprop='url' class=""  href="../emg81/index.html"   data-target="#">EMG81 Pickup </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="796" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Projects<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="1108" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-uno/index.html"   data-target="#">pedalSHIELD UNO </a>
+
+</li>
+<li itemprop='name'  data-id="797" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield/index.html"   data-target="#">pedalSHIELD DUE </a>
+
+</li>
+<li itemprop='name'  data-id="1437" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-mega/index.html"   data-target="#">pedalSHIELD MEGA </a>
+
+</li>
+<li itemprop='name'  data-id="1312" data-level="2">
+<a itemprop='url' class=""  href="../pedal-pi/index.html"   data-target="#">Pedal-Pi </a>
+
+</li>
+<li itemprop='name'  data-id="1662" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="1663" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="1668" data-level="2">
+<a itemprop='url' class=""  href="../time-manipulator/index.html"   data-target="#">Time Manipulator </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name'  data-id="745" data-level="1">
+<a itemprop='url' class=""  href="../forum-electrosmash/index.html"   data-target="#">Forum </a>
+
+</li>
+<li itemprop='name'  data-id="816" data-level="1">
+<a itemprop='url' class=""  href="../shop/index.html"   data-target="#">Shop</a>
+
+</li>
+</ul>
+</div>
+
+		</nav>
+    <!-- //NAVBAR MAIN -->
+
+	</div>
+</header>
+<!-- //MAIN NAVIGATION -->
+
+
+
+
+
+
+  
+
+
+  
+
+
+	
+<div id="t3-mainbody" class="container t3-mainbody">
+	<div class="row">
+
+		<!-- MAIN CONTENT -->
+		<div id="t3-content" class="t3-content col-xs-12 col-sm-8  col-md-9">
+						<div class="item-page clearfix">
+
+
+<!-- Article -->
+<article>
+	<meta itemprop="inLanguage" content="en-GB" />
+	<meta itemprop="url" content="index.html" />
+
+      
+<header class="article-header clearfix">
+	<h1 class="article-title" itemprop="headline">
+					<a href="index.html" itemprop="url" title="Boss DS-1 Distortion Analysis">
+				Boss DS-1 Distortion Analysis</a>
+			</h1>
+
+			</header>
+    
+    
+  <!-- Aside -->
+    <!-- //Aside -->
+
+  
+  
+  
+	
+  
+	
+	<section class="article-content clearfix">
+		<p><span style="color: #333333; font-size: 10pt;"></span><span style="color: #333333; font-size: 10pt;">The Boss DS-1 is a distortion guitar pedal released in 1978 by Boss. It was the first distortion pedal made by Boss with a distinctive hard-clipping sound perfect for high gain rock and metal still keeping the character of the original guitar. The Boss DS-1 together with the TubeScreamer and the ProCo Rat cover almost all the spectrum of tastes for vintage classic rock/hard rock guitar distortion.</span></p>
+<p><span style="color: #333333; font-size: 10pt;"><a href="../_assets/7037f913557e.jpg"><img src="../_assets/7037f913557e.jpg" alt="boss ds1" width="211" height="384" style="display: block; margin-left: auto; margin-right: auto;" title="boss ds1" /></a>Referring to the electronic design, the current Boss DS-1 has a simple circuit: some transistor stages with an op-amp core and hard clipping diodes. This analysis is focused in the latest pedal schematic revision which is easy to find and prone to modifications.</span></p>
+ 
+<h1><strong><span style="font-size: 10pt;"></span><span style="color: #333333; font-size: 10pt;"><span style="font-size: 14pt; color: #000000;">Table of Contents:</span></span></strong></h1>
+<p style="padding-left: 30px;"><span style="font-size: 10pt;"><a href="/boss-ds1-analysis#circuit_versions">1- Boss DS-1 Circuit Versions.</a></span><br /><span style="font-size: 10pt;"><a href="/boss-ds1-analysis#schematic">2. Schematic.</a></span><br /><span style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ds1-analysis#jfet">2.1 JFET Bypass Switching / True Bypass.</a></span><br /><span style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ds1-analysis#true">2.2 Part List / Bill of Materials.</a></span><br /><span style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ds1-analysis#layout">2.3 Circuit Layout. </a></span><br /><span style="font-size: 10pt;"><a href="/boss-ds1-analysis#power">3. Power Supply Stage.</a></span><br /><span style="font-size: 10pt;"><a href="/boss-ds1-analysis#input">4. Input Stage.</a></span><br /><span style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ds1-analysis#impedance">4.1 Input Impedance Calculation.</a></span><br /><span style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ds1-analysis#input_frequency">4.2 Input Stage Frequency Response.</a></span><br /><span style="font-size: 10pt;"><a href="/boss-ds1-analysis#transistor-booster">5. Transistor Booster Stage.</a></span><br /><span style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ds1-analysis#transistor-frequency">5.1 Transistor Booster Frequency Response.</a></span><br /><span style="font-size: 10pt;"><a href="/boss-ds1-analysis#op-amp">6. Op-Amp Gain Stage.</a></span><br /><span style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ds1-analysis#op-amp-voltage">6.1 Voltage Gain Calculation.</a></span><br /><span style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ds1-analysis#op-amp-frequency">6.2 Op-Amp Gain Frequency Response.</a></span><br /><span style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ds1-analysis#c10-capacitor">6.3 The effect of the C<sub>10</sub> Capacitor.</a></span><br /><span style="font-size: 10pt;"><a href="/boss-ds1-analysis#tone-level">7. Tone / Level Stage.</a></span><br /><span style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ds1-analysis#tone-level-frequency">7.1 Tone/Level Frequency Response.</a></span><br /><span style="font-size: 10pt;"><a href="/boss-ds1-analysis#output-buffer">8. Output Buffer.</a></span><br /><span style="font-size: 10pt;"><a href="/boss-ds1-analysis#signature">9. Boss DS-1 Distortion Sound Signature.</a></span><br /><span style="font-size: 10pt;"><a href="/boss-ds1-analysis#resources">10. Resources.</a></span></p>
+<p>&nbsp;</p>
+<h1><a id="circuit_versions"></a><strong><span style="font-size: 14pt; color: #000000;">1- Boss DS-1 Circuit Versions</span></strong></h1>
+<p><span style="font-size: 10pt; color: #333333;">During its life, the Boss DS-1 Distortion has had two schematic revisions due to components availability:</span></p>
+<p><span style="font-size: 10pt; color: #333333;"><span style="color: #000000;"><strong>a. 1978 Original First Release</strong></span> using the Toshiba TA7136AP pre-amplifier (it is not an op-amp) with the circuit labeled as &ldquo;DS-1&rdquo;. Made in Japan,&nbsp; with a distinguishable silver screw. </span><br /><span style="font-size: 10pt; color: #333333;">In terms of sound, it gives the warmest distortion, offering glints of grittiness and smoothness at the same time. This first model had some inconveniences like momentary LED and the need for an external power supply. As usual, this model is the most expensive/difficult to find and it is claimed to produce the best sound.</span></p>
+<p><span style="font-size: 10pt; color: #333333;"><span style="color: #000000;"><strong>b. 1994 Second Release</strong></span> using the Rohm BA728N op-amp (Made in Japan). The previous TA7136AP integrated circuit was at the end of its stock life, so the whole circuit design was modified (re-labeled as &ldquo;DS1-A&rdquo;) to accommodate a standard easy to find and replace dual op-amp.</span><br /><span style="font-size: 10pt; color: #333333;">This model is not very loud with a transparent drive. It is versatile; almost clean at lower gain setting with a serious edge at high gain (slight hiss is noticeable at higher gain settings). From now on, all the models are commonly called post '94.<br /></span></p>
+<p><span style="font-size: 10pt; color: #333333;"><span style="color: #000000;"><strong>c. 2000 Third Release</strong></span> using the Mitsubishi M5223AL op-amp (Made in Taiwan) and also using the previous &ldquo;DS1-A&rdquo; circuit diagram that will prevail until today. It is the loudest among all the models, at higher gain settings the distortion is fizzy (poorly made fuzz) with some noise. There are some popular mods to improve its tone making it thicker/stronger and more versatile (Tri-Gain / JHS / Keeley / Analogman)</span></p>
+<p><span style="font-size: 10pt; color: #333333;"><strong><span style="color: #000000;">d. 2006 Forth Release</span></strong> when the New Japan Radio NJM2904L op-amp was introduced with the usual DS1-A circuit. Cheap, easy to find and perfect for mods.</span></p>
+<p>&nbsp;<br /><span style="color: #333333; font-size: 10pt;"></span></p>
+<h1><span style="color: #333333; font-size: 10pt;"><span style="color: #000000; font-size: 14pt;"><a id="schematic" name="schematic"></a><strong>2. Boss DS1 Distortion Schematic.</strong></span></span></h1>
+<p><span style="font-size: 10pt; color: #333333;">The <a href="/images/tech/ds1/boss-ds1-distortion-schematic.jpg">Boss DS1 circuit</a> can be broken down </span><span style="font-size: 10pt; color: #333333;">into 5 big blocks: Input Stage, Transistor Booster, Op-Amp Gain Stage, Tone Control, Output Buffer and Power Supply.</span></p>
+<p><a href="../_assets/45b2ea234f58.jpg"><img src="../_assets/9f2224f4de2b.jpg" alt="boss ds1 distortion schematic parts small" width="704" height="205" style="display: block; margin-left: auto; margin-right: auto;" title="boss ds1 distortion schematic parts" /></a></p>
+<p><span style="color: #333333;"><span style="font-size: 10pt;">The design idea is simple: The Input and Output Buffers will isolate the circuit, keeping the signal path clean and tone-sucking free. The </span><span style="font-size: 10pt;">transistor booster will pre-amplify the signal and all the distortion is produced using a variable op-amp gain circuit with diodes shorting the output to ground, producing hard clipping. This distortion stage is followed by a passive tone filter and level control. The Power Supply provides energy and bias points to all the circuit.</span></span></p>
+<p><span style="font-size: 10pt; color: #333333;">The circuit presented here is adapted to be used with a 3PDT switch, simplifying the circuit for DIY.</span></p>
+<h1><span style="font-size: 12pt; color: #000000;"><a id="true_bypass" name="jfet"></a><strong>2.1 Boss DS-1 JFET Bypass Switching / True Bypass.</strong></span></h1>
+<p><span style="color: #333333; font-size: 10pt;">The original Boss DS-1 circuit&nbsp;has a JFET Bypass Switch Circuit to enable/disable the effect using a simple cheap momentary push button. The idea is simple: it can activate the effect routing the signal through the circuit or deactivate it, bypassing the pedal core BUT keeping the input and output buffers always in the signal path.</span></p>
+<p><span style="font-size: 10pt; color: #333333;">If you want to read more about the switching circuit operation, check the TubeScreamer pedal explanation, this part of the circuit is exactly the same: <a href="/tube-screamer-analysis#jfet">TubeScreamer JFET Switch Operation.</a></span></p>
+<p><span style="color: #333333; font-size: 10pt;">On the other hand, true bypass switches (3PDT) are considered to give a clean and transparent path for the bypassed signal. A 3PDT switch</span><span style="color: #333333; font-size: 10pt;"> (<em>Triple Pole Double Throw)</em> will also allow you to light a power-on LED at the same time, which is pretty convenient. <span style="color: #333333; font-size: 10pt;">The 3PDT drives the guitar signal either through the effect circuitry, or straight input-to-output, the guitar signal does not even touch the input of the effect.</span></span><a href="../_assets/4438809380bd.jpg"><img src="../_assets/4438809380bd.jpg" alt="3PDT Switch" width="202" height="161" style="display: block; margin-left: auto; margin-right: auto;" /></a></p>
+<p><span style="color: #333333; font-size: 10pt;">For mass production true bypass switches are difficult to mount and not cheap, some big pedal circuit manufacturers (like Boss) prefer to use complex but cheap JFET bypass circuits that also can carry other benefits like keeping always the input/output buffer in the signal chain (if desired).</span></p>
+<h2><span style="font-size: 10pt; color: #000000;"><span style="font-size: 10pt; color: #000000;"><a id="bom" name="true"></a> <strong><span style="font-size: 12pt;">2.2 Boss DS1 </span></strong></span><span style="font-size: 12pt;"><strong>Part List / Bill of Materials (Tue Bypass).</strong><br /></span></span></h2>
+<p style="padding-left: 30px;"><span style="font-size: 10pt; color: #333333;">C1,C3&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 47n</span><br /><span style="font-size: 10pt; color: #333333;">C2,C8,C9&nbsp;&nbsp; 0.47u</span><br /><span style="font-size: 10pt; color: #333333;">C4&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 250p</span><br /><span style="font-size: 10pt; color: #333333;">C5&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 68n</span><br /><span style="font-size: 10pt; color: #333333;">C7&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100p</span><br /><span style="font-size: 10pt; color: #333333;">C10&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.01u</span><br /><span style="font-size: 10pt; color: #333333;">C11&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.022u</span><br /><span style="font-size: 10pt; color: #333333;">C12&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.1u</span><br /><span style="font-size: 10pt; color: #333333;">C13&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.047u</span><br /><span style="font-size: 10pt; color: #333333;">C14&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1u</span><br /><span style="font-size: 10pt; color: #333333;">C15&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 47uF</span><br /><span style="font-size: 10pt; color: #333333;">C23&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100uF</span><br /><span style="font-size: 10pt; color: #333333;">D1&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1N4004</span><br /><span style="font-size: 10pt; color: #333333;">D4,D5,D8&nbsp;&nbsp;&nbsp; D1N4148</span><br /><span style="font-size: 10pt; color: #333333;">Q1,Q2,Q3&nbsp;&nbsp; 2SC2240</span><br /><span style="font-size: 10pt; color: #333333;">R1,R22&nbsp;&nbsp; &nbsp;&nbsp; 1K</span><br /><span style="font-size: 10pt; color: #333333;">R2,R7&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 470K</span><br /><span style="font-size: 10pt; color: #333333;">R3,R8,R18,R21,R24,R25&nbsp;&nbsp; &nbsp;10K</span><br /><span style="font-size: 10pt; color: #333333;">R4,R5,R10,R11,R23&nbsp; &nbsp; 100K</span><br /><span style="font-size: 10pt; color: #333333;">R9&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 22</span><br /><span style="font-size: 10pt; color: #333333;">R13&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.7K</span><br /><span style="font-size: 10pt; color: #333333;">R14,R15&nbsp;&nbsp; &nbsp;2.2K</span><br /><span style="font-size: 10pt; color: #333333;">R16,R17&nbsp;&nbsp; &nbsp;6.8K</span><br /><span style="font-size: 10pt; color: #333333;">R39&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 47K</span><br /><span style="font-size: 10pt; color: #333333;">R19,R20&nbsp;&nbsp; &nbsp;1M</span><br /><span style="font-size: 10pt; color: #333333;">U1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NJM3404A ( or equivalent M5223AL, BA728N)</span><br /><span style="font-size: 10pt; color: #333333;">VR1,VR2&nbsp;&nbsp; &nbsp;100KB</span><br /><span style="font-size: 10pt; color: #333333;">VR3&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20KB</span><br /><span style="font-size: 10pt; color: #333333;">J1,&nbsp;</span><span style="font-size: 10pt;"><span style="color: #333333;">J2&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 6.35mm Jacks.</span></span></p>
+<h2><strong><span style="color: #000000;"><a id="layout"></a><span style="font-size: 12pt;">2.3 <span style="color: #000000;"><span style="color: #000000;">Boss DS1 Circuit Layout</span>&nbsp;</span></span></span></strong></h2>
+<p><span style="font-size: 10pt; color: #333333;">The circuit uses a single layer PCB with standard through-hole components which makes it easy and cheap to produce. All the potentiometers, jacks and battery are wired and hand soldered which is quite labor intensive.<br /></span></p>
+<p>&nbsp;<a href="../_assets/d825097e86f0.jpg"><img src="../_assets/b6c276e51aaf.jpg" alt="boss ds1 distortion pcb small" style="display: block; margin-left: auto; margin-right: auto;" title="boss ds1 distortion pcb " /></a></p>
+<p><span style="font-size: 10pt;"><span style="color: #000000;"><strong><span style="text-decoration: underline;">note:</span></strong></span> Original Images from <a href="http://gitaradiy.pl/artykul/id/5.html" style="color: #333333;">gitaradiy.pl</a> and <a href="http://www.diystompboxes.com/smfforum/index.php?topic=64731.0" style="color: #333333;">miqbal&nbsp;on diystompboxes.com</a></span></p>
+<p>&nbsp;</p>
+<p><strong><span style="font-family: helvetica; font-size: 12pt;">Boss DS-1 Operational Amplifier:</span></strong></p>
+<p><span style="font-family: helvetica; font-size: 10pt;">Although the circuit has been the same through the ages, the unusually SIL (Single in Line) <span style="font-family: helvetica; font-size: 13.3333px;">packaged&nbsp;</span>op-amp has changed several times:</span></p>
+<ul>
+<li><span style="font-family: helvetica; font-size: 10pt;">At the beginning (1978), the DS-1 was using the Toshiba TA7136AP opamp. This remained unchanged for about 16 years.</span></li>
+<li><span style="font-family: helvetica; font-size: 10pt;">In 1994 the op-amp was replaced by the Rohm BA728N. </span></li>
+<li><span style="font-family: helvetica; font-size: 10pt;">6 year later, in 2000 the opamp was again changed by the Mitsubishi M5223AL </span></li>
+<li><span style="font-family: helvetica; font-size: 10pt;">The last change was in 2006 when the New Japan Radio NJM2904L opamp was introduced.</span></li>
+</ul>
+<p><a href="../_assets/76eeef3d5c4d.jpg"><img src="../_assets/76eeef3d5c4d.jpg" alt="TA7136AP operational amplifier DS1" width="313" height="152" style="display: block; margin-left: auto; margin-right: auto;" title="TA7136AP operational amplifier DS1" /></a></p>
+<p>All these op-amp changes where due to manufacturing stock/part obsolescence.</p>
+<h1><span style="font-size: 12pt; color: #000000;"><a id="power" name="power"></a><strong><span style="font-size: 14pt;">3. Power Supply Stage.</span></strong></span></h1>
+<p><span style="font-size: 10pt; color: #333333;">The Power Supply Stage is a simple resistor divider that provides the power (+9V) and bias voltage (+4.5V) to the pedal:</span></p>
+<p><a href="../_assets/837f798e1683.png"><img src="../_assets/837f798e1683.png" alt="boss ds1 distortion power supply" width="358" height="261" style="display: block; margin-left: auto; margin-right: auto;" title="boss ds1 distortion power supply" /></a></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">The resistor divider (R24, R25) generates +4.5 volts to be used as a virtual ground (bias voltage).</span></li>
+<li><span style="font-size: 10pt; color: #333333;">The capacitors C23 (100uF) and C15 (47uF) are bulk capacitance that stabilizes the power supply lines.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">The diode D1 is protection against reverse polarity connections, in case the player connects a wrong power adapter.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">A stereo guitar input jack could be used as an on-off switch, connecting the battery (-) pin to ground when the guitar jack is plugged.</span></li>
+</ul>
+<p>&nbsp;</p>
+<h2><span style="font-size: 12pt; color: #000000;"><a id="input" name="input"></a><strong><span style="font-size: 14pt;">4. Input Stage.</span></strong></span></h2>
+<p><span style="font-size: 10pt; color: #333333;">The input buffer is a plain Emitter Follower (aka Common Collector) with unity gain and high input impedance that preserves signal quality eliminating tone sucking (high-frequency loss):</span></p>
+<p><a href="../_assets/789747a7680d.png"><img src="../_assets/789747a7680d.png" alt="boss ds1 distortion input buffer" width="387" height="353" style="display: block; margin-left: auto; margin-right: auto;" title="boss ds1 distortion input buffer" /></a></p>
+<p><span style="font-size: 10pt; color: #333333;"></span><span style="font-size: 10pt; color: #333333;">The Q1 part is a 2SC2240 Toshiba transistor, cheap low-noise/high-gain (&beta;=200-700), nothing special here, it just does the job.<br /></span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">The capacitor C1 isolates the guitar from any pedal dangerous DC level and filters the inaudible low-frequency signals with a cut frequency of 7.2Hz (fc=1/2&pi;C<sub>1</sub>Z<sub>in</sub>) </span></li>
+<li><span style="font-size: 10pt; color: #333333;">The R1 input series will protect the base of the transistor from surge currents (electrostatic discharges from the guitar jack tip). </span></li>
+<li><span style="font-size: 10pt; color: #333333;">R2 is just a moderate high-value resistor that biases the base of the transistor to 4.5V.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">R3 is the emitter resistance, 10K is a pretty standard value for an Emitter Follower buffer.</span><br /><span style="color: #ff0000;"></span></li>
+</ul>
+<p><span style="color: #ff0000;"></span></p>
+<h2><span style="font-size: 10pt; color: #000000;"><a id="impedance" name="impedance"></a><span style="font-size: 12pt;">4.1 Input Impedance Calculation.</span></span></h2>
+<p><span style="font-size: 10pt; color: #333333;">In an Emitter Follower the input impedance can be calculated as &nbsp;<span style="font-size: 10pt; color: #333333;">&beta;</span> * R<sub>emitter </sub>, so the total impedance of the pedal is:</span></p>
+<p><span style="font-size: 10pt; color: #333333;">Z<sub>in</sub>= R<sub>1</sub> +(R<sub>2</sub>//<span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;">&beta;</span></span>*R<sub>3</sub>) = R<sub>2</sub> = 470K&Omega;</span></p>
+<p><span style="font-size: 10pt; color: #333333;"><span style="text-decoration: underline;">note:</span> the simplifaction of the formula&nbsp; (Z<sub>in</sub>= R<sub>2</sub>) is because&nbsp;the resistor R<sub>1</sub> is too small compared to R<sub>2</sub> (1K&Omega;&lt;&lt;470K&Omega;) and <span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;">&beta;</span></span>*R<sub>3</sub></span> is too big compared to R<sub>2</sub> (200*10K&Omega;&gt;&gt;470K&Omega;), you can also make all the numbers and reach to the same conclusion.</span></p>
+<p><span style="font-size: 10pt; color: #333333;">If you want a further explanation of how to make all the numeric calculations, check the <a href="/tube-screamer-analysis#impedance">Tube Screamer Input Impedance Calculation</a>; the circuit is very similar and all the maths are there. <br /></span></p>
+<p><span style="font-size: 10pt; color: #333333;">470K&Omega; is a high input impedance to avoid loading guitar pickups and tone sucking, although the rule of thumb is to interface the guitar to an input impedance that is 1 M&Omega; minimum.</span></p>
+<p>&nbsp;</p>
+<h2><span style="font-size: 10pt; color: #000000;"><span style="font-size: 12pt;"><a id="input_frequency"></a><strong>4.2 Input Stage Frequency Response.</strong></span><br /></span></h2>
+<p><a href="../_assets/801614a1d8ef.png"><img src="../_assets/801614a1d8ef.png" alt="boss ds1 input buffer freq response" width="701" height="238" style="display: block; margin-left: auto; margin-right: auto;" title="boss ds1 input buffer freq response" /></a></p>
+<p><span style="font-size: 10pt; color: #333333;">The frequency response of this input buffer is dominated by the high pass filter created by C<sub>1</sub> and R<sub>2</sub> which has a cut frequency of 7.2Hz (f<sub>c</sub>=1/(2&pi;RC)). Frequencies at 7.2Hz are attenuated -3dB with a roll-off or 6dB/oct. The aim of this stage is just to buffer the signal and remove the DC level </span></p>
+<p>&nbsp;</p>
+<h1><span style="font-size: 10pt; color: #000000;"><a id="transistor-booster"></a></span><strong><span style="font-size: 12pt; color: #000000;"><span style="font-size: 14pt;">5. Transistor Booster Stage.</span></span></strong></h1>
+<p><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;">This stage applies some frequency filtering and signal boosting before the op-amp stage. The idea is to raise the signal levels so the next stage can work with acceptable levels although as we can see later, the signal is maybe <em>too boosted</em> after this stage.<br /></span></span></p>
+<p><a href="../_assets/00c6bfde12da.png"><img src="../_assets/00c6bfde12da.png" alt="boss ds1 distortion transistor booster" width="424" height="405" style="display: block; margin-left: auto; margin-right: auto;" title="boss ds1 distortion transistor booster" /></a></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 10pt; color: #333333;">The first part of this stage are 2 consecutive high pass filters:</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">C2 and R4 with a cut frequency of 3.3Hz</span></li>
+<li><span style="font-size: 10pt; color: #333333;">C3 and R5 with a cut frequency of 33Hz. <span style="color: #333333; font-size: 13.3333px;"></span><br /></span></li>
+</ul>
+<p><span style="font-size: 10pt; color: #333333;">The basic idea behind this filters is to remove the excess of bass before the (next) distortion stage, a guitar signal with too much bass harmonics could make the distortion slow, dumped or muddy.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 10pt; color: #333333;">The transistor stage is a Common Emitter amplifier, the approx. voltage gain in this topology is collector resistance divided by the emitter resistance (R<sub>C</sub>/R<sub>E </sub>or R8/R9 = 10K/22 = 454 = 53dB), but the&nbsp;effect of the feedback resistor and capacitor (R7 and C4) will lower this gain to 35dB&nbsp; have to be taken into consideration.</span></p>
+<p><span style="font-size: 10pt; color: #333333;">The maths behind this topology so-called Shunt Feedback resistor are a bit complex and if you want to see the full numeric development check the <span style="color: #0000ff;"><a href="/big-muff-pi-analysis#input2" style="color: #0000ff;">Big Muff Pi Input Booster Stage</a></span>, the topology is the same with some small values changes. In a nutshell, the original high gain (454) is reduced to a <em>more sensible</em> value of 56 (35dB) with better immunity to noise/temperature and oscillation.</span></p>
+<p><span style="font-size: 10pt; color: #333333;">However, a gain of 56 times is a huge amount of it, if we have a guitar input signal of 200mVpp, after the transistor booster the signal level is 11.2Vpp, the waveform will be distorted because the pedal supply is 9V. This gain will create a clipping that looking at the image below is asymmetric (cycles have a slightly different duration) and has a soft knee or soft clipping:</span></p>
+<p>&nbsp;</p>
+<p><a href="../_assets/7bd17aa52ef4.png"><img src="../_assets/7bd17aa52ef4.png" alt="boss ds1 transistor booster waveform" width="704" height="250" style="display: block; margin-left: auto; margin-right: auto;" title="boss ds1 transistor booster waveform" /> <br /></a><span style="color: #333333; font-size: 10pt;"><span style="text-decoration: underline;">note:</span> in the image above:</span></p>
+<ul>
+<li><span style="color: #333333; font-size: 10pt;">Guitar input signal in blue color 200mVpp.</span></li>
+<li><span style="color: #333333; font-size: 10pt;">Output signal after the Transistor Booster Stage in red color 9Vpp (clipped).</span>&nbsp;</li>
+</ul>
+<p>Q2 Transconductance:</p>
+<p>&nbsp;</p>
+<h2><span style="font-size: 10pt; color: #000000;"><a id="transistor-frequency"></a></span><strong><span style="font-size: 10pt; color: #000000;"><span style="font-size: 12pt;">5.1 Transistor Booster Frequency Response.</span></span></strong></h2>
+<p><a href="../_assets/0edc9eb271d2.png"><img src="../_assets/0edc9eb271d2.png" alt="boss ds1 transistor booster freq response" width="700" height="237" style="display: block; margin-left: auto; margin-right: auto;" title="boss ds1 transistor booster freq response" /></a></p>
+<p><span style="font-size: 10pt; color: #333333;">The response of the Transistor Booster stage has an attenuation of the low frequencies because of the 2 high pass filters discussed above, so the freqs below 33Hz are attenuated (6dB/oct) and reaching the bottom of the graph at 3.3Hz the signal has a -12dB/oct roll-off</span></p>
+<p><span style="font-size: 10pt; color: #333333;">The signal has a raw gain of 35dB (56 times bigger) on frequencies above 3.3KHz that makes this stage to boost the guitar signal to the (soft) clipping.</span></p>
+<p>&nbsp;</p>
+<h1><span style="font-size: 12pt; color: #000000;"><a id="op-amp"></a><strong><span style="font-size: 14pt;">6. Op-Amp Gain Stage.</span></strong></span></h1>
+<p><span style="font-size: 10pt; color: #333333;">The Operational Amplifier block is the heart of the circuit, it is build using a variable non inverting&nbsp;op-amp&nbsp;amplifier with two diodes to do the clip/distortion action and some passive RC filters ( passband = low pass + high pass) to set the clipping and the frequency at which it occurs. <a href="../_assets/fee2e60787b8.png"><img src="../_assets/fee2e60787b8.png" alt="boss ds1 distortion op amp gain stage" width="757" height="299" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<p><span style="font-size: 10pt; color: #333333;">At the beginning of the stage, there is an RC network (C<sub>5</sub>-R<sub>10</sub>) that creates a high pass filter with a cut frequency of 23Hz (f<sub>c</sub>=1/2&pi;RC). This is not an intentional filter, just a cap is needed to couple the previous transistor gain stage and a moderate-high value resistor is needed to bias the + pin of the op-amp at virtual ground (+4.5V).</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">R10 is a<span style="font-size: 10pt; color: #333333;"> high-value resistor that biases the input of the op-amp to 4.5V. </span> </span></li>
+<li><span style="font-size: 10pt; color: #333333;">The diode D<sub>8</sub> is placed to protect the op-amp input. At the op-amp input, signals will float around 4.5V biased by R<sub>10</sub>, and in case that signal coming from the previous stage tries to drive the op-amp input below the negative rail, the diode will clip at -0.7V&nbsp; (-V<sub>F</sub>) not allowing dangerous voltages to be present at the + pin.</span></li>
+</ul>
+<p style="padding-left: 60px;"><span style="font-size: 10pt; color: #333333;">Q2's collector is biased around +5.8V, and when going into saturation, without D8, U1 pin 3 would be driven to -1.3V. When an op-amp input is driven beyond the rails, bad things happen. Some opamps are damaged, some will latch-up, most take time for the input stage to recover from being over-driven, and that screws up the sound. </span></p>
+<p style="padding-left: 60px;"><span style="font-size: 10pt; color: #333333;">It is important to mention that by the time this diode is conducting, the opamp is already clipping. Therefore D8 has nothing to do with asymmetrical clipping or any kind of guitar signal modification.&nbsp;</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">R39 will protect the input of the op-amp keeping the current limited on the + pin. </span></li>
+</ul>
+<p><span style="font-size: 10pt; color: #333333;"><span style="text-decoration: underline;"><strong><span style="color: #000000; text-decoration: underline;">note:</span></strong></span> If you are using the Mitsubishi M5223AL op-amp you will need a 1K pull-up resistor from the second op-amp output to +9V. This resistor is labeled as R40 and will force the op-amp to work into class-A reducing distortion. Read the last page of the M5223A datasheet for more information.</span></p>
+<p><a href="../_assets/13143d3c4737.jpg"><img src="../_assets/13143d3c4737.jpg" alt="op amp classA" width="1000" height="320" style="display: block; margin-left: auto; margin-right: auto;" title="op amp classA" /></a></p>
+<p><span style="font-size: 10pt; color: #333333;">The first half of the NJM2904L dual op-amp is a simple buffer, it won't add (or remove) anything to the guitar signal. It buffers interfaces the previous Transistor Booster stage with the second half of the op-amp that will do all the magic.<br /></span></p>
+<p>&nbsp;</p>
+<h2><span style="font-size: 12pt;"><a id="op-amp-voltage"></a><strong><span style="color: #000000;">6.1 Voltage Gain Calculation.</span></strong></span></h2>
+<p><span style="font-size: 10pt; color: #333333;">The second half of the NJM2904L is a non-inverting amplifier that will boost the signal up to 22.3 times (26.5 dBs) following the formula:</span></p>
+<p style="padding-left: 30px;"><span style="font-size: 10pt; color: #333333;">Gv<sub>op-amp max</sub> = 1 + ( VR1<span class="st" data-hveid="43"></span>)/( R<sub>13</sub><span class="st" data-hveid="43"></span>) = 1 +(100K/4.7K) = 22.3 (26.5dB)</span></p>
+<p style="padding-left: 30px;"><span style="font-size: 10pt; color: #333333;">Gv<sub>op-amp min</sub> = 1 + ( <span class="st" data-hveid="43">0&lrm;&Omega; </span>)/( R<sub>13</sub><span class="st" data-hveid="43"> </span>) = 1+(0K/4.7K) = 1 (0dB)</span></p>
+<p><span style="font-size: 10pt; color: #333333;">The clipping stage defines the distortion signature sound, it is built using 2 back to back diodes that shunt the signal to AC ground (4.5V), this kind of clipping technique gives a &ldquo;hard-clipping&rdquo; sound also used in the MXR Micro-amp or the RAT opposed to the &ldquo;<em>soft-clipping</em>&rdquo; style created by placing the diodes on the feedback loop of the op-amp and&nbsp; used in other pedals like the Tube-Screamer.&nbsp;&nbsp; <br /></span></p>
+<p><span style="font-size: 10pt; color: #333333;">With the 26.5 dB of gain, the audio signal will be bigger than the V<sub>F</sub> of the diode (1S1588 or 1S2473 or equivalent 1N4148) that is around 0.7V in any position, creating a hard clipping action:</span></p>
+<p><span style="font-size: 10pt; color: #333333;"> <a href="../_assets/c8c35c0353f7.png" style="color: #333333;"><img src="../_assets/c8c35c0353f7.png" alt="boss ds1 distortion waveform" width="703" height="282" style="display: block; margin-right: auto; margin-left: auto;" title="boss ds1 distortion waveform" /></a></span></p>
+<p><span style="font-size: 10pt; color: #333333;">The image above shows the waveform after the clipping diodes, it exhibits a clear squared shape limited between +0.7V and -0.7V which is the V<sub>F</sub> of the diodes. Playing with the distortion potentiometer the edge of the waveform can be softened by in any case the overall look is pretty squared and distorted. </span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">&nbsp;Capacitor C7 (100pF) reduces the high harsh harmonics at the very top of the audio spectrum. It controls it by allowing highs through the feedback loop.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">&nbsp;The high-pass filter created by C8 and R13 (and part of the VR1 pot depending on its position) will remove freqs below 72Hz (or lower depending on the VR1 position)</span></li>
+</ul>
+<p style="padding-left: 60px;"><span style="font-size: 10pt; color: #333333;">&nbsp;fc<sub>max</sub> = 1/(2&pi;C<sub>8</sub>R<sub>13</sub>) = 1/(2*3.14*0.47u*4.7K) = 72Hz</span></p>
+<p style="padding-left: 60px;"><span style="font-size: 10pt; color: #333333;">&nbsp;fc<sub>min</sub> = 1/(2&pi;C<sub>8</sub>(R<sub>13</sub>+VR1)) = 1/(2*3.14*0.47u*104.7K) = 3Hz</span></p>
+<p><span style="font-size: 10pt; color: #333333;">At max distortion, harmonics over 72Hz get the full gain of the distortion stage, and everything below it gets progressively less gain and distortion. Bass notes are less clipped, so the distortion is frequency selective (similar to what happens in the Tube Screamer, but in that case, the freq limit is 720 instead of 72Hz).<br /></span></p>
+<ul>
+<li>&nbsp;<span style="font-size: 10pt; color: #333333;"> As mentioned above, the diodes D4 and D5 will clip when the amplified signal goes over/below the forward voltage (V<sub>F</sub>) which is around 0.7V.</span></li>
+</ul>
+<p><span style="font-size: 8pt;"></span></p>
+<h2><span style="font-size: 10pt; color: #000000;"><a id="op-amp-frequency"></a><strong><span style="font-size: 12pt;">6.2 Op-Amp Gain Frequency Response.</span></strong></span></h2>
+<p><a href="../_assets/d2cd35aa1453.png"><img src="../_assets/d2cd35aa1453.png" alt="boss ds1 op amp stage freq response" width="699" height="241" style="display: block; margin-left: auto; margin-right: auto;" title="boss ds1 op amp stage freq response" /></a></p>
+<p><span style="font-size: 10pt; color: #333333;">The frequency response of the Op-Amp Gain stage is set in the low frequencies by the high-pass filter formed by C8 &amp; R13 (fc=72Hz). Also, C5 &amp; R10 reduce harmonics below 23Hz at the limit of the audio spectrum that will help either way to reduce oscillation.</span></p>
+<p><span style="font-size: 10pt; color: #333333;">On the high frequencies by the low-pass filter formed by R14 and C10 will attenuate harmonics over 7.2Khz, this is better explained in the section below. The cap C7 will also reduce harmonics at very high frequencies, softening a bit the distortion and reducing oscillation problems.<br /></span></p>
+<p><span style="font-size: 10pt; color: #333333;">The minimum gain is 0dB and can go up to 26.5dB depending on the position of the <em>distortion</em> potentiometer, this amount of gain is not massive (the Tube Screamer has 41dB, the Proco Rat has 67dB) but the fact that the previous stage has a gain of 35dB makes that the resulting signal is completely clipped.</span></p>
+<h2><span style="font-size: 10pt;"><strong><a id="c10-capacitor"></a><span style="font-size: 12pt; color: #000000;">6.3 The effect of the C<sub>10</sub> Capacitor.</span></strong></span></h2>
+<p><span style="color: #333333;"><span style="font-size: 10pt;">There is an obvious RC network (R14 &amp; C10) with C10 in parallel with D4 and D5 clipping devices. The D4 &amp; D5 diodes load the R14 - C10 network and drastically alter the cutoff freq. When either D4 or D5 are conducting, the impedance at R14 - C10 junction is greatly reduced. This is a non-linear circuit, the best way to analyze the behavior is in the time-domain, as is shown in the figure in 6.1. section.</span></span></p>
+<p><span style="color: #333333;"><span style="font-size: 10pt;">The image below is only applicable to the case where the signal is so small (below clipping) that the diodes don't conduct, where the</span></span><span style="color: #333333;"><span style="font-size: 10pt;">&nbsp;resistor R14 and C10 form a low pass filter with fc=7.2KHz that will mellow the signal, but most of the time D4 or D5 are conducting...</span></span></p>
+<p><span style="font-size: 10pt;"><a href="../_assets/a40604abfd46.png" style="color: #ffcc00;"><img src="../_assets/a40604abfd46.png" alt="boss ds1 op amp stage NO C10 freq response" width="699" height="237" style="display: block; margin-left: auto; margin-right: auto;" title="boss ds1 op amp stage NO C10 freq response" /></a>&nbsp;</span></p>
+<p><span style="font-size: 10pt; color: #333333;">Generally speaking, the C10 cap makes the&nbsp;distortion less grainy, making a rounder-pleasant distortion.</span></p>
+<p>&nbsp;</p>
+<h1><span style="font-size: 10pt; color: #000000;"><strong><a id="tone-level"></a><span style="font-size: 14pt;">7. Tone / Level Stage.</span></strong><br /></span></h1>
+<p><span style="font-size: 10pt; color: #333333;">The Boss DS-1 uses a passive <em>Big Muff Pi style</em> tone control, which scoops the mids and attenuates the lows or highs, depending on which way you turn the knob. The circuit consists of a simple fixed -6dB/oct low pass filter (formed by R16 and C12 with an fc=234Hz) and a fixed -6dB/oct high pass filter (formed by C11 and R17 with an fc=1063Hz) using the VR3 pot to mix the two signals. <span style="color: #333333;"><span style="font-size: 10pt;">The cut-off points of both filters are calculated so that their interweaving effect create a frequency scoop/notch</span><span style="font-size: 10pt;">&nbsp;around 500Hz&nbsp;</span><span style="font-size: 10pt;">when the tone control is set to the middle position.</span></span><br /></span></p>
+<p><a href="../_assets/029e289ddc31.png"><img src="../_assets/029e289ddc31.png" alt="boss ds1 distortion tone level stage" width="424" height="353" style="display: block; margin-left: auto; margin-right: auto;" title="boss ds1 distortion tone level stage" /></a></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">After the initial tone shaping carried out by the first part of the circuit and the VR3, the VR2 pot regulates the level by bleeding part of the signal to AC ground.</span></li>
+</ul>
+<p>&nbsp;</p>
+<h2><strong><span style="font-size: 10pt; color: #000000;"><span style="font-size: 12pt;"><a id="tone-level-frequency"></a></span></span><span style="color: #000000; font-size: 12pt;">7.1 Tone/Level Frequency Response.</span></strong></h2>
+<p>&nbsp;<a href="../_assets/d1a35cdcdefd.png"><img src="../_assets/d1a35cdcdefd.png" alt="boss ds1 tone level freq response" width="700" height="245" style="display: block; margin-left: auto; margin-right: auto;" title="boss ds1 tone level freq response" /></a></p>
+<p><span style="font-size: 10pt; color: #333333;">The frequency response of the Tone control looks similar to the <a href="/big-muff-pi-analysis#link41">Big Muff Pi</a>, the Boss DS-1 has a scoop around 500Hz. This equalization enhance the bass and treble of the signal and is used in hard rock, other pedals <a href="/tube-screamer-analysis#tone-stage">like the Tube Screamer</a> have a completely different approach boosting the mids creating a mid-hump.</span></p>
+<p><span style="font-size: 10pt; color: #333333;"> <span style="line-height: 18px;"><span style="line-height: 18px;">There is an overall -12dB (4 times) loss and&nbsp;</span><span style="line-height: 18px;">at the notch the loss is about -20db (500Hz) but there is no problem with this because in the previous stage after the diode clipping the signal has a 1.4Vpp amplitude, with -12dB loss the resulting signal will be 350mVpp (1.4Vpp/4times) which is fine for an output level and won't distort the input stage of the next pedal on the chain or the guitar amplifier.</span></span></span></p>
+<p>&nbsp;</p>
+<h1><span style="font-size: 12pt; color: #000000;"><strong><span style="font-size: 14pt;"><a id="output-buffer"></a><span style="color: #000000;">8. Output Buffer.</span></span></strong><br /></span></h1>
+<p><span style="font-size: 10pt; color: #333333;">The output buffer has exactly the same circuit as the input buffer, its task is to keep a low output impedance for better signal integrity in the guitar-pedals-amp chain. Like the Input Stage, this unity gain buffer is implemented with a plain Emitter Follower with a 10K emitter resistor R21, biased from the 4.5V source with R19 in parallel with R20 (1M//1M=500K). <br /></span></p>
+<p><a href="/images/tech/ds1/boss-ds1-distortion-output-buffer.pn"><img src="../_assets/5e731d73b0c1.png" alt="boss ds1 distortion output buffer" width="556" height="308" style="display: block; margin-left: auto; margin-right: auto;" title="boss ds1 distortion output buffer" /></a></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;"><span style="line-height: 18px;"><span style="line-height: 18px;">The input capacitor C13 and R20 create a high pass filter with fc=3.4Hz (fc=1/2piRC), the idea is just to remove the DC levels so the transistor can be correctly biased.</span></span></span></li>
+<li><span style="font-size: 10pt; color: #333333;"><span style="line-height: 18px;"><span style="line-height: 18px;"> The 2SC2240 is a cheap high-gain transistor, a simple unity gain buffer does not have high requirements for the transistor.</span></span></span></li>
+<li><span style="font-size: 10pt; color: #333333;">R21 is the emitter resistance, 10K is a standard value for an Emitter Follower buffer.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">C14 and R23 form a high pass filter with an fc=1.6Hz below the audio spectrum. The purpose of this filter is just to remove the DC levels from the final output signal.</span></li>
+</ul>
+<p>&nbsp;</p>
+<h1><span style="font-size: 14pt; color: #000000;"><a id="signature" name="signature"></a><strong>9. Boss DS-1 Distortion Sound Signature.</strong></span></h1>
+<p><span style="font-size: 10pt; color: #333333;">The sound footprint of the current Boss DS-1 Distortion could be defined by its exaggerated amount of gain, the hard clipping of the grounded diodes and the freq response shaped by different filters through the whole pedal. These are the key elements:<br /></span></p>
+<ul>
+<li><span style="color: #333333; font-size: 10pt;">In the Op Amp Clipping Stage, the diodes (D4 &amp; D5) are back to back connected to AC ground (+4.5V), so the clip is harder and as a hard knee giving a strong character.</span></li>
+</ul>
+<ul>
+<li><span style="color: #333333; font-size: 10pt;">In the Transistor Booster Stage, the Q2 asymmetric clipping gives rise to even-order harmonics which are more sonically pleasing. Modders will unbalance the D4-D5 network to make their clipping even more asymmetric.</span></li>
+</ul>
+<ul>
+<li><span style="color: #333333; font-size: 10pt;">The Tone-Level stage with a mid-scoop is used in fuzz pedals (Big Muff Pi) and some Marshall amps being popular among hard-rock/metal players. Other pedals like the Tube screamer have a complete opposite freq response (mid boost), so this characteristic is a great part of the pedal personality</span></li>
+</ul>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">The Transistor Boosting Stage has a huge amount of gain, it amplifies the incoming signal 56 times (35dB). This transistor overdrives the signal from the early stages of the pedal and will condition the behavior of the whole effect. This is the reason why a lot of mods like the&nbsp;'Vintage Ripper', the 'Fat Mod for DS-1' or the 'Huevos Grandes' increase the size of R9 from 22&Omega; to 1K&Omega;, this makes the voltage gain of the Transistor Booster Stage to decrease from the default 35dB(56 times) to a more moderate value of 17dB (7 times).</span></li>
+</ul>
+<p><span style="font-size: 10pt; color: #333333;"><a href="../_assets/8ace4eca0370.png" style="color: #333333;"><img src="../_assets/8ace4eca0370.png" alt="boss ds1 distortion r10 22 1K mod" width="701" height="245" style="display: block; margin-left: auto; margin-right: auto;" title="boss ds1 distortion r10 22 1K mod" /></a></span></p>
+<p><span style="font-size: 10pt; color: #333333;">In consequence, by replacing R9 for a 1K resistor, the signal gets boosted just 7 times (17dB), so any typical guitar input signal of 100mVpp after the transistor booster stage has a level of 100mVpp x 7 = 0.7Vpp a low level that will not clip the op-amp stage. This makes the user have a higher grade of control and variation; from a simple boosting to hard clipping.</span></p>
+<p><a href="../_assets/699431c48298.png"><img src="../_assets/699431c48298.png" alt="boss ds1 distortion r10 22 1K mod waveform" width="701" height="510" style="display: block; margin-left: auto; margin-right: auto;" title="boss ds1 distortion r10 22 1K mod waveform" /></a><span style="color: #ff0000;"></span></p>
+<p><span style="color: #ff0000; font-size: 10pt;"><span style="color: #333333;">In the image above you can see the difference between using an R9 of 22&Omega; (default) or using the 1K&Omega; resistor. Using the 1K value the amount of the clipping control is wider. </span></span></p>
+<p><span style="color: #ff0000; font-size: 10pt;"><span style="color: #333333;">A bigger R9 applies negative feedback through the Q2 emitter and lowers the collector current. The emitter feedback reduces the distortion. Both the emitter feedback and the lower collector current decrease Q2's voltage gain, which lessens the effect of the negative feedback through R7 and C4. By lessening the effect of R7 and C4, the low-freq cutoff from C3 is moved down and the high-freq cutoff from C4 is moved up. I think this is why people say that increasing R9 "flattens the frequency response".&nbsp;</span></span></p>
+<p>&nbsp;</p>
+<p><span style="color: #333333; font-size: 10pt;">This all-time classic Boss DS1 design has a lot of subtle things going under the radar that even the original designers do not fully grasp, in my opinion, the Klon Centaur is the pinnacle of this factor. In most&nbsp;cases,&nbsp;the electronic design of a good sounding pedal is a mix of luck, engineering, and black magic.<br /></span></p>
+<p>&nbsp;</p>
+<h1><span style="font-size: 14pt; color: #000000;"><a id="resources" name="resources"></a><strong>10. Resources.</strong></span></h1>
+<p><span style="font-size: 10pt;"><a href="http://www.premierguitar.com/articles/boss-ds-1-mods-1">Boss DS-1 Mods by PremerGuitar.</a></span><br /><span style="font-size: 10pt; color: #333333;"><a href="https://www.google.co.uk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=6&amp;cad=rja&amp;uact=8&amp;ved=0ahUKEwjjrLf_kPjKAhVJQhQKHWwRBb0QFggzMAU&amp;url=http%3A%2F%2Ffreestompboxes.org%2Fmembers%2F5thumbs%2FBuild%2520Your%2520Own%2520DS-1%2520Distortion.pdf&amp;usg=AFQjCNFMDjbk99WQUAbbBf6BpH26tBD9pw">Build your Own DS-1 Distortion.</a></span><br /><a href="http://www.pedalhaven.com/two-easy-boss-ds-1-distortion-pedal-modifications/"><span style="font-size: 10pt;">Marshall JCM &amp; Octave Fuzz Mods by pedalheaven.</span></a><br /><span style="font-size: 10pt; color: #333333;"><a href="http://www.soft.com.sg/forum/showthread.php?70396-Boss-DS-1-A-detailed-take!">Boss DS-1 A Detailed Take by GoodSpeed64.</a></span><br /><span style="font-size: 10pt; color: #333333;"><a href="http://www.physics.unlv.edu/~bill/PHYS483/op_amp_filt.pdf">OpAmp Filter Examples</a>&nbsp;by University Las Vegas Nevada.</span><br /><span style="font-size: 10pt; color: #333333;"><br /></span></p>
+<p><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;">My sincere appreciation to Dave Harvey, Romeo G. Cesar, G. Brandt, K. Carpenter and D. Knapp for your support writing this article.</span></span></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;"></span></span>&nbsp;</p>
+<p style="text-align: right;"><span style="color: #333333; font-size: 10pt;">Thanks for reading, all feedback is appreciated <span id="cloakd4981ee5b12d828e47f4cb421692a162">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
+				document.getElementById('cloakd4981ee5b12d828e47f4cb421692a162').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyd4981ee5b12d828e47f4cb421692a162 = '&#105;nf&#111;' + '&#64;';
+				addyd4981ee5b12d828e47f4cb421692a162 = addyd4981ee5b12d828e47f4cb421692a162 + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';
+				var addy_textd4981ee5b12d828e47f4cb421692a162 = '&#105;nf&#111;' + '&#64;' + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';document.getElementById('cloakd4981ee5b12d828e47f4cb421692a162').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyd4981ee5b12d828e47f4cb421692a162 + '\'>'+addy_textd4981ee5b12d828e47f4cb421692a162+'<\/a>';
+		</script></span></p>	</section>
+  
+  <!-- footer -->
+    <!-- //footer -->
+
+			<hr class="divider-vertical" /><ul class="pager pagenav">
+	<li class="previous">
+		<a class="hasTooltip" title="MXR Dyna Comp Analysis" aria-label="Previous article: MXR Dyna Comp Analysis" href="../mxr-dyna-comp-analysis/index.html" rel="prev">
+			<span class="icon-chevron-left" aria-hidden="true"></span> <span aria-hidden="true">Prev</span>		</a>
+	</li>
+	<li class="next">
+		<a class="hasTooltip" title="Fuzz Face Analysis" aria-label="Next article: Fuzz Face Analysis" href="../fuzz-face/index.html" rel="next">
+			<span aria-hidden="true">Next</span> <span class="icon-chevron-right" aria-hidden="true"></span>		</a>
+	</li>
+</ul>
+	
+	
+	</article>
+<!-- //Article -->
+
+
+</div><div><a href="http://www.artio.net" style="font-size: 8px; visibility: visible; display: inline;" title="Web development, Joomla, CMS, CRM, Online shop software, databases">Joomla SEF URLs by Artio</a></div>
+		</div>
+		<!-- //MAIN CONTENT -->
+
+		<!-- SIDEBAR RIGHT -->
+		<div class="t3-sidebar t3-sidebar-right col-xs-12 col-sm-4  col-md-3 ">
+			<div class="t3-module module " id="Mod28"><div class="module-inner"><h3 class="module-title "><span>New Updates</span></h3><div class="module-ct"><ul class="latestnews mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../arduino-audio-meter/index.html" itemprop="url">
+			<span itemprop="name">
+				Arduino Audio Meter			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../dallas-rangemaster/index.html" itemprop="url">
+			<span itemprop="name">
+				Dallas Rangemaster Treble Booster Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../time-manipulator/index.html" itemprop="url">
+			<span itemprop="name">
+				Time Manipulator - Arduino Delay/Echo/Reverb			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../marshall-guvnor-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Marshall The Guvnor Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../germanium-fuzz/index.html" itemprop="url">
+			<span itemprop="name">
+				You Can Build the Perfect Germanium Fuzz			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../mxr-distortion-plus-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				MXR Distortion + Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod29"><div class="module-inner"><h3 class="module-title "><span>Most Visited</span></h3><div class="module-ct"><ul class="mostread mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../tube-screamer-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Tube Screamer Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../fuzz-face/index.html" itemprop="url">
+			<span itemprop="name">
+				Fuzz Face Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../proco-rat/index.html" itemprop="url">
+			<span itemprop="name">
+				Pro Co Rat Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="index.html" itemprop="url">
+			<span itemprop="name">
+				Boss DS-1 Distortion Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../klon-centaur-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Klon Centaur Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../big-muff-pi-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Big Muff Pi Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod184"><div class="module-inner"><h3 class="module-title "><span>Follow us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><span style="font-size: 10pt; color: #333333;">You can also follow us on:</span></p>
+<p><a href="https://www.facebook.com/ElectroSmash"><img src="../_assets/df34a2b41b54.png" alt="facebook" /></a>&nbsp;&nbsp; <a href="https://plus.google.com/+Electrosmash/about"><img src="../_assets/3ffc52860091.png" alt="google" /></a>&nbsp;&nbsp; <a href="https://www.instagram.com/electro.smash/"><img src="../_assets/45b0b0fe2d4b.png" alt="instagram" /></a></p>
+<p><a href="https://www.pinterest.com/electrosmash/"><img src="../_assets/05310d9fcf2a.png" alt="pinterest" /></a>&nbsp;&nbsp; <a href="https://www.youtube.com/user/ElectroSmashTV"><img src="../_assets/d920883b3613.png" alt="youtube" /></a>&nbsp;&nbsp; <a href="https://twitter.com/electro_smash"><img src="../_assets/52581f7264eb.png" alt="twitter" /></a></p></div>
+</div></div></div>
+		</div>
+		<!-- //SIDEBAR RIGHT -->
+
+	</div>
+</div> 
+
+
+
+  
+
+
+  
+
+
+	
+<!-- BACK TOP TOP BUTTON -->
+<div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top hidden-xs hidden-sm affix-top">
+  <button class="btn btn-primary" title="Back to Top"><i class="fa fa-caret-up"></i></button>
+</div>
+<script type="text/javascript">
+(function($) {
+	// Back to top
+	$('#back-to-top').on('click', function(){
+		$("html, body").animate({scrollTop: 0}, 500);
+		return false;
+	});
+    $(window).on('load', function(){
+        // hide button to top if the document height not greater than window height*2;using window load for more accurate calculate.    
+        if ((parseInt($(window).height())*2)>(parseInt($(document).height()))) {
+            $('#back-to-top').hide();
+        } 
+    });
+})(jQuery);
+</script>
+<!-- BACK TO TOP BUTTON -->
+
+<!-- FOOTER -->
+<footer id="t3-footer" class="wrap t3-footer">
+
+			<!-- FOOTER SPOTLIGHT -->
+		<div class="container hidden-xs">
+				<!-- SPOTLIGHT -->
+	<div class="t3-spotlight t3-footer-sl  row">
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod185"><div class="module-inner"><h3 class="module-title "><span>About us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../about-us/index.html">&nbsp;&nbsp;<img src="../_assets/420f9f181bc0.jpg" alt="smash electro" /></a></p>
+<p><a href="../about-us/index.html"><span style="font-size: 10pt; color: #333333;">Smashing audio electronics since MMXIII</span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod183"><div class="module-inner"><h3 class="module-title "><span>Email Newsletter</span></h3><div class="module-ct"><div class="acymailing_module" id="acymailing_module_formAcymailing98131">
+	<div class="acymailing_fulldiv" id="acymailing_fulldiv_formAcymailing98131"  >
+		<form id="formAcymailing98131" action="/" onsubmit="return submitacymailingform('optin','formAcymailing98131')" method="post" name="formAcymailing98131"  >
+		<div class="acymailing_module_form" >
+						<table class="acymailing_form">
+				<tr>
+												<td class="acyfield_email acy_requiredField">
+								<input id="user_email_formAcymailing98131"  onfocus="if(this.value == 'example@email.com') this.value = '';" onblur="if(this.value=='') this.value='example@email.com';" class="inputbox" type="text" name="user[email]" style="width:90%" value="example@email.com" title="example@email.com"/>
+							</td> </tr><tr>
+					
+					<td  class="acysubbuttons">
+												<input class="button subbutton btn btn-primary" type="submit" value="Subscribe" name="Submit" onclick="try{ return submitacymailingform('optin','formAcymailing98131'); }catch(err){alert('The form could not be submitted '+err);return false;}"/>
+											</td>
+				</tr>
+			</table>
+						<input type="hidden" name="ajax" value="0" />
+			<input type="hidden" name="acy_source" value="module_183" />
+			<input type="hidden" name="ctrl" value="sub"/>
+			<input type="hidden" name="task" value="notask"/>
+			<input type="hidden" name="redirect" value="https%3A%2F%2Fwww.electrosmash.com%2Fboss-ds1-analysis"/>
+			<input type="hidden" name="redirectunsub" value="https%3A%2F%2Fwww.electrosmash.com%2Fboss-ds1-analysis"/>
+			<input type="hidden" name="option" value="com_acymailing"/>
+						<input type="hidden" name="hiddenlists" value="1"/>
+			<input type="hidden" name="acyformname" value="formAcymailing98131" />
+									</div>
+		</form>
+	</div>
+	</div>
+
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod186"><div class="module-inner"><h3 class="module-title "><span>Contact us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../contact-us/index.html"><span style="font-size: 10pt; color: #333333;">e-mail us at <span id="cloak5d873a49b924ae9eafc2c96e5ed34ae6">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
+				document.getElementById('cloak5d873a49b924ae9eafc2c96e5ed34ae6').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy5d873a49b924ae9eafc2c96e5ed34ae6 = '&#105;nf&#111;' + '&#64;';
+				addy5d873a49b924ae9eafc2c96e5ed34ae6 = addy5d873a49b924ae9eafc2c96e5ed34ae6 + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';
+				var addy_text5d873a49b924ae9eafc2c96e5ed34ae6 = '&#105;nf&#111;' + '&#64;' + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';document.getElementById('cloak5d873a49b924ae9eafc2c96e5ed34ae6').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy5d873a49b924ae9eafc2c96e5ed34ae6 + '\'>'+addy_text5d873a49b924ae9eafc2c96e5ed34ae6+'<\/a>';
+		</script></span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod188"><div class="module-inner"><h3 class="module-title "><span>Rights</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p style="text-align: left;">&nbsp;&nbsp;<a href="https://creativecommons.org/licenses/by-nc/3.0/"><img src="../_assets/b0e99d439c44.png" alt="88x31" /></a></p>
+<p style="text-align: left;"><img src="../_assets/fe2636cdea5c.png" alt="open source logo" width="180" height="38" /></p>
+<p style="text-align: left;"><img src="../_assets/8281c4ec3a3b.png" alt="open hardware logo" width="180" height="38" /></p>
+<p style="text-align: left;">&nbsp;</p></div>
+</div></div></div>
+							</div>
+			</div>
+<!-- SPOTLIGHT -->
+		</div>
+		<!-- //FOOTER SPOTLIGHT -->
+	
+	<section class="t3-copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 copyright ">
+					
+          <small>
+            <a href="http://twitter.github.io/bootstrap/" title="Bootstrap by Twitter" target="_blank">Bootstrap</a> is a front-end framework of Twitter, Inc. Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" title="MIT License" target="_blank">MIT License.</a>
+          </small>
+          <small>
+            <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> font licensed under <a href="http://scripts.sil.org/OFL">SIL OFL 1.1</a>.
+          </small>
+				</div>
+							</div>
+		</div>
+	</section>
+
+</footer>
+<!-- //FOOTER -->
+
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29544239-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

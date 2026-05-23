@@ -1,0 +1,781 @@
+
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr"
+	  class='com_content view-article itemid-515 j31 mm-hover '>
+
+<head>
+	<base href="../index/index.html" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="pedal, stompbox, effect, guitar, back, talk, reverse, delay, danelectro, circuit, schematic, analysis, controls, analog, pcb, digital, input, output, signal, buffer, adc, audio, codec, power" />
+	<meta name="rights" content="Creative Commons: Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0) " />
+	<meta name="author" content="JR" />
+	<meta name="description" content="Reverse Delay Effect, Control Knobs, Circuit, Analog PCB Circuit., Voltage Bias Block, Input Buffer Stage, Output Buffer Stage, Digital PCB Circuit, Power Supply Stage, Power On Reset Circuit, Potentiometers &amp; Fo" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>ElectroSmash - Back Talk Analysis</title>
+	<link href="index.html" rel="canonical" />
+	<link href="../_assets/d87243966412.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../_assets/26f5cf410b61.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/15ff046a2fe3.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/dd09f39c1b89.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"acf0355a2a531c4d54e793b917d79436","system.paths":{"root":"","base":""}}</script>
+	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+	<script src="../_assets/323c609448d2.js" type="text/javascript"></script>
+	<script src="../_assets/b8bcbb2f005c.js" type="text/javascript" async="async"></script>
+	<script type="text/javascript">
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });	if(typeof acymailingModule == 'undefined'){
+				var acymailingModule = [];
+			}
+			
+			acymailingModule['emailRegex'] = /^[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+)*\@([a-z0-9-]+\.)+[a-z0-9]{2,10}$/i;
+
+			acymailingModule['NAMECAPTION'] = 'Name';
+			acymailingModule['NAME_MISSING'] = 'Please enter your name';
+			acymailingModule['EMAILCAPTION'] = 'example@email.com';
+			acymailingModule['VALID_EMAIL'] = 'Please enter a valid e-mail address';
+			acymailingModule['ACCEPT_TERMS'] = 'Please check the Terms and Conditions';
+			acymailingModule['CAPTCHA_MISSING'] = 'The captcha is invalid, please try again';
+			acymailingModule['NO_LIST_SELECTED'] = 'Please select the lists you want to subscribe to';
+		
+acymailingModule['excludeValuesformAcymailing44901'] = [];
+acymailingModule['excludeValuesformAcymailing44901']['name'] = 'Name';
+acymailingModule['excludeValuesformAcymailing44901']['email'] = 'example@email.com';
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });
+	</script>
+
+	
+<!-- META FOR IOS & HANDHELD -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<style type="text/stylesheet">
+		@-webkit-viewport   { width: device-width; }
+		@-moz-viewport      { width: device-width; }
+		@-ms-viewport       { width: device-width; }
+		@-o-viewport        { width: device-width; }
+		@viewport           { width: device-width; }
+	</style>
+	<script type="text/javascript">
+		//<![CDATA[
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement("style");
+			msViewportStyle.appendChild(
+				document.createTextNode("@-ms-viewport{width:auto!important}")
+			);
+			document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+		}
+		//]]>
+	</script>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="apple-mobile-web-app-capable" content="YES"/>
+<!-- //META FOR IOS & HANDHELD -->
+
+
+
+
+<!-- Le HTML5 shim and media query for IE8 support -->
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script type="text/javascript" src="../_assets/010a3c86157d.js"></script>
+<![endif]-->
+
+<!-- You can add Google Analytics here or use T3 Injection feature -->
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="../_assets/76d3e1341c39.css" type="text/css" />
+<![endif]-->
+	</head>
+
+<body>
+
+<div class="t3-wrapper corporate"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
+
+	
+<!-- MAIN NAVIGATION -->
+<header id="t3-mainnav" class="wrap navbar navbar-default navbar-fixed-top t3-mainnav">
+
+	<!-- OFF-CANVAS -->
+		<!-- //OFF-CANVAS -->
+
+	<div class="container">
+
+		<!-- NAVBAR HEADER -->
+		<div class="navbar-header">
+
+			<!-- LOGO -->
+			<div class="logo logo-image">
+				<div class="logo-image">
+					<a href="/" title="ElectroSmash">
+													<img class="logo-img" src="../_assets/115794d6d5b8.png" alt="ElectroSmash" />
+						
+												
+						<span>ElectroSmash</span>
+					</a>
+				</div>
+			</div>
+			<!-- //LOGO -->
+
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-collapse">
+					<i class="fa fa-bars"></i>
+				</button>
+			
+	    
+		</div>
+		<!-- //NAVBAR HEADER -->
+
+		<!-- NAVBAR MAIN -->
+				<nav class="t3-navbar-collapse navbar-collapse collapse"></nav>
+		
+		<nav class="t3-navbar navbar-collapse collapse">
+			<div  class="t3-megamenu"  data-responsive="true">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav navbar-nav level0">
+<li itemprop='name'  data-id="435" data-level="1">
+<a itemprop='url' class=""  href="/"   data-target="#">Home </a>
+
+</li>
+<li itemprop='name' class="dropdown mega" data-id="510" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Chips<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="492" data-level="2">
+<a itemprop='url' class=""  href="../jrc4558-analysis/index.html"   data-target="#">JRC4558  </a>
+
+</li>
+<li itemprop='name'  data-id="519" data-level="2">
+<a itemprop='url' class=""  href="../mn3007-bucket-brigade-devices/index.html"   data-target="#">MN3007 BBDs </a>
+
+</li>
+<li itemprop='name'  data-id="468" data-level="2">
+<a itemprop='url' class=""  href="../lm386-analysis/index.html"   data-target="#">LM386 </a>
+
+</li>
+<li itemprop='name'  data-id="1643" data-level="2">
+<a itemprop='url' class=""  href="../pt2399-analysis/index.html"   data-target="#">PT2399 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="444" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Amps<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="993" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="489" data-level="2">
+<a itemprop='url' class=""  href="../little-gem-analysis/index.html"   data-target="#">Little Gem Amp </a>
+
+</li>
+<li itemprop='name'  data-id="526" data-level="2">
+<a itemprop='url' class=""  href="../marshall-mg10/index.html"   data-target="#">Marshall MG10 </a>
+
+</li>
+<li itemprop='name'  data-id="491" data-level="2">
+<a itemprop='url' class=""  href="../noisy-cricket-analysis/index.html"   data-target="#">Noisy Cricket  </a>
+
+</li>
+<li itemprop='name'  data-id="490" data-level="2">
+<a itemprop='url' class=""  href="../ruby-amp-analysis/index.html"   data-target="#">Ruby Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="488" data-level="2">
+<a itemprop='url' class=""  href="../smokey-amp-analysis/index.html"   data-target="#">Smokey Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="746" data-level="2">
+<a itemprop='url' class=""  href="http://www.electrosmash.com/schematics#amps"   data-target="#">Amps Schematics.</a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="active dropdown mega" data-id="511" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Pedals<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  style="width: 600px"  data-width="600"><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name' class="current active" data-id="515" data-level="2">
+<a itemprop='url' class=""  href="index.html"   data-target="#">Back Talk Reverse Delay </a>
+
+</li>
+<li itemprop='name'  data-id="518" data-level="2">
+<a itemprop='url' class=""  href="../big-muff-pi-analysis/index.html"   data-target="#">Big Muff Pi  </a>
+
+</li>
+<li itemprop='name'  data-id="524" data-level="2">
+<a itemprop='url' class=""  href="../boss-ce-2-analysis/index.html"   data-target="#">Boss CE-2 Chorus </a>
+
+</li>
+<li itemprop='name'  data-id="1088" data-level="2">
+<a itemprop='url' class=""  href="../boss-ds1-analysis/index.html"   data-target="#">Boss DS-1 Distortion </a>
+
+</li>
+<li itemprop='name'  data-id="1713" data-level="2">
+<a itemprop='url' class=""  href="../dallas-rangemaster/index.html"   data-target="#">Dallas Rangemaster </a>
+
+</li>
+<li itemprop='name'  data-id="905" data-level="2">
+<a itemprop='url' class=""  href="../crybaby-gcb-95/index.html"   data-target="#">Dunlop CryBaby GCB-95  </a>
+
+</li>
+<li itemprop='name'  data-id="842" data-level="2">
+<a itemprop='url' class=""  href="../fuzz-face/index.html"   data-target="#">Fuzz Face </a>
+
+</li>
+<li itemprop='name'  data-id="1664" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="512" data-level="2">
+<a itemprop='url' class=""  href="../tube-screamer-analysis/index.html"   data-target="#">Ibanez Tube Screamer </a>
+
+</li>
+<li itemprop='name'  data-id="1433" data-level="2">
+<a itemprop='url' class=""  href="../klon-centaur-analysis/index.html"   data-target="#">Klon Centaur </a>
+
+</li>
+</ul>
+</div></div>
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="548" data-level="2">
+<a itemprop='url' class=""  href="../mxr-microamp/index.html"   data-target="#">MXR MicroAmp </a>
+
+</li>
+<li itemprop='name'  data-id="1667" data-level="2">
+<a itemprop='url' class=""  href="../marshall-guvnor-analysis/index.html"   data-target="#">Marshall Guvnor </a>
+
+</li>
+<li itemprop='name'  data-id="1632" data-level="2">
+<a itemprop='url' class=""  href="../mxr-distortion-plus-analysis/index.html"   data-target="#">MXR Distortion + </a>
+
+</li>
+<li itemprop='name'  data-id="1244" data-level="2">
+<a itemprop='url' class=""  href="../mxr-dyna-comp-analysis/index.html"   data-target="#">MXR Dyna Comp </a>
+
+</li>
+<li itemprop='name'  data-id="573" data-level="2">
+<a itemprop='url' class=""  href="../mxr-phase90/index.html"   data-target="#">MXR Phase 90 </a>
+
+</li>
+<li itemprop='name'  data-id="553" data-level="2">
+<a itemprop='url' class=""  href="../proco-rat/index.html"   data-target="#">ProCo Rat </a>
+
+</li>
+<li itemprop='name'  data-id="520" data-level="2">
+<a itemprop='url' class=""  href="../sitar-swami-analysis/index.html"   data-target="#">Sitar Swami </a>
+
+</li>
+<li itemprop='name'  data-id="525" data-level="2">
+<a itemprop='url' class=""  href="../vox-v847-analysis/index.html"   data-target="#">Vox V847 Wah Wah </a>
+
+</li>
+<li itemprop='name'  data-id="547" data-level="2">
+<a itemprop='url' class=""  href="../emg81/index.html"   data-target="#">EMG81 Pickup </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="796" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Projects<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="1108" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-uno/index.html"   data-target="#">pedalSHIELD UNO </a>
+
+</li>
+<li itemprop='name'  data-id="797" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield/index.html"   data-target="#">pedalSHIELD DUE </a>
+
+</li>
+<li itemprop='name'  data-id="1437" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-mega/index.html"   data-target="#">pedalSHIELD MEGA </a>
+
+</li>
+<li itemprop='name'  data-id="1312" data-level="2">
+<a itemprop='url' class=""  href="../pedal-pi/index.html"   data-target="#">Pedal-Pi </a>
+
+</li>
+<li itemprop='name'  data-id="1662" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="1663" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="1668" data-level="2">
+<a itemprop='url' class=""  href="../time-manipulator/index.html"   data-target="#">Time Manipulator </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name'  data-id="745" data-level="1">
+<a itemprop='url' class=""  href="../forum-electrosmash/index.html"   data-target="#">Forum </a>
+
+</li>
+<li itemprop='name'  data-id="816" data-level="1">
+<a itemprop='url' class=""  href="../shop/index.html"   data-target="#">Shop</a>
+
+</li>
+</ul>
+</div>
+
+		</nav>
+    <!-- //NAVBAR MAIN -->
+
+	</div>
+</header>
+<!-- //MAIN NAVIGATION -->
+
+
+
+
+
+
+  
+
+
+  
+
+
+	
+<div id="t3-mainbody" class="container t3-mainbody">
+	<div class="row">
+
+		<!-- MAIN CONTENT -->
+		<div id="t3-content" class="t3-content col-xs-12 col-sm-8  col-md-9">
+						<div class="item-page clearfix">
+
+
+<!-- Article -->
+<article>
+	<meta itemprop="inLanguage" content="en-GB" />
+	<meta itemprop="url" content="index.html" />
+
+      
+<header class="article-header clearfix">
+	<h1 class="article-title" itemprop="headline">
+					<a href="index.html" itemprop="url" title="Back Talk Reverse Delay Analysis">
+				Back Talk Reverse Delay Analysis</a>
+			</h1>
+
+			</header>
+    
+    
+  <!-- Aside -->
+    <!-- //Aside -->
+
+  
+  
+  
+	
+  
+	
+	<section class="article-content clearfix">
+		<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The Back Talk Reverse Delay pedal is included in the&nbsp;<em>Miscellaneous Series Effects</em>&nbsp;released in 2001 by Danelectro.&nbsp;Built in a sturdy die-cast enclosure and running on 9V, it is <span style="color: #800000;"><span style="color: #333333;">a cost-effective pure digital backward delay,&nbsp;suitable for creative possibilities, going from subtle delay to&nbsp;psychedelic&nbsp;oscillating noisy sounds</span>.</span></span></p>
+<p><a href="../_assets/4caa58f1b0a4.png"><span style="font-family: verdana, geneva;"><img src="../_assets/4caa58f1b0a4.png" alt="back-delay-reverse-delay-pcbs" width="688" height="219" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+ 
+<h1><span style="font-family: verdana, geneva;"><strong><span style="font-size: 14pt; color: #000000;">Table of Contents:</span></strong></span></h1>
+<p><span style="color: #0000ff; font-family: verdana, geneva;"><a href="/back-talk-analysis#reversedelay1"><span style="color: #0000ff;"><span style="font-size: 10pt;">1. The Reverse Delay Effect</span>.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; <a href="/back-talk-analysis#controls11"><span style="color: #0000ff;">1.1 Reverse Delay Back Talk Control Knobs.</span></a></span><br /><span style="color: #0000ff; font-family: verdana, geneva;"><a href="/back-talk-analysis#circuit2"><span style="font-size: 10pt; color: #0000ff;">2. Back Talk Reverse Delay Circuit.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; <a href="/back-talk-analysis#analog21"><span style="color: #0000ff;">2.1 The Analog PCB Circuit.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="/back-talk-analysis#bias211"><span style="color: #0000ff;">2.1.1 Voltage Bias Block.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="/back-talk-analysis#input212"><span style="color: #0000ff;">2.1.2 Input Buffer Stage.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="/back-talk-analysis#output213"><span style="color: #0000ff;">2.1.3 Output Buffer Stage.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; <a href="/back-talk-analysis#digital22"><span style="color: #0000ff;">2.2 The Digital PCB Circuit.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="/back-talk-analysis#power221"><span style="color: #0000ff;">2.2.1 Power Supply Stage.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="/back-talk-analysis#por222"><span style="color: #0000ff;">2.2.2 Power On Reset Circuit.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="/back-talk-analysis#adc223"><span style="color: #0000ff;">2.2.3 Potentiometers &amp; Footswitch ADC Block.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="/back-talk-analysis#codec224"><span style="color: #0000ff;">2.2.4 Audio Codec.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="/back-talk-analysis#memory225"><span style="color: #0000ff;">2.2.5 Memory Management.</span></a></span><br /><span style="color: #0000ff; font-family: verdana, geneva;"><a href="/back-talk-analysis#clon3"><span style="font-size: 10pt; color: #0000ff;">3. Back Talk Reverse Delay Clon.</span></a></span><br /><span style="color: #0000ff; font-family: verdana, geneva;"><a href="/back-talk-analysis#resources4"><span style="font-size: 10pt; color: #0000ff;">4. Resources.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff; font-family: verdana, geneva;">&nbsp; &nbsp; &nbsp; <a href="/back-talk-analysis#datacheets41"><span style="color: #0000ff;">4.1 Back Talk Reverse Delay Datasheets.</span></a></span></p>
+<pre><span style="font-family: verdana, geneva;"></span></pre>
+<h1><span style="font-size: 14pt; font-family: verdana, geneva;"><a id="reversedelay1" name="reversedelay1"></a><strong><span style="color: #000000;">1. The Reverse Delay Effect.</span></strong></span></h1>
+<p><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">The concept behind reverse delay device is simple: The input signal is passed through a memory buffer, where it is delayed for a short time and&nbsp;</span><span style="font-size: 10pt;">then sent reversed to the output. </span></span></p>
+<p><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">Mixing the reverse delayed sound with the original signal, the pedal produces a single repeat following the original&nbsp;</span><span style="font-size: 10pt;">sound, but feedbacking a percentage of the delayed signal back to the input produces a repeating echo effect, where each subsequent echo is a&nbsp;</span><span style="font-size: 10pt;">little quieter than the previous one.&nbsp;</span></span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">If the feedback gain is more than unity, the echoes will build up in level rather than decaying, resulting in an uncontrollable psychedelic howl.</span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/06e259375bee.png"><img src="../_assets/06e259375bee.png" alt="Back Talk Reverse Delay Signal Diagram" width="520" height="179" style="display: block; margin-left: auto; margin-right: auto;" /></a><span style="font-size: 10pt; color: #333333;">To illustrate the operation, a sawtooth signal is used as a guitar input signal.</span></span></p>
+<ol>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Original sawtooth input wave.</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">In the beginning of the process, the wave is chopped according to the pedal knobs.</span></li>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Each of these pieces are reversed and delayed.&nbsp;</span></li>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">At last, the original blue wave (2) and the reverse delayed green one (3) are blended creating the sound effect.</span></li>
+</ol>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"></span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/96b1459165ea.png"><span style="font-size: 10pt; color: #333333;"><img src="../_assets/96b1459165ea.png" alt="Back Talk Reverse Delay Signal" width="610" height="409" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></span></p>
+<h2><span style="font-family: verdana, geneva;"><strong><span style="font-size: 12pt;"><a id="controls11" name="controls11"></a><span style="color: #000000;">1.1 Reverse Delay Back Talk Control Knobs.</span></span></strong></span></h2>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The pedal is commanded by 3 knobs: Mix, Speed, and Repetitions which will adjust the effect sound features:</span></p>
+<ul>
+<li><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;"><span style="color: #000000;">Mix:</span>&nbsp;Controls the blend between the original&nbsp;<em>dry</em>&nbsp;signal and the&nbsp;<em>wet</em>&nbsp;processed signal, giving more presence to the genuine input wave or to the&nbsp;</span><span style="font-size: 10pt;">effected sound.</span></span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"><span style="color: #000000;">Repetitions:</span>&nbsp;Sets the number of times that the sampled delayed signal will be repeated over the original signal, creating an echo effect and controlling its depth.&nbsp;</span></li>
+<li><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;"><span style="color: #000000;">Speed:</span>&nbsp;Adjusts the sample delay window, in other words, the amount of time that the signal is delayed and the duration of the delay.&nbsp;</span><span style="font-size: 10pt;">To illustrate this factor, in the below figure the reverse delay effect is applied over two sawtooth signals with a different speed/delay window:</span></span></li>
+</ul>
+<p><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">&nbsp; &nbsp; &nbsp;</span><a href="../_assets/d58681da44ed.png"><span style="color: #333333; font-size: 10pt;"><img src="../_assets/d58681da44ed.png" alt="Back Talk Reverse Delay Speed Knob" width="800" height="178" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"></span></p>
+<p><span style="font-family: verdana, geneva;"><a id="circuit2" name="circuit2"></a>&nbsp;<strong><span style="font-size: 14pt; color: #000000;">2. Back Talk Reverse Delay Circuit.</span></strong></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The circuit is implemented in two PCBs: the&nbsp;<em>Analog PCB</em>&nbsp;and the&nbsp;<em>Digital PCB</em>, linked by a 7-pin connector.&nbsp;</span><br /><span style="font-family: verdana, geneva;"><span style="color: #333333;"><span style="font-size: 10pt;">The input signal enters into the pedal through the Analog PCB, being buffered and prepared to the digital signal processing in the Digital PCB.&nbsp;</span><span style="font-size: 10pt;">After the digital effect is added by the Digital PCB, the signal is sent back to the Analog PCB to be buffered again and be prepared to the output.</span></span><a href="../_assets/e5a2bb80cb93.png"><img src="../_assets/e5a2bb80cb93.png" alt="Back Delay Reverse Delay Exploded View" width="487" height="306" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<h2><span style="font-family: verdana, geneva;"><strong><span style="font-size: 12pt;"><a id="analog21" name="analog21"></a><span style="color: #000000;">2.1 The Analog PCB Circuit.</span></span></strong></span></h2>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The small input/output buffer board is a single layer PCB which contains 3 stages: the Voltage Bias, the Input Buffer, and the Output Buffer.&nbsp;</span><br /><span style="font-family: verdana, geneva;"><a href="../_assets/b525766367b6.png"><span style="font-size: 10pt; color: #333333;"><img src="../_assets/b525766367b6.png" alt="Back Talk Reverse Delay Analog PCB" width="256" height="250" style="display: block; margin-left: auto; margin-right: auto;" /></span></a><span style="font-size: 10pt; color: #333333;">The circuit is based on<a href="../jrc4558-analysis/index.html"> the famous 4558 dual op-amp IC</a>, one half of it will be used as Input Buffer and the other half as an Output Buffer. The&nbsp;</span><span style="font-size: 10pt; color: #333333;">7-pin connector will send and receive signals between this PCB and the Digital Board.</span><a href="../_assets/3eaeb423f5e1.png"><img src="../_assets/9c3bfaac3636.png" alt="Back Talk Reverse Delay Analog Board Circuit" width="800" height="336" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<h3><span style="font-size: 10pt; font-family: verdana, geneva;"><a id="bias211" name="bias211"></a><strong><span style="color: #000000;">2.1.1 Voltage Bias Block.</span></strong></span></h3>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The Voltage Bias Block provides the voltage levels to the 4558 dual op-amp and electrical protection against reverse polarity supply.<a href="../_assets/4f9deaf1b7eb.png"><img src="../_assets/4f9deaf1b7eb.png" alt="Back Talk Reverse Delay Voltage Bias" width="663" height="268" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<ul>
+<li><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">The resistor divider (R<sub>114</sub>, R<sub>115</sub>) generates +2.4 volts from +4.8V. The&nbsp;+2.4V&nbsp;resistors junction is decoupled to ground with a large value electrolytic capacitor C<sub>907</sub>&nbsp;(100uF)&nbsp;</span><span style="font-size: 10pt;">to remove all ripple from the supply voltage.&nbsp;</span></span></li>
+<li><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">The diode D</span><span style="font-size: 10pt; color: #333333;">101<span style="font-size: small;">&nbsp;protects the pedal against reverse polarity connections.</span></span></span></li>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The stereo in jack is used as an on-off switch, switching the battery (-) terminal to ground when the guitar jack is connected.</span></li>
+</ul>
+<h3><span style="font-size: 10pt; font-family: verdana, geneva;"><a id="input212" name="input212"></a><strong><span style="color: #000000;">2.1.2 Input Buffer Stage.</span></strong></span></h3>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The Input Buffer grants high input impedance, frequency filtering and voltage gain, keeping signal integrity and preparing it to be digitalized.</span><br /><span style="font-family: verdana, geneva;"><a href="../_assets/646444dae61c.png"><span style="font-size: 10pt;"><img src="../_assets/646444dae61c.png" alt="Back Talk Reverse Delay Input Buffer" width="605" height="318" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Not considering for the moment the caps C<sub>3</sub>&nbsp;and C<sub>4</sub>, the non-inverting amplifier gain can be calculated as:</span></p>
+<p><span style="color: #333333; font-family: verdana, geneva;"><img src="http://latex.codecogs.com/gif.latex?G_{v}=\frac{1+R_{6}}{R_{7}}=\frac{1+47K}{18K}=2.6" alt="" title="G_{v}=\frac{1+R_{6}}{R_{7}}=\frac{1+47K}{18K}=2.6" /></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The capacitors C<sub>3</sub>&nbsp;and C<sub>4</sub>&nbsp;create a pass-band filter (low pass + high pass) where:</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Low pass =&nbsp;R<sub>6</sub>C<sub>3</sub>&nbsp;network with f<sub>c</sub>=1/(2&pi;R<sub>6</sub>C<sub>3</sub>)&nbsp;</span></li>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">High pass =&nbsp;R<sub>7</sub>C<sub>4</sub>&nbsp;network with f<sub>c</sub>=1/(2&pi;R<sub>7</sub>C<sub>4</sub>)</span></li>
+</ul>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">This pass-band filter is&nbsp;<span style="color: #3366ff;"><a href="/tube-screamer-analysis#non-inverting" style="color: #3366ff;"><span style="color: #333333;">similar to the non-inverting amp in the Tube Screamer</span></a></span>. It will add a subte honky tone but besides this small tone modification, it is important for digital effects to eliminate the excess of bass and treble due to the bandwidth limitation in the analog to digital conversion stage.</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The network C<sub>5</sub>&nbsp;R<sub>8</sub>&nbsp;R<sub>10</sub>&nbsp;and the input impedance&nbsp;of the 4558 (Z<sub>in</sub>=50M<span style="font-family: arial, sans-serif; font-size: small; line-height: 16px;">&Omega;</span>) also creates a high pass filter to remove the DC component from the input line.</span></li>
+<li><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">The resistor R<sub>9</sub>&nbsp;next to the input jack to ground is a pull-down resistor which avoids popping sounds when&nbsp;</span><span style="font-size: 10pt;">the pedal is switched on. The input pull-down resistor becomes the maximum input impedance of the pedal.</span></span></li>
+</ul>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;"></span></p>
+<h3><span style="font-size: 10pt; font-family: verdana, geneva;"><a id="output213" name="output213"></a><strong><span style="color: #000000;">2.1.3 Output Buffer Stage.</span></strong></span></h3>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;"><span style="color: #333333;">The Output Buffer procures low output impedance, filtering and some voltage Gain, keeping signal integrity and preparing it to the outpu</span>t.</span><br /><span style="font-family: verdana, geneva;"><a href="../_assets/5fd472058ae0.png"><span style="font-size: 10pt;"><img src="../_assets/5fd472058ae0.png" alt="Back Talk Reverse Delay Output Buffer" width="641" height="333" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The op amp is in inverting configuration, C<sub>6</sub>&nbsp;will smooth high harsh harmonics and C<sub>8</sub>&nbsp;is a bass cut filter, muting the excess of bass to be delivered to the next stage.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;"></span></p>
+<p><span style="font-size: 12pt; font-family: verdana, geneva;"><a id="digital22" name="digital22"></a><strong><span style="color: #000000;">2.2 The Digital PCB Circuit.</span></strong></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The 2-layers PCB can be broken down into simpler blocks: Power Supply stage, Potentiometers &amp; Footswitch ADC block, Audio Codec and Memory Management.</span><br /><a href="../_assets/af885240cf4d.png"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"><img src="../_assets/af885240cf4d.png" alt="Back Talk Reverse Delay Digital PCB" width="514" height="371" style="display: block; margin-left: auto; margin-right: auto;" /></span></a><br /><span style="font-family: verdana, geneva;"><span style="color: #333333;"><span style="font-size: 10pt;">The circuit is based in the 8-bit Atmel microcontroller AT1200S which manages few peripherals. The input signal coming from the Analog Board</span>&nbsp;<span style="font-size: 10pt;">is primarily digitalized by the PCM3500E Audio Codec and the resulting data is processed by the Micro using the</span>&nbsp;<span style="font-size: 10pt;">RAM memory to generate the reverse delay effect. Finally, the digital signal is translated back to analog levels using again the PCM3500E</span>&nbsp;<span style="font-size: 10pt;">Codec. Two linear voltage regulators will grant 5.0 and 3.6 of voltage supply for the parts.</span></span><a href="../_assets/e6090e32c3c5.png"><img src="../_assets/e6090e32c3c5.png" alt="Back Talk Reverse Delay Digital Board Circuit" width="800" height="302" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<h3><span style="font-size: 10pt; font-family: verdana, geneva;"><a id="power221" name="power221"></a><strong><span style="color: #000000;">2.2.1 Power Supply Stage.</span></strong></span></h3>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The Power Supply Stage&nbsp;<span style="color: #333333; font-size: 13px; line-height: 18px;">is made up of two Holtek voltage regulators, they</span>&nbsp;will provide voltage supply to all stages in the pedal.&nbsp;</span></p>
+<p><a href="../_assets/0fbd2c04b9e3.png"><span style="font-size: 10pt; font-family: verdana, geneva;"><img src="../_assets/0fbd2c04b9e3.png" alt="Back Talk Reverse Delay Power Supply" width="861" height="208" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+<ul>
+<li><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">The IC5 HT7550 is a three-terminal&nbsp;</span><span style="font-size: small;">5V@100mA low</span><span style="font-size: 10pt;">&nbsp;dropout CMOS linear voltage regulator, supplying 5.0 volts.</span></span></li>
+<li><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: small;">The 9V battery primary voltage source and the 5.0V output are decoupled to ground with several capacitors C</span><sub style="font-size: 10pt;">9</sub><span style="font-size: small;">, C</span><sub style="font-size: 10pt;">8</sub><span style="font-size: small;">,&nbsp;<span style="color: #333333; font-size: 13px; line-height: 18px;">C</span><sub style="color: #333333; line-height: 18px;">29</sub><sub style="color: #333333; line-height: 18px;">&nbsp;</sub></span><span style="color: #333333; font-size: 13px; line-height: 18px;"><span style="color: #333333; font-size: small; line-height: 18px;">(4.7uF elec.)</span><span style="font-size: small;"></span><span style="color: #333333; font-size: 13px; line-height: 18px;">C</span><sub style="color: #333333; line-height: 18px;"><span style="font-size: small;">30&nbsp;</span></sub><span style="color: #333333; font-size: 13px; line-height: 18px;"><span style="color: #333333; font-size: small; line-height: 18px;">(4.7uF elec.)</span></span></span><span style="font-size: small;">&nbsp;and C</span><sub style="font-size: 10pt;">5</sub><span style="font-size: small;">&nbsp;(100uF elec) to remove all ripple from supply voltage.</span></span></li>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The R<sub>14</sub>C<sub>41</sub>&nbsp;network generates +4.8V&nbsp;<em>Slow</em>&nbsp;supply, which is used only by the 4558 Dual Op-Amp and the HC4066 Analog Switch, grants a smooth supply ramp due capacitor C<sub>41</sub>&nbsp;charge/discharge time:</span></li>
+</ul>
+<p style="margin-left: 30px;"><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">Time&nbsp;<sub>Charge/Discharge</sub>&nbsp;= 5<sub>*</sub>R<sub>14*</sub>C<sub>41&nbsp;</sub></span><span style="font-size: small;">= 5<sub>*</sub>100</span><span class="st" style="font-size: small;">&Omega;</span><span style="font-size: small;"><sub>*</sub>10uF = 5ms</span></span></p>
+<ul>
+<li><span style="color: #333333; font-family: verdana, geneva;">&nbsp;<span style="font-size: 10pt;">The IC4 HT7136 is a three-terminal&nbsp;</span><span style="font-size: small;">3.6V@30mA low</span><span style="font-size: 10pt;">&nbsp;dropout CMOS linear voltage regulator, supplying 3.6 volts only to the Audio Codec.</span></span></li>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The 9V battery primary voltage source and the 3.6V output are decoupled to ground with several capacitors C<sub>7</sub>, C<sub>10</sub>, and C<sub>6</sub>&nbsp;(100uF elec.) to remove all ripple from supply voltage.</span></li>
+</ul>
+<h3><strong><span style="font-size: 10pt; font-family: verdana, geneva;"><a id="por222" name="por222"></a><span style="color: #000000;">2.2.2 Power On Reset Circuit.</span></span></strong></h3>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">It is important to keep under control the system at start-up estate. Otherwise, the microcontroller may initially operate in an unpredictable fashion.<a href="../_assets/b8db79ec8b2c.png"><img src="../_assets/b8db79ec8b2c.png" alt="Back Talk Reverse Delay Power On Reset" width="602" height="284" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The Power-On-Reset circuit asserts a reset signal whenever Vcc supply falls below a reset threshold. The reset time-out period can be adjusted using C<sub>42</sub>. Reset remains asserted for an interval programmed by C<sub>42</sub>, after Vcc has risen obove the threshold voltage.</span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"></span></p>
+<h3><strong><span style="font-size: 10pt; font-family: verdana, geneva;"><a id="adc223" name="adc223"></a><span style="color: #000000;">2.2.3 Potentiometers &amp; Footswitch ADC Block.</span></span></strong></h3>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The VR3 Mix, VR1 Speed, VR2 Repetitions 3K3 potentiometers and the pedal footswitch SW1 are read by the microcontroler through an Analog to Digital Converter IC7 TLC0834C.<a href="../_assets/e0b369c80d01.png"><img src="../_assets/e0b369c80d01.png" alt="Back Talk Reverse Delay ADC" width="929" height="393" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<p><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">The microcontroler does not have enough embedded ADCs to read all the analog levels from the potentiometers and the footswitch, so as to do it&nbsp;</span><span style="font-size: 10pt;">and save the maximum resources, the Texas Instruments TLC0834C ADC is used. T</span><span style="font-size: 10pt;">he result of these measures are sent in a single serial line to the microcontroller to be processed.</span></span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">D-Latches from IC10 HC373 multiplex the port B of the micro, keeping these lines accessible for other purposes at the same time.</span></li>
+</ul>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"></span></p>
+<h3><span style="color: #000000;"><strong><span style="font-size: 10pt; font-family: verdana, geneva;"><a id="codec224" style="color: #000000;" name="codec224"></a><span style="color: #000000;">2.2.4 Audio Codec.</span></span></strong></span></h3>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">The Audio Codec is a single chip that encodes the guitar analog input as a digital serial signal to be taken by the microcontroller.&nbsp;</span><span style="font-size: 10pt; color: #333333;">It also decodes the processed digital signals from the microcontroller back into analog.</span><span style="font-size: 10pt;">&nbsp;So, t</span><span style="font-size: 10pt; color: #333333;">he Codec contains both an Analog-to-digital converter (ADC) and Digital-to-analog converter (DAC) running off the same clock at 11.286 MHz.</span><a href="../_assets/8f2079d874bd.png"><span style="color: #333333;"><span style="font-size: 10pt;"><img src="../_assets/8f2079d874bd.png" alt="Back Talk Reverse Delay Audio Codec" width="973" height="443" style="display: block; margin-left: auto; margin-right: auto;" /></span></span></a></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="color: #333333;"><span style="font-size: 10pt;">The PCM3500E by Burr-Brown contains 16-bit Delta Sigma ADC and DAC, with a sampling frequency of 22.05KHz (11.286/512).&nbsp;</span><span style="font-size: 10pt;">The chip also includes anti-aliasing filter, digital high-pass&nbsp;</span></span><span style="color: #333333;"><span style="font-size: 10pt;">filter for DC blocking, and output low-pass filter&nbsp;</span><span style="font-size: 10pt;">to enhance performance.</span></span></span></p>
+<p><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">The&nbsp;<em>dry</em>&nbsp;input signal is&nbsp;<em>encoded</em>&nbsp;or digitalized by the ADC block of the PCM3500 and sent in serial mode to the micro. The microcontroller&nbsp;</span><span style="font-size: 10pt;">manage and modify the digitalized signal adding the back delay effect and finally the&nbsp;<em>wet</em>&nbsp;signal is translated back to analog using the DAC block of</span><span style="font-size: 10pt;">&nbsp;the PCM3500.</span></span></p>
+<ul>
+<li><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">Using the Analog Switch HC4066 commanded by the microcontroller, the input signal can skip all the digital signal processing and go straight to the output when the pedal is in off/bypass mode.</span></span></li>
+<li><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;"><span style="line-height: 18px;">The Power on diode D<sub>1</sub>&nbsp;is turned on when the push footswitch is pressed, showing whether the effect is active or not.</span></span></span></li>
+</ul>
+<p><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;"></span></span></p>
+<h3><span style="font-size: 12pt;"><strong><span style="font-size: 10pt; font-family: verdana, geneva;"><a id="memory225" name="memory225"></a><span style="color: #000000;">2.3 Memory Management.</span></span></strong></span></h3>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">All delay based pedals need some mechanism to store the audio in order to play it later as a delayed version.</span>&nbsp;<span style="font-size: 10pt; color: #333333;">This method can be magnetic tape in old&nbsp;<em>pure</em>&nbsp;analog effects, capacitors in bucket brigade delay devices or just RAM memory in&nbsp;<em>pure</em>&nbsp;digital pedals.</span></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The two ISS ram chips supply 8-bits of 32K memory each one, these parts can be associated as 32K of 16-bits memory. The Audio Codec works at 16-bits with a sampling period of 22.05KHz, with this speed, the memory system is able to store 32K/22.05KHz = 1.45 seconds of delay. &nbsp;</span></p>
+<p><span style="font-family: verdana, geneva;"><span style="color: #333333;"><span style="font-size: 10pt;">In the Back Talk pedal, the main bottleneck in the hardware design is the way to manage two 28 pined memory chips with a limited free lines.&nbsp;</span><span style="font-size: 10pt;">To do so, 16 d-type latches are needed to extend the number of available lines multiplexing the port B of the micro.</span></span><a href="../_assets/8117d8af5d4d.png"><img src="../_assets/8117d8af5d4d.png" alt="Back Talk Reverse Delay Memory Management" width="986" height="532" style="font-size: 10pt; color: #333333; display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<p><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">The Microcontroler receives the digitalized guitar signal from the PCM3500 Audio Codec in serial mode. Then, the data serial string is&nbsp;</span><span style="font-size: 10pt;">processed and sent in parallel to the RAM memory through the HC373 D-latches; the IC9 D-Latch is used to drive the address lines and the IC8 manage the memory I/O lines.</span></span></p>
+<p><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">Depending on the user potentiometers (mix, speed, repetitions) the micro will apply&nbsp;</span><span style="font-size: 10pt;">different adjustments in the feedback, deep of memory buffer and mixing algorithm.</span></span></p>
+<ul>
+<li><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">The HC137&nbsp;<span style="line-height: 18px;">3-to-8 Line Decoder</span>&nbsp;is in charge of enable the latches and also address the memory extending the number of available lines. The diodes D<sub>3</sub>, D<sub>4</sub>, D<sub>5</sub>&nbsp;and D<sub>6</sub>&nbsp;are used to adjust levels between parts.</span></span></li>
+<li><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">The IC12&nbsp;<span style="line-height: 18px;">HC368 Hex inverting buffers adapt the levels to negative logic to engage ICs.</span></span></span></li>
+</ul>
+<p><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;"><span style="line-height: 18px;"></span></span></span></p>
+<h1><span style="font-size: 14pt; font-family: verdana, geneva;"><a id="clon3" name="clon3"></a><strong><span style="color: #000000;">3. Back Talk Reverse Delay Clon.</span></strong></span></h1>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">After understanding the circuit and Danelectro approach for this pedal, it can be concluded that the reverse engineering clone is pretty discouraging. Despite the relatively complex PCB layout and all surface montage devices, some of then obsoletes, the git of the pedal remains in the source code of the microcontroller which is not available.</span></p>
+<p><span style="font-size: small; color: #333333; font-family: verdana, geneva;">The hardware design indicates that the program code must be complex as well; the serial data encryption and decryption for the Audio Codec and the ADC,&nbsp;the 24 latches, 2 memories and&nbsp;decoder management for real time signal processing is not trivial.</span></p>
+<p><span style="font-size: small; color: #333333; font-family: verdana, geneva;">Anyway, is a good learning exercise to see how the big ones design DSP pedals, so you can for sure gain some ideas for you own designs, good luck!</span></p>
+<p style="text-align: right;"><span style="font-family: verdana, geneva;"></span></p>
+<h1><span style="font-size: 14pt; font-family: verdana, geneva;"><a id="resources4" name="resources4"></a><strong><span style="color: #000000;">4. Resources.</span></strong></span></h1>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="http:/en.wikipedia.org/wiki/Danelectro">Danelectro pedals</a>&nbsp;in Wikipedia.</span><br /><span style="font-family: verdana, geneva;"><span style="font-size: 10pt;"><a href="http://www.muzique.com/news/pulldown-resistors/">Pulldown Resistors</a>&nbsp;by AMZFX</span>.</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="http://www.muzique.com/news/pulldown-resistor-vs-input-impedance/">Pulldown Resistors vs Input Impedance</a>&nbsp;by AMZFX.</span><br /><span style="font-size: small; font-family: verdana, geneva;"><a href="http://www.soundonsound.com/sos/jul03/articles/sequencerdelay.asp">Sequencer Delay Masterclass</a>&nbsp;in Sound on Sound.</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="http://dafx10.iem.at/papers/RaffelSmith_DAFx10_P42.pdf">Practical Modeling of Bucket-Brigade-Device CircitsCircits</a>&nbsp;by C. Raffel &amp; J. Smith.</span></p>
+<h2><span style="font-family: verdana, geneva;"><a id="datacheets41" name="datacheets41"></a><strong><span style="font-size: 12pt; color: #000000;">4.1 Back Talk Reverse Delay Datasheets.</span></strong></span></h2>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">IC1, IC2,&nbsp;<a href="http://www.issi.com/pdf/61C256AH.pdf">IS61C256AH 32Kx8 CMOS High Speed Static RAM Memory.</a></span><br /><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">IC3,&nbsp;<a href="http://www.ti.com/lit/ds/symlink/pcm3500.pdf">PCM3500E 16bit Mono audio Codec / 16bit Delta Sigma ADC/DAC</a>.</span><br /><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">IC4,&nbsp;<a href="http://www.holtek.com.tw/english/docum/consumer/71xx_1.htm">HT7136 30mA 3.6V voltage regulator</a>.</span><br /><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">IC5,&nbsp;<a href="http://www.holtek.com.tw/english/docum/consumer/75xx_1.htm">HT7550 100mA 5.0V voltage regulator</a>.</span><br /><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">IC6,&nbsp;<a href="http://www.atmel.com/Images/doc0838.pdf">AT90S1200 8bit Microcontroler 1K Flash memory</a>.</span><br /><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">IC7,&nbsp;<a href="http://www.ti.com/lit/ds/symlink/tlc0838.pdf">TLC0834C Analog to Digital converter with serial control.</a>&nbsp;</span><br /><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">IC8, IC9, IC10,&nbsp;<a href="http://www.ti.com/lit/ds/symlink/sn74hc373.pdf">HC373 Octal Transparent D-type Latches with 3-state outputs.&nbsp;</a></span><br /><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">IC11,&nbsp;<a href="http://www.ti.com/lit/ds/symlink/cd74hc137.pdf">HC137 3-to-8 Line Decoder Demultiplexer with Address Latches.</a></span><br /><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">IC12,&nbsp;<a href="http://www.ti.com/lit/ds/symlink/sn74hc368.pdf">HC368 Hex inverting buffers and line drivers with 3-state output</a>.</span><br /><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">IC13,&nbsp;<a href="http://www.ti.com/lit/ds/symlink/sn74hc4066.pdf">HC4066 Quad Analog Switch.</a></span></p>
+<p style="text-align: right;"><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"><span style="line-height: 18px; text-align: right; font-size: small; color: #333333;">Thanks for reading, all feedback is appreciated &nbsp;</span><img src="../_assets/26a349a17744.jpg" alt="jr(at)ElectroSmash.com " style="line-height: 18px; text-align: right; color: #333333; font-family: Arial, Helvetica, sans-serif; font-size: 13px;" /></span></p>
+<p style="text-align: right;"><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"></span></p>	</section>
+  
+  <!-- footer -->
+    <!-- //footer -->
+
+			<hr class="divider-vertical" /><ul class="pager pagenav">
+	<li class="previous">
+		<a class="hasTooltip" title="Boss CE-2 Analysis" aria-label="Previous article: Boss CE-2 Analysis" href="../boss-ce-2-analysis/index.html" rel="prev">
+			<span class="icon-chevron-left" aria-hidden="true"></span> <span aria-hidden="true">Prev</span>		</a>
+	</li>
+</ul>
+	
+	
+	</article>
+<!-- //Article -->
+
+
+</div><div><a href="http://www.artio.net" style="font-size: 8px; visibility: visible; display: inline;" title="Web development, Joomla, CMS, CRM, Online shop software, databases">Joomla SEF URLs by Artio</a></div>
+		</div>
+		<!-- //MAIN CONTENT -->
+
+		<!-- SIDEBAR RIGHT -->
+		<div class="t3-sidebar t3-sidebar-right col-xs-12 col-sm-4  col-md-3 ">
+			<div class="t3-module module " id="Mod28"><div class="module-inner"><h3 class="module-title "><span>New Updates</span></h3><div class="module-ct"><ul class="latestnews mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../arduino-audio-meter/index.html" itemprop="url">
+			<span itemprop="name">
+				Arduino Audio Meter			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../dallas-rangemaster/index.html" itemprop="url">
+			<span itemprop="name">
+				Dallas Rangemaster Treble Booster Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../time-manipulator/index.html" itemprop="url">
+			<span itemprop="name">
+				Time Manipulator - Arduino Delay/Echo/Reverb			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../marshall-guvnor-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Marshall The Guvnor Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../germanium-fuzz/index.html" itemprop="url">
+			<span itemprop="name">
+				You Can Build the Perfect Germanium Fuzz			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../mxr-distortion-plus-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				MXR Distortion + Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod29"><div class="module-inner"><h3 class="module-title "><span>Most Visited</span></h3><div class="module-ct"><ul class="mostread mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../tube-screamer-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Tube Screamer Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../fuzz-face/index.html" itemprop="url">
+			<span itemprop="name">
+				Fuzz Face Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../proco-rat/index.html" itemprop="url">
+			<span itemprop="name">
+				Pro Co Rat Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../boss-ds1-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Boss DS-1 Distortion Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../klon-centaur-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Klon Centaur Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../big-muff-pi-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Big Muff Pi Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod184"><div class="module-inner"><h3 class="module-title "><span>Follow us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><span style="font-size: 10pt; color: #333333;">You can also follow us on:</span></p>
+<p><a href="https://www.facebook.com/ElectroSmash"><img src="../_assets/df34a2b41b54.png" alt="facebook" /></a>&nbsp;&nbsp; <a href="https://plus.google.com/+Electrosmash/about"><img src="../_assets/3ffc52860091.png" alt="google" /></a>&nbsp;&nbsp; <a href="https://www.instagram.com/electro.smash/"><img src="../_assets/45b0b0fe2d4b.png" alt="instagram" /></a></p>
+<p><a href="https://www.pinterest.com/electrosmash/"><img src="../_assets/05310d9fcf2a.png" alt="pinterest" /></a>&nbsp;&nbsp; <a href="https://www.youtube.com/user/ElectroSmashTV"><img src="../_assets/d920883b3613.png" alt="youtube" /></a>&nbsp;&nbsp; <a href="https://twitter.com/electro_smash"><img src="../_assets/52581f7264eb.png" alt="twitter" /></a></p></div>
+</div></div></div>
+		</div>
+		<!-- //SIDEBAR RIGHT -->
+
+	</div>
+</div> 
+
+
+
+  
+
+
+  
+
+
+	
+<!-- BACK TOP TOP BUTTON -->
+<div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top hidden-xs hidden-sm affix-top">
+  <button class="btn btn-primary" title="Back to Top"><i class="fa fa-caret-up"></i></button>
+</div>
+<script type="text/javascript">
+(function($) {
+	// Back to top
+	$('#back-to-top').on('click', function(){
+		$("html, body").animate({scrollTop: 0}, 500);
+		return false;
+	});
+    $(window).on('load', function(){
+        // hide button to top if the document height not greater than window height*2;using window load for more accurate calculate.    
+        if ((parseInt($(window).height())*2)>(parseInt($(document).height()))) {
+            $('#back-to-top').hide();
+        } 
+    });
+})(jQuery);
+</script>
+<!-- BACK TO TOP BUTTON -->
+
+<!-- FOOTER -->
+<footer id="t3-footer" class="wrap t3-footer">
+
+			<!-- FOOTER SPOTLIGHT -->
+		<div class="container hidden-xs">
+				<!-- SPOTLIGHT -->
+	<div class="t3-spotlight t3-footer-sl  row">
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod185"><div class="module-inner"><h3 class="module-title "><span>About us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../about-us/index.html">&nbsp;&nbsp;<img src="../_assets/420f9f181bc0.jpg" alt="smash electro" /></a></p>
+<p><a href="../about-us/index.html"><span style="font-size: 10pt; color: #333333;">Smashing audio electronics since MMXIII</span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod183"><div class="module-inner"><h3 class="module-title "><span>Email Newsletter</span></h3><div class="module-ct"><div class="acymailing_module" id="acymailing_module_formAcymailing44901">
+	<div class="acymailing_fulldiv" id="acymailing_fulldiv_formAcymailing44901"  >
+		<form id="formAcymailing44901" action="index.html" onsubmit="return submitacymailingform('optin','formAcymailing44901')" method="post" name="formAcymailing44901"  >
+		<div class="acymailing_module_form" >
+						<table class="acymailing_form">
+				<tr>
+												<td class="acyfield_email acy_requiredField">
+								<input id="user_email_formAcymailing44901"  onfocus="if(this.value == 'example@email.com') this.value = '';" onblur="if(this.value=='') this.value='example@email.com';" class="inputbox" type="text" name="user[email]" style="width:90%" value="example@email.com" title="example@email.com"/>
+							</td> </tr><tr>
+					
+					<td  class="acysubbuttons">
+												<input class="button subbutton btn btn-primary" type="submit" value="Subscribe" name="Submit" onclick="try{ return submitacymailingform('optin','formAcymailing44901'); }catch(err){alert('The form could not be submitted '+err);return false;}"/>
+											</td>
+				</tr>
+			</table>
+						<input type="hidden" name="ajax" value="0" />
+			<input type="hidden" name="acy_source" value="module_183" />
+			<input type="hidden" name="ctrl" value="sub"/>
+			<input type="hidden" name="task" value="notask"/>
+			<input type="hidden" name="redirect" value="https%3A%2F%2Fwww.electrosmash.com%2Fback-talk-analysis"/>
+			<input type="hidden" name="redirectunsub" value="https%3A%2F%2Fwww.electrosmash.com%2Fback-talk-analysis"/>
+			<input type="hidden" name="option" value="com_acymailing"/>
+						<input type="hidden" name="hiddenlists" value="1"/>
+			<input type="hidden" name="acyformname" value="formAcymailing44901" />
+									</div>
+		</form>
+	</div>
+	</div>
+
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod186"><div class="module-inner"><h3 class="module-title "><span>Contact us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../contact-us/index.html"><span style="font-size: 10pt; color: #333333;">e-mail us at <span id="cloakbf76dd6a9d60f384d6346130f3ebfb12">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
+				document.getElementById('cloakbf76dd6a9d60f384d6346130f3ebfb12').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addybf76dd6a9d60f384d6346130f3ebfb12 = '&#105;nf&#111;' + '&#64;';
+				addybf76dd6a9d60f384d6346130f3ebfb12 = addybf76dd6a9d60f384d6346130f3ebfb12 + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';
+				var addy_textbf76dd6a9d60f384d6346130f3ebfb12 = '&#105;nf&#111;' + '&#64;' + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';document.getElementById('cloakbf76dd6a9d60f384d6346130f3ebfb12').innerHTML += '<a ' + path + '\'' + prefix + ':' + addybf76dd6a9d60f384d6346130f3ebfb12 + '\'>'+addy_textbf76dd6a9d60f384d6346130f3ebfb12+'<\/a>';
+		</script></span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod188"><div class="module-inner"><h3 class="module-title "><span>Rights</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p style="text-align: left;">&nbsp;&nbsp;<a href="https://creativecommons.org/licenses/by-nc/3.0/"><img src="../_assets/b0e99d439c44.png" alt="88x31" /></a></p>
+<p style="text-align: left;"><img src="../_assets/fe2636cdea5c.png" alt="open source logo" width="180" height="38" /></p>
+<p style="text-align: left;"><img src="../_assets/8281c4ec3a3b.png" alt="open hardware logo" width="180" height="38" /></p>
+<p style="text-align: left;">&nbsp;</p></div>
+</div></div></div>
+							</div>
+			</div>
+<!-- SPOTLIGHT -->
+		</div>
+		<!-- //FOOTER SPOTLIGHT -->
+	
+	<section class="t3-copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 copyright ">
+					
+          <small>
+            <a href="http://twitter.github.io/bootstrap/" title="Bootstrap by Twitter" target="_blank">Bootstrap</a> is a front-end framework of Twitter, Inc. Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" title="MIT License" target="_blank">MIT License.</a>
+          </small>
+          <small>
+            <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> font licensed under <a href="http://scripts.sil.org/OFL">SIL OFL 1.1</a>.
+          </small>
+				</div>
+							</div>
+		</div>
+	</section>
+
+</footer>
+<!-- //FOOTER -->
+
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29544239-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

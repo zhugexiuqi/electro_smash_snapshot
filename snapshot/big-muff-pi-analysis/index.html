@@ -1,0 +1,844 @@
+
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr"
+	  class='com_content view-article itemid-518 j31 mm-hover '>
+
+<head>
+	<base href="../index/index.html" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="big, muff, pi, circuit, fuzz schematic, electro, harmonix, ehx,input, signal, clipping, stage, voltage, gain, response, frequency, tone, impedance, calculation, bom, part, list, amplifier, sustain, distortion, transistor" />
+	<meta name="rights" content="Creative Commons: Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0) " />
+	<meta name="author" content="JR" />
+	<meta name="description" content="Circuit, List of Materials / Parts List, Input Booster Stage, Shunt Feedback Common Emitter Stage, Input Booster Voltage Gain Calculation, Input Impedance Calculation, Input Booster Frequency Response, Clipping Stage, Sustain Circuit, Clipping Amplifier V" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>ElectroSmash - Big Muff Pi Analysis</title>
+	<link href="index.html" rel="canonical" />
+	<link href="../_assets/d87243966412.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../_assets/26f5cf410b61.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/15ff046a2fe3.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/dd09f39c1b89.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"10a0538c088a57f5c9ce612499c46218","system.paths":{"root":"","base":""}}</script>
+	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+	<script src="../_assets/323c609448d2.js" type="text/javascript"></script>
+	<script src="../_assets/b8bcbb2f005c.js" type="text/javascript" async="async"></script>
+	<script type="text/javascript">
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });	if(typeof acymailingModule == 'undefined'){
+				var acymailingModule = [];
+			}
+			
+			acymailingModule['emailRegex'] = /^[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+)*\@([a-z0-9-]+\.)+[a-z0-9]{2,10}$/i;
+
+			acymailingModule['NAMECAPTION'] = 'Name';
+			acymailingModule['NAME_MISSING'] = 'Please enter your name';
+			acymailingModule['EMAILCAPTION'] = 'example@email.com';
+			acymailingModule['VALID_EMAIL'] = 'Please enter a valid e-mail address';
+			acymailingModule['ACCEPT_TERMS'] = 'Please check the Terms and Conditions';
+			acymailingModule['CAPTCHA_MISSING'] = 'The captcha is invalid, please try again';
+			acymailingModule['NO_LIST_SELECTED'] = 'Please select the lists you want to subscribe to';
+		
+acymailingModule['excludeValuesformAcymailing47551'] = [];
+acymailingModule['excludeValuesformAcymailing47551']['name'] = 'Name';
+acymailingModule['excludeValuesformAcymailing47551']['email'] = 'example@email.com';
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });
+	</script>
+
+	
+<!-- META FOR IOS & HANDHELD -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<style type="text/stylesheet">
+		@-webkit-viewport   { width: device-width; }
+		@-moz-viewport      { width: device-width; }
+		@-ms-viewport       { width: device-width; }
+		@-o-viewport        { width: device-width; }
+		@viewport           { width: device-width; }
+	</style>
+	<script type="text/javascript">
+		//<![CDATA[
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement("style");
+			msViewportStyle.appendChild(
+				document.createTextNode("@-ms-viewport{width:auto!important}")
+			);
+			document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+		}
+		//]]>
+	</script>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="apple-mobile-web-app-capable" content="YES"/>
+<!-- //META FOR IOS & HANDHELD -->
+
+
+
+
+<!-- Le HTML5 shim and media query for IE8 support -->
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script type="text/javascript" src="../_assets/010a3c86157d.js"></script>
+<![endif]-->
+
+<!-- You can add Google Analytics here or use T3 Injection feature -->
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="../_assets/76d3e1341c39.css" type="text/css" />
+<![endif]-->
+	</head>
+
+<body>
+
+<div class="t3-wrapper corporate"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
+
+	
+<!-- MAIN NAVIGATION -->
+<header id="t3-mainnav" class="wrap navbar navbar-default navbar-fixed-top t3-mainnav">
+
+	<!-- OFF-CANVAS -->
+		<!-- //OFF-CANVAS -->
+
+	<div class="container">
+
+		<!-- NAVBAR HEADER -->
+		<div class="navbar-header">
+
+			<!-- LOGO -->
+			<div class="logo logo-image">
+				<div class="logo-image">
+					<a href="/" title="ElectroSmash">
+													<img class="logo-img" src="../_assets/115794d6d5b8.png" alt="ElectroSmash" />
+						
+												
+						<span>ElectroSmash</span>
+					</a>
+				</div>
+			</div>
+			<!-- //LOGO -->
+
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-collapse">
+					<i class="fa fa-bars"></i>
+				</button>
+			
+	    
+		</div>
+		<!-- //NAVBAR HEADER -->
+
+		<!-- NAVBAR MAIN -->
+				<nav class="t3-navbar-collapse navbar-collapse collapse"></nav>
+		
+		<nav class="t3-navbar navbar-collapse collapse">
+			<div  class="t3-megamenu"  data-responsive="true">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav navbar-nav level0">
+<li itemprop='name'  data-id="435" data-level="1">
+<a itemprop='url' class=""  href="/"   data-target="#">Home </a>
+
+</li>
+<li itemprop='name' class="dropdown mega" data-id="510" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Chips<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="492" data-level="2">
+<a itemprop='url' class=""  href="../jrc4558-analysis/index.html"   data-target="#">JRC4558  </a>
+
+</li>
+<li itemprop='name'  data-id="519" data-level="2">
+<a itemprop='url' class=""  href="../mn3007-bucket-brigade-devices/index.html"   data-target="#">MN3007 BBDs </a>
+
+</li>
+<li itemprop='name'  data-id="468" data-level="2">
+<a itemprop='url' class=""  href="../lm386-analysis/index.html"   data-target="#">LM386 </a>
+
+</li>
+<li itemprop='name'  data-id="1643" data-level="2">
+<a itemprop='url' class=""  href="../pt2399-analysis/index.html"   data-target="#">PT2399 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="444" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Amps<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="993" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="489" data-level="2">
+<a itemprop='url' class=""  href="../little-gem-analysis/index.html"   data-target="#">Little Gem Amp </a>
+
+</li>
+<li itemprop='name'  data-id="526" data-level="2">
+<a itemprop='url' class=""  href="../marshall-mg10/index.html"   data-target="#">Marshall MG10 </a>
+
+</li>
+<li itemprop='name'  data-id="491" data-level="2">
+<a itemprop='url' class=""  href="../noisy-cricket-analysis/index.html"   data-target="#">Noisy Cricket  </a>
+
+</li>
+<li itemprop='name'  data-id="490" data-level="2">
+<a itemprop='url' class=""  href="../ruby-amp-analysis/index.html"   data-target="#">Ruby Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="488" data-level="2">
+<a itemprop='url' class=""  href="../smokey-amp-analysis/index.html"   data-target="#">Smokey Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="746" data-level="2">
+<a itemprop='url' class=""  href="http://www.electrosmash.com/schematics#amps"   data-target="#">Amps Schematics.</a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="active dropdown mega" data-id="511" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Pedals<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  style="width: 600px"  data-width="600"><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="515" data-level="2">
+<a itemprop='url' class=""  href="../back-talk-analysis/index.html"   data-target="#">Back Talk Reverse Delay </a>
+
+</li>
+<li itemprop='name' class="current active" data-id="518" data-level="2">
+<a itemprop='url' class=""  href="index.html"   data-target="#">Big Muff Pi  </a>
+
+</li>
+<li itemprop='name'  data-id="524" data-level="2">
+<a itemprop='url' class=""  href="../boss-ce-2-analysis/index.html"   data-target="#">Boss CE-2 Chorus </a>
+
+</li>
+<li itemprop='name'  data-id="1088" data-level="2">
+<a itemprop='url' class=""  href="../boss-ds1-analysis/index.html"   data-target="#">Boss DS-1 Distortion </a>
+
+</li>
+<li itemprop='name'  data-id="1713" data-level="2">
+<a itemprop='url' class=""  href="../dallas-rangemaster/index.html"   data-target="#">Dallas Rangemaster </a>
+
+</li>
+<li itemprop='name'  data-id="905" data-level="2">
+<a itemprop='url' class=""  href="../crybaby-gcb-95/index.html"   data-target="#">Dunlop CryBaby GCB-95  </a>
+
+</li>
+<li itemprop='name'  data-id="842" data-level="2">
+<a itemprop='url' class=""  href="../fuzz-face/index.html"   data-target="#">Fuzz Face </a>
+
+</li>
+<li itemprop='name'  data-id="1664" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="512" data-level="2">
+<a itemprop='url' class=""  href="../tube-screamer-analysis/index.html"   data-target="#">Ibanez Tube Screamer </a>
+
+</li>
+<li itemprop='name'  data-id="1433" data-level="2">
+<a itemprop='url' class=""  href="../klon-centaur-analysis/index.html"   data-target="#">Klon Centaur </a>
+
+</li>
+</ul>
+</div></div>
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="548" data-level="2">
+<a itemprop='url' class=""  href="../mxr-microamp/index.html"   data-target="#">MXR MicroAmp </a>
+
+</li>
+<li itemprop='name'  data-id="1667" data-level="2">
+<a itemprop='url' class=""  href="../marshall-guvnor-analysis/index.html"   data-target="#">Marshall Guvnor </a>
+
+</li>
+<li itemprop='name'  data-id="1632" data-level="2">
+<a itemprop='url' class=""  href="../mxr-distortion-plus-analysis/index.html"   data-target="#">MXR Distortion + </a>
+
+</li>
+<li itemprop='name'  data-id="1244" data-level="2">
+<a itemprop='url' class=""  href="../mxr-dyna-comp-analysis/index.html"   data-target="#">MXR Dyna Comp </a>
+
+</li>
+<li itemprop='name'  data-id="573" data-level="2">
+<a itemprop='url' class=""  href="../mxr-phase90/index.html"   data-target="#">MXR Phase 90 </a>
+
+</li>
+<li itemprop='name'  data-id="553" data-level="2">
+<a itemprop='url' class=""  href="../proco-rat/index.html"   data-target="#">ProCo Rat </a>
+
+</li>
+<li itemprop='name'  data-id="520" data-level="2">
+<a itemprop='url' class=""  href="../sitar-swami-analysis/index.html"   data-target="#">Sitar Swami </a>
+
+</li>
+<li itemprop='name'  data-id="525" data-level="2">
+<a itemprop='url' class=""  href="../vox-v847-analysis/index.html"   data-target="#">Vox V847 Wah Wah </a>
+
+</li>
+<li itemprop='name'  data-id="547" data-level="2">
+<a itemprop='url' class=""  href="../emg81/index.html"   data-target="#">EMG81 Pickup </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="796" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Projects<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="1108" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-uno/index.html"   data-target="#">pedalSHIELD UNO </a>
+
+</li>
+<li itemprop='name'  data-id="797" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield/index.html"   data-target="#">pedalSHIELD DUE </a>
+
+</li>
+<li itemprop='name'  data-id="1437" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-mega/index.html"   data-target="#">pedalSHIELD MEGA </a>
+
+</li>
+<li itemprop='name'  data-id="1312" data-level="2">
+<a itemprop='url' class=""  href="../pedal-pi/index.html"   data-target="#">Pedal-Pi </a>
+
+</li>
+<li itemprop='name'  data-id="1662" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="1663" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="1668" data-level="2">
+<a itemprop='url' class=""  href="../time-manipulator/index.html"   data-target="#">Time Manipulator </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name'  data-id="745" data-level="1">
+<a itemprop='url' class=""  href="../forum-electrosmash/index.html"   data-target="#">Forum </a>
+
+</li>
+<li itemprop='name'  data-id="816" data-level="1">
+<a itemprop='url' class=""  href="../shop/index.html"   data-target="#">Shop</a>
+
+</li>
+</ul>
+</div>
+
+		</nav>
+    <!-- //NAVBAR MAIN -->
+
+	</div>
+</header>
+<!-- //MAIN NAVIGATION -->
+
+
+
+
+
+
+  
+
+
+  
+
+
+	
+<div id="t3-mainbody" class="container t3-mainbody">
+	<div class="row">
+
+		<!-- MAIN CONTENT -->
+		<div id="t3-content" class="t3-content col-xs-12 col-sm-8  col-md-9">
+						<div class="item-page clearfix">
+
+
+<!-- Article -->
+<article>
+	<meta itemprop="inLanguage" content="en-GB" />
+	<meta itemprop="url" content="index.html" />
+
+      
+<header class="article-header clearfix">
+	<h1 class="article-title" itemprop="headline">
+					<a href="index.html" itemprop="url" title="Big Muff Pi Analysis">
+				Big Muff Pi Analysis</a>
+			</h1>
+
+			</header>
+    
+    
+  <!-- Aside -->
+    <!-- //Aside -->
+
+  
+  
+  
+	
+  
+	
+	<section class="article-content clearfix">
+		<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The Big Muff Pi is a distortion/sustain guitar pedal designed by Bob Myer and Mike Matthews in 1969 and mass produced in 1970. This effect was the first overwhelming success of Electro-Harmonix due to&nbsp;the distinctive sound, price, and reliability. Several versions and reeditions were released over the years.</span></p>
+<p><a href="../_assets/07a9c70ad61c.png"><span style="font-family: verdana, geneva;"><img src="../_assets/07a9c70ad61c.png" alt="Big Muff Pi All Pedals" width="695" height="139" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Many inspiring guitarists use this stompbox, giving to the Big Muff Pi a leading role in the hard-driving music signature:</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Tony Peluso of The Carpenters, Carlos Santana, David Gilmour of Pink Floyd, Ronnie Montrose,&nbsp;Mike Mills and Pete Buck of R.E.M., Robin Finck of Nine Inch Nails, Brian Molko of Placebo, Cliff Burton of Metallica, Kurt Kobain of Nirvana, Thom Yorke of Radiohead, Pete Townshend of The Who, Thurston and Lee Renaldo Moore of Sonic Youth, Billy Corgan of Smashing Pumkins, J. Mascis of Dinosaur Jr., Dan Auerbach of Black Keys, Ace Frehley of Kiss, The Edge of U2, Jamie Cook of the Arctic Monkeys, Jack White of White Stripes, John Frusciante of The Red Hot Chili Peppers, Chris Wolstenholme of Muse are some of the B.M.P well known users.</span></p>
+ 
+<h1><span style="font-family: verdana, geneva;"><strong><span style="font-size: 14pt; color: #000000;"></span><span style="font-size: 14pt;">Table of Contents:</span></strong></span></h1>
+<p style="padding-left: 30px;"><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="/big-muff-pi-analysis#circuit1">1. The Big Muff Pi Circuit.</a><br />&nbsp;&nbsp; &nbsp;<a href="/big-muff-pi-analysis#bom11">1.1 List of Materials / Parts List.</a><br /><a href="/big-muff-pi-analysis#input2">2. Input Booster Stage.</a><br />&nbsp;&nbsp; &nbsp;<a href="/big-muff-pi-analysis#link21">2.1 Shunt Feedback Common Emitter Stage.</a><br />&nbsp;&nbsp; &nbsp;<a href="/big-muff-pi-analysis#link22">2.2 Input Booster Voltage Gain Calculation.</a><br />&nbsp;&nbsp; &nbsp;<a href="/big-muff-pi-analysis#link23">2.3 Input Impedance Calculation.</a><br />&nbsp;&nbsp; &nbsp;<a href="/big-muff-pi-analysis#link24">2.4 Input Booster Frequency Response.</a><br /><a href="/big-muff-pi-analysis#link3">3. Big Muff Pi Clipping Stage.</a><br />&nbsp;&nbsp; &nbsp;<a href="/big-muff-pi-analysis#link31">3.1 Sustain Circuit.</a><br />&nbsp;&nbsp; &nbsp;<a href="/big-muff-pi-analysis#link32">3.2 Clipping Amplifier Voltage Gain Calculation</a><br />&nbsp;&nbsp; &nbsp;<a href="/big-muff-pi-analysis#link33">3.3 Clipping Method.</a><br />&nbsp;&nbsp; &nbsp;<a href="/big-muff-pi-analysis#link34">3.4 Clipping Stage Frequency Response.</a><br /><a href="/big-muff-pi-analysis#link4">4. Passive Tone Control Stage.</a><br />&nbsp;&nbsp; &nbsp;<a href="/big-muff-pi-analysis#link41">4.1 Tone Control Frequency Response.</a><br /><a href="/big-muff-pi-analysis#link5">5. Output Stage.</a><br />&nbsp;&nbsp; <a href="/big-muff-pi-analysis#link51">&nbsp;5.1 Big Muff Pi Output Impedance.</a><br /><a href="/big-muff-pi-analysis#link6">6. Big Muff Pi Bias and Tone Response.</a><br /><a href="/big-muff-pi-analysis#link7">7. Resources.</a><br />&nbsp;&nbsp;&nbsp; <a href="/big-muff-pi-analysis#link71">7.1 Datasheets.</a></span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;"></span></p>
+<h1><span style="font-size: 14pt; font-family: verdana, geneva;"><a id="circuit1" name="circuit1"></a><strong><span style="color: #000000;">1. The Big Muff Pi Circuit.</span></strong></span></h1>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">The Big Muff Pi circuit consists of 4 cascaded common emitter amplifier stages</span>&nbsp;<span style="font-size: 10pt; color: #333333;">with a passive tone control. The schematic can be broken down into 4 simpler blocks: Input Booster, Clipping Stage, Passive Tone Control&nbsp;</span><span style="font-size: 10pt; color: #333333;">and Output Booster.</span></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="../_assets/c47c1ad2526a.png"><img src="../_assets/fe57e8aafde1.png" alt="Big Muff Pi v3 Circuit Stages" width="800" height="234" style="display: block; margin-left: auto; margin-right: auto;" /></a><span style="color: #333333;">The circuit design was inspired by previous Fuzz pedals like the Dallas Arbiter Fuzz-Face, Maestro Fuzz-Tone or Electro-Harmonix Axis Fuzz. In addition, the BMP introduced a double clipping stage, a new tone control and it is able to produce a characteristic sustained distortion sound never heard before.</span></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">There are also several enhancements on the design in order to make the circuit stable and reliable: All components are based in silicon, all transistor stages include an emitter resistance, which makes the gain independent from temperature or transistor intrinsic characteristics. Three out of four stages include feedback resistors and Miller capacitors, which stabilize the behavior and frequency response. It is a big advantage versus the contemporary dodgy pedals based on germanium.</span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The components selected for the design are very generic and easy to find: just high gain NPN transistors, simple silicon diodes and standard resistors, caps and three 100K linear pots. Avoiding exotic parts and making the circuit ready for mass production and a shortage of suppliers.</span></p>
+<p><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">This study is focused on the American&nbsp;<em>Version 3</em>, associated with the iconic bold red and black design and released in</span>&nbsp;<span style="font-size: 10pt;">1976-1977, the analysis can be easily extrapolated to any other version.</span></span></p>
+<p><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;"></span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 12pt; color: #333333;"><a id="bom11" name="bom11"></a></span><strong><span style="font-size: 12pt; color: #000000;">1.1 Big Muff Pi List of Materials / Parts List.</span></strong></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The components are labeled following the original Electro-Harmonix printed circuit board:</span></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">4 NPN Transistors: BC239 or equivalents 2N5088, 2N5089, BC549C, SE4010, 2N5210, 2N5113: Q<sub>1</sub>, Q<sub>2</sub>, Q<sub>3</sub>, Q<sub>4</sub>.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">4 Silicon Diodes: 1N914 or equivalent 1N4148: D<sub>1</sub>, D<sub>2</sub>, D<sub>3</sub>, D<sub>4</sub>.</span></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">3 Potentiometers 100K Lin: Sustain, Tone, Volume.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">5 Resistances 10K: R<sub>13</sub>, R<sub>19</sub>, R<sub>18</sub>, <span style="font-size: 10pt; color: #333333;">R<sub>11</sub></span> R<sub>12</sub>.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">3 Resistances 100K: R<sub>20</sub>, R<sub>16</sub>, R<sub>3</sub>.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">3 Resistances 470K: R<sub>9</sub>, R<sub>17</sub>, R<sub>15</sub>.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">2 Resistances 39K: R<sub>2</sub>, R<sub>8</sub>.&nbsp;</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">2 Resistances 150: R<sub>21</sub>, R<sub>10</sub>.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">2 Resistances 15K: R<sub>6</sub>.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1 Resistance 47K: R<sub>14</sub>.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1 Resistance 100: R<sub>22</sub>.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1 Resistance 3.3K: R<sub>4</sub>.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1 Resistance 1K: R<sub>23</sub>.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1 Resistance 22K: R<sub>5</sub>.</span></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">4 Capacitors 1uF: C<sub>1</sub>, C<sub>4</sub>, C<sub>6</sub>, C<sub>7</sub>.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">4 Capacitors 100nF: C<sub>5</sub>, C<sub>13</sub>, C<sub>3</sub>, C<sub>2</sub>.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">3 Capacitors 470pF: C<sub>10</sub>, C<sub>11</sub>, C<sub>12</sub>.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1 Capacitor 4nF: C<sub>9</sub>.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1 Capacitor 10nF: C<sub>8</sub>.</span></p>
+<h1><span style="font-size: 14pt; font-family: verdana, geneva;"><a id="input2" name="input2"></a><strong><span style="color: #000000;">2. Big Muff Pi Input Booster Stage.</span></strong></span></h1>
+<p><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">This clean boost stage is based on a Common Emitter amplifier with Shunt Feedback and&nbsp;</span><span style="color: #333333; font-size: 10pt;">some arrangements to enhance the performance.&nbsp;</span></span><br /><span style="font-family: verdana, geneva;"><a href="../_assets/7bc38c4c59e8.png"><span style="color: #333333; font-size: 10pt;"><img src="../_assets/7bc38c4c59e8.png" alt="Big Muff Pi V3 Input Booster" width="385" height="332" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></span><br /><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The Input Booster sets the pedal input impedance, shapes the frequency response and adds some gain.</span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"></span></p>
+<h2><span style="font-family: verdana, geneva;"><strong><span style="font-size: 12pt;"><a id="link21" name="link21"></a><span style="color: #000000;">2.1 Big Muff Pi Shunt Feedback Common Emitter Stage</span></span><span style="font-size: 12pt; color: #000000;">.</span></strong></span></h2>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">In common emitter amps, the approximate voltage gain is collector resistance divided by the emitter resistance (R<sub>C</sub>/R<sub>E</sub>), but the&nbsp;</span><span style="font-size: 10pt; color: #333333;">effect of the feedback resistor has to be taken into consideration:</span></span><br /><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">The resistor R<sub>9</sub>&nbsp;from collector to base also called&nbsp;<em>Shunt Feedback&nbsp;resistor</em>&nbsp;or R<sub>F</sub> is a method to apply negative feedback to the amplifier.&nbsp;</span><span style="font-size: 10pt; color: #333333;">While it results in a reduced overall voltage gain and input impedance, a number of improvements are obtained:</span></span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Better stabilized voltage gain.</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Improved frequency response.</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Reduced Noise.</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">More Linear operation.</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">More immune against variations in temperature and transistors Beta.</span></li>
+</ul>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;"><span style="color: #000000;">How it works?:</span>&nbsp;If the emitter current were to increase, the voltage drop across Rc increases, decreasing Vc</span><span style="font-size: 10pt; color: #333333;">, reducing Ib feedback to the base. This, in turn, decreases the emitter current, correcting the original increase.</span>&nbsp;<span style="font-size: 10pt; color: #333333;">The value of R<sub>9&nbsp;</sub></span><span style="font-size: 10pt; color: #333333;"><span style="font-size: small;">should be selected so that the collector voltage is half of the supply voltage.&nbsp;</span></span></span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<h2><span style="font-family: verdana, geneva;"><strong><span style="font-size: 12pt;"><a id="link22" name="link22"></a><span style="color: #000000;">2.2 Input Booster Voltage Gain Calculation.</span></span></strong></span></h2>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">A <a href="http://www.uotechnology.edu.iq/dep-eee/lectures/2nd/Electronics%201/Part%2004.pdf">simplified analysis method</a> must be used to calculate the voltage gain of the amplifier, otherwise, it turns into an&nbsp;</span><span style="font-size: 10pt; color: #333333;">arithmetic nightmare. It consists of 3 steps:</span></span></p>
+<ul>
+<li><span style="font-family: verdana, geneva;"><strong><span style="color: #333333; font-size: 10pt;">a) Identify the Amplifier Topology:</span></strong></span></li>
+</ul>
+<p style="padding-left: 60px;"><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">The topology is known as <em>Voltage-Shunt Feedback</em>: voltage refers to connecting the output voltage as the input to the feedback network and</span>&nbsp;<span style="font-size: 10pt; color: #333333;">Shunt refers to connecting the feedback signal in parallel/shunt with the input current source.</span></span><br /><br /></p>
+<ul>
+<li><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;"><strong>b) Draw the equivalent circuit without the feedback network:</strong>&nbsp;<span style="color: #333333; font-size: 13px; line-height: 18px;">The idea is to draw an equivalent amplifier without feedback but taking the loading of it into consideration. In the image below, the resistor values are substituted by generic labels, in order to make the formulas more intuitive:</span></span><a href="../_assets/726c56331462.png"><span style="color: #333333; font-size: 10pt;"><img src="../_assets/726c56331462.png" alt="Big Muff Pi V3 Small Signal" width="748" height="206" style="color: #333333; font-size: 13px; line-height: 18px; display: block; margin-left: auto; margin-right: auto;" /></span></a></span></li>
+</ul>
+<p style="padding-left: 30px;"><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">The equivalent circuit uses Norton's current source since the feedback signal is current. In the image below, the feedback resistor is grounded</span>&nbsp;<span style="font-size: 10pt; color: #333333;">in the input and output sections and the resistors grouped:</span><a href="../_assets/cbc5685b057f.png"><img src="../_assets/cbc5685b057f.png" alt="Big Muff Pi Small Signal " width="532" height="294" style="display: block; margin-left: auto; margin-right: auto;" /></a><span style="font-size: 10pt; color: #333333;"> </span></span></p>
+<p style="padding-left: 90px;"><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">Where:</span></span></p>
+<p style="margin-left: 30px; padding-left: 60px;"><span style="color: #333333; font-size: small; font-family: verdana, geneva;"><img src="http://latex.codecogs.com/gif.latex?R_{B}=R_{S}//R_{A}//R_{F} = 39K//47K//470K = 20.4K" alt="" title="R_{B}=R_{S}//R_{A}//R_{F} = 39K//47K//470K = 20.4K" /></span></p>
+<p style="margin-left: 30px; padding-left: 60px;"><span style="color: #333333; font-size: small; font-family: verdana, geneva;"><img src="http://latex.codecogs.com/gif.latex?R_{L}=R_{sustain}//R_{C}//R_{F} = 101K//10K//470K = 9K" alt="" title="R_{L}=R_{sustain}//R_{C}//R_{F} = 101K//10K//470K = 9K" /></span></p>
+<p style="margin-left: 30px;"><span style="color: #333333; font-size: small; font-family: verdana, geneva;"></span></p>
+<p>&nbsp;</p>
+<ul>
+<li><span style="font-family: verdana, geneva;"><strong><span style="font-size: 10pt; color: #333333;">c) T</span></strong><span style="color: #333333; font-size: 10pt;"><strong>he voltage gain</strong> can be calculated following the simplified analysis of these equations:</span></span></li>
+</ul>
+<p style="padding-left: 60px;"><span style="font-family: verdana, geneva;"><span style="color: #000000;"><span style="font-size: small;">A</span><sub style="color: #333333;">Z</sub></span><span style="color: #333333; font-size: small;">: Voltage-Shunt Gain without feedback formula:</span></span></p>
+<p style="margin-left: 30px; padding-left: 60px;"><span style="font-family: verdana, geneva;"><img src="http://latex.codecogs.com/gif.latex?A_{z}=\frac{V_{out}}{I_{s}}=\frac{\beta \cdot i_{b} \cdot R_{L}}{i_{b} + (\frac{r\pi \cdot i_{b}}{R_{B}}) + (\frac{R_{E}(\beta +1)i_{b}}{R_{B}})}" alt="" title="A_{z}=\frac{V_{out}}{I_{s}}=\frac{\beta \cdot i_{b} \cdot R_{L}}{i_{b} + (\frac{r\pi \cdot i_{b}}{R_{B}}) + (\frac{R_{E}(\beta +1)i_{b}}{R_{B}})}" /></span></p>
+<p style="margin-left: 30px; padding-left: 60px;"><br /><span style="font-family: verdana, geneva;"><img src="http://latex.codecogs.com/gif.latex?with\: \: \: \: (\frac{R_{E}(\beta +1)i_{b}}{R_{B}}) &gt; &gt; i_{b} + (\frac{r\pi \cdot i_{b}}{R_{B}})" alt="" title="with\: \: \: \: (\frac{R_{E}(\beta +1)i_{b}}{R_{B}}) &gt; &gt; i_{b} + (\frac{r\pi \cdot i_{b}}{R_{B}})" /></span></p>
+<p style="margin-left: 30px; padding-left: 60px;"><br /><span style="font-family: verdana, geneva;"><img src="http://latex.codecogs.com/gif.latex?A_{z}=\frac{V_{out}}{I_{s}}=\frac{R_{B} \cdot R_{L}}{R_{E}}" alt="" title="A_{z}=\frac{V_{out}}{I_{s}}=\frac{R_{B} \cdot R_{L}}{R_{E}}" /></span></p>
+<p style="padding-left: 60px;"><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"><span style="color: #000000;">B<sub>G</sub></span>: Feedback Voltage-Shunt formula:</span></p>
+<p style="margin-left: 30px; padding-left: 60px;"><span style="font-family: verdana, geneva;"><img src="http://latex.codecogs.com/gif.latex?B_{G}=\frac{I_{F}}{V_{out}}= \frac{1}{R_{F}}" alt="" title="B_{G}=\frac{I_{F}}{V_{out}}=- \frac{1}{R_{F}}" /></span></p>
+<p style="padding-left: 60px;"><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"><span style="color: #000000;">A<sub>ZF</sub></span>: Voltage-Shunt Gain with Feedback&nbsp;</span></p>
+<p style="margin-left: 30px; padding-left: 60px;"><span style="font-family: verdana, geneva;"><img src="http://latex.codecogs.com/gif.latex?A_{ZF}=\frac{A_{Z}}{1+A_{Z}B_{G}}=\frac{\frac{R_{B} \cdot R_{L}}{R_{E}}}{1+\frac{R_{B} \cdot R_{L}}{R_{E}}\cdot\frac{1}{R_{F}}}" alt="" title="A_{ZF}=\frac{A_{Z}}{1+A_{Z}B_{G}}=\frac{\frac{R_{B} \cdot R_{L}}{R_{E}}}{1+\frac{R_{B} \cdot R_{L}}{R_{E}}\cdot\frac{1}{R_{F}}}" /></span></p>
+<p style="padding-left: 60px;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"><span style="color: #000000;">GV</span>: Voltage Gain:</span></p>
+<p style="margin-left: 30px; padding-left: 60px;"><span style="font-family: verdana, geneva;"><img src="http://latex.codecogs.com/gif.latex?G_{V}=\frac{V_{out}}{V_{S}}=\frac{V_{out}}{I_{S}\cdot R_{S}}=\frac{A_{ZF}}{R_{S}}" alt="" title="G_{V}=\frac{V_{out}}{V_{S}}=\frac{V_{out}}{I_{S}\cdot R_{S}}=\frac{A_{ZF}}{R_{S}}" /></span></p>
+<p style="padding-left: 60px;"><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Replacing the&nbsp;Input Booster circuit values&nbsp;R<sub>B</sub>=20.4K, R<sub>L</sub>=9K, R<sub>E</sub>&nbsp;=100, R<sub>S</sub>=39K and R<sub>F</sub>&nbsp;=470K the results obtained are B<sub>G</sub>=1/470K, A<sub>ZF</sub>=374.2 and the voltage value is G<sub>V</sub>=9.6 (19.6dB) although doing the simulation the G<sub>V</sub>&nbsp;never reaches this value (it is 16.7 dB).</span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"></span></p>
+<h2><span style="font-size: 12pt; font-family: verdana, geneva;"><a id="link23" name="link23"></a><strong><span style="color: #000000;">2.3 Big Muff Pi Input Impedance Calculation.</span></strong></span></h2>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The Big Muff Pi input impedance is R<sub>2</sub> aka <em>R<sub>S</sub> series resistance</em> plus the input impedance of the Input Booster stage:</span></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">&nbsp;<span style="color: #333333; font-size: 13px; line-height: 18px;">Z<sub>in</sub> = R<sub>S</sub> + (R<sub>in input Booster</sub>)&nbsp;</span></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">The input resistance of the Input Booster due to the emitter resistance and the feedback network effect is much smaller than R<sub>2</sub>. So, the value of the input resistor R<sub>2</sub>=39K accounts&nbsp;</span><span style="font-size: 10pt; color: #333333;">for almost all of the signal loading at the input. The 39K it is indeed a low input impedance, and the&nbsp;</span><span style="font-size: 10pt; color: #333333;">guitar signal might suffer tone sucking (loss of high frequencies), although tone and volume loss&nbsp;</span><span style="font-size: 10pt; color: #333333;">is compensated by the rest of the circuit design.</span></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">Increasing the 39k R<sub>2</sub>&nbsp;input resistor, the input impedance is increased but it also forms a voltage divider at the input,&nbsp;</span><span style="font-size: 10pt; color: #333333;">reducing the available voltage gain.</span></span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;"></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt;">The Emitter Resistance:&nbsp;</span><span style="font-size: 10pt; color: #333333;">Adding an emitter resistance R<sub>22</sub>&nbsp;to a common emitter amp, also known as&nbsp;<em>Emitter Degeneration</em>, makes the voltage gain less</span>&nbsp;<span style="font-size: 10pt; color: #333333;">dependant from BJT parameters, and therefore less vulnerable to temperature and bias current changes.</span>&nbsp;<span style="font-size: 10pt; color: #333333;">The stability characteristics of the circuit are&nbsp;</span><span style="font-size: 10pt; color: #333333;">thus improved at the expense of a reduction in gain.</span></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"></span></p>
+<h2><span style="font-family: verdana, geneva;"><a id="link24" name="link24"></a><strong><span style="font-size: 12pt; color: #000000;">2.4 Input Booster Frequency Response.</span></strong></span></h2>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">The frequency response is tailored by two capacitors: the input decoupling cap C<sub>1</sub>&nbsp;which sets the low-frequency response (roll-off the bass) and the Miller Capacitor</span>&nbsp;<span style="font-size: 10pt; color: #333333;">C<sub>10</sub>&nbsp;which shapes the high-frequency response (roll-off the highs):</span></span><br /><span style="font-family: verdana, geneva;"><a href="../_assets/d832cebd781f.png"><img src="../_assets/d832cebd781f.png" alt="Big Muff Pi Input Booster Frequency Response" width="800" height="252" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<ul>
+<li><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">Input Capacitor C<sub>1</sub>: creates a high-pass filter, increasing its value will result in a more bassy response&nbsp;</span><span style="color: #333333; font-size: 10pt;">and increasing the signal into the pedal. The cut-off frequency is around 3.8Hz, not disturbing guitar harmonics.</span></span></li>
+<li><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">Collector to Base feedback Capacitor:&nbsp;</span><span style="color: #333333; font-size: 10pt;">C<sub>10</sub>&nbsp;is a&nbsp;<em>Lag Capacitor</em>&nbsp;or&nbsp;<em>Miller Capacitor</em>&nbsp;compensation to avoid oscillation&nbsp;</span><span style="color: #333333; font-size: 10pt;">which sets the amplifier bandwidth and the dominant pole frequency.&nbsp;</span><span style="color: #333333; font-size: 10pt;">The effective value of the C<sub>10</sub>&nbsp;capacitor is increased by the internal collector-base capacitance (base to collector depletion capacitance)&nbsp;</span><span style="color: #333333; font-size: 10pt;">of the BJT.&nbsp;</span></span></li>
+</ul>
+<p style="margin-left: 30px;"><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">With a C<sub>10</sub>&nbsp;of 470pF and depending on the internal BJT capacitance, low pass filter cut-off frequency is around 1.2KHz. This operation&nbsp;</span><span style="color: #333333; font-size: 10pt;">occurs just before the distortion stage; clipping a low-passed signal usually sounds better, smoother and less harsh.</span></span></p>
+<p style="margin-left: 30px;"><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">The usual values for this cap are decs to some hundreds of pF, l</span><span style="color: #333333; font-size: 10pt;">owering the C<sub>10</sub>&nbsp;value will result in a more treble response, rolling-off fewer highs.</span></span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<h1><span style="font-size: 14pt; font-family: verdana, geneva;"><a id="link3" name="link3"></a><strong><span style="color: #000000;">3. Big Muff Pi Clipping Stage.</span></strong></span></h1>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">The clipping Stage is made of a passive voltage divider (sustain potentiometer) and&nbsp;</span><span style="font-size: 10pt; color: #333333;">two consecutive common emitter stages.&nbsp;</span><span style="font-size: 10pt; color: #333333;">Each of the two consecutive Q<sub>2</sub>/Q<sub>3</sub> clipping stages keeps&nbsp;the same topology as the Input Booster. In addition, the clipping amplifiers&nbsp;</span><span style="font-size: 10pt; color: #333333;">include a back to back diodes to create the symmetric clipping.</span></span><br /><span style="font-family: verdana, geneva;"><a href="../_assets/0a4041ba3da7.png"><img src="../_assets/0a4041ba3da7.png" alt="Big Muff Pi Clipping Stage" width="576" height="331" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">The design idea for the double distortion is that the first transistor <em>softly</em> clips the waveform in the feedback loop:&nbsp;</span><span style="font-size: 10pt; color: #333333;">creating the distortion and filtering the signal. After the first clipping transistor, the second one repeats the operation again and refines&nbsp;</span><span style="font-size: 10pt; color: #333333;">the distorted signal creating the <em>hard</em> clip.</span></span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/f992af8f2268.png"><img src="../_assets/f992af8f2268.png" alt="Big Muff Pi Clipped Signal" width="704" height="227" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<h2><span style="font-size: 12pt; font-family: verdana, geneva;"><a id="link31" name="link31"></a><strong><span style="color: #000000; background-color: #ffffff;">3.1 Big Muff Pi Sustain Circuit.</span></strong></span></h2>
+<p><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">The 100K sustain potentiometer controls the level of the signal going into the clipping blocks. If the level is high, the signal will be more clipped and the distortion&nbsp;</span><span style="color: #333333; font-size: 10pt;">effect will hold even if the guitar input signal is not strong.&nbsp;</span><span style="color: #333333; font-size: 10pt;">The resistor R<sub>23</sub> prevents the signal from coming from the Input Booster from being cut-off</span>&nbsp;<span style="color: #333333; font-size: 10pt;">when the sustain pot is at the lowest setting.</span></span></p>
+<h2><span style="font-size: 12pt; font-family: verdana, geneva;"><a id="link32" name="link32"></a><strong><span style="color: #000000;">3.2 Clipping Amplifier Voltage Gain Calculation.</span></strong></span></h2>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The voltage gain can be calculated applying the&nbsp;simplified analysis method as in the Input Booster:</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">First Clipping Stage, using the formulas of the Input Booster:&nbsp;<span style="line-height: 18px;"> <br /></span></span></span></li>
+</ul>
+<p style="margin-left: 60px;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">R<sub>B </sub>= R<sub>S</sub>//R<sub>A</sub>//R<sub>F </sub>= 10K//100K//470K = 8.9K </span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">R<sub>L </sub>= R<sub>F</sub>//R<sub>C </sub>= 470K//10K = 9.8K </span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">R<sub>E</sub> = 150 </span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">R<sub>S </sub>= 10K</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">R<sub>F</sub> = 470K </span><br /><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">The results obtained ar</span><span style="font-size: 10pt;">e: </span></span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">B<sub>G </sub>= 1/470K </span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">A<sub>ZF </sub>= 260</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The Voltage Gain is G<sub>V </sub>= A<sub>ZF</sub>/RS = 260/10 = 26 (28dB). In the real circuit is around 23 dB.</span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">Second Clipping Stage, using the formulas of the Input Booster:&nbsp;<span style="line-height: 18px;"></span></span></span></li>
+</ul>
+<p style="margin-left: 60px;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">R<sub>B </sub>= R<sub>S</sub>//R<sub>A</sub>//R<sub>F </sub>= 10K//100K//470K = 8.9K&nbsp;</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">R<sub>L </sub>= R<sub>F</sub>//R<sub>C </sub>= 470K//15K = 14.5K</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">R<sub>E</sub> = 150&nbsp;</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">R<sub>S</sub> = 10K </span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">R<sub>F</sub> = 470K </span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The results obtained are:</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">B<sub>G </sub>= 1/470K</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">A<sub>ZF </sub>= 304 </span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The Voltage Gain is G<sub>V </sub>= A<sub>ZF</sub>/R<sub>S </sub>= 304/10 = 30 (29dB).&nbsp;<span style="font-size: 13px; line-height: 18px;">In the real circuit is around 25 dB.</span></span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;"><strong><span style="color: #000000;">Note:</span></strong> In the calculation, the diodes feedback network is not taken into consideration because it contains&nbsp;</span><span style="color: #333333; font-size: 10pt;">big capacitors C<sub>6</sub>&nbsp;and C<sub>7</sub>&nbsp;which disconnect the path for DC conditions.</span>&nbsp;</span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The Gain of the second clipping stage is slightly higher (1 or 2 dBs) than the first one. <span style="font-size: 10pt; color: #333333;">However, the voltage gain of this stage will not reach such values as 28 or 29dBs. As it will be seen in the next point, the gain is limited by the clipping diodes action. The output signal of the amplifiers will never exceed <span class="st">&plusmn;0.6V&nbsp;</span>and all the extra gain will modify the slew rate and the shape of the clipped signal.</span>&nbsp;</span></p>
+<p><br /><span style="font-size: 12pt; font-family: verdana, geneva;"><a id="link33" name="link33"></a><strong><span style="color: #000000;">3.3 Big Muff Pi Clipping Method.</span></strong></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="color: #333333;"><span style="font-size: 10pt;">The diodes D<sub>1</sub>-D<sub>2</sub> and D<sub>3</sub>-D<sub>4</sub> in the collector-base feedback loop of the transistors, clip the signal when&nbsp;</span><span style="font-size: 10pt;">the voltage difference between the <em>input</em> (transistor base) and the <em>output</em> (transistor collector)</span>&nbsp;<span style="font-size: 10pt;">is higher than the V<sub>F</sub> of the diode, which is around 0.6V.&nbsp;</span></span><span style="font-size: 10pt; color: #333333;">So they will limit the signal peaks and the output signal&nbsp;</span><span style="color: #333333; font-size: 13px; line-height: 18px;">will never exceed&nbsp;</span><span class="st" style="color: #333333; font-size: 13px; line-height: 18px;">&plusmn; 0.6V.</span></span></p>
+<p><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">The big 1uF series capacitors C<sub>6</sub> and C<sub>7</sub> located next to the feedback diodes, allow the AC signal to pass through it</span>&nbsp;<span style="font-size: 10pt;">and be clipped and block the DC bias voltage. Keeping the transistor operating point undisturbed.</span>&nbsp;<span style="font-size: 10pt;">These caps determine the frequency band the unit clips. Enlarging this cap will make it clip more bass harmonics,&nbsp;</span><span style="font-size: 10pt;">make it smaller for more high-end clipping and archiving more saturated tone, more sustain, and compression</span></span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p><br /><span style="font-size: 12pt; font-family: verdana, geneva;"><a id="link34" name="link34"></a><strong><span style="color: #000000;">3.4 Clipping Stage Frequency Response.</span></strong></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">In each of the clipping amplifiers, the frequency response is similar to the Input Booster, tailored by two capacitors:&nbsp;</span><span style="font-size: 10pt; color: #333333;">The input series decoupling caps C<sub>12</sub>-C<sub>19</sub> acting as a high pass filter and rolling-off the bass below some decs of Hz&nbsp;</span><span style="font-size: 10pt; color: #333333;">and the C<sub>6</sub>-C<sub>7</sub> Miller Capacitors acting as a low pass filter shaping the high frequency response and rolling-off around 1KHz:</span></span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/34cca0ce8239.png"><img src="../_assets/34cca0ce8239.png" alt="Big Muff Pi Clipping Stage Frequency Response" width="693" height="289" style="display: block; margin-left: auto; margin-right: auto;" /></a></span><br /><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">In the image above, the Clipping Stage frequency response is shown. The red curve illustrates the output after</span>&nbsp;<span style="font-size: 10pt; color: #333333;">the first clipping, with a maximum gain of 23.4 dB and band limited with two poles at 55Hz and 1.78</span><span style="font-size: 10pt; color: #333333;">KHz. The blue curve shows</span><span style="font-size: 10pt; color: #333333;">&nbsp;the output after the second clipping, with a maximum gain of 25.2 dB (48.6 - 23.4 = 25.2) and band limited with two poles&nbsp;</span><span style="font-size: 10pt; color: #333333;">at 94Hz and 1.17KHz.</span></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">The BMP distortion is very narrow bandwidth limited,&nbsp;</span><span style="font-size: 10pt; color: #333333;">attenuating harmonics at 40dB/dec outside the pass-band, and taking into consideration the Input Booster similar response which adds another two poles, all frequencies below 90Hz, and over 1.2KHz are attenuated 60dB/dec.</span></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"><span style="line-height: 18px; font-size: 10pt; color: #333333;">The basic idea inside the Big Muff Pi is to remove the high harmonics using Miller Capacitors three times: in Q<sub>4</sub>, Q<sub>3</sub>&nbsp;and Q<sub>2</sub>&nbsp;around 1.2 KHz</span><span style="line-height: 18px;"></span><span style="line-height: 18px; font-size: 10pt; color: #333333;">and resulting in a narrow frequency limited response that accentuates the lows and low mids, making it perfect for bass-less bands.&nbsp;<span style="color: #333333; font-size: 13px; line-height: 18px;">It seems that getting rid of its overdriven high end is the trick to increase the <em>sustain</em> of the guitar.</span></span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 14pt; font-family: verdana, geneva;"></span></p>
+<p><span style="font-size: 14pt; font-family: verdana, geneva;"><a id="link4" name="link4"></a><strong><span style="color: #000000;">4. Big Muff Pi Passive Tone Control Stage.</span></strong></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="color: #333333;"><span style="font-size: 10pt;">The Passive Tone Control has a simple and effective design: essentially it is just a</span>&nbsp;<span style="font-size: 10pt;">combination of high-low pass filters that are mixed together by a single linear 100K&nbsp;<em>Tone</em> potentiometer.&nbsp;</span><span style="font-size: 10pt;">The cut-off points are designed so that their interweaving effect introduces a middle-frequency scoop/notch</span><span style="font-size: 10pt;">&nbsp;at 1KHz&nbsp;</span><span style="font-size: 10pt;">when the potentiometer is set to the middle position. </span></span><a href="../_assets/1e663bc4b8fa.png"><img src="../_assets/1e663bc4b8fa.png" alt="Big Muff Pi Tone Control" width="246" height="308" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<h2><span style="font-size: 12pt; color: #000000; font-family: verdana, geneva;"></span></h2>
+<h2><span style="font-family: verdana, geneva;"><strong><span style="font-size: 12pt; color: #000000;"><a id="link41" name="link41"></a>4.1 Big Muff Pi Tone Control Frequency Response.</span></strong></span></h2>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Find below the BMP frequency response, showing from blue to red all values of the tone potentiometer:</span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/e10a5fece133.png"><img src="../_assets/e10a5fece133.png" alt="Big Muff Pi Tone Control Frequency Response" width="800" height="265" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The green response line has the tone pot set at the midpoint, evidencing the 1KHz&nbsp;<span style="line-height: 18px;">scoop. It also shows that the tone control is not able to archive a flat response.&nbsp;<span style="line-height: 18px;">There is an overall 7dB loss and&nbsp;</span><span style="line-height: 18px;">at the notch, the loss is about 6.5db (-13.5db total) at 1KHz.</span></span></span></li>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The blue and red color curves have the tone at full treble/bass respectively.</span></li>
+</ul>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<h1><span style="font-size: 14pt; font-family: verdana, geneva;"><a id="link5" name="link5"></a><span style="color: #333333;"><strong><span style="color: #000000;">5. Output Stage.</span></strong></span></span></h1>
+<p><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">The Output Stage is once again a common emitter amplifier amp which recovers the volume loss during the passive&nbsp;</span><span style="font-size: 10pt;">tone stack.</span></span><br /><span style="font-family: verdana, geneva;"><a href="../_assets/07897417778b.png"><img src="../_assets/07897417778b.png" alt="bBig Muff Pi Output Booster" width="375" height="301" style="display: block; margin-left: auto; margin-right: auto;" /></a></span><br /><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">The design of this last stage is simpler than the previous ones, not including resistor Shunt Feedback or&nbsp;</span><span style="font-size: 10pt;">Miller compensation. The frequency response is then flat across the audio band and the gain is about 13dB, compensating</span>&nbsp;<span style="font-size: 10pt;">the loss in the passive tone filter.</span></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The Voltage Gain in this basic common emitter topology is</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">G<sub>V&nbsp;</sub>= R<sub>C</sub>/R<sub>E&nbsp;</sub>=&nbsp;<span style="color: #333333; font-size: 13px; line-height: 18px;">R<sub>6</sub></span><span style="color: #333333; font-size: 13px; line-height: 18px;">/R<sub>4</sub></span>&nbsp;= 15K/3.3K = 4.5 = 13dB</span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The Output impedance of the common emitter transistor stage is equal to R<sub>C</sub> = R<sub>6</sub> = 10K.</span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The last part of the circuit is a simple 100k volume potentiometer that regulates the output level.&nbsp;</span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;"></span></p>
+<h2><span style="font-size: 12pt; font-family: verdana, geneva;"><a id="link51" name="link51"></a><strong><span style="color: #000000;">5.1 Big Muff Pi Output Impedance.</span></strong></span></h2>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The pedal output impedance also depends on the volume potentiometer position, being always less than 10K:</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Volume Potentiometer at maximum volume: Z<sub>out</sub> = Z<sub>out|Output Stage</sub> // 100K = 9K approx.</span></li>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Volume Potentiometer at minimum volume: Z<sub>out</sub> = Z<sub>out|Output Stage</sub> + 99K // 1K = 1K approx.</span></li>
+</ul>
+<h1><span style="font-size: 14pt; font-family: verdana, geneva;"><a id="link6" name="link6"></a><strong><span style="color: #000000;">6. Big Muff Pi Bias and Tone Response.</span></strong></span></h1>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"><span style="font-size: 13px; line-height: 18px;">In the image below, the most important DC bias points are shown. It can be useful to trace circuit failures:</span></span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/93d8f359071e.png"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 13px; line-height: 18px;"><img src="../_assets/93d8f359071e.png" alt="Big Muff Pi Bias" width="800" height="234" style="display: block; margin-left: auto; margin-right: auto;" /></span></span></a></span></p>
+<p><span style="line-height: 18px; color: #333333; font-size: 10pt; font-family: verdana, geneva;">In the graph below the most important signals at the output of each stage are shown:</span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/15967fba1f08.png"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 13px; line-height: 18px;"><img src="../_assets/15967fba1f08.png" alt="Big Muff Pi Waveforms" width="800" height="323" style="display: block; margin-left: auto; margin-right: auto;" /></span></span></a></span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"><strong><span style="color: #000000;">Orange Signal:</span></strong> It is the input signal, for this test a 1KHz, 200mVpp guitar alike signal is used.</span></li>
+</ul>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"><strong><span style="color: #000000;">Black Signal:</span></strong> It is the output of the Input Booster, just the input signal inverted and amplified&nbsp;<span style="line-height: 18px;">9.6 times (19.6dB). At this point is important to mention that due to the low-level value of R<sub>14</sub>=47K, the V<sub>C&nbsp;</sub>of the transistor is not at V</span><span style="line-height: 18px;">cc/2=4.5V but at 7V. It might cause asymmetric clipping if the input signal is bigger than 0.2Vpp.&nbsp;</span></span></li>
+</ul>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"><strong><span style="color: #000000;">Red Signal:</span></strong> It is the output of the first Clipping Stage, the previous signal is amplified 23 dBs and the amplitude is clipped to&nbsp;<span style="line-height: 18px;">&plusmn;0.6V. The Sustain potentiometer is set at maximum value.</span></span></li>
+</ul>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"><strong><span style="color: #000000;">Blue Signal:</span></strong>&nbsp;<span style="line-height: 18px;">&nbsp;<span style="line-height: 18px;">It is the output of the first Clipping Stage, the previous signal is amplified 25 dBs and the amplitude is clipped to&nbsp;</span><span style="line-height: 18px;">&plusmn;0.6V. After two consecutive clipping stages, the shape is more square or hard.</span></span></span></li>
+</ul>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"><strong><span style="color: #000000;">Green Signal:</span></strong> It is the output after the Tone Control, set&nbsp;at mid position. The signal is attenuated around 13dBs because at 1KHz the mid scoop is there and the shape is slightly changed.</span></li>
+</ul>
+<ul>
+<li><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;"><strong><span style="color: #000000;">Pink Signal:</span></strong> It is the output signal of the Big Muff Pi. The previous signal is amplified 13dBs without changes in frequency. The Volume potentiometer is set&nbsp;at maximum value</span>.</span></li>
+</ul>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<h1><span style="font-size: 14pt; color: #000000; font-family: verdana, geneva;"><a id="link7" name="link7"></a><strong>7.&nbsp;Resources.</strong></span></h1>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="http://www.bigmuffpage.com">The Big Muff Page</a>, <span style="color: #333333;">the most comprehensive site about BMP by Kitrae. </span></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="http:/www.uotechnology.edu.iq/dep-eee/lectures/2nd/Electronics%201/Part%2004.pdf">Feedback BJT Amplifier Analysis </a><span style="color: #333333;">by Dr. Ahmed Saadoon.</span></span><br /><span style="font-family: verdana, geneva;"><span style="font-size: 10pt;"><a href="http://webs.uvigo.es/ario/docencia/ean/FEEDBACK1.pdf">Feedback BTJ Amplifier Analysis</a> <span style="color: #333333;">by the University of Vigo</span></span><span style="color: #333333;">.</span></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="http://www.coda-effects.com/2015/11/big-muff-mods-and-tweaks.html">BMP Mods and Tweaks.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="http://www.diyaudio.com/forums/solid-state/144603-what-capacitor-base-collector.html">BMP Questions in DIYaudio</a>.</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="http://www.muzique.com/lab/tone3.htm">BMP tone Control</a> <span style="color: #333333;">by AMZ.</span></span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"><a href="http://www.thatraymond.com/downloads/solidstate_guitar_amplifiers_teemu_kyttala_v1.0.pdf">Teemuk&nbsp;Kyttala&nbsp;Solid State Guitar Amplifiers</a>,&nbsp;the Holy Scripture.</span></p>
+<p>&nbsp;</p>
+<p><span style="color: #333333; font-size: 13.3333px;">Our sincere appreciation to B. Toskin for helping us with the article.</span></p>
+<h2><span style="font-size: 12pt; color: #000000; font-family: verdana, geneva;"><a id="link71" name="link71"></a><strong>7.1 Datasheets.</strong></span></h2>
+<ul>
+<li><span style="font-family: verdana, geneva;">&nbsp;<span style="font-size: 10pt; color: #333333;">NPN Transistors:</span></span></li>
+</ul>
+<p style="margin-left: 60px;"><span style="font-size: 10pt; color: #3366ff; font-family: verdana, geneva;"><a href="http://www.datasheetcatalog.org/datasheet/motorola/BC239.pdf"><span style="color: #3366ff;">BC239 Datasheet. </span></a></span><br /><span style="font-size: 10pt; color: #3366ff; font-family: verdana, geneva;"><a href="http://w5jgv.com/tree_amplifier/2N5088-89.pdf"><span style="color: #3366ff;">2N5088/2N5089 Datasheet. </span></a></span><br /><span style="font-size: 10pt; color: #3366ff; font-family: verdana, geneva;"><a href="http://www.datasheetcatalog.org/datasheet/motorola/BC549C.pdf"><span style="color: #3366ff;">BC549C Datasheet. </span></a></span><br /><span style="color: #3366ff; font-family: verdana, geneva;"><a href="http://datasheet.seekic.com/PdfFile/SE4/SE4010.pdf"><span style="font-size: 10pt; color: #3366ff;">SE4010 Datasheet.</span></a></span><br /><span style="font-family: verdana, geneva;"><a href="http://72.52.208.92/~gbpprorg/mil/cavity/2N5210.pdf"><span style="font-size: 10pt; color: #3366ff;"><span style="color: #3366ff;">2N5210 Datasheet. </span></span></a></span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Silicon Diodes:</span></li>
+</ul>
+<p style="margin-left: 60px;"><span style="font-size: 10pt; color: #3366ff; font-family: verdana, geneva;"><a href="http://www.oup.com/us/pdf/microcircuits/students/diode/1N914B_philip.pdf"><span style="color: #3366ff;">1N914 Datasheet. </span></a></span><br /><span style="font-size: 10pt; color: #3366ff; font-family: verdana, geneva;"><a href="http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf"><span style="color: #3366ff;">1N4148 Datasheet.</span></a>&nbsp;</span></p>
+<p style="text-align: right;"><span style="font-size: 12pt; color: #000000; font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">Thanks for reading, all feedback is appreciated &nbsp; &nbsp;&nbsp;<img src="../_assets/26a349a17744.jpg" alt="jr(at)ElectroSmash.com " style="float: right;" /></span></span></p>	</section>
+  
+  <!-- footer -->
+    <!-- //footer -->
+
+			<hr class="divider-vertical" /><ul class="pager pagenav">
+	<li class="previous">
+		<a class="hasTooltip" title="Pro Co Rat Analysis" aria-label="Previous article: Pro Co Rat Analysis" href="../proco-rat/index.html" rel="prev">
+			<span class="icon-chevron-left" aria-hidden="true"></span> <span aria-hidden="true">Prev</span>		</a>
+	</li>
+	<li class="next">
+		<a class="hasTooltip" title="Tube Screamer Analysis" aria-label="Next article: Tube Screamer Analysis" href="../tube-screamer-analysis/index.html" rel="next">
+			<span aria-hidden="true">Next</span> <span class="icon-chevron-right" aria-hidden="true"></span>		</a>
+	</li>
+</ul>
+	
+	
+	</article>
+<!-- //Article -->
+
+
+</div><div><a href="http://www.artio.net" style="font-size: 8px; visibility: visible; display: inline;" title="Web development, Joomla, CMS, CRM, Online shop software, databases">Joomla SEF URLs by Artio</a></div>
+		</div>
+		<!-- //MAIN CONTENT -->
+
+		<!-- SIDEBAR RIGHT -->
+		<div class="t3-sidebar t3-sidebar-right col-xs-12 col-sm-4  col-md-3 ">
+			<div class="t3-module module " id="Mod28"><div class="module-inner"><h3 class="module-title "><span>New Updates</span></h3><div class="module-ct"><ul class="latestnews mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../arduino-audio-meter/index.html" itemprop="url">
+			<span itemprop="name">
+				Arduino Audio Meter			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../dallas-rangemaster/index.html" itemprop="url">
+			<span itemprop="name">
+				Dallas Rangemaster Treble Booster Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../time-manipulator/index.html" itemprop="url">
+			<span itemprop="name">
+				Time Manipulator - Arduino Delay/Echo/Reverb			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../marshall-guvnor-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Marshall The Guvnor Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../germanium-fuzz/index.html" itemprop="url">
+			<span itemprop="name">
+				You Can Build the Perfect Germanium Fuzz			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../mxr-distortion-plus-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				MXR Distortion + Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod29"><div class="module-inner"><h3 class="module-title "><span>Most Visited</span></h3><div class="module-ct"><ul class="mostread mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../tube-screamer-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Tube Screamer Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../fuzz-face/index.html" itemprop="url">
+			<span itemprop="name">
+				Fuzz Face Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../proco-rat/index.html" itemprop="url">
+			<span itemprop="name">
+				Pro Co Rat Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../boss-ds1-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Boss DS-1 Distortion Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../klon-centaur-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Klon Centaur Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="index.html" itemprop="url">
+			<span itemprop="name">
+				Big Muff Pi Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod184"><div class="module-inner"><h3 class="module-title "><span>Follow us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><span style="font-size: 10pt; color: #333333;">You can also follow us on:</span></p>
+<p><a href="https://www.facebook.com/ElectroSmash"><img src="../_assets/df34a2b41b54.png" alt="facebook" /></a>&nbsp;&nbsp; <a href="https://plus.google.com/+Electrosmash/about"><img src="../_assets/3ffc52860091.png" alt="google" /></a>&nbsp;&nbsp; <a href="https://www.instagram.com/electro.smash/"><img src="../_assets/45b0b0fe2d4b.png" alt="instagram" /></a></p>
+<p><a href="https://www.pinterest.com/electrosmash/"><img src="../_assets/05310d9fcf2a.png" alt="pinterest" /></a>&nbsp;&nbsp; <a href="https://www.youtube.com/user/ElectroSmashTV"><img src="../_assets/d920883b3613.png" alt="youtube" /></a>&nbsp;&nbsp; <a href="https://twitter.com/electro_smash"><img src="../_assets/52581f7264eb.png" alt="twitter" /></a></p></div>
+</div></div></div>
+		</div>
+		<!-- //SIDEBAR RIGHT -->
+
+	</div>
+</div> 
+
+
+
+  
+
+
+  
+
+
+	
+<!-- BACK TOP TOP BUTTON -->
+<div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top hidden-xs hidden-sm affix-top">
+  <button class="btn btn-primary" title="Back to Top"><i class="fa fa-caret-up"></i></button>
+</div>
+<script type="text/javascript">
+(function($) {
+	// Back to top
+	$('#back-to-top').on('click', function(){
+		$("html, body").animate({scrollTop: 0}, 500);
+		return false;
+	});
+    $(window).on('load', function(){
+        // hide button to top if the document height not greater than window height*2;using window load for more accurate calculate.    
+        if ((parseInt($(window).height())*2)>(parseInt($(document).height()))) {
+            $('#back-to-top').hide();
+        } 
+    });
+})(jQuery);
+</script>
+<!-- BACK TO TOP BUTTON -->
+
+<!-- FOOTER -->
+<footer id="t3-footer" class="wrap t3-footer">
+
+			<!-- FOOTER SPOTLIGHT -->
+		<div class="container hidden-xs">
+				<!-- SPOTLIGHT -->
+	<div class="t3-spotlight t3-footer-sl  row">
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod185"><div class="module-inner"><h3 class="module-title "><span>About us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../about-us/index.html">&nbsp;&nbsp;<img src="../_assets/420f9f181bc0.jpg" alt="smash electro" /></a></p>
+<p><a href="../about-us/index.html"><span style="font-size: 10pt; color: #333333;">Smashing audio electronics since MMXIII</span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod183"><div class="module-inner"><h3 class="module-title "><span>Email Newsletter</span></h3><div class="module-ct"><div class="acymailing_module" id="acymailing_module_formAcymailing47551">
+	<div class="acymailing_fulldiv" id="acymailing_fulldiv_formAcymailing47551"  >
+		<form id="formAcymailing47551" action="index.html" onsubmit="return submitacymailingform('optin','formAcymailing47551')" method="post" name="formAcymailing47551"  >
+		<div class="acymailing_module_form" >
+						<table class="acymailing_form">
+				<tr>
+												<td class="acyfield_email acy_requiredField">
+								<input id="user_email_formAcymailing47551"  onfocus="if(this.value == 'example@email.com') this.value = '';" onblur="if(this.value=='') this.value='example@email.com';" class="inputbox" type="text" name="user[email]" style="width:90%" value="example@email.com" title="example@email.com"/>
+							</td> </tr><tr>
+					
+					<td  class="acysubbuttons">
+												<input class="button subbutton btn btn-primary" type="submit" value="Subscribe" name="Submit" onclick="try{ return submitacymailingform('optin','formAcymailing47551'); }catch(err){alert('The form could not be submitted '+err);return false;}"/>
+											</td>
+				</tr>
+			</table>
+						<input type="hidden" name="ajax" value="0" />
+			<input type="hidden" name="acy_source" value="module_183" />
+			<input type="hidden" name="ctrl" value="sub"/>
+			<input type="hidden" name="task" value="notask"/>
+			<input type="hidden" name="redirect" value="https%3A%2F%2Fwww.electrosmash.com%2Fbig-muff-pi-analysis"/>
+			<input type="hidden" name="redirectunsub" value="https%3A%2F%2Fwww.electrosmash.com%2Fbig-muff-pi-analysis"/>
+			<input type="hidden" name="option" value="com_acymailing"/>
+						<input type="hidden" name="hiddenlists" value="1"/>
+			<input type="hidden" name="acyformname" value="formAcymailing47551" />
+									</div>
+		</form>
+	</div>
+	</div>
+
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod186"><div class="module-inner"><h3 class="module-title "><span>Contact us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../contact-us/index.html"><span style="font-size: 10pt; color: #333333;">e-mail us at <span id="cloak6de431e6956f0fd4b37e1e454be4bad5">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
+				document.getElementById('cloak6de431e6956f0fd4b37e1e454be4bad5').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy6de431e6956f0fd4b37e1e454be4bad5 = '&#105;nf&#111;' + '&#64;';
+				addy6de431e6956f0fd4b37e1e454be4bad5 = addy6de431e6956f0fd4b37e1e454be4bad5 + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';
+				var addy_text6de431e6956f0fd4b37e1e454be4bad5 = '&#105;nf&#111;' + '&#64;' + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';document.getElementById('cloak6de431e6956f0fd4b37e1e454be4bad5').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy6de431e6956f0fd4b37e1e454be4bad5 + '\'>'+addy_text6de431e6956f0fd4b37e1e454be4bad5+'<\/a>';
+		</script></span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod188"><div class="module-inner"><h3 class="module-title "><span>Rights</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p style="text-align: left;">&nbsp;&nbsp;<a href="https://creativecommons.org/licenses/by-nc/3.0/"><img src="../_assets/b0e99d439c44.png" alt="88x31" /></a></p>
+<p style="text-align: left;"><img src="../_assets/fe2636cdea5c.png" alt="open source logo" width="180" height="38" /></p>
+<p style="text-align: left;"><img src="../_assets/8281c4ec3a3b.png" alt="open hardware logo" width="180" height="38" /></p>
+<p style="text-align: left;">&nbsp;</p></div>
+</div></div></div>
+							</div>
+			</div>
+<!-- SPOTLIGHT -->
+		</div>
+		<!-- //FOOTER SPOTLIGHT -->
+	
+	<section class="t3-copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 copyright ">
+					
+          <small>
+            <a href="http://twitter.github.io/bootstrap/" title="Bootstrap by Twitter" target="_blank">Bootstrap</a> is a front-end framework of Twitter, Inc. Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" title="MIT License" target="_blank">MIT License.</a>
+          </small>
+          <small>
+            <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> font licensed under <a href="http://scripts.sil.org/OFL">SIL OFL 1.1</a>.
+          </small>
+				</div>
+							</div>
+		</div>
+	</section>
+
+</footer>
+<!-- //FOOTER -->
+
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29544239-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

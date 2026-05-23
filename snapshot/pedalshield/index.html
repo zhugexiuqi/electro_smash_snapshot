@@ -1,0 +1,1117 @@
+
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr"
+	  class='com_content view-article itemid-435 home j31 mm-hover '>
+
+<head>
+	<base href="../index/index.html" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="pedalshield, pedal, shield, arduino, due, guitar, effect, stompbox, pedal, open, source, programmable, digital, schematic, circuit, analysis, stages, resistor, capacitors, TL072, TC1044, dsp,C, C/C++, digital, signal, processing, programming, echo, delay," />
+	<meta name="rights" content="Creative Commons: Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0) " />
+	<meta name="author" content="JR" />
+	<meta name="description" content="pedalSHIELD is a programmable Arduino Open Source guitar effects pedal made for guitarists, hackers and programmers. Users can program their own effects in C/C++ or download ready effects from the online library.It is designed to be a platform to learn ab" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>ElectroSmash - pedalSHIELD Arduino Guitar Pedal.</title>
+	<link href="index.html" rel="canonical" />
+	<link href="../_assets/d87243966412.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../_assets/f9b53bfd3b9f.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/15ff046a2fe3.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/dd09f39c1b89.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"21cf302f16ded8d598603dbe11bdb890","system.paths":{"root":"","base":""}}</script>
+	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+	<script src="../_assets/42737ccc5bab.js" type="text/javascript"></script>
+	<script src="../_assets/b8bcbb2f005c.js" type="text/javascript" async="async"></script>
+	<script type="text/javascript">
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('load',function(){
+	var siteurl = '../index/index.html';
+	function path(){
+	  var args = arguments,result = [];
+	  for(var i = 0; i < args.length; i++){
+	  	result.push(args[i].replace('@', [siteurl,'plugins/content/hs_highlighter/lib/scripts/'].join('')));
+	  }
+	  return result;
+	};
+	 
+	SyntaxHighlighter.autoloader.apply(null, path(
+	  'applescript            @shBrushAppleScript.js',
+	  'actionscript3 as3      @shBrushAS3.js',
+	  'bash shell             @shBrushBash.js',
+	  'coldfusion cf          @shBrushColdFusion.js',
+	  'cpp c                  @shBrushCpp.js',
+	  'c# c-sharp csharp      @shBrushCSharp.js',
+	  'css                    @shBrushCss.js',
+	  'delphi pascal          @shBrushDelphi.js',
+	  'diff patch pas         @shBrushDiff.js',
+	  'erl erlang             @shBrushErlang.js',
+	  'groovy                 @shBrushGroovy.js',
+	  'java                   @shBrushJava.js',
+	  'jfx javafx             @shBrushJavaFX.js',
+	  'js jscript javascript  @shBrushJScript.js',
+	  'perl pl                @shBrushPerl.js',
+	  'php                    @shBrushPhp.js',
+	  'text plain             @shBrushPlain.js',
+	  'py python              @shBrushPython.js',
+	  'ruby rails ror rb      @shBrushRuby.js',
+	  'sass scss              @shBrushSass.js',
+	  'scala                  @shBrushScala.js',
+	  'sql                    @shBrushSql.js',
+	  'vb vbnet               @shBrushVb.js',
+	  'xml xhtml xslt html    @shBrushXml.js'
+	  
+	));
+	
+	SyntaxHighlighter.defaults['auto-links'] = false;;
+	SyntaxHighlighter.all();	
+});
+		
+		jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });	if(typeof acymailingModule == 'undefined'){
+				var acymailingModule = [];
+			}
+			
+			acymailingModule['emailRegex'] = /^[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+)*\@([a-z0-9-]+\.)+[a-z0-9]{2,10}$/i;
+
+			acymailingModule['NAMECAPTION'] = 'Name';
+			acymailingModule['NAME_MISSING'] = 'Please enter your name';
+			acymailingModule['EMAILCAPTION'] = 'example@email.com';
+			acymailingModule['VALID_EMAIL'] = 'Please enter a valid e-mail address';
+			acymailingModule['ACCEPT_TERMS'] = 'Please check the Terms and Conditions';
+			acymailingModule['CAPTCHA_MISSING'] = 'The captcha is invalid, please try again';
+			acymailingModule['NO_LIST_SELECTED'] = 'Please select the lists you want to subscribe to';
+		
+acymailingModule['excludeValuesformAcymailing47911'] = [];
+acymailingModule['excludeValuesformAcymailing47911']['name'] = 'Name';
+acymailingModule['excludeValuesformAcymailing47911']['email'] = 'example@email.com';
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });
+	</script>
+
+	
+<!-- META FOR IOS & HANDHELD -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<style type="text/stylesheet">
+		@-webkit-viewport   { width: device-width; }
+		@-moz-viewport      { width: device-width; }
+		@-ms-viewport       { width: device-width; }
+		@-o-viewport        { width: device-width; }
+		@viewport           { width: device-width; }
+	</style>
+	<script type="text/javascript">
+		//<![CDATA[
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement("style");
+			msViewportStyle.appendChild(
+				document.createTextNode("@-ms-viewport{width:auto!important}")
+			);
+			document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+		}
+		//]]>
+	</script>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="apple-mobile-web-app-capable" content="YES"/>
+<!-- //META FOR IOS & HANDHELD -->
+
+
+
+
+<!-- Le HTML5 shim and media query for IE8 support -->
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script type="text/javascript" src="../_assets/010a3c86157d.js"></script>
+<![endif]-->
+
+<!-- You can add Google Analytics here or use T3 Injection feature -->
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="../_assets/76d3e1341c39.css" type="text/css" />
+<![endif]-->
+	</head>
+
+<body>
+
+<div class="t3-wrapper corporate"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
+
+	
+<!-- MAIN NAVIGATION -->
+<header id="t3-mainnav" class="wrap navbar navbar-default navbar-fixed-top t3-mainnav">
+
+	<!-- OFF-CANVAS -->
+		<!-- //OFF-CANVAS -->
+
+	<div class="container">
+
+		<!-- NAVBAR HEADER -->
+		<div class="navbar-header">
+
+			<!-- LOGO -->
+			<div class="logo logo-image">
+				<div class="logo-image">
+					<a href="/" title="ElectroSmash">
+													<img class="logo-img" src="../_assets/115794d6d5b8.png" alt="ElectroSmash" />
+						
+												
+						<span>ElectroSmash</span>
+					</a>
+				</div>
+			</div>
+			<!-- //LOGO -->
+
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-collapse">
+					<i class="fa fa-bars"></i>
+				</button>
+			
+	    
+		</div>
+		<!-- //NAVBAR HEADER -->
+
+		<!-- NAVBAR MAIN -->
+				<nav class="t3-navbar-collapse navbar-collapse collapse"></nav>
+		
+		<nav class="t3-navbar navbar-collapse collapse">
+			<div  class="t3-megamenu"  data-responsive="true">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav navbar-nav level0">
+<li itemprop='name' class="current active" data-id="435" data-level="1">
+<a itemprop='url' class=""  href="/"   data-target="#">Home </a>
+
+</li>
+<li itemprop='name' class="dropdown mega" data-id="510" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Chips<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="492" data-level="2">
+<a itemprop='url' class=""  href="../jrc4558-analysis/index.html"   data-target="#">JRC4558  </a>
+
+</li>
+<li itemprop='name'  data-id="519" data-level="2">
+<a itemprop='url' class=""  href="../mn3007-bucket-brigade-devices/index.html"   data-target="#">MN3007 BBDs </a>
+
+</li>
+<li itemprop='name'  data-id="468" data-level="2">
+<a itemprop='url' class=""  href="../lm386-analysis/index.html"   data-target="#">LM386 </a>
+
+</li>
+<li itemprop='name'  data-id="1643" data-level="2">
+<a itemprop='url' class=""  href="../pt2399-analysis/index.html"   data-target="#">PT2399 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="444" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Amps<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="993" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="489" data-level="2">
+<a itemprop='url' class=""  href="../little-gem-analysis/index.html"   data-target="#">Little Gem Amp </a>
+
+</li>
+<li itemprop='name'  data-id="526" data-level="2">
+<a itemprop='url' class=""  href="../marshall-mg10/index.html"   data-target="#">Marshall MG10 </a>
+
+</li>
+<li itemprop='name'  data-id="491" data-level="2">
+<a itemprop='url' class=""  href="../noisy-cricket-analysis/index.html"   data-target="#">Noisy Cricket  </a>
+
+</li>
+<li itemprop='name'  data-id="490" data-level="2">
+<a itemprop='url' class=""  href="../ruby-amp-analysis/index.html"   data-target="#">Ruby Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="488" data-level="2">
+<a itemprop='url' class=""  href="../smokey-amp-analysis/index.html"   data-target="#">Smokey Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="746" data-level="2">
+<a itemprop='url' class=""  href="http://www.electrosmash.com/schematics#amps"   data-target="#">Amps Schematics.</a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="511" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Pedals<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  style="width: 600px"  data-width="600"><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="515" data-level="2">
+<a itemprop='url' class=""  href="../back-talk-analysis/index.html"   data-target="#">Back Talk Reverse Delay </a>
+
+</li>
+<li itemprop='name'  data-id="518" data-level="2">
+<a itemprop='url' class=""  href="../big-muff-pi-analysis/index.html"   data-target="#">Big Muff Pi  </a>
+
+</li>
+<li itemprop='name'  data-id="524" data-level="2">
+<a itemprop='url' class=""  href="../boss-ce-2-analysis/index.html"   data-target="#">Boss CE-2 Chorus </a>
+
+</li>
+<li itemprop='name'  data-id="1088" data-level="2">
+<a itemprop='url' class=""  href="../boss-ds1-analysis/index.html"   data-target="#">Boss DS-1 Distortion </a>
+
+</li>
+<li itemprop='name'  data-id="1713" data-level="2">
+<a itemprop='url' class=""  href="../dallas-rangemaster/index.html"   data-target="#">Dallas Rangemaster </a>
+
+</li>
+<li itemprop='name'  data-id="905" data-level="2">
+<a itemprop='url' class=""  href="../crybaby-gcb-95/index.html"   data-target="#">Dunlop CryBaby GCB-95  </a>
+
+</li>
+<li itemprop='name'  data-id="842" data-level="2">
+<a itemprop='url' class=""  href="../fuzz-face/index.html"   data-target="#">Fuzz Face </a>
+
+</li>
+<li itemprop='name'  data-id="1664" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="512" data-level="2">
+<a itemprop='url' class=""  href="../tube-screamer-analysis/index.html"   data-target="#">Ibanez Tube Screamer </a>
+
+</li>
+<li itemprop='name'  data-id="1433" data-level="2">
+<a itemprop='url' class=""  href="../klon-centaur-analysis/index.html"   data-target="#">Klon Centaur </a>
+
+</li>
+</ul>
+</div></div>
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="548" data-level="2">
+<a itemprop='url' class=""  href="../mxr-microamp/index.html"   data-target="#">MXR MicroAmp </a>
+
+</li>
+<li itemprop='name'  data-id="1667" data-level="2">
+<a itemprop='url' class=""  href="../marshall-guvnor-analysis/index.html"   data-target="#">Marshall Guvnor </a>
+
+</li>
+<li itemprop='name'  data-id="1632" data-level="2">
+<a itemprop='url' class=""  href="../mxr-distortion-plus-analysis/index.html"   data-target="#">MXR Distortion + </a>
+
+</li>
+<li itemprop='name'  data-id="1244" data-level="2">
+<a itemprop='url' class=""  href="../mxr-dyna-comp-analysis/index.html"   data-target="#">MXR Dyna Comp </a>
+
+</li>
+<li itemprop='name'  data-id="573" data-level="2">
+<a itemprop='url' class=""  href="../mxr-phase90/index.html"   data-target="#">MXR Phase 90 </a>
+
+</li>
+<li itemprop='name'  data-id="553" data-level="2">
+<a itemprop='url' class=""  href="../proco-rat/index.html"   data-target="#">ProCo Rat </a>
+
+</li>
+<li itemprop='name'  data-id="520" data-level="2">
+<a itemprop='url' class=""  href="../sitar-swami-analysis/index.html"   data-target="#">Sitar Swami </a>
+
+</li>
+<li itemprop='name'  data-id="525" data-level="2">
+<a itemprop='url' class=""  href="../vox-v847-analysis/index.html"   data-target="#">Vox V847 Wah Wah </a>
+
+</li>
+<li itemprop='name'  data-id="547" data-level="2">
+<a itemprop='url' class=""  href="../emg81/index.html"   data-target="#">EMG81 Pickup </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="796" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Projects<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="1108" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-uno/index.html"   data-target="#">pedalSHIELD UNO </a>
+
+</li>
+<li itemprop='name'  data-id="797" data-level="2">
+<a itemprop='url' class=""  href="index.html"   data-target="#">pedalSHIELD DUE </a>
+
+</li>
+<li itemprop='name'  data-id="1437" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-mega/index.html"   data-target="#">pedalSHIELD MEGA </a>
+
+</li>
+<li itemprop='name'  data-id="1312" data-level="2">
+<a itemprop='url' class=""  href="../pedal-pi/index.html"   data-target="#">Pedal-Pi </a>
+
+</li>
+<li itemprop='name'  data-id="1662" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="1663" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="1668" data-level="2">
+<a itemprop='url' class=""  href="../time-manipulator/index.html"   data-target="#">Time Manipulator </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name'  data-id="745" data-level="1">
+<a itemprop='url' class=""  href="../forum-electrosmash/index.html"   data-target="#">Forum </a>
+
+</li>
+<li itemprop='name'  data-id="816" data-level="1">
+<a itemprop='url' class=""  href="../shop/index.html"   data-target="#">Shop</a>
+
+</li>
+</ul>
+</div>
+
+		</nav>
+    <!-- //NAVBAR MAIN -->
+
+	</div>
+</header>
+<!-- //MAIN NAVIGATION -->
+
+
+
+
+
+
+  
+
+
+  
+
+
+	
+<div id="t3-mainbody" class="container t3-mainbody">
+	<div class="row">
+
+		<!-- MAIN CONTENT -->
+		<div id="t3-content" class="t3-content col-xs-12 col-sm-8  col-md-9">
+						<div class="item-page clearfix">
+
+
+<!-- Article -->
+<article>
+	<meta itemprop="inLanguage" content="en-GB" />
+	<meta itemprop="url" content="index.html" />
+
+      
+<header class="article-header clearfix">
+	<h1 class="article-title" itemprop="headline">
+					<a href="index.html" itemprop="url" title="pedalSHIELD DUE Arduino Guitar Pedal.">
+				pedalSHIELD DUE Arduino Guitar Pedal.</a>
+			</h1>
+
+			</header>
+    
+    
+  <!-- Aside -->
+    <!-- //Aside -->
+
+  
+  
+  
+	
+  
+	
+	<section class="article-content clearfix">
+		<p><span style="font-size: 10pt; color: #333333;">pedalSHIELD DUE is a programmable Arduino Open Source &amp; Open Hardware guitar pedal made for guitarists, hackers, and programmers. Users can program their own effects in C/C++ or download ready effects from the <a href="../forum/software-pedalshield/index.html">online library</a>.</span></p>
+<p style="text-align: center;"><iframe src="https://www.youtube.com/embed/COPaqJBekBQ" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;">It is designed to be a platform to learn about digital signal processing, effects, synthesizers and experiment without deep knowledge in electronics or programming.</span></span></p>
+ 
+<p style="text-align: center;"><a href="../_assets/b3a2e56a4890.jpg"><img src="../_assets/dc64d92ff235.jpg" alt="pedalSHIELD-parts-small" width="719" height="324" style="text-align: center; display: block; margin-left: auto; margin-right: auto;" /></a></p>
+<p><span style="text-align: center; color: #ffffff;">l</span><span style="font-size: 10pt; color: #333333;">&nbsp; &nbsp;</span></p>
+<p><strong><span style="font-size: 14pt; color: #000000;">How Does it Work?</span></strong></p>
+<p><span style="font-size: 10pt; color: #333333;">The shield has three parts:</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;"><span style="color: #000000;"><strong>The Input Stage</strong> or Preamp:</span> Amplifies the guitar input signal and sends it to the Arduino DUE microcontroller to be processed.&nbsp;</span></li>
+<li><span style="font-size: 10pt; color: #333333;"><strong><span style="color: #000000;">Arduino DUE Board:</span></strong> It does all the Digital Signal Processing (DSP) modifying the signal and adding the effect (delay, echo, distortion, volume...).</span></li>
+<li><span style="font-size: 10pt; color: #333333;"><strong><span style="color: #000000;">The Output Stage:</span></strong> Once the waveform is processed, the signal is taken from the Arduino DACs and prepared to be sent to the Guitar Amplifier. <br />This part also includes a Summing Amplifier which is very useful for delay effects like echo or chorus.<br /></span></li>
+</ul>
+<p><a href="../_assets/26ba2772d5d5.jpg"><span style="font-size: 10pt; color: #333333;"><img src="../_assets/26ba2772d5d5.jpg" alt="pedalshield-arduino-guitar-pedal-diagram" width="608" height="223" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+<p><span style="font-size: 10pt; color: #333333;">pedalSHIELD uses 2 ADCs and 2 DACS in parallel in order to achieve higher bit resolution (2 x 12bits). However, using only 1 DAC and 1 ADC is possible without modifications. You can check all the details in the <a href="/pedalshield#hw">hardware design section</a> and in the <a href="../forum/hardware-pedalshield/index.html">pedalSHIELD Hardware forum</a>.<br /></span></p>
+<p><a href="../_assets/c398d8c71d74.jpg"><span style="font-size: 10pt; color: #333333;"><img src="../_assets/6e250967531b.jpg" alt="pedalSHIELD-PCB-360-view-small" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+<p><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #000000;"><strong><span style="font-size: 14pt;"></span></strong></span></span></p>
+<p><span style="font-size: 12pt; color: #000000;"><strong><span style="font-size: 14pt;">How to Program it?</span></strong></span></p>
+<p><span style="font-size: 10pt; color: #333333;">The shield is programmed in C/C++ using the standard free Arduino platform (Linux/Windows/Mac). All tools and programs are open-source and compatible with Arduino libraries. </span></p>
+<p><span style="font-size: 10pt; color: #333333;">Basic knowledge of C is needed. The best way to show how to program it is showing an example pedal:</span></p>
+<p><span style="text-decoration: underline; font-size: 10pt; color: #000000;"><span>1. Clean Volume/Booster Pedal:</span></span></p>
+<p><span style="font-size: 10pt;"><span style="color: #333333;">&nbsp;This code creates a Volume/Booster pedal, the architecture of the program looks like</span><br /></span></p>
+<p><a href="../_assets/b8a2209f0d97.jpg"><img src="../_assets/b8a2209f0d97.jpg" alt="exaple-code" style="display: block; margin-left: auto; margin-right: auto;" /></a></p>
+<pre class="brush:cpp">// Licensed under a Creative Commons Attribution 3.0 Unported License.
+// Based on rcarduino.blogspot.com previous work.
+// www.electrosmash.com/pedalshield
+
+int in_ADC0, in_ADC1;  //variables for 2 ADCs values (ADC0, ADC1)
+int POT0, POT1, POT2, out_DAC0, out_DAC1; //variables for 3 pots (ADC8, ADC9, ADC10)
+int LED = 3;
+int FOOTSWITCH = 7; 
+int TOGGLE = 2; 
+
+void setup()
+{
+  //ADC Configuration
+  ADC-&gt;ADC_MR |= 0x80;   // DAC in free running mode.
+  ADC-&gt;ADC_CR=2;         // Starts ADC conversion.
+  ADC-&gt;ADC_CHER=0x1CC0;  // Enable ADC channels 0 and 1.  
+
+  //DAC Configuration
+  analogWrite(DAC0,0);  // Enables DAC0
+  analogWrite(DAC1,0);  // Enables DAC0
+}
+
+void loop()
+{
+  //Read the ADCs
+  while((ADC-&gt;ADC_ISR &amp; 0x1CC0)!=0x1CC0);// wait for ADC 0, 1, 8, 9, 10 conversion complete.
+  in_ADC0=ADC-&gt;ADC_CDR[7];               // read data from ADC0
+  in_ADC1=ADC-&gt;ADC_CDR[6];               // read data from ADC1  
+  POT0=ADC-&gt;ADC_CDR[10];                 // read data from ADC8        
+  POT1=ADC-&gt;ADC_CDR[11];                 // read data from ADC9   
+  POT2=ADC-&gt;ADC_CDR[12];                 // read data from ADC10 
+    
+  //Add volume feature with POT2
+  out_DAC0=map(in_ADC0,0,4095,1,POT2);
+  out_DAC1=map(in_ADC1,0,4095,1,POT2);
+  
+  //Write the DACs
+  dacc_set_channel_selection(DACC_INTERFACE, 0);       //select DAC channel 0
+  dacc_write_conversion_data(DACC_INTERFACE, out_DAC0);//write on DAC
+  dacc_set_channel_selection(DACC_INTERFACE, 1);       //select DAC channel 1
+  dacc_write_conversion_data(DACC_INTERFACE, out_DAC1);//write on DAC
+}</pre>
+<p><span style="font-size: 10pt;"><span style="font-size: 10pt; color: #333333;"><span style="color: #333333;">You can check all the codes and more examples at the <strong><a href="../forum/software-pedalshield/index.html">pedalSHIELD Software Forum</a>&nbsp;</strong>and don't forget the <strong><a href="../forum/software-pedalshield/233-best-pedalshield-due-topics/index.html">Most Important Topics</a>.</strong></span></span><br /></span></p>
+<p><span style="color: #333333; font-size: 10pt;">You can <a href="https://soundcloud.com/electro-smash">listen in SounCloud</a> all the already programmed effects <span style="font-size: 10pt;"><span style="font-size: 10pt; color: #333333;"><span style="color: #333333;">(delay, reverb, echo, metronome, tremolo, distortion, etc...)</span></span></span>:</span></p>
+<p>{soundcloud}http://soundcloud.com/electro-smash/echo-pedalshield|700|0 {/soundcloud} <br />{soundcloud}http://soundcloud.com/electro-smash/tremolo-pedalshield|700|0 {/soundcloud}<br />{soundcloud}http://soundcloud.com/electro-smash/distortion-effect-by|700|0 {/soundcloud}</p>
+<p>&nbsp;<span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt;"><span style="color: #333333;"></span></span></span><span style="font-size: 10pt;"></span></p>
+<p><strong><span style="font-size: 14pt;"><a name="hw"></a><span style="color: #99cc00;"><span style="color: #000000;">pedalSHIELD Hardware Design.</span></span></span></strong></p>
+<p><span style="color: #333333;"><strong><span style="font-size: 10pt;">Specifications:</span></strong></span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">Based in Arduino Due.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">Configurable sampling time from 8kHz to 192kHz.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">More than 2200 instructions per sample at 48kHz</span></li>
+<li><span style="font-size: 10pt; color: #333333;">Microcontroller:</span>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">84MHz 32bit Atmel SAM3X8E ARM Cortex-M3.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">96KB RAM, 512KB Flash Memory.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">Integrated DMA.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">12 bit ADC/DAC integrated sampling up to 1Msps.</span></li>
+</ul>
+</li>
+<li><span style="font-size: 10pt; color: #333333;">Interface:</span>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">3 Configurable potentiometers.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">2 Configurable switches.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">Blue power-on led PWM controlled.</span></li>
+<li><span style="font-size: 10pt;"><span style="color: #333333;">True Bypass Footswitch.</span> </span></li>
+</ul>
+</li>
+<li><span style="font-size: 10pt; color: #333333;">Connectors:</span>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">Input Jack, 1/4 inch unbalanced, Zin=5M<span class="st">&Omega;.</span></span></li>
+<li><span style="font-size: 10pt; color: #333333;">Output Jack, 1/4 inch unbalanced, Zout=100<span class="st">&Omega;</span>.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">Power supply: power taken from Arduino Due board.</span></li>
+</ul>
+</li>
+</ul>
+<p><span style="font-size: 10pt;"><span style="font-size: 10pt; color: #333333;"><span style="color: #333333;">The design was created using <a href="http://www.kicad-pcb.org/">KiCad</a>, an <span style="color: #333333;">open-source GNU free of charge electronic design CAD tool</span>. All <a href="../forum/hardware-pedalshield/18-kicad-schematics-pedalshield/index.html">schematic native files</a> and <a href="../forum/hardware-pedalshield/17-pedalshield-bill-of-materials-and-alternatives/index.html">bill of materials</a> are public. </span></span></span><span style="font-size: 10pt; color: #333333;">The circuit can be broken down into 5 simpler blocks: Power Supply, Input Stage, Output Stage, User Interface and Arduino Connectors:</span></p>
+<p><a href="../_assets/c3a8f4225fd5.png"><span style="font-size: 10pt;"><img src="../_assets/dca6e2150fe3.png" alt="pedalshield schematic" style="display: block; margin-left: auto; margin-right: auto;" /></span></a><br /><span style="font-size: 10pt; color: #333333;">The functionality is simple; 2 opamps will prepare the signal to be digitized and also 2 opamps will recover the signal from</span><br /><span style="font-size: 10pt; color: #333333;">the microcontroller. <span style="font-size: 10pt; color: #333333;">Two ADCs in parallel can be used to read the guitar signal, improving the bit depth (2x12bits). Furthermore, this arrange is also compatible with the&nbsp;<span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;">"<a href="../forum/hardware-pedalshield/22-double-span-and-digitize-signals-using-two-adcs/index.html">Double Span and Digitize Signals using Two ADCs</a>"</span></span> by placing the Jumper1.</span><br /></span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;"><span style="color: #000000;"><strong>Input Stage / Preamp:</strong></span> The guitar signal is amplified for better acquisition by the first op-amp which follows the <a href="../mxr-microamp/index.html">MicroAmp guitar pedal design</a>. The trimmer V<sub>R1</sub> adjusts the gain of this amplifier. There is also a <a href="../forum/software-pedalshield/3-software-utilities/index.html">program which helps to automatically adjust this trimmer</a>. The second inverting op-amp inverts the amplified signal to be applied to the ADC1. The Diodes D<sub>1</sub>, D<sub>2</sub>, D<sub>3</sub>, D<sub>4</sub> are clamping diodes that protect the Arduino's ADC from signals above 3,3V and below 0V.</span></li>
+</ul>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;"><strong><span style="color: #000000;">The Output State</span></strong>: Using a Differential amplifier (Gain=1) two DACs can be read in parallel improving the bit resolution (2x12bits). However, if a signal is generated at DAC0 and DAC1 is not used, the Differential amplifier behaves as a normal Buffer. The last op-amp is in a Summing configuration, adding the processed signal and the original one if the Mix Switch is ON. This stage is very convenient to implement some pedals like delay, flanger, chorus, metronome, etc..</span></li>
+</ul>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;"><strong><span style="color: #000000;">The Power Supply:</span></strong> Generates <span class="st">&plusmn;</span>5V to feed the operational amplifiers and achieve maximum signal swing without distortion.</span></li>
+</ul>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;"><strong><span style="color: #000000;">User Interface:</span></strong>&nbsp;The player can use 3 programmable potentiometers, 2 switches, 1 LED and the 3PDT True Bypass footswitch.<br /></span></li>
+</ul>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;"><span style="color: #000000;"><strong>Arduino Connectors:</strong></span> 5 pin headers link the shield with Arduino DUE transferring the signals.</span></li>
+</ul>
+<p><span style="font-size: 10pt; color: #333333;"><img src="../_assets/61845f48c1d6.jpg" alt="pedalSHIELD-360-view-small" style="display: block; margin-left: auto; margin-right: auto;" />&nbsp;</span></p>
+<p><span style="color: #0000ff;"><a href="../product-category/arduino/pedalshield-due/index.html" style="color: #0000ff;"><span style="font-size: 12pt;"><strong>Buy a pedalSHIELD DUE online.</strong></span></a></span></p>
+<p><span style="color: #333333; font-size: 10pt;">There are 2 options in the </span><a href="../index/index.html"><span style="color: #333333; font-size: 10pt;">online shop:</span></a></p>
+<ol>
+<li><span style="font-size: 10pt; color: #333333;"></span><span style="color: #333333; font-size: 10pt;"><span style="color: #333333; font-size: 10pt;"><span style="color: #3366ff;"><a href="../product-category/arduino/pedalshield-due/index.html" style="color: #3366ff;"><strong>Order only the PCB.</strong></a> </span>It uses easy-to-find standard components and you can build the kit yourself. The bill of materials is public with all the references and the Mouser part numbers.</span></span></li>
+<li><span style="color: #333333; font-size: 10pt;"><span style="color: #3366ff;"><a href="../product-category/arduino/pedalshield-due/index.html" style="color: #3366ff;"><strong>Order the Full Kit:</strong> </a></span>This kit includes the PCB, cover and all the components to build pedalSHIELD at home (you just need to add the Arduino DUE board). <a href="../contact/index.html"></a></span></li>
+</ol>
+<p><span style="font-size: 10pt; color: #333333;">All the transactions are done through PayPal for maximum security (also accepting Credit Card).</span></p>
+<p><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;">If you have any question, <strong><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt; color: #333333;"><span style="color: #333333; font-size: 10pt;"><span style="color: #333333; font-size: 10pt;"><a href="../contact/index.html">contact us</a></span></span></span></span></strong>.</span></span></p>
+<p><a href="../_assets/2443215a1b11.jpg"><span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt;"><span style="color: #333333;"><img src="../_assets/2443215a1b11.jpg" alt="pedalSHIELD intro" width="482" height="325" style="margin: 0px auto; display: block;" /></span></span></span></a></p>
+<p><span style="font-size: 10pt; color: #333333;"></span></p>
+<p>&nbsp;</p>
+<p><span style="color: #000000; font-size: 10pt;"><strong>Bill Of Materials:</strong></span></p>
+<p><span style="color: #333333; font-size: 10pt;">The components were selected using easy-to-find through-hole parts and a minimum number of references. You can also <a href="../forum/hardware-pedalshield/17-pedalshield-bill-of-materials-and-alternatives/index.html">download it</a> in txt, pdf, excel or open office format.</span></p>
+<table border="0" cellspacing="0" align="center"><colgroup><col width="119" /><col width="34" /><col width="292" /><col width="212" /><col width="160" /></colgroup>
+<tbody>
+<tr>
+<td colspan="5" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; text-align: center;" align="LEFT" width="817" height="18">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="5" style="border-left: 1px solid #000000; border-right: 1px solid #000000;" align="CENTER" height="18"><span style="font-size: 12pt;"><strong><span style="color: #004586; font-family: Calibri;">pedalSHIELD Bill of Materials /Parts List</span></strong></span></td>
+</tr>
+<tr>
+<td colspan="5" style="border-left: 1px solid #000000; border-right: 1px solid #000000;" align="LEFT" height="18">&nbsp;</td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="CENTER" height="18"><span style="font-size: 10pt;"><strong><span style="color: #4c4c4c; font-family: Calibri;">Value</span></strong></span></td>
+<td align="CENTER"><span style="font-size: 10pt;"><strong><span style="color: #4c4c4c; font-family: Calibri;">Qty</span></strong></span></td>
+<td align="CENTER"><span style="font-size: 10pt;"><strong><span style="color: #4c4c4c; font-family: Calibri;">References</span></strong></span></td>
+<td align="CENTER"><span style="font-size: 10pt;"><strong><span style="color: #4c4c4c; font-family: Calibri;">Description</span></strong></span></td>
+<td style="border-right: 1px solid #000000;" align="CENTER"><span style="font-size: 10pt;"><strong><span style="color: #4c4c4c; font-family: Calibri;">Mouser Reference</span></strong></span></td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" bgcolor="#E6E6FF" height="18"><span style="font-size: 10pt;"><strong><span style="color: #4c4c4c; font-family: Calibri;">Capacitors</span></strong></span></td>
+<td align="CENTER" bgcolor="#E6E6FF">&nbsp;</td>
+<td align="LEFT" bgcolor="#E6E6FF">&nbsp;</td>
+<td align="LEFT" bgcolor="#E6E6FF">&nbsp;</td>
+<td style="border-right: 1px solid #000000;" align="LEFT" bgcolor="#E6E6FF">&nbsp;</td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">270p</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">5</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">C2 C5 C8 C9 C12</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">Ceramic Disc Capacitors</span></td>
+<td style="border-right: 1px solid #000000;" align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">140-50S5-271J-RC</span></td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">0.1u</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">6</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">C1 C4 C6 C7 C10 C11</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">Film Capacitors.</span></td>
+<td style="border-right: 1px solid #000000;" align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">ECQ-V1H104JL</span></td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">1u</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">1</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">C13</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">Aluminium Electrolytic Capacitors </span></td>
+<td style="border-right: 1px solid #000000;" align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">ECE-A1HKA010</span></td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">4.7u</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">1</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">C3</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">Aluminium Electrolytic Capacitors </span></td>
+<td style="border-right: 1px solid #000000;" align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">ECE-A1EKA4R7</span></td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">10u</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">2</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">C14 C15</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">Aluminium Electrolytic Capacitors </span></td>
+<td style="border-right: 1px solid #000000;" align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">ECE-A1HKA100B</span></td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">47uF</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">1</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">C18</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">Aluminium Electrolytic Capacitors </span></td>
+<td style="border-right: 1px solid #000000;" align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">REA470M1CBK-0511P</span></td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" bgcolor="#E6E6FF" height="18"><span style="font-size: 10pt;"><strong><span style="color: #333333; font-family: Calibri;">Resistors</span></strong></span></td>
+<td align="CENTER" bgcolor="#E6E6FF">&nbsp;</td>
+<td align="LEFT" bgcolor="#E6E6FF">&nbsp;</td>
+<td align="LEFT" bgcolor="#E6E6FF">&nbsp;</td>
+<td style="border-right: 1px solid #000000;" align="LEFT" bgcolor="#E6E6FF">&nbsp;</td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">1K</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">2</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">R3 R21</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">Metal Film Resistors, 1% Tol.</span></td>
+<td style="border-right: 1px solid #000000;" align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">MF1/4DC1001F</span></td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">4.7K</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">3</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">R5 R9 R10 </span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">Metal Film Resistors, 1% Tol.</span></td>
+<td style="border-right: 1px solid #000000;" align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">MF1/4DCT52R4701F</span></td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">50K</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">1</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">R7</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">Metal Film Resistors, 1% Tol.</span></td>
+<td style="border-right: 1px solid #000000;" align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">MF1/4DCT52R4992F</span></td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">100K</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">12</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">R4 R6 R8 R11 R12 R13 R14 R15 R16 R17 R19 R20</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">Metal Film Resistors, 1% Tol.</span></td>
+<td style="border-right: 1px solid #000000;" align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">MF1/4DCT52R1003F</span></td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">10M</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">2</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">R1 R2</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">Metal Film Resistors, 1% Tol.</span></td>
+<td style="border-right: 1px solid #000000;" align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">RK1/4DC1005F</span></td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">500K</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">1</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">RV1</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">Trimmer Res. -9mm Single Turn</span></td>
+<td style="border-right: 1px solid #000000;" align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">3319W-3-504</span></td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">10K</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">3</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">RV2 RV3 RV4</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">Alpha Potentiometers Flat 20mm</span></td>
+<td style="border-right: 1px solid #000000;" align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">RK09L114001T</span></td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">Plastic Knobs</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">3</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">RV2, RV3, RV4</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">Plastic Knob +crew, Shaft:6.35mm</span></td>
+<td style="border-right: 1px solid #000000;" align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">450-2023-GRX</span></td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" bgcolor="#E6E6FF" height="18"><span style="font-size: 10pt;"><strong><span style="color: #333333; font-family: Calibri;">Others</span></strong></span></td>
+<td align="CENTER" bgcolor="#E6E6FF">&nbsp;</td>
+<td align="LEFT" bgcolor="#E6E6FF">&nbsp;</td>
+<td align="LEFT" bgcolor="#E6E6FF">&nbsp;</td>
+<td style="border-right: 1px solid #000000;" align="LEFT" bgcolor="#E6E6FF">&nbsp;</td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">1N5817</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">4</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">D1 D2 D3 D4</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">Schottky Diodes Vr/20V Io/1A </span></td>
+<td style="border-right: 1px solid #000000;" align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">1N5817</span></td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">LED</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">1</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">D5</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">Through hole, blue led.</span></td>
+<td style="border-right: 1px solid #000000;" align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">C4SMG-BJS-CQ0T0451</span></td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">SWITCH_3PDT</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">1</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">SW1</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">3PDT True Bypass Footswitch </span></td>
+<td style="border-right: 1px solid #000000;" align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">107-SF17020F-32-21RL </span></td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">SWITCH_INV</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">2</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">SW2 SW3</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">Toggle Switch SPDT</span></td>
+<td style="border-right: 1px solid #000000;" align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">612-100-A1111 </span></td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" bgcolor="#E6E6FF" height="18"><span style="font-size: 10pt;"><strong><span style="color: #333333; font-family: Calibri;">Connectors</span></strong></span></td>
+<td align="CENTER" bgcolor="#E6E6FF">&nbsp;</td>
+<td align="LEFT" bgcolor="#E6E6FF">&nbsp;</td>
+<td align="LEFT" bgcolor="#E6E6FF">&nbsp;</td>
+<td style="border-right: 1px solid #000000;" align="LEFT" bgcolor="#E6E6FF">&nbsp;</td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">CONN_8pins</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">5</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">CONN2 CONN3 CONN4 CONN5 CONN6</span></td>
+<td align="LEFT">&nbsp;</td>
+<td style="border-right: 1px solid #000000;" align="LEFT">&nbsp;</td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">JACKS</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">2</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">JI, J2</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">Neutrix 1/4 stereo Chrome Conn.</span></td>
+<td style="border-right: 1px solid #000000;" align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">NMJ6HCD2</span></td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" bgcolor="#E6E6FF" height="18"><span style="font-size: 10pt;"><strong><span style="color: #333333; font-family: Calibri;">IC's</span></strong></span></td>
+<td align="CENTER" bgcolor="#E6E6FF">&nbsp;</td>
+<td align="LEFT" bgcolor="#E6E6FF">&nbsp;</td>
+<td align="LEFT" bgcolor="#E6E6FF">&nbsp;</td>
+<td style="border-right: 1px solid #000000;" align="LEFT" bgcolor="#E6E6FF">&nbsp;</td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">TL072</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">2</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">U1 U2</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">Operational amplifier.</span></td>
+<td style="border-right: 1px solid #000000;" align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">TL072IPE4</span></td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">TC1044</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">1</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">U3</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">Voltage switching regulator. </span></td>
+<td style="border-right: 1px solid #000000;" align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">TC1044SCPA</span></td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">8PIN SOCKETS</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">3</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">U1, U2, U3</span></td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">8pin DIP plastic socket.</span></td>
+<td style="border-right: 1px solid #000000;" align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">1-390261-2</span></td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" bgcolor="#E6E6FF" height="18"><span style="font-size: 10pt;"><strong><span style="color: #333333; font-family: Calibri;">Mechanic</span></strong></span></td>
+<td align="CENTER" bgcolor="#E6E6FF">&nbsp;</td>
+<td align="LEFT" bgcolor="#E6E6FF">&nbsp;</td>
+<td align="LEFT" bgcolor="#E6E6FF">&nbsp;</td>
+<td style="border-right: 1px solid #000000;" align="LEFT" bgcolor="#E6E6FF">&nbsp;</td>
+</tr>
+<tr>
+<td style="border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">pedalSHIELD PCB</span></td>
+<td align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">1</span></td>
+<td align="LEFT">&nbsp;</td>
+<td align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">Dual Layer 2x4&rdquo; PCB soldermask.</span></td>
+<td style="border-right: 1px solid #000000;" align="LEFT">&nbsp;</td>
+</tr>
+<tr>
+<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000;" align="LEFT" height="18"><span style="font-family: Calibri; font-size: 10pt;">Plastic Protector</span></td>
+<td style="border-bottom: 1px solid #000000;" align="CENTER"><span style="font-family: Calibri; font-size: 10pt;">1</span></td>
+<td style="border-bottom: 1px solid #000000;" align="LEFT">&nbsp;</td>
+<td style="border-bottom: 1px solid #000000;" align="LEFT"><span style="font-family: Calibri; font-size: 10pt;">3D printed plastic cover protector.</span></td>
+<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000;" align="LEFT">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p><span style="color: #000000; font-size: 10pt;"></span></p>
+<p><span style="color: #000000; font-size: 10pt;"><strong>3D Printed Cover</strong></span></p>
+<p style="text-align: justify;"><span style="color: #000000; font-size: 10pt;"><span style="color: #333333; font-size: 10pt;"><span style="color: #333333; font-size: 10pt;">pedalSHIELD includes a custom acrylic cover designed to protect the electronics.&nbsp;</span></span></span></p>
+<p style="text-align: justify;"><span style="color: #333333; font-size: 10pt;">There is a 3D printed cover made of ABS plastic with 3mm thickness and designed <span style="color: #3366ff;"><a href="http://www.thingiverse.com/thing:210541" style="color: #3366ff;">by Shuttl3D on Thingiverse</a>,</span> it provides enough robustness and protection to the electronic circuits while adding a touch of color to the pedal. If you have a 3D printer you can use and explore <span style="color: #3366ff;"><a href="https://www.thingiverse.com/search?q=pedalshield&amp;sa=&amp;dwh=485aa2707f64633" style="color: #3366ff;">other designs made for pedalSHIELD DUE on Thingiverse.</a></span><br /></span></p>
+<p><span style="color: #333333; font-size: 10pt;"><span style="color: #333333; font-size: 10pt;">Once the design was adjusted with the 3D printer, the cover was made of laser-cut&nbsp;<a href="http://en.wikipedia.org/wiki/Poly%28methyl_methacrylate%29">plexiglass</a><span style="color: #333333; font-size: 10pt;"><span style="color: #333333; font-size: 10pt;"> which is strong and lightweight. The last review is in transparent color which makes easier to check the hardware under it.<br /></span></span></span></span></p>
+<p><span style="color: #000000; font-size: 10pt;"></span></p>
+<p><a href="../_assets/a65e4ab9112b.jpg"><span style="color: #000000; font-size: 10pt;"><strong><img src="../_assets/a65e4ab9112b.jpg" alt="pedalSHIELD covers new" width="697" height="235" style="display: block; margin-left: auto; margin-right: auto;" /></strong></span></a></p>
+<p>&nbsp;</p>
+<p><strong><span style="font-size: 10pt; color: #000000;">Frequently Asked Questions (FAQ):</span></strong></p>
+<p><span style="font-size: 10pt; color: #000000;">What is Arduino?</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">Arduino is a single-board microcontroller to make using electronics in multidisciplinary projects more accessible. The hardware and software are open-source.</span></li>
+</ul>
+<p><span style="font-size: 10pt; color: #000000;">Where can I buy Arduino Due board?</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">All major suppliers like <a href="http://es.mouser.com/ProductDetail/Arduino/A000062/?qs=sGAEpiMZZMs5EsmM6MQhfSBmF%252bOwLqsr">Mouser</a>,&nbsp;<a href="http://www.element14.com/community/search.jspa?q=arduino+due">element-14</a>, <a href="http://www.digikey.com/product-search/en?vendor=0&amp;keywords=arduino+due">Digikey</a>, <a href="http://uk.rs-online.com/web/p/processor-microcontroller-development-kits/7697412/?searchTerm=arduino+due&amp;relevancy-data=636F3D3126696E3D4931384E44656661756C74266C753D656E266D6D3D6D61746368616C6C7061727469616C26706D3D5E5C442B5C735C442B2426706F3D3926736E3D592673743D4B4559574F52445F4D554C54495F414C504841267573743D61726475696E6F206475652673633D592677633D4E4F4E4526">RS-Online</a> have it in their catalog and also you can find it on eBay and physical electronic shops.<br /></span></li>
+</ul>
+<p><span style="font-size: 10pt; color: #000000;">Does pedalSHIELD work with all Arduino boards?</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">No, only with Arduino DUE.</span></li>
+</ul>
+<p><span style="font-size: 10pt; color: #000000;">Is pedalSHIELD suitable for bass players?</span></p>
+<ul>
+<li>&nbsp;<span style="font-size: 10pt; color: #333333;">Yes, but you need to swap 6 capacitors (C<sub>1</sub> C<sub>4</sub> C<sub>6</sub> C<sub>7</sub> C<sub>10</sub> C<sub>11</sub>) from 0.1uF to 0.5uF, that is all.</span></li>
+</ul>
+<p><span style="font-size: 10pt; color: #000000;">Can I plug headphones directly into pedalSHIELD?</span></p>
+<ul>
+<li>&nbsp;<span style="font-size: 10pt; color: #333333;">No, pedalSHIELD is not an amplifier. It needs to be plugged into a guitar amplifier or to a multi-effects (Line 6 pods, etc..).</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="color: #333333; font-size: 10pt;">Thanks for reading, all feedback is appreciated&nbsp; &nbsp;&nbsp;</span></p>
+<p style="margin-top: 12px; line-height: 18px; color: #555555; font-family: Arial,Helvetica,sans-serif; text-align: right;"><span style="font-size: 10pt;"><span style="font-size: 12pt;"><span style="color: #333333; font-size: 10pt;"><img src="../_assets/26a349a17744.jpg" alt="jr(at)ElectroSmash.com " style="float: left;" /></span></span></span></p>
+<p>&nbsp;</p>
+<p style="margin-top: 12px; line-height: 18px; color: #555555; font-family: Arial,Helvetica,sans-serif; text-align: center;">&nbsp;</p>
+<p style="margin-top: 12px; line-height: 18px; color: #555555; font-family: Arial,Helvetica,sans-serif; text-align: center;"><span style="color: #808080; font-size: 8pt;"><span style="color: #0000ff;"><a href="../rights/index.html" style="font-weight: bold; color: #0063e1;"><span style="color: #0000ff;">Some Rights Reserved</span></a></span>, you are free to copy, share, remix and use all material.<br />Trademarks, brand names and logos are the property of their respective owners.</span></p>
+<p>&nbsp;</p>	</section>
+  
+  <!-- footer -->
+    <!-- //footer -->
+
+			<hr class="divider-vertical" /><ul class="pager pagenav">
+	<li class="previous">
+		<a class="hasTooltip" title="Dunlop CryBaby GCB-95 Cicuit Analysis" aria-label="Previous article: Dunlop CryBaby GCB-95 Cicuit Analysis" href="../crybaby-gcb-95/index.html" rel="prev">
+			<span class="icon-chevron-left" aria-hidden="true"></span> <span aria-hidden="true">Prev</span>		</a>
+	</li>
+	<li class="next">
+		<a class="hasTooltip" title="Vox V847 Wah-Wah Analysis" aria-label="Next article: Vox V847 Wah-Wah Analysis" href="../vox-v847-analysis/index.html" rel="next">
+			<span aria-hidden="true">Next</span> <span class="icon-chevron-right" aria-hidden="true"></span>		</a>
+	</li>
+</ul>
+	
+	
+	</article>
+<!-- //Article -->
+
+
+</div><div><a href="http://www.artio.net" style="font-size: 8px; visibility: visible; display: inline;" title="Web development, Joomla, CMS, CRM, Online shop software, databases">Joomla SEF URLs by Artio</a></div>
+		</div>
+		<!-- //MAIN CONTENT -->
+
+		<!-- SIDEBAR RIGHT -->
+		<div class="t3-sidebar t3-sidebar-right col-xs-12 col-sm-4  col-md-3 ">
+			<div class="t3-module module " id="Mod28"><div class="module-inner"><h3 class="module-title "><span>New Updates</span></h3><div class="module-ct"><ul class="latestnews mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../arduino-audio-meter/index.html" itemprop="url">
+			<span itemprop="name">
+				Arduino Audio Meter			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../dallas-rangemaster/index.html" itemprop="url">
+			<span itemprop="name">
+				Dallas Rangemaster Treble Booster Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../time-manipulator/index.html" itemprop="url">
+			<span itemprop="name">
+				Time Manipulator - Arduino Delay/Echo/Reverb			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../marshall-guvnor-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Marshall The Guvnor Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../germanium-fuzz/index.html" itemprop="url">
+			<span itemprop="name">
+				You Can Build the Perfect Germanium Fuzz			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../mxr-distortion-plus-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				MXR Distortion + Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod29"><div class="module-inner"><h3 class="module-title "><span>Most Visited</span></h3><div class="module-ct"><ul class="mostread mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../tube-screamer-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Tube Screamer Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../fuzz-face/index.html" itemprop="url">
+			<span itemprop="name">
+				Fuzz Face Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../proco-rat/index.html" itemprop="url">
+			<span itemprop="name">
+				Pro Co Rat Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../boss-ds1-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Boss DS-1 Distortion Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../klon-centaur-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Klon Centaur Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../big-muff-pi-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Big Muff Pi Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod184"><div class="module-inner"><h3 class="module-title "><span>Follow us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><span style="font-size: 10pt; color: #333333;">You can also follow us on:</span></p>
+<p><a href="https://www.facebook.com/ElectroSmash"><img src="../_assets/df34a2b41b54.png" alt="facebook" /></a>&nbsp;&nbsp; <a href="https://plus.google.com/+Electrosmash/about"><img src="../_assets/3ffc52860091.png" alt="google" /></a>&nbsp;&nbsp; <a href="https://www.instagram.com/electro.smash/"><img src="../_assets/45b0b0fe2d4b.png" alt="instagram" /></a></p>
+<p><a href="https://www.pinterest.com/electrosmash/"><img src="../_assets/05310d9fcf2a.png" alt="pinterest" /></a>&nbsp;&nbsp; <a href="https://www.youtube.com/user/ElectroSmashTV"><img src="../_assets/d920883b3613.png" alt="youtube" /></a>&nbsp;&nbsp; <a href="https://twitter.com/electro_smash"><img src="../_assets/52581f7264eb.png" alt="twitter" /></a></p></div>
+</div></div></div>
+		</div>
+		<!-- //SIDEBAR RIGHT -->
+
+	</div>
+</div> 
+
+
+
+  
+
+
+  
+
+
+	
+<!-- BACK TOP TOP BUTTON -->
+<div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top hidden-xs hidden-sm affix-top">
+  <button class="btn btn-primary" title="Back to Top"><i class="fa fa-caret-up"></i></button>
+</div>
+<script type="text/javascript">
+(function($) {
+	// Back to top
+	$('#back-to-top').on('click', function(){
+		$("html, body").animate({scrollTop: 0}, 500);
+		return false;
+	});
+    $(window).on('load', function(){
+        // hide button to top if the document height not greater than window height*2;using window load for more accurate calculate.    
+        if ((parseInt($(window).height())*2)>(parseInt($(document).height()))) {
+            $('#back-to-top').hide();
+        } 
+    });
+})(jQuery);
+</script>
+<!-- BACK TO TOP BUTTON -->
+
+<!-- FOOTER -->
+<footer id="t3-footer" class="wrap t3-footer">
+
+			<!-- FOOTER SPOTLIGHT -->
+		<div class="container hidden-xs">
+				<!-- SPOTLIGHT -->
+	<div class="t3-spotlight t3-footer-sl  row">
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod185"><div class="module-inner"><h3 class="module-title "><span>About us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../about-us/index.html">&nbsp;&nbsp;<img src="../_assets/420f9f181bc0.jpg" alt="smash electro" /></a></p>
+<p><a href="../about-us/index.html"><span style="font-size: 10pt; color: #333333;">Smashing audio electronics since MMXIII</span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod183"><div class="module-inner"><h3 class="module-title "><span>Email Newsletter</span></h3><div class="module-ct"><div class="acymailing_module" id="acymailing_module_formAcymailing47911">
+	<div class="acymailing_fulldiv" id="acymailing_fulldiv_formAcymailing47911"  >
+		<form id="formAcymailing47911" action="/" onsubmit="return submitacymailingform('optin','formAcymailing47911')" method="post" name="formAcymailing47911"  >
+		<div class="acymailing_module_form" >
+						<table class="acymailing_form">
+				<tr>
+												<td class="acyfield_email acy_requiredField">
+								<input id="user_email_formAcymailing47911"  onfocus="if(this.value == 'example@email.com') this.value = '';" onblur="if(this.value=='') this.value='example@email.com';" class="inputbox" type="text" name="user[email]" style="width:90%" value="example@email.com" title="example@email.com"/>
+							</td> </tr><tr>
+					
+					<td  class="acysubbuttons">
+												<input class="button subbutton btn btn-primary" type="submit" value="Subscribe" name="Submit" onclick="try{ return submitacymailingform('optin','formAcymailing47911'); }catch(err){alert('The form could not be submitted '+err);return false;}"/>
+											</td>
+				</tr>
+			</table>
+						<input type="hidden" name="ajax" value="0" />
+			<input type="hidden" name="acy_source" value="module_183" />
+			<input type="hidden" name="ctrl" value="sub"/>
+			<input type="hidden" name="task" value="notask"/>
+			<input type="hidden" name="redirect" value="https%3A%2F%2Fwww.electrosmash.com%2Fpedalshield"/>
+			<input type="hidden" name="redirectunsub" value="https%3A%2F%2Fwww.electrosmash.com%2Fpedalshield"/>
+			<input type="hidden" name="option" value="com_acymailing"/>
+						<input type="hidden" name="hiddenlists" value="1"/>
+			<input type="hidden" name="acyformname" value="formAcymailing47911" />
+									</div>
+		</form>
+	</div>
+	</div>
+
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod186"><div class="module-inner"><h3 class="module-title "><span>Contact us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../contact-us/index.html"><span style="font-size: 10pt; color: #333333;">e-mail us at <span id="cloak79b9d00570c9455f5bbb0d2048d9ceca">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
+				document.getElementById('cloak79b9d00570c9455f5bbb0d2048d9ceca').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy79b9d00570c9455f5bbb0d2048d9ceca = '&#105;nf&#111;' + '&#64;';
+				addy79b9d00570c9455f5bbb0d2048d9ceca = addy79b9d00570c9455f5bbb0d2048d9ceca + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';
+				var addy_text79b9d00570c9455f5bbb0d2048d9ceca = '&#105;nf&#111;' + '&#64;' + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';document.getElementById('cloak79b9d00570c9455f5bbb0d2048d9ceca').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy79b9d00570c9455f5bbb0d2048d9ceca + '\'>'+addy_text79b9d00570c9455f5bbb0d2048d9ceca+'<\/a>';
+		</script></span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod188"><div class="module-inner"><h3 class="module-title "><span>Rights</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p style="text-align: left;">&nbsp;&nbsp;<a href="https://creativecommons.org/licenses/by-nc/3.0/"><img src="../_assets/b0e99d439c44.png" alt="88x31" /></a></p>
+<p style="text-align: left;"><img src="../_assets/fe2636cdea5c.png" alt="open source logo" width="180" height="38" /></p>
+<p style="text-align: left;"><img src="../_assets/8281c4ec3a3b.png" alt="open hardware logo" width="180" height="38" /></p>
+<p style="text-align: left;">&nbsp;</p></div>
+</div></div></div>
+							</div>
+			</div>
+<!-- SPOTLIGHT -->
+		</div>
+		<!-- //FOOTER SPOTLIGHT -->
+	
+	<section class="t3-copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 copyright ">
+					
+          <small>
+            <a href="http://twitter.github.io/bootstrap/" title="Bootstrap by Twitter" target="_blank">Bootstrap</a> is a front-end framework of Twitter, Inc. Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" title="MIT License" target="_blank">MIT License.</a>
+          </small>
+          <small>
+            <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> font licensed under <a href="http://scripts.sil.org/OFL">SIL OFL 1.1</a>.
+          </small>
+				</div>
+							</div>
+		</div>
+	</section>
+
+</footer>
+<!-- //FOOTER -->
+
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29544239-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

@@ -1,0 +1,805 @@
+
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr"
+	  class='com_content view-article itemid-435 home j31 mm-hover '>
+
+<head>
+	<base href="../index/index.html" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="proco, pro, co, rat, the rat, technology, circuit, schematic, guts, layout, bom, study, analysis, inside, how, it , works, lm308, op-amp, signal, high, distortion, power, supply, diodes, clipping, output buffer, tone, control, filtering, high, low, pass, " />
+	<meta name="rights" content="Creative Commons: Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0) " />
+	<meta name="author" content="JR" />
+	<meta name="description" content="Pro Co Rat Schematic, Power Supply Stage, Clipper Amplifier, Voltage Gain, Low/High Pass Filtering, LM308 Op-Amp Selection, Diode Clipping, Tone Control, Output Stage, Pro Co Rat Frequency Response, Resources" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>ElectroSmash - ProCo Rat Analysis</title>
+	<link href="index.html" rel="canonical" />
+	<link href="../_assets/d87243966412.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../_assets/26f5cf410b61.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/15ff046a2fe3.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/dd09f39c1b89.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"929cad07d65c665bffdfe46dc5d34f0e","system.paths":{"root":"","base":""}}</script>
+	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+	<script src="../_assets/323c609448d2.js" type="text/javascript"></script>
+	<script src="../_assets/b8bcbb2f005c.js" type="text/javascript" async="async"></script>
+	<script type="text/javascript">
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });	if(typeof acymailingModule == 'undefined'){
+				var acymailingModule = [];
+			}
+			
+			acymailingModule['emailRegex'] = /^[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+)*\@([a-z0-9-]+\.)+[a-z0-9]{2,10}$/i;
+
+			acymailingModule['NAMECAPTION'] = 'Name';
+			acymailingModule['NAME_MISSING'] = 'Please enter your name';
+			acymailingModule['EMAILCAPTION'] = 'example@email.com';
+			acymailingModule['VALID_EMAIL'] = 'Please enter a valid e-mail address';
+			acymailingModule['ACCEPT_TERMS'] = 'Please check the Terms and Conditions';
+			acymailingModule['CAPTCHA_MISSING'] = 'The captcha is invalid, please try again';
+			acymailingModule['NO_LIST_SELECTED'] = 'Please select the lists you want to subscribe to';
+		
+acymailingModule['excludeValuesformAcymailing79191'] = [];
+acymailingModule['excludeValuesformAcymailing79191']['name'] = 'Name';
+acymailingModule['excludeValuesformAcymailing79191']['email'] = 'example@email.com';
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });
+	</script>
+
+	
+<!-- META FOR IOS & HANDHELD -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<style type="text/stylesheet">
+		@-webkit-viewport   { width: device-width; }
+		@-moz-viewport      { width: device-width; }
+		@-ms-viewport       { width: device-width; }
+		@-o-viewport        { width: device-width; }
+		@viewport           { width: device-width; }
+	</style>
+	<script type="text/javascript">
+		//<![CDATA[
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement("style");
+			msViewportStyle.appendChild(
+				document.createTextNode("@-ms-viewport{width:auto!important}")
+			);
+			document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+		}
+		//]]>
+	</script>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="apple-mobile-web-app-capable" content="YES"/>
+<!-- //META FOR IOS & HANDHELD -->
+
+
+
+
+<!-- Le HTML5 shim and media query for IE8 support -->
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script type="text/javascript" src="../_assets/010a3c86157d.js"></script>
+<![endif]-->
+
+<!-- You can add Google Analytics here or use T3 Injection feature -->
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="../_assets/76d3e1341c39.css" type="text/css" />
+<![endif]-->
+	</head>
+
+<body>
+
+<div class="t3-wrapper corporate"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
+
+	
+<!-- MAIN NAVIGATION -->
+<header id="t3-mainnav" class="wrap navbar navbar-default navbar-fixed-top t3-mainnav">
+
+	<!-- OFF-CANVAS -->
+		<!-- //OFF-CANVAS -->
+
+	<div class="container">
+
+		<!-- NAVBAR HEADER -->
+		<div class="navbar-header">
+
+			<!-- LOGO -->
+			<div class="logo logo-image">
+				<div class="logo-image">
+					<a href="/" title="ElectroSmash">
+													<img class="logo-img" src="../_assets/115794d6d5b8.png" alt="ElectroSmash" />
+						
+												
+						<span>ElectroSmash</span>
+					</a>
+				</div>
+			</div>
+			<!-- //LOGO -->
+
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-collapse">
+					<i class="fa fa-bars"></i>
+				</button>
+			
+	    
+		</div>
+		<!-- //NAVBAR HEADER -->
+
+		<!-- NAVBAR MAIN -->
+				<nav class="t3-navbar-collapse navbar-collapse collapse"></nav>
+		
+		<nav class="t3-navbar navbar-collapse collapse">
+			<div  class="t3-megamenu"  data-responsive="true">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav navbar-nav level0">
+<li itemprop='name' class="current active" data-id="435" data-level="1">
+<a itemprop='url' class=""  href="/"   data-target="#">Home </a>
+
+</li>
+<li itemprop='name' class="dropdown mega" data-id="510" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Chips<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="492" data-level="2">
+<a itemprop='url' class=""  href="../jrc4558-analysis/index.html"   data-target="#">JRC4558  </a>
+
+</li>
+<li itemprop='name'  data-id="519" data-level="2">
+<a itemprop='url' class=""  href="../mn3007-bucket-brigade-devices/index.html"   data-target="#">MN3007 BBDs </a>
+
+</li>
+<li itemprop='name'  data-id="468" data-level="2">
+<a itemprop='url' class=""  href="../lm386-analysis/index.html"   data-target="#">LM386 </a>
+
+</li>
+<li itemprop='name'  data-id="1643" data-level="2">
+<a itemprop='url' class=""  href="../pt2399-analysis/index.html"   data-target="#">PT2399 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="444" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Amps<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="993" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="489" data-level="2">
+<a itemprop='url' class=""  href="../little-gem-analysis/index.html"   data-target="#">Little Gem Amp </a>
+
+</li>
+<li itemprop='name'  data-id="526" data-level="2">
+<a itemprop='url' class=""  href="../marshall-mg10/index.html"   data-target="#">Marshall MG10 </a>
+
+</li>
+<li itemprop='name'  data-id="491" data-level="2">
+<a itemprop='url' class=""  href="../noisy-cricket-analysis/index.html"   data-target="#">Noisy Cricket  </a>
+
+</li>
+<li itemprop='name'  data-id="490" data-level="2">
+<a itemprop='url' class=""  href="../ruby-amp-analysis/index.html"   data-target="#">Ruby Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="488" data-level="2">
+<a itemprop='url' class=""  href="../smokey-amp-analysis/index.html"   data-target="#">Smokey Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="746" data-level="2">
+<a itemprop='url' class=""  href="http://www.electrosmash.com/schematics#amps"   data-target="#">Amps Schematics.</a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="511" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Pedals<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  style="width: 600px"  data-width="600"><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="515" data-level="2">
+<a itemprop='url' class=""  href="../back-talk-analysis/index.html"   data-target="#">Back Talk Reverse Delay </a>
+
+</li>
+<li itemprop='name'  data-id="518" data-level="2">
+<a itemprop='url' class=""  href="../big-muff-pi-analysis/index.html"   data-target="#">Big Muff Pi  </a>
+
+</li>
+<li itemprop='name'  data-id="524" data-level="2">
+<a itemprop='url' class=""  href="../boss-ce-2-analysis/index.html"   data-target="#">Boss CE-2 Chorus </a>
+
+</li>
+<li itemprop='name'  data-id="1088" data-level="2">
+<a itemprop='url' class=""  href="../boss-ds1-analysis/index.html"   data-target="#">Boss DS-1 Distortion </a>
+
+</li>
+<li itemprop='name'  data-id="1713" data-level="2">
+<a itemprop='url' class=""  href="../dallas-rangemaster/index.html"   data-target="#">Dallas Rangemaster </a>
+
+</li>
+<li itemprop='name'  data-id="905" data-level="2">
+<a itemprop='url' class=""  href="../crybaby-gcb-95/index.html"   data-target="#">Dunlop CryBaby GCB-95  </a>
+
+</li>
+<li itemprop='name'  data-id="842" data-level="2">
+<a itemprop='url' class=""  href="../fuzz-face/index.html"   data-target="#">Fuzz Face </a>
+
+</li>
+<li itemprop='name'  data-id="1664" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="512" data-level="2">
+<a itemprop='url' class=""  href="../tube-screamer-analysis/index.html"   data-target="#">Ibanez Tube Screamer </a>
+
+</li>
+<li itemprop='name'  data-id="1433" data-level="2">
+<a itemprop='url' class=""  href="../klon-centaur-analysis/index.html"   data-target="#">Klon Centaur </a>
+
+</li>
+</ul>
+</div></div>
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="548" data-level="2">
+<a itemprop='url' class=""  href="../mxr-microamp/index.html"   data-target="#">MXR MicroAmp </a>
+
+</li>
+<li itemprop='name'  data-id="1667" data-level="2">
+<a itemprop='url' class=""  href="../marshall-guvnor-analysis/index.html"   data-target="#">Marshall Guvnor </a>
+
+</li>
+<li itemprop='name'  data-id="1632" data-level="2">
+<a itemprop='url' class=""  href="../mxr-distortion-plus-analysis/index.html"   data-target="#">MXR Distortion + </a>
+
+</li>
+<li itemprop='name'  data-id="1244" data-level="2">
+<a itemprop='url' class=""  href="../mxr-dyna-comp-analysis/index.html"   data-target="#">MXR Dyna Comp </a>
+
+</li>
+<li itemprop='name'  data-id="573" data-level="2">
+<a itemprop='url' class=""  href="../mxr-phase90/index.html"   data-target="#">MXR Phase 90 </a>
+
+</li>
+<li itemprop='name'  data-id="553" data-level="2">
+<a itemprop='url' class=""  href="index.html"   data-target="#">ProCo Rat </a>
+
+</li>
+<li itemprop='name'  data-id="520" data-level="2">
+<a itemprop='url' class=""  href="../sitar-swami-analysis/index.html"   data-target="#">Sitar Swami </a>
+
+</li>
+<li itemprop='name'  data-id="525" data-level="2">
+<a itemprop='url' class=""  href="../vox-v847-analysis/index.html"   data-target="#">Vox V847 Wah Wah </a>
+
+</li>
+<li itemprop='name'  data-id="547" data-level="2">
+<a itemprop='url' class=""  href="../emg81/index.html"   data-target="#">EMG81 Pickup </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="796" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Projects<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="1108" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-uno/index.html"   data-target="#">pedalSHIELD UNO </a>
+
+</li>
+<li itemprop='name'  data-id="797" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield/index.html"   data-target="#">pedalSHIELD DUE </a>
+
+</li>
+<li itemprop='name'  data-id="1437" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-mega/index.html"   data-target="#">pedalSHIELD MEGA </a>
+
+</li>
+<li itemprop='name'  data-id="1312" data-level="2">
+<a itemprop='url' class=""  href="../pedal-pi/index.html"   data-target="#">Pedal-Pi </a>
+
+</li>
+<li itemprop='name'  data-id="1662" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="1663" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="1668" data-level="2">
+<a itemprop='url' class=""  href="../time-manipulator/index.html"   data-target="#">Time Manipulator </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name'  data-id="745" data-level="1">
+<a itemprop='url' class=""  href="../forum-electrosmash/index.html"   data-target="#">Forum </a>
+
+</li>
+<li itemprop='name'  data-id="816" data-level="1">
+<a itemprop='url' class=""  href="../shop/index.html"   data-target="#">Shop</a>
+
+</li>
+</ul>
+</div>
+
+		</nav>
+    <!-- //NAVBAR MAIN -->
+
+	</div>
+</header>
+<!-- //MAIN NAVIGATION -->
+
+
+
+
+
+
+  
+
+
+  
+
+
+	
+<div id="t3-mainbody" class="container t3-mainbody">
+	<div class="row">
+
+		<!-- MAIN CONTENT -->
+		<div id="t3-content" class="t3-content col-xs-12 col-sm-8  col-md-9">
+						<div class="item-page clearfix">
+
+
+<!-- Article -->
+<article>
+	<meta itemprop="inLanguage" content="en-GB" />
+	<meta itemprop="url" content="index.html" />
+
+      
+<header class="article-header clearfix">
+	<h1 class="article-title" itemprop="headline">
+					<a href="index.html" itemprop="url" title="Pro Co Rat Analysis">
+				Pro Co Rat Analysis</a>
+			</h1>
+
+			</header>
+    
+    
+  <!-- Aside -->
+    <!-- //Aside -->
+
+  
+  
+  
+	
+  
+	
+	<section class="article-content clearfix">
+		<p><span style="font-size: 10pt; color: #333333;">The Pro Co Rat is a distortion pedal by Pro Co Sound designed by Scott Burnham and Steve Kiraly in Kalamazoo, Michigan 1978.&nbsp;The original circuit and appearance suffered some changes over the different revisions but the tone remained the same.&nbsp;</span></p>
+<p><span style="font-size: 10pt; color: #333333;">Due to the pedal success there are several versions designed by Pro Co like the Juggernaut (1979), R2DU (1984), RAT2 (1988), Turbo RAT (1989), Vintage RAT (1991), BRAT (1997), Deucetone RAT (2002), Juggernaut Bass RAT (2003), You Dirty RAT (2004),'85 Whiteface RAT Reissue (2010).</span><a href="../_assets/d4ab3be1bd0a.jpg"><span style="font-size: 10pt; color: #333333;"><img src="../_assets/d4ab3be1bd0a.jpg" alt="ProCo Rat Pedal Intro Image" width="210" height="250" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+<p><span style="font-size: 10pt;">Although the pedal was originally built as custom-order product in 1978, Pro Co began to mass produce it in 1979. In 2008 production moved to China and is now manufactured by Neutrik for Pro Co Sound.</span></p>
+ 
+<h1><strong>&nbsp;<span style="font-size: 14pt; color: #000000;">Table of Contents:</span></strong></h1>
+<p><a href="/proco-rat#link1"><span style="font-size: 10pt;">1. Pro Co Rat Schematic.</span></a><br /><a href="/proco-rat#link2"><span style="font-size: 10pt;">2. Power Supply Stage.</span></a><br /><a href="/proco-rat#link3"><span style="font-size: 10pt;">3. Clipper Amplifier.</span></a><br /><span style="font-size: 10pt;">&nbsp; &nbsp; &nbsp;<a href="/proco-rat#link31">3.1 Voltage Gain.</a></span><br /><span style="font-size: 10pt;">&nbsp; &nbsp;<a href="/proco-rat#link32"> &nbsp;3.2 Low/High Pass Filtering.</a></span><br /><span style="font-size: 10pt;">&nbsp; &nbsp; &nbsp;<a href="/proco-rat#link33">3.3 LM308 Op-Amp Selection.</a></span><br /><span style="font-size: 10pt;">&nbsp; &nbsp; <a href="/proco-rat#link34">&nbsp;3.4 Diode Clipping.</a></span><br /><a href="/proco-rat#link4"><span style="font-size: 10pt;">4. Tone Control.</span></a><br /><a href="/proco-rat#link5"><span style="font-size: 10pt;">5. Output Stage.</span></a><br /><a href="/proco-rat#link6"><span style="font-size: 10pt;">6. Pro Co Rat Frequency Response.</span></a><br /><span style="font-size: 10pt;"><a href="/proco-rat#link7">7. Resources.</a></span></p>
+<h1><span style="font-size: 14pt; color: #000000;"><a name="link1"></a><strong>1. Pro Co Rat Schematic</strong></span></h1>
+<p><span style="font-size: 10pt; color: #333333;">The Pro Co Rat circuit can be broken down into four simpler blocks: Power Supply, Clipper Amplifier, Tone Control and Output Stage:</span></p>
+<p><a href="../_assets/1b4ca7b9aad5.jpg"><span style="font-size: 10pt;"><img src="../_assets/c173269b933d.jpg" alt="Pro Co Rat Schematic Parts" width="700" height="305" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+<p><span style="font-size: 10pt; color: #333333;">The design is based on the LM308 single op-amp. The distortion is produced using a variable gain circuit with diodes clipping the waveform. The distortion stage is followed by a tone filter and an output buffer stage that ends up with a tone control.</span></p>
+<p><span style="color: #000000;"><strong><span style="font-size: 10pt;">Pro Co Rat Circuit Layout.</span></strong></span></p>
+<p><span style="font-size: 10pt; color: #333333;">It uses a single layer PCB with standard through-hole components which easily fits in the steel enclosure. The different version/revisions use different substrates.</span></p>
+<p><a href="../_assets/e63e5e7951bb.jpg"><img src="../_assets/e63e5e7951bb.jpg" alt="proco rats pcb" width="900" height="287" style="display: block; margin-left: auto; margin-right: auto;" title="proco rats pcb" /></a></p>
+<p><span style="color: #000000;"><strong><span style="font-size: 10pt;">Pro Co Rat Parts List/Bill of Materials.</span></strong></span></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt; color: #333333;">C<sub>1</sub>, C<sub>9</sub>&nbsp;&nbsp; &nbsp;22nF<br />C<sub>2</sub>&nbsp;&nbsp; &nbsp;1nF<br />C<sub>3</sub>&nbsp;&nbsp; &nbsp;30pF<br />C<sub>4</sub>&nbsp;&nbsp; &nbsp;100pF<br />C<sub>5</sub>&nbsp;&nbsp; &nbsp;2.2uF<br />C<sub>6</sub>, C<sub>7</sub>&nbsp;&nbsp; &nbsp;4.7uF<br />C<sub>8</sub>&nbsp;&nbsp; &nbsp;3.3nF<br />C<sub>10</sub>, C<sub>13</sub>&nbsp;&nbsp; &nbsp;1uF<br />C<sub>11</sub>&nbsp;&nbsp; &nbsp;100uF<br />C<sub>12</sub>&nbsp;&nbsp; &nbsp;0.1uF<br />D<sub>1</sub>, D<sub>2</sub>&nbsp;&nbsp; &nbsp;1N914<br />D<sub>3</sub>&nbsp;&nbsp; &nbsp;1N4002<br />Q<sub>1</sub>&nbsp;&nbsp; &nbsp;2N5458<br />R<sub>VOLUME</sub>,R<sub>TONE</sub>,<span style="font-size: 10pt;">R<sub>DISTORTION</sub></span>&nbsp; 100K-A<br /><span style="font-size: 10pt;">R<sub>1</sub>, R<sub>2</sub>, R<sub>8</sub>&nbsp;&nbsp; &nbsp;1M<br />R<sub>3</sub>, R<sub>6</sub>&nbsp;&nbsp; &nbsp;1K<br />R<sub>4</sub>, R<sub>10</sub>&nbsp;&nbsp; &nbsp;47<br />R<sub>5</sub>&nbsp;&nbsp; &nbsp;560<br />R<sub>7</sub>&nbsp;&nbsp; &nbsp;1.5K<br />R<sub>9</sub>&nbsp;&nbsp; &nbsp;10K<br />R<sub>11</sub>, R<sub>12</sub>&nbsp;&nbsp; &nbsp;100K<br />U<sub>1</sub>&nbsp;&nbsp; &nbsp;LM308</span>&nbsp;&nbsp;</span></p>
+<h1><span style="font-size: 14pt; color: #000000;"><a name="link2"></a><strong>2. Power Supply Stage.</strong></span></h1>
+<p><span style="font-size: 10pt; color: #333333;">The Power Supply stage provides 9V for the active circuits (op-amp and transistor). Generating 4.5 volts using a simple voltage divider (R<sub>11</sub>, R<sub>12</sub>) to be used as virtual ground.</span></p>
+<p><a href="../_assets/716a4cda80a6.png"><span style="font-size: 10pt;"><img src="../_assets/716a4cda80a6.png" alt="Pro Co Rat Power Supply" width="340" height="196" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">Caps C<sub>11</sub> and C<sub>12</sub> remove ripple from the 9V supply, the C<sub>13</sub>&nbsp;does the same in the 4.5V line.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">&nbsp;R10 47&Omega; resistor filter noise in power line, this low-value resistor together with the caps C<sub>11</sub> and C<sub>12</sub> will create a low pass filter which attenuates high-frequency impulse noise.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">Diode D<sub>3</sub> is placed for reverse polarity protection.</span></li>
+</ul>
+<h1><span style="font-size: 14pt; color: #000000;"><a name="link3"></a><strong>3. Clipper Amplifier.</strong></span></h1>
+<p><span style="font-size: 10pt; color: #333333;">The Clipping Amplifier is the core of the circuit, it is made of a non-inverting op-amp amplifier with variable voltage gain and some filters to shape the distortion response. Two diodes D<sub>1</sub> and D<sub>2</sub>&nbsp;will perform the hard clip action.</span></p>
+<p><a href="../_assets/ba26fc285bf5.png"><span style="font-size: 10pt;"><img src="../_assets/ba26fc285bf5.png" alt="Pro Co Rat Clipping Stage" width="611" height="272" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">The 1M<span style="font-size: 13px;">&Omega;</span> input resistor R<sub>1</sub> next to the input jack to ground is a pull-down resistor, which avoids popping sounds when the pedal is switched on. This input pull-down resistor becomes the maximum input impedance of the pedal.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">The 22nF cap C<sub>1&nbsp;</sub>blocks DC and provides simple high pass filtering. All the interesting guitar signal will pass through, only harmonics below 7.2Hz will be attenuated. The cut-off frequency is defined by the formula:&nbsp;</span></li>
+</ul>
+<p style="margin-left: 60px;"><span style="color: #333333;"><div class="latex " >\[ f_{c1}=\frac {1} {2\pi \cdot R_{2} \cdot C_{1}}= \frac{1}{2\pi \cdot 1M \cdot 22nF}=7.2Hz \]</div><span style="font-size: 10pt;"><br /></span></span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">The 1K&nbsp;resistor <span style="font-size: 13.3333px;">R</span><sub>3</sub>&nbsp;protects the op-amp from input over currents. The 1nF&nbsp;cap <span style="font-size: 13px;">C</span><sub>2</sub>&nbsp;shunts high freqs to ground and out to mellow the signal.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">The big C<sub>7</sub> is just a coupling capacitor which removes DC content and connects the op-amp to the diodes stage. The resistor R<sub>6</sub> will limit the amount of current through the diodes.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="color: #000000;"><strong><span style="font-size: 10pt;">Pro Co Rat Input Impedance.</span></strong></span></p>
+<p><span style="font-size: 10pt; color: #333333;">The input impedance can be calculated as:</span></p>
+<p style="margin-left: 30px;"><span style="color: #333333;"><div class="latex " >\[ Z_{in}= (R_{1}//R_{2})//(R_{3}+Z_{in LM308})&nbsp;\]</div></span></p>
+<p style="margin-left: 30px;"><span style="color: #333333;"><div class="latex " >\[ Z_{in}= (1M//1M) // (1K+40M)= 494K&nbsp;\]</div></span></p>
+<p><span style="color: #333333;"><span style="font-size: 10pt;"><span style="text-decoration: underline; color: #000000;">note</span>: 494K<span style="font-size: 13px;">&Omega;&nbsp;</span>is a high input impedance and can be considered fairly good for a distortion pedal. Anyway, the best practice is to keep the input impedance at least in 1 M</span><span style="font-size: 10pt;"><span style="font-size: 13px;">&Omega;, avoiding tone sucking. By increasing R<sub>1</sub> and R<sub>2</sub> values to 2M<span style="font-size: 13.3333px;">&Omega;</span> for instance, the pedal input impedance will rise to 1M<span style="font-size: 13.3333px;">&Omega;</span>&nbsp;and the pedal will keep better all the guitar original sonic features.&nbsp;</span></span></span><span style="font-size: 10pt; color: #333333;"><br /></span></p>
+<p>&nbsp;</p>
+<h2><span style="color: #000000;"><span style="font-size: 12pt;"><a name="link31"></a><strong>3.1 Voltage Gain</strong></span></span></h2>
+<p><span style="font-size: 10pt; color: #333333;">The voltage gain is trimmed with the distortion knob, in the non inverting topology can be calculated as:</span></p>
+<p style="margin-left: 30px;"><span style="color: #333333;"><div class="latex " >\[ G_{v}=1+\frac{R_{DISTORTION}}{R_{4}//R_{5}} \]</div></span></p>
+<p style="margin-left: 30px;"><span style="color: #333333;"><div class="latex " >\[ G_{v min}=1+\frac{0}{47//560}=1\: (0dB) \]</div></span></p>
+<p style="margin-left: 30px;"><span style="color: #333333;"><div class="latex " >\[ G_{v max}=1+\frac{100K}{47//560}=2305 \: (67dB) \]</div></span></p>
+<p><span style="color: #333333;"><span style="font-size: 10pt; color: #000000;"><span style="text-decoration: underline;">note</span>: </span><span style="font-size: 10pt;">this voltage gain can be considered slightly high for a distortion pedal and similar to other distortion pedals like Big Muff Pi (G<sub>vmax</sub>=60dB), MXR Distortion + (G<sub>vmax</sub>=46dB) or Tube Screamer (G<sub>vmax</sub>=41dB).&nbsp;</span><span style="font-size: 10pt;">However, the voltage gain of this stage will not reach such a values as 67dB. The gain will be limited by op-amp characteristics and also by the clipping diodes action, as it will be studied in the Diode Clipping Section.</span></span></p>
+<p>&nbsp;</p>
+<h2><span style="font-size: 12pt; color: #000000;"><a name="link32"></a><strong>3.2 Low/High Pass Filtering.</strong></span></h2>
+<p><span style="font-size: 10pt; color: #333333;"><span style="font-size: 13px;">It is usual to find a combination of low pass and high pass filters before or within the clipping stage in distortion pedals. The distortion makes the original guitar signal more harmonically complex, this means that more amounts of distortion are being added, it can be more difficult to give each sound its own space in the band mix. Artificially band-limiting a distorted signal, using both high and low-pass filters, can help it sit more comfortably in a mix, by preventing its spectrum from spreading over too wide an area.</span></span></p>
+<p><a href="../_assets/bf9bcee4dfd4.png"><span style="font-size: 10pt;"><span style="font-size: 13px;"><img src="../_assets/bf9bcee4dfd4.png" alt="pro-co-rat-clipping-response" width="749" height="244" style="display: block; margin-left: auto; margin-right: auto;" /></span></span></a></p>
+<p><span style="font-size: 10pt; color: #333333;"><span style="font-size: 13px;"><span style="font-size: 10pt;">In the image above, the response of the Clipping Amplifier is shown. The signal is band limited in high and low frequencies. This mid hump around 1KHz&nbsp;helps to keep the guitar sound from getting lost in the overall mix of the band.</span></span></span></p>
+<p><span style="font-size: 10pt; color: #333333;"><span style="font-size: 13px;"><span style="font-size: 10pt;">Harmonics below 1.5 KHz and 60Hz are attenuated due to the high-pass filters. In high frequencies there is also a roll-off because of the low pass filter and the op-amp gain-bandwidth product, both effects more noticeable at high-gain (blue lines).</span></span></span></p>
+<p><strong><span style="color: #000000;"><span style="font-size: 10pt;">Low pass Filter.</span></span></strong></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt; color: #333333;">The small 100pF capacitor C<sub>4</sub> across the feedback resistor works as a low pass filter, softening the corners of the guitar waveform and mellowing out the high end before the clipping.</span></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt; color: #333333;">The cut-off frequency of the filter is defined by the formula:</span></p>
+<p style="margin-left: 60px;"><span style="color: #333333;"><div class="latex " >\[ f_{c1}=\frac{1}{2\pi \cdot R_{DIST} \cdot C_{4}} \]</div></span></p>
+<p style="margin-left: 60px;"><span style="color: #333333;"><div class="latex " >\[ f_{c1 min}=\frac{1}{2\pi \cdot 100K \cdot 100pF}= 16 KHz \]</div></span></p>
+<p style="margin-left: 30px;"><span style="color: #333333;"><span style="font-size: 10pt;">The R</span><sub>DISTORTION</sub><span style="font-size: 10pt;"> potentiometer will shift the f</span><sub>c1</sub><span style="font-size: 10pt;"> frequency, making the action of the 100pF is more dramatic when the distortion control is maxed out at 100K, bringing the cut-off minimum frequency to the audible frequencies (16 KHz) and then softening the distortion. When the distortion knob is not maxed out, the f<sub>c</sub> goes higher being less noticeable.</span></span></p>
+<p><span style="color: #000000;"><strong><span style="font-size: 10pt;">High Pass Filter.</span></strong></span></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt; color: #333333;">There are two parallel RC networks formed by R<sub>4</sub>C<sub>5</sub> and R<sub>5</sub>C<sub>6</sub> from the (-) input to ground. They are an active high pass filter, placing two poles and attenuating frequencies below the cut-off frequencies:</span></p>
+<p style="margin-left: 60px;"><span style="color: #333333;"><div class="latex " >\[ f_{c2}=\frac{1}{2\pi \cdot R_{4} \cdot C_{5}}&nbsp;=\frac{1}{2\pi \cdot 47 \cdot 2.2uF}= 1539 Hz \]</div></span></p>
+<p style="margin-left: 60px;"><span style="color: #333333;"><div class="latex " >\[ f_{c3}=\frac{1}{2\pi \cdot R_{5} \cdot C_{6}}&nbsp;=\frac{1}{2\pi \cdot 560 \cdot 4.7uF}= 60 Hz \]</div></span></p>
+<p style="margin-left: 30px;"><span style="color: #333333;"><span style="font-size: 10pt;">Harmonics below 1.5KHz will have an attenuation 20dB/dec and lower harmonics below 60Hz will be severely muted at 40dB/dec. This filtering provoke that bass notes will be attenuated before the clipping action, making the low end less clipped and creating a&nbsp;</span><span style="font-size: 10pt;">frequency selective distortion.</span></span></p>
+<p>&nbsp;</p>
+<h2><span style="font-size: 12pt; color: #000000;"><a name="link33"></a><strong>3.3 The Op Amp Selection.</strong></span></h2>
+<p><span style="font-size: 10pt; color: #333333;">The original Rat pedal uses the LM308N Motorola op-amp, the Texas Instruments OP07DP was a replacement op-amp used in the new models. Part of the Rat's tone remains on the choice of the chip as a function of the Slew Rate, the Gain-Bandwidth Product, and the Compensation Capacitor:</span></p>
+<p><span style="font-size: 10pt;"><strong><span style="color: #000000;">The Slew Rate.</span></strong></span></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt; color: #333333;">It refers to how fast the op-amp can swing its output. If the signal to be amplified is <em>too fast</em>&nbsp;(high frequencies), the op-amp will not be able to perform properly, only amplifying signals below the slew rate limit.</span></p>
+<p style="margin-left: 30px;"><a href="../_assets/cd4a3501dd5c.png"><span style="font-size: 10pt;"><img src="../_assets/cd4a3501dd5c.png" alt="lm308-slew-rate" width="460" height="250" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+<p style="margin-left: 30px;"><span style="font-size: 13.3333px; color: #333333;">In the image above, the slew rate of the LM308 is shown together with the TL071 (standard op-amp used in stompboxes) for comparison purposes. The TL071 slew rate is 13V/us, the LM308 is 0.3V/us around 40 times slower, it indicates how slow is the Rat op-amp is.</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">The slew rate is inversely proportional the compensator capacitor, the smaller the cap the faster the slew rate.</span></li>
+</ul>
+<p style="margin-left: 30px;"><span style="font-size: 10pt; color: #333333;">For a guitar signal (approximated to a sinusoidal) the Slew Rate of the op-amp will limit the rise speed of the signal following the equation:</span></p>
+<p style="margin-left: 60px;"><span style="color: #333333;"><div class="latex " >\[ Slew\: Rate \geq 2 \pi f\cdot V_{p} \]</div></span></p>
+<p style="margin-left: 60px;"><span style="color: #333333;"><div class="latex " >\[ f_{max}=\frac{Slew\: Rate}{2\pi \cdot V_{p}}=\frac{300000}{2\pi \cdot 9V}=5.3\: KHz \]</div></span></p>
+<p style="margin-left: 60px;"><span style="font-size: 10pt; color: #333333;">Where V<sub>peak </sub>is 9V, and the Slew Rate taken from the datasheet image is 300000 V/s.</span></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt; color: #333333;">That means that the op-amp output will not be able of following harmonics higher than 5.3KHz, so high frequencies will not pass through the amplifier, limiting or muting high harmonics.</span></p>
+<p><span style="font-size: 10pt; color: #000000;"><strong>The Gain-Bandwidth Product</strong></span></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt;">It is relative to the gain setting; the <em>Open Loop Frequency Response</em> (gain-bandwidth product) graph below extracted from the datasheet, shows that not all frequencies can be amplified the same quantity.</span></p>
+<p style="margin-left: 30px;"><a href="../_assets/9d3ce1c3bbab.png"><span style="font-size: 10pt;"><img src="../_assets/9d3ce1c3bbab.png" alt="lm308-gain-bandwidth-product" width="276" height="269" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt;">For the Rat maximum voltage gain, which is 67dB, the frequencies below 500Hz will be amplified without problems, but higher frequencies will have less and less amplification as the graph shows. At 10KHz, for instance, the max. voltage gain will be no more than 30dB.</span></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt;">In this way, the amplification of the guitar signal is frequency dependent, bass harmonics will take maximum gain while higher freqs will suffer less gain.</span></p>
+<p><span style="color: #000000;"><strong style="font-size: 10pt;">The Compensation Capacitor.</strong></span></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt;">Bandwidth and Slew Rate are proportional to 1/C<sub>compensation</sub>,&nbsp;<span style="font-size: 13.3333px;">the smaller the cap the bigger the <span style="font-size: 13.3333px;">Bandwidth and Slew Rate</span>.</span>&nbsp;The typical and suggested value by the datasheet is 30pF (same as used in the Rat design).</span></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt;"><a href="../_assets/d51ae15ddc56.png"><img src="../_assets/d51ae15ddc56.png" alt="pro-co-rat-badwidth" width="750" height="241" style="font-size: 13.3333px; display: block; margin-left: auto; margin-right: auto;" /></a></span><span style="font-size: 10pt;"></span></p>
+<p>&nbsp;</p>
+<p style="margin-left: 30px; text-align: left;"><span style="font-size: 10pt;">The above image shows again how the high freqs are attenuated, using a 30pF cap.&nbsp;<span>Using bigger/smaller caps the Bandwidth and Slew Rate will be reduced/improved.</span></span></p>
+<p style="text-align: left;"><span style="font-size: 10pt;">Summarizing these 3 effects, part of the signature sound of a Rat is essentially the op-amp collapsing under pressure and how the high-freqs are attenuated and not treated in a linear way. The result of all this will be clipped by the diodes.</span></p>
+<p>&nbsp;</p>
+<h2><span style="font-size: 12pt; color: #000000;"><a name="link34"></a><strong>3.4 Diode Clipping.</strong></span></h2>
+<p><span style="font-size: 10pt;">The silicon diodes D<sub>1</sub> and D<sub>2 </sub>&nbsp;do hard-clipping on the pre-amplified signal creating symmetric distortion in a similar way as&nbsp;</span><span style="font-size: 10pt;">the MXR Distortion+ or Boss DS-1 do.&nbsp;</span><span style="font-size: 10pt;">When the voltage difference (positive or negative) between the op-amp output and ground is bigger than the diodes forward voltage V<sub>F</sub>, the diode will turn on. As the diode turns on forward biased, the signal will be clipped to the V<sub>F&nbsp;</sub>value.&nbsp;<span style="font-size: 13px;">The diode D<sub>1</sub> will clip the positive semi-cycle signal to +V<sub>F</sub> and D<sub>2</sub> will clip the negative signal semi-cycle to -V<sub>F</sub>.</span></span></p>
+<p><span style="font-size: 10pt;"><span style="font-size: 13px;">The Rat uses 1N914 standard diodes, any other silicon compatible like 1N4148, 1N4448, or 1N916 can be replaced without troubles.</span></span></p>
+<p><span style="font-size: 10pt;"><a href="../_assets/19add07f416c.png"><img src="../_assets/19add07f416c.png" alt="pro-co-rat-clipped-waveform" width="752" height="242" style="display: block; margin-left: auto; margin-right: auto;" /></a>In the above graph, the input signal is represented in blue color. This original signal will be amplified by the op-amp until the power supply limits (line represented in purple). After the voltage gain, the diodes will clip the signal to&nbsp;&plusmn;V<sub>F.</sub></span></p>
+<p>&nbsp;</p>
+<p><span style="color: #000000; font-size: 14pt;"><a name="link4"></a><strong>4. Tone Control.</strong></span></p>
+<p><span style="font-size: 10pt; color: #333333;">The passive Tone Control is a simple low pass filter.<a href="../_assets/6c4f0fc1b308.png"><img src="../_assets/6c4f0fc1b308.png" alt="Pro Co Rat Tone Control" width="280" height="165" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<p><span style="font-size: 10pt; color: #333333;">The cut-off frequency can be calculated as:</span></p>
+<p style="margin-left: 30px;"><span style="color: #333333;"><div class="latex " >\[ f_{c}=\frac{1}{2\pi \cdot (R_{TONE} + R_{7}) \cdot C_{8}} &nbsp;\]</div></span></p>
+<p style="margin-left: 30px;"><span style="color: #333333;"><div class="latex " >\[ f_{c min}=\frac{1}{2\pi \cdot (100K + 1.5K) \cdot 3.3n}= 475Hz \]</div></span></p>
+<p style="margin-left: 30px;"><span style="color: #333333;"><div class="latex " >\[ f_{c max}=\frac{1}{2\pi \cdot (0 + 1.5K) \cdot 3.3n}= 32KHz \]</div></span></p>
+<p><span style="font-size: 10pt; color: #333333;">So the high harmonics above the fc selected by R<sub>TONE</sub> are attenuated like the graph below:</span></p>
+<p><a href="../_assets/133fcdc6c555.png"><span style="font-size: 10pt;"><img src="../_assets/133fcdc6c555.png" alt="pro-co-rat-tone-control-response" width="753" height="244" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+<p><span style="font-size: 10pt;">The range of the filter is pretty wide, being able to sweep almost all the audio spectrum from 475Hz to 32KHz. The Tone Control combined with all the other filters placed in the pedal will create a mid-hump, to be analyzed in the Frequency Response Section.</span></p>
+<p><a href="../_assets/c6b2f72a2391.png"><span style="font-size: 10pt;"><img src="../_assets/c6b2f72a2391.png" alt="pro-co-rat-tone-waveform" width="751" height="251" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+<p><span style="font-size: 10pt;">&nbsp;The clipped waveform will be affected by the low pass filter, as shown above, creating a <em>shark fin </em>shape as the tone control is maxed.</span></p>
+<h1><strong><span style="font-size: 14pt; color: #000000;"><a name="link5"></a>5. Output Stage.</span></strong></h1>
+<p><span style="font-size: 10pt;"><span style="color: #333333;">The Output Stage is a JFET unitary gain amplifier in <a href="http://en.wikipedia.org/wiki/Common_drain"><span style="color: #333333;">common drain (source follower)&nbsp;configuratio</span></a>n. It is placed to create a low output impedance, that is good to keep tone integrity in the signal chain. It also isolates the volume stage from the Tone Control in order to make both controls independent, otherwise changing the volume will alter the tone:</span> <a href="../_assets/342b4e6dd47a.png"><img src="../_assets/342b4e6dd47a.png" alt="Pro Co Rat Output Stage" width="407" height="229" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<p><span style="color: #333333;"><span style="font-size: 10pt;">The JFET common drain is useful because it uses a very reduced amount of components, it has a high input impedance (approx R<sub>8</sub>=1M<span style="font-size: 10pt;"><span style="font-size: 13px;"><span style="font-size: 13.3333px;">&Omega;</span></span></span>) and a medium-low output impedance (few hundred of ohms)</span>.</span></p>
+<ul>
+<li><span style="color: #333333;"><span style="font-size: 10pt;"><strong><span style="color: #000000;">Volume Control:</span></strong>&nbsp;</span><span style="font-size: 10pt;">The passive volume control is a standard 100K audio potentiometer which bleeds part of the input signal to ground.</span></span></li>
+</ul>
+<h1><span style="font-size: 14pt; color: #000000;"><a name="link6"></a><strong>6. Frequency Response.</strong></span></h1>
+<p style="margin-top: 12px; line-height: 18px; color: #555555; font-family: Arial,Helvetica,sans-serif;"><span style="color: #333333;"><span style="font-size: 10pt;">The frequency response of the Pro Co Rat is designed to empathize the mid frequencies. In order to do it,&nbsp;</span><span style="font-size: 10pt;">&nbsp;the waveform is&nbsp;filtered through the different stages, removing the harsh high-freq harmonics and the overloading bass presence.</span></span></p>
+<ul style="margin: 10px 0px 0px 25px; padding: 0px; color: #555555; font-family: Arial,Helvetica,sans-serif; line-height: normal;">
+<li style="padding-top: 0px; padding-bottom: 5px;"><span style="font-size: 10pt; color: #333333;">In the Clipping Amplifier Stage, there is a double RC network which places two poles and attenuates harmonics below 1.5KHz.&nbsp;</span></li>
+<li style="padding-top: 0px; padding-bottom: 5px;"><span style="color: #333333; font-size: 10pt;">There are several high pass filters, but the Tone circuit and the op-amp bandwidth limit will roll off harmonics higher than 1KHz.</span></li>
+</ul>
+<p><span style="font-size: 13.3333px; color: #333333;">Frequency Response with Linear time base:</span></p>
+<p><a href="../_assets/ed9ad547451c.png"><span style="color: #333333; font-size: 10pt;"><span style="font-size: 13.3333px;"><img src="../_assets/ed9ad547451c.png" alt="Pro Co Rat Frequency Response Linear" width="750" height="244" style="display: block; margin-left: auto; margin-right: auto;" /></span></span></a></p>
+<p><span style="color: #333333; font-size: 10pt;">Frequency Response with Logarithmic time base:</span></p>
+<p><a href="../_assets/b30e4788148a.png"><span style="color: #333333; font-size: 10pt;"><img src="../_assets/b30e4788148a.png" alt="Pro Co Rat Frequency Response Logarithmic" width="750" height="246" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+<p><span style="font-size: 10pt;">&nbsp;The frequency response of the Pro Co Rat is similar to the <a href="/tube-screamer-analysis#frequency">Tube Screamer response</a>&nbsp;showing a mid-hump around 1KHz.</span></p>
+<h1><span style="font-size: 14pt; color: #000000;"><a name="link7"></a><strong>7. Resources.</strong></span></h1>
+<p style="margin-left: 30px;"><a href="http://www.linear.com/docs/1704"><span style="font-size: 13.3333px;">LM308 Datasheet.&nbsp;</span></a><br /><span style="font-size: 13.3333px;"><a href="http://www.diystompboxes.com/smfforum/index.php?action=printpage;topic=96351.0">DIYStompboxes thread </a>about the Rat op-amp.&nbsp;</span><br /><a href="http://www.soundonsound.com/sos/apr10/articles/distortion.htm">Great article about Distortion</a> in SoundonSound.com<br /><a href="http://webpages.charter.net/daosmun/">Pro Co RAT models</a> by Dosum.<br /><a href="http://www.effectsdatabase.com/model/proco/rat">Pro Co RAT in</a> by Effects Data Base.<br /><a href="http://www.musicgarage.fi/2011/07/01/flea-market-find/">Pro Co RAT</a> in Jaska`s Music Garage.<br /><a href="http://filters.muziq.be/model/proco/rat">Pro Co RAT info</a> by Muziq.be</p>
+<p>&nbsp;</p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt;"><span style="font-size: 12pt;"><span style="color: #333333; font-size: 10pt;">Thanks for reading, all feedback is appreciated.</span></span></span></p>
+<p><span style="color: #333333; font-size: 13.3333px;">&nbsp; &nbsp; &nbsp; &nbsp; Our sincere appreciation to M. Chiampi for helping us with the article.</span></p>
+<p style="padding-left: 30px;"><img src="../_assets/26a349a17744.jpg" alt="jr(at)ElectroSmash.com " style="float: left;" /></p>
+<p>&nbsp;</p>
+<p style="margin-top: 12px; line-height: 18px; color: #555555; font-family: Arial,Helvetica,sans-serif; text-align: center;"><span style="color: #808080; font-size: 8pt;"><span style="color: #0000ff;"><a href="../rights/index.html" style="font-weight: bold; color: #0063e1;"><span style="color: #0000ff;">Some Rights Reserved</span></a></span>, you are free to copy, share, remix and use all material.<br />Trademarks, brand names and logos are the property of their respective owners.</span></p>	</section>
+  
+  <!-- footer -->
+    <!-- //footer -->
+
+			<hr class="divider-vertical" /><ul class="pager pagenav">
+	<li class="previous">
+		<a class="hasTooltip" title="Fuzz Face Analysis" aria-label="Previous article: Fuzz Face Analysis" href="../fuzz-face/index.html" rel="prev">
+			<span class="icon-chevron-left" aria-hidden="true"></span> <span aria-hidden="true">Prev</span>		</a>
+	</li>
+	<li class="next">
+		<a class="hasTooltip" title="Big Muff Pi Analysis" aria-label="Next article: Big Muff Pi Analysis" href="../big-muff-pi-analysis/index.html" rel="next">
+			<span aria-hidden="true">Next</span> <span class="icon-chevron-right" aria-hidden="true"></span>		</a>
+	</li>
+</ul>
+	
+	
+	</article>
+<!-- //Article -->
+
+
+</div><div><a href="http://www.artio.net" style="font-size: 8px; visibility: visible; display: inline;" title="Web development, Joomla, CMS, CRM, Online shop software, databases">Joomla SEF URLs by Artio</a></div>
+		</div>
+		<!-- //MAIN CONTENT -->
+
+		<!-- SIDEBAR RIGHT -->
+		<div class="t3-sidebar t3-sidebar-right col-xs-12 col-sm-4  col-md-3 ">
+			<div class="t3-module module " id="Mod28"><div class="module-inner"><h3 class="module-title "><span>New Updates</span></h3><div class="module-ct"><ul class="latestnews mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../arduino-audio-meter/index.html" itemprop="url">
+			<span itemprop="name">
+				Arduino Audio Meter			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../dallas-rangemaster/index.html" itemprop="url">
+			<span itemprop="name">
+				Dallas Rangemaster Treble Booster Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../time-manipulator/index.html" itemprop="url">
+			<span itemprop="name">
+				Time Manipulator - Arduino Delay/Echo/Reverb			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../marshall-guvnor-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Marshall The Guvnor Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../germanium-fuzz/index.html" itemprop="url">
+			<span itemprop="name">
+				You Can Build the Perfect Germanium Fuzz			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../mxr-distortion-plus-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				MXR Distortion + Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod29"><div class="module-inner"><h3 class="module-title "><span>Most Visited</span></h3><div class="module-ct"><ul class="mostread mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../tube-screamer-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Tube Screamer Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../fuzz-face/index.html" itemprop="url">
+			<span itemprop="name">
+				Fuzz Face Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="index.html" itemprop="url">
+			<span itemprop="name">
+				Pro Co Rat Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../boss-ds1-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Boss DS-1 Distortion Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../klon-centaur-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Klon Centaur Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../big-muff-pi-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Big Muff Pi Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod184"><div class="module-inner"><h3 class="module-title "><span>Follow us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><span style="font-size: 10pt; color: #333333;">You can also follow us on:</span></p>
+<p><a href="https://www.facebook.com/ElectroSmash"><img src="../_assets/df34a2b41b54.png" alt="facebook" /></a>&nbsp;&nbsp; <a href="https://plus.google.com/+Electrosmash/about"><img src="../_assets/3ffc52860091.png" alt="google" /></a>&nbsp;&nbsp; <a href="https://www.instagram.com/electro.smash/"><img src="../_assets/45b0b0fe2d4b.png" alt="instagram" /></a></p>
+<p><a href="https://www.pinterest.com/electrosmash/"><img src="../_assets/05310d9fcf2a.png" alt="pinterest" /></a>&nbsp;&nbsp; <a href="https://www.youtube.com/user/ElectroSmashTV"><img src="../_assets/d920883b3613.png" alt="youtube" /></a>&nbsp;&nbsp; <a href="https://twitter.com/electro_smash"><img src="../_assets/52581f7264eb.png" alt="twitter" /></a></p></div>
+</div></div></div>
+		</div>
+		<!-- //SIDEBAR RIGHT -->
+
+	</div>
+</div> 
+
+
+
+  
+
+
+  
+
+
+	
+<!-- BACK TOP TOP BUTTON -->
+<div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top hidden-xs hidden-sm affix-top">
+  <button class="btn btn-primary" title="Back to Top"><i class="fa fa-caret-up"></i></button>
+</div>
+<script type="text/javascript">
+(function($) {
+	// Back to top
+	$('#back-to-top').on('click', function(){
+		$("html, body").animate({scrollTop: 0}, 500);
+		return false;
+	});
+    $(window).on('load', function(){
+        // hide button to top if the document height not greater than window height*2;using window load for more accurate calculate.    
+        if ((parseInt($(window).height())*2)>(parseInt($(document).height()))) {
+            $('#back-to-top').hide();
+        } 
+    });
+})(jQuery);
+</script>
+<!-- BACK TO TOP BUTTON -->
+
+<!-- FOOTER -->
+<footer id="t3-footer" class="wrap t3-footer">
+
+			<!-- FOOTER SPOTLIGHT -->
+		<div class="container hidden-xs">
+				<!-- SPOTLIGHT -->
+	<div class="t3-spotlight t3-footer-sl  row">
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod185"><div class="module-inner"><h3 class="module-title "><span>About us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../about-us/index.html">&nbsp;&nbsp;<img src="../_assets/420f9f181bc0.jpg" alt="smash electro" /></a></p>
+<p><a href="../about-us/index.html"><span style="font-size: 10pt; color: #333333;">Smashing audio electronics since MMXIII</span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod183"><div class="module-inner"><h3 class="module-title "><span>Email Newsletter</span></h3><div class="module-ct"><div class="acymailing_module" id="acymailing_module_formAcymailing79191">
+	<div class="acymailing_fulldiv" id="acymailing_fulldiv_formAcymailing79191"  >
+		<form id="formAcymailing79191" action="/" onsubmit="return submitacymailingform('optin','formAcymailing79191')" method="post" name="formAcymailing79191"  >
+		<div class="acymailing_module_form" >
+						<table class="acymailing_form">
+				<tr>
+												<td class="acyfield_email acy_requiredField">
+								<input id="user_email_formAcymailing79191"  onfocus="if(this.value == 'example@email.com') this.value = '';" onblur="if(this.value=='') this.value='example@email.com';" class="inputbox" type="text" name="user[email]" style="width:90%" value="example@email.com" title="example@email.com"/>
+							</td> </tr><tr>
+					
+					<td  class="acysubbuttons">
+												<input class="button subbutton btn btn-primary" type="submit" value="Subscribe" name="Submit" onclick="try{ return submitacymailingform('optin','formAcymailing79191'); }catch(err){alert('The form could not be submitted '+err);return false;}"/>
+											</td>
+				</tr>
+			</table>
+						<input type="hidden" name="ajax" value="0" />
+			<input type="hidden" name="acy_source" value="module_183" />
+			<input type="hidden" name="ctrl" value="sub"/>
+			<input type="hidden" name="task" value="notask"/>
+			<input type="hidden" name="redirect" value="https%3A%2F%2Fwww.electrosmash.com%2Fproco-rat"/>
+			<input type="hidden" name="redirectunsub" value="https%3A%2F%2Fwww.electrosmash.com%2Fproco-rat"/>
+			<input type="hidden" name="option" value="com_acymailing"/>
+						<input type="hidden" name="hiddenlists" value="1"/>
+			<input type="hidden" name="acyformname" value="formAcymailing79191" />
+									</div>
+		</form>
+	</div>
+	</div>
+
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod186"><div class="module-inner"><h3 class="module-title "><span>Contact us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../contact-us/index.html"><span style="font-size: 10pt; color: #333333;">e-mail us at <span id="cloak81430442dddc219111caca5526268d90">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
+				document.getElementById('cloak81430442dddc219111caca5526268d90').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy81430442dddc219111caca5526268d90 = '&#105;nf&#111;' + '&#64;';
+				addy81430442dddc219111caca5526268d90 = addy81430442dddc219111caca5526268d90 + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';
+				var addy_text81430442dddc219111caca5526268d90 = '&#105;nf&#111;' + '&#64;' + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';document.getElementById('cloak81430442dddc219111caca5526268d90').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy81430442dddc219111caca5526268d90 + '\'>'+addy_text81430442dddc219111caca5526268d90+'<\/a>';
+		</script></span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod188"><div class="module-inner"><h3 class="module-title "><span>Rights</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p style="text-align: left;">&nbsp;&nbsp;<a href="https://creativecommons.org/licenses/by-nc/3.0/"><img src="../_assets/b0e99d439c44.png" alt="88x31" /></a></p>
+<p style="text-align: left;"><img src="../_assets/fe2636cdea5c.png" alt="open source logo" width="180" height="38" /></p>
+<p style="text-align: left;"><img src="../_assets/8281c4ec3a3b.png" alt="open hardware logo" width="180" height="38" /></p>
+<p style="text-align: left;">&nbsp;</p></div>
+</div></div></div>
+							</div>
+			</div>
+<!-- SPOTLIGHT -->
+		</div>
+		<!-- //FOOTER SPOTLIGHT -->
+	
+	<section class="t3-copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 copyright ">
+					
+          <small>
+            <a href="http://twitter.github.io/bootstrap/" title="Bootstrap by Twitter" target="_blank">Bootstrap</a> is a front-end framework of Twitter, Inc. Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" title="MIT License" target="_blank">MIT License.</a>
+          </small>
+          <small>
+            <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> font licensed under <a href="http://scripts.sil.org/OFL">SIL OFL 1.1</a>.
+          </small>
+				</div>
+							</div>
+		</div>
+	</section>
+
+</footer>
+<!-- //FOOTER -->
+
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29544239-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

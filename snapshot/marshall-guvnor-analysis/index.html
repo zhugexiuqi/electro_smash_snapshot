@@ -1,0 +1,858 @@
+
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr"
+	  class='com_content view-article itemid-435 home j31 mm-hover '>
+
+<head>
+	<base href="../index/index.html" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="MXR, MicroAmp, micro amp, micro, amp, analysis, technology, study, explanation, circuit, schematic, signal, output, input, voltage, gain, frequency, response, TL061, TL071, TL081, opamp, op-amp, amplifier, bom, parts list, diagram, booster, pedal, volume," />
+	<meta name="rights" content="Creative Commons: Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0) " />
+	<meta name="author" content="Ray" />
+	<meta name="description" content="The Guv'nor was the first guitar pedal designed by Marshall, released in 1988 and in production for 4 years. This overdrive/distortion Made in England effect replicates the classic tube Marshall Amp sound into compact and solid state box featuring a sustainable gain with a touch of compression.&amp;nbsp;There are later" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>ElectroSmash - Marshall The Guvnor Analysis</title>
+	<link href="index.html" rel="canonical" />
+	<link href="../_assets/d87243966412.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../_assets/26f5cf410b61.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/15ff046a2fe3.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/dd09f39c1b89.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"0d22b12dfb19632a154db4e85d6ecb41","system.paths":{"root":"","base":""}}</script>
+	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+	<script src="../_assets/323c609448d2.js" type="text/javascript"></script>
+	<script src="../_assets/b8bcbb2f005c.js" type="text/javascript" async="async"></script>
+	<script type="text/javascript">
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });	if(typeof acymailingModule == 'undefined'){
+				var acymailingModule = [];
+			}
+			
+			acymailingModule['emailRegex'] = /^[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+)*\@([a-z0-9-]+\.)+[a-z0-9]{2,10}$/i;
+
+			acymailingModule['NAMECAPTION'] = 'Name';
+			acymailingModule['NAME_MISSING'] = 'Please enter your name';
+			acymailingModule['EMAILCAPTION'] = 'example@email.com';
+			acymailingModule['VALID_EMAIL'] = 'Please enter a valid e-mail address';
+			acymailingModule['ACCEPT_TERMS'] = 'Please check the Terms and Conditions';
+			acymailingModule['CAPTCHA_MISSING'] = 'The captcha is invalid, please try again';
+			acymailingModule['NO_LIST_SELECTED'] = 'Please select the lists you want to subscribe to';
+		
+acymailingModule['excludeValuesformAcymailing67411'] = [];
+acymailingModule['excludeValuesformAcymailing67411']['name'] = 'Name';
+acymailingModule['excludeValuesformAcymailing67411']['email'] = 'example@email.com';
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });
+	</script>
+
+	
+<!-- META FOR IOS & HANDHELD -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<style type="text/stylesheet">
+		@-webkit-viewport   { width: device-width; }
+		@-moz-viewport      { width: device-width; }
+		@-ms-viewport       { width: device-width; }
+		@-o-viewport        { width: device-width; }
+		@viewport           { width: device-width; }
+	</style>
+	<script type="text/javascript">
+		//<![CDATA[
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement("style");
+			msViewportStyle.appendChild(
+				document.createTextNode("@-ms-viewport{width:auto!important}")
+			);
+			document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+		}
+		//]]>
+	</script>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="apple-mobile-web-app-capable" content="YES"/>
+<!-- //META FOR IOS & HANDHELD -->
+
+
+
+
+<!-- Le HTML5 shim and media query for IE8 support -->
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script type="text/javascript" src="../_assets/010a3c86157d.js"></script>
+<![endif]-->
+
+<!-- You can add Google Analytics here or use T3 Injection feature -->
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="../_assets/76d3e1341c39.css" type="text/css" />
+<![endif]-->
+	</head>
+
+<body>
+
+<div class="t3-wrapper corporate"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
+
+	
+<!-- MAIN NAVIGATION -->
+<header id="t3-mainnav" class="wrap navbar navbar-default navbar-fixed-top t3-mainnav">
+
+	<!-- OFF-CANVAS -->
+		<!-- //OFF-CANVAS -->
+
+	<div class="container">
+
+		<!-- NAVBAR HEADER -->
+		<div class="navbar-header">
+
+			<!-- LOGO -->
+			<div class="logo logo-image">
+				<div class="logo-image">
+					<a href="/" title="ElectroSmash">
+													<img class="logo-img" src="../_assets/115794d6d5b8.png" alt="ElectroSmash" />
+						
+												
+						<span>ElectroSmash</span>
+					</a>
+				</div>
+			</div>
+			<!-- //LOGO -->
+
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-collapse">
+					<i class="fa fa-bars"></i>
+				</button>
+			
+	    
+		</div>
+		<!-- //NAVBAR HEADER -->
+
+		<!-- NAVBAR MAIN -->
+				<nav class="t3-navbar-collapse navbar-collapse collapse"></nav>
+		
+		<nav class="t3-navbar navbar-collapse collapse">
+			<div  class="t3-megamenu"  data-responsive="true">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav navbar-nav level0">
+<li itemprop='name' class="current active" data-id="435" data-level="1">
+<a itemprop='url' class=""  href="/"   data-target="#">Home </a>
+
+</li>
+<li itemprop='name' class="dropdown mega" data-id="510" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Chips<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="492" data-level="2">
+<a itemprop='url' class=""  href="../jrc4558-analysis/index.html"   data-target="#">JRC4558  </a>
+
+</li>
+<li itemprop='name'  data-id="519" data-level="2">
+<a itemprop='url' class=""  href="../mn3007-bucket-brigade-devices/index.html"   data-target="#">MN3007 BBDs </a>
+
+</li>
+<li itemprop='name'  data-id="468" data-level="2">
+<a itemprop='url' class=""  href="../lm386-analysis/index.html"   data-target="#">LM386 </a>
+
+</li>
+<li itemprop='name'  data-id="1643" data-level="2">
+<a itemprop='url' class=""  href="../pt2399-analysis/index.html"   data-target="#">PT2399 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="444" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Amps<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="993" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="489" data-level="2">
+<a itemprop='url' class=""  href="../little-gem-analysis/index.html"   data-target="#">Little Gem Amp </a>
+
+</li>
+<li itemprop='name'  data-id="526" data-level="2">
+<a itemprop='url' class=""  href="../marshall-mg10/index.html"   data-target="#">Marshall MG10 </a>
+
+</li>
+<li itemprop='name'  data-id="491" data-level="2">
+<a itemprop='url' class=""  href="../noisy-cricket-analysis/index.html"   data-target="#">Noisy Cricket  </a>
+
+</li>
+<li itemprop='name'  data-id="490" data-level="2">
+<a itemprop='url' class=""  href="../ruby-amp-analysis/index.html"   data-target="#">Ruby Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="488" data-level="2">
+<a itemprop='url' class=""  href="../smokey-amp-analysis/index.html"   data-target="#">Smokey Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="746" data-level="2">
+<a itemprop='url' class=""  href="http://www.electrosmash.com/schematics#amps"   data-target="#">Amps Schematics.</a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="511" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Pedals<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  style="width: 600px"  data-width="600"><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="515" data-level="2">
+<a itemprop='url' class=""  href="../back-talk-analysis/index.html"   data-target="#">Back Talk Reverse Delay </a>
+
+</li>
+<li itemprop='name'  data-id="518" data-level="2">
+<a itemprop='url' class=""  href="../big-muff-pi-analysis/index.html"   data-target="#">Big Muff Pi  </a>
+
+</li>
+<li itemprop='name'  data-id="524" data-level="2">
+<a itemprop='url' class=""  href="../boss-ce-2-analysis/index.html"   data-target="#">Boss CE-2 Chorus </a>
+
+</li>
+<li itemprop='name'  data-id="1088" data-level="2">
+<a itemprop='url' class=""  href="../boss-ds1-analysis/index.html"   data-target="#">Boss DS-1 Distortion </a>
+
+</li>
+<li itemprop='name'  data-id="1713" data-level="2">
+<a itemprop='url' class=""  href="../dallas-rangemaster/index.html"   data-target="#">Dallas Rangemaster </a>
+
+</li>
+<li itemprop='name'  data-id="905" data-level="2">
+<a itemprop='url' class=""  href="../crybaby-gcb-95/index.html"   data-target="#">Dunlop CryBaby GCB-95  </a>
+
+</li>
+<li itemprop='name'  data-id="842" data-level="2">
+<a itemprop='url' class=""  href="../fuzz-face/index.html"   data-target="#">Fuzz Face </a>
+
+</li>
+<li itemprop='name'  data-id="1664" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="512" data-level="2">
+<a itemprop='url' class=""  href="../tube-screamer-analysis/index.html"   data-target="#">Ibanez Tube Screamer </a>
+
+</li>
+<li itemprop='name'  data-id="1433" data-level="2">
+<a itemprop='url' class=""  href="../klon-centaur-analysis/index.html"   data-target="#">Klon Centaur </a>
+
+</li>
+</ul>
+</div></div>
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="548" data-level="2">
+<a itemprop='url' class=""  href="../mxr-microamp/index.html"   data-target="#">MXR MicroAmp </a>
+
+</li>
+<li itemprop='name'  data-id="1667" data-level="2">
+<a itemprop='url' class=""  href="index.html"   data-target="#">Marshall Guvnor </a>
+
+</li>
+<li itemprop='name'  data-id="1632" data-level="2">
+<a itemprop='url' class=""  href="../mxr-distortion-plus-analysis/index.html"   data-target="#">MXR Distortion + </a>
+
+</li>
+<li itemprop='name'  data-id="1244" data-level="2">
+<a itemprop='url' class=""  href="../mxr-dyna-comp-analysis/index.html"   data-target="#">MXR Dyna Comp </a>
+
+</li>
+<li itemprop='name'  data-id="573" data-level="2">
+<a itemprop='url' class=""  href="../mxr-phase90/index.html"   data-target="#">MXR Phase 90 </a>
+
+</li>
+<li itemprop='name'  data-id="553" data-level="2">
+<a itemprop='url' class=""  href="../proco-rat/index.html"   data-target="#">ProCo Rat </a>
+
+</li>
+<li itemprop='name'  data-id="520" data-level="2">
+<a itemprop='url' class=""  href="../sitar-swami-analysis/index.html"   data-target="#">Sitar Swami </a>
+
+</li>
+<li itemprop='name'  data-id="525" data-level="2">
+<a itemprop='url' class=""  href="../vox-v847-analysis/index.html"   data-target="#">Vox V847 Wah Wah </a>
+
+</li>
+<li itemprop='name'  data-id="547" data-level="2">
+<a itemprop='url' class=""  href="../emg81/index.html"   data-target="#">EMG81 Pickup </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="796" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Projects<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="1108" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-uno/index.html"   data-target="#">pedalSHIELD UNO </a>
+
+</li>
+<li itemprop='name'  data-id="797" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield/index.html"   data-target="#">pedalSHIELD DUE </a>
+
+</li>
+<li itemprop='name'  data-id="1437" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-mega/index.html"   data-target="#">pedalSHIELD MEGA </a>
+
+</li>
+<li itemprop='name'  data-id="1312" data-level="2">
+<a itemprop='url' class=""  href="../pedal-pi/index.html"   data-target="#">Pedal-Pi </a>
+
+</li>
+<li itemprop='name'  data-id="1662" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="1663" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="1668" data-level="2">
+<a itemprop='url' class=""  href="../time-manipulator/index.html"   data-target="#">Time Manipulator </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name'  data-id="745" data-level="1">
+<a itemprop='url' class=""  href="../forum-electrosmash/index.html"   data-target="#">Forum </a>
+
+</li>
+<li itemprop='name'  data-id="816" data-level="1">
+<a itemprop='url' class=""  href="../shop/index.html"   data-target="#">Shop</a>
+
+</li>
+</ul>
+</div>
+
+		</nav>
+    <!-- //NAVBAR MAIN -->
+
+	</div>
+</header>
+<!-- //MAIN NAVIGATION -->
+
+
+
+
+
+
+  
+
+
+  
+
+
+	
+<div id="t3-mainbody" class="container t3-mainbody">
+	<div class="row">
+
+		<!-- MAIN CONTENT -->
+		<div id="t3-content" class="t3-content col-xs-12 col-sm-8  col-md-9">
+						<div class="item-page clearfix">
+
+
+<!-- Article -->
+<article>
+	<meta itemprop="inLanguage" content="en-GB" />
+	<meta itemprop="url" content="index.html" />
+
+      
+<header class="article-header clearfix">
+	<h1 class="article-title" itemprop="headline">
+					<a href="index.html" itemprop="url" title="Marshall The Guvnor Analysis">
+				Marshall The Guvnor Analysis</a>
+			</h1>
+
+			</header>
+    
+    
+  <!-- Aside -->
+    <!-- //Aside -->
+
+  
+  
+  
+	
+  
+	
+	<section class="article-content clearfix">
+		<p><span style="font-family: verdana, geneva; font-size: 10pt;">The Guv'nor was the first guitar pedal designed by Marshall, released in 1988 and in production during 4 years. This overdrive/distortion <em>Made in England</em> effect replicates the classic tube Marshall Amp sound into compact and solid state box featuring a sustainable gain with a touch of compression.&nbsp;There are later Guv'nor MK2 models in a different enclosure, but most people prefer the sound of the original discontinued model.&nbsp;</span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/49b56d396769.jpg"><span style="font-size: 10pt;"><img src="../_assets/49b56d396769.jpg" alt="Marshall guvnor guitar pedal" width="420" height="322" style="display: block; margin-left: auto; margin-right: auto;" title="Marshall guvnor guitar pedal" /></span></a></span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">In this article, we are going to study the original design and see what are the bits that make this effect so desired.</span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+ 
+<h1><span style="font-family: verdana, geneva; color: #000000;"><strong><span style="font-size: 14pt;">Table of Contents.</span></strong></span></h1>
+<p style="padding-left: 30px;"><span style="color: #3366ff;"><a href="/marshall-guvnor-analysis#link1" style="color: #3366ff;"><span style="font-size: 10pt; font-family: verdana, geneva;">1. Marshall Guv'nor Schematic.</span></a></span></p>
+<p style="padding-left: 30px;"><span style="font-size: 10pt; font-family: verdana, geneva; color: #3366ff;">&nbsp; &nbsp; &nbsp;<a href="/marshall-guvnor-analysis#link11" style="color: #3366ff;">1.1 The Power Supply Stage.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva; color: #3366ff;">&nbsp; &nbsp; &nbsp;<a href="/marshall-guvnor-analysis#link12" style="color: #3366ff;">1.2 The Input Stage.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva; color: #3366ff;">&nbsp; &nbsp; &nbsp;<a href="/marshall-guvnor-analysis#link13" style="color: #3366ff;">1.3 Clipping Stage.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva; color: #3366ff;">&nbsp; &nbsp; &nbsp;<a href="/marshall-guvnor-analysis#link14" style="color: #3366ff;">1.4 Tone Control Stage.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva; color: #3366ff;">&nbsp; &nbsp; &nbsp;<a href="/marshall-guvnor-analysis#link15" style="color: #3366ff;">1.5 Output Stage:</a></span></p>
+<p style="padding-left: 30px;"><span style="color: #3366ff;"><a href="/marshall-guvnor-analysis#link2" style="color: #3366ff;"><span style="font-size: 10pt; font-family: verdana, geneva;">2. Resources.</span></a></span></p>
+<h1><span style="font-family: verdana, geneva;"><strong><span style="color: #000000;"><span style="font-size: 14pt; color: #000000;"><a id="link1"></a>1. Marshall Guv'nor Schematic.</span></span></strong></span></h1>
+<p style="text-align: left;"><span style="font-size: 10pt; font-family: verdana, geneva;">The Guvnor circuit can be divided into 5 blocks: Input Stage, Clipping Stage, Tone Control, Output Stage and Power Supply:</span></p>
+<p style="text-align: left;"><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="../_assets/34f46f039457.png"><img src="../_assets/7f6c09fae608.png" alt="marshall guvnor schematic parts" width="1000" height="384" style="display: block; margin-left: auto; margin-right: auto;" title="marshall guvnor schematic parts" /></a></span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">The Guv'nor schematic is simple but perfectly tuned: One dual op-amp boosts the signal using the Gain knob. In the clipping stage, 2 diodes to ground will hard-clip the guitar signal. This boosted and clipped waveform passes through the tone stack (with independent bass-mid-treble potentiometers) and finally, the output stage will adjust the volume level. The original circuit has a stereo 1/4" effects loop just before the pedal's output, allowing the Guvnor to include any pedal in its own loop (you would need a custom 1/4" <em>Y-cable</em> with tip-send and ring-return).</span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; font-family: verdana, geneva; color: #000000;"><strong>Marshall The Guv'nor + Circuit Layout</strong></span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">The original circuit is made using two double-sided PCBs: one contains the potentiometers and core circuit and the second one accommodates the audio/power jacks. The connection between elements is made by hand-soldered wiring. Although the enclosure and the feel of the pedal are sturdy, some parts of the pedal are famous for their fragility: the jacks (a good substitute is the Fender #0059922000 jack) and the footswitch (standard 2P2T) have a limited lifespan. Because of this factor (and discontinuity), this effect is a good candidate for DIYers. <br /></span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;"><a href="../_assets/cb43e3f392d1.jpg"><img src="../_assets/cb43e3f392d1.jpg" alt="marshall guvnor pcb layout" width="354" height="359" style="display: block; margin-left: auto; margin-right: auto;" title="marshall guvnor pcb layout" /></a></span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">The first models were made in England, later boxes look the same but were made in Korea and at the end of its production life, the pedal was made in Taiwan. The serial number plate on the battery cover should say where each box was built.</span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/c3103baafff6.jpg"><img src="../_assets/c3103baafff6.jpg" alt="Marshall Guvnor sticker made in UK Korea" style="display: block; margin-left: auto; margin-right: auto;" title="Marshall Guvnor sticker made in UK Korea" /></a></span></p>
+<h2><span style="color: #000000; font-family: verdana, geneva;"><strong><span style="font-size: 12pt; color: #000000;"><a id="link11"></a>1.1 Marshall Guv'nor Power Supply Stage.</span></strong><br /></span></h2>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">The Power Supply Stage will generate bias voltage (+4.5V) and&nbsp;energy (+9V) for the circuit:</span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;"><a href="../_assets/5b83c703dd7f.png"><img src="../_assets/5b83c703dd7f.png" alt="marshall guvnor power supply circuit" width="296" height="286" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">&nbsp;The Guvnor uses a rather minimalistic power supply: </span></p>
+<ul>
+<li><span style="font-family: verdana, geneva; font-size: 10pt;">Two <strong>47K resistors (R13 and R14)</strong> will generate the +4.5V bias voltage for the op-amps (aka virtual ground). <br /></span></li>
+<li><span style="font-family: verdana, geneva; font-size: 10pt;">One electrolytic <strong>capacitor C14 (10uF)</strong> decouples the&nbsp;resistors junction (+4.5V), reducing any noise from the supply line.</span></li>
+</ul>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">Other pedals include some extra parts, like a cap to also decouple the +9V line, a diode for reverse polarity protection, etc . Marshall took the simple and effective path here.</span></p>
+<h2><span style="font-family: verdana, geneva;"><strong><span style="color: #000000;"><span style="font-size: 12pt; color: #000000;"><a id="link12"></a>1.2 Marshall Guv'nor Input Stage.</span></span></strong></span></h2>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The first block is a TL072 op-amp in a <a href="https://en.wikipedia.org/wiki/Operational_amplifier_applications#Non-inverting_amplifier" style="color: #00466e; font-family: verdana, geneva; font-size: 13.3333px;">non-inverting topology</a> which gain is adjusted by the 100K VR1 Gain potentiometer. This stage provides voltage gain, high input impedance, and signal filtering:</span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/c621b90a976d.png"><img src="../_assets/c621b90a976d.png" alt="marshall guvnor input stage circuit" width="511" height="375" style="display: block; margin-left: auto; margin-right: auto;" title="marshall guvnor input stage circuit" /></a></span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The <strong>2.2M</strong><span style="color: #333333;"><strong>&Omega; R1</strong> resistor from the input to ground is an anti-pop resistor, it will avoid abrupt pop sounds when the effect is engaged.</span></span></li>
+<li><span style="font-family: verdana, geneva; font-size: 10pt;">The <strong>9.6nF C1</strong> input cap&nbsp;<span style="color: #333333;">blocks DC and provides simple high pass filtering. C1 and R2 create a 1st order high-pass filter:</span></span></li>
+</ul>
+<p style="padding-left: 60px;"><span style="font-family: verdana, geneva; font-size: 10pt;">fc=1/(2x&pi;xR2xC1) = (1/2x3.14x1M<span style="color: #333333;">&Omega;</span>x9.6nF) = 16Hz</span></p>
+<p style="padding-left: 60px;"><span style="font-family: verdana, geneva; font-size: 10pt;"><span style="color: #333333;">With an fc=16Hz it will block DC and any&nbsp;low-frequency parasitic oscillation.</span><span style="color: #333333;"><br /></span></span></p>
+<ul>
+<li><span style="font-family: verdana, geneva; font-size: 10pt;"><span style="color: #333333;">The (pin 3 +) input of the op-amp is biased to +4.5V using the <strong>R</strong></span><strong><span style="color: #333333;">2</span></strong><span style="color: #333333;"><strong> resistor</strong> (1M<span style="line-height: 115%;">&Omega;</span>), keeping the virtual ground at +4.5V and being able to amplify bipolar guitar input signals.</span></span></li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p><span style="background-color: #ffffff; color: #000000; font-family: verdana, geneva; font-size: 12pt;"><strong>Marshall Guv'nor Input Impedance Calculation.</strong></span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">The input impedance is defined by the formula:</span></p>
+<p style="padding-left: 60px;"><span style="font-family: verdana, geneva; font-size: 10pt;">Zin = R1 //&nbsp; R2 // Zin<sub>TL072 Op-Amp</sub>&nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-family: verdana, geneva; font-size: 10pt;">Zin = 2.2M // 1M // 10<sup>12</sup>&nbsp;= 690K<span style="color: #333333;">&Omega;</span></span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;"><span style="line-height: 115%;">690K is a good input impedance, not loading the guitar pickups and preventing tone sucking (attenuation of high harmonics). As a rule of thumb, the input impedance of a pedal should be 1M</span><span style="line-height: 115%;">&Omega; minimum, but 0.69M&Omega; is still pretty good.&nbsp;</span></span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;"><span style="text-decoration: underline;">note</span>: The&nbsp;10<sup style="font-family: verdana, geneva;">12</sup><span style="color: #333333;">&Omega; input resistance value of the op-amp is taken from the <span style="color: #3366ff;"><a href="http://www.ti.com/lit/ds/symlink/tl072.pdf" style="color: #3366ff;">TL072 datasheet</a>.</span></span><sup style="font-family: verdana, geneva;">&nbsp;&nbsp;</sup></span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;"><span style="text-decoration: underline;">note</span>: the "//" symbol means <span style="color: #3366ff;"><a href="https://en.wikipedia.org/wiki/Resistor#Series_and_parallel_resistors" style="color: #3366ff;">"resistors in parallel".</a></span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p><span style="color: #000000; font-size: 12pt; font-family: verdana, geneva;"><span style="color: #000000;"><strong><span style="font-size: 10pt;"><a id="voltagegain"></a><span style="color: #000000; font-size: 12pt;">Input Stage Voltage Gain.</span></span></strong></span></span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">In a non-inverting op-amp like the one used in the Input Stage, the voltage gain is calculated as follows:</span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;"></span></p>
+<p style="padding-left: 60px;"><span style="font-family: verdana, geneva; font-size: 10pt;">Gv =&nbsp; 1 + (VR1 / R3)</span></p>
+<p style="padding-left: 60px;"><span style="font-family: verdana, geneva; font-size: 10pt;">Gv<sub>(min)</sub> =&nbsp; 1 + (0&Omega;/ 2.2K&Omega;) =&nbsp;1 (0dB)</span></p>
+<p style="padding-left: 60px;"><span style="font-family: verdana, geneva; font-size: 10pt;">Gv<sub>(max)</sub> =&nbsp; 1 + (100K&Omega; / 2.2K&Omega;) =&nbsp; 46.45 (33.3 dB)</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">This 33.3 dB of gain is a reasonably-high gain that will be increased over the next Clipping Stage.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p><span style="font-family: verdana, geneva; font-size: 12pt; color: #000000;"><strong>Input Stage Frequency Response.</strong></span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">The frequency response is tailored by 3 capacitors (C1, C2, and C3) which create 3 filters:</span></p>
+<ul>
+<li><span style="font-family: verdana, geneva; font-size: 10pt;">Two high-pass filters</span>
+<ul>
+<li><span style="font-family: verdana, geneva; font-size: 10pt;"><strong>Created by</strong> <strong>C1 and R2</strong>, fc=1/2&pi;RC=16Hz.&nbsp;This input cap will just remove and DC content from the guitar signal, it has no effect at all on the audio signal.&nbsp;</span></li>
+<li><span style="font-family: verdana, geneva; font-size: 10pt;"><strong>Created by C3 and R3</strong>,&nbsp;fc=1/2&pi;RC=723Hz.&nbsp;This capacitor and the series resistors R3&nbsp;&nbsp;and RV&nbsp;from the (-) input to ground act as a high-pass filter. Many other guitar pedals have a cap at the same point: like the <span style="color: #3366ff;"><a href="/mxr-distortion-plus-analysis#link12" style="color: #3366ff;">MXR Distortion + (C3)</a></span>, the&nbsp;<span style="color: #3366ff;"><a href="../tube-screamer-analysis/index.html" style="color: #3366ff;">Tube Screamer (C3)</a></span>, the&nbsp;<span style="color: #3366ff;"><a href="../proco-rat/index.html" style="color: #3366ff;">Pro-Co Rat (C5, C6)</a></span>, the&nbsp;<span style="color: #3366ff;"><a href="../boss-ds1-analysis/index.html" style="color: #3366ff;">Boss DS-1 (C8)</a></span>&nbsp;and the&nbsp;<span style="color: #3366ff;"><a href="/mxr-microamp#link2" style="color: #3366ff;">MicroAmp (C3)</a></span>. The intention is to attenuate low frequencies that can overload the op-amp, causing instability or hum.&nbsp;&nbsp;</span></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><span style="font-family: verdana, geneva; font-size: 10pt;">One low-pass filter</span>
+<ul>
+<li><span style="color: #000000; font-family: verdana, geneva; font-size: 10pt;"><strong>Created by C2 and VR1</strong>,&nbsp;fc=1/2&pi;RC=13.2KHz. This 120pF cap will remove the harsh harmonics from the hard-clip, resulting in a smoother distortion. As VR1 is a variable potentiometer, the&nbsp;frequency response will also vary with it: With maximum gain (VR1=100K&Omega;) the bass will start to roll-off at 13.2KHz, and as the gain is reduced, the&nbsp;fc will go up in frequency. This is why if you look at the hump, the shape is more pronounced as the gain is higher (top part of the graph below).</span></li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/ef734b03ede2.png"><img src="../_assets/ef734b03ede2.png" alt="marshall guvnor input stage frequency response" width="1000" height="337" style="display: block; margin-left: auto; margin-right: auto;" title="marshall guvnor input stage frequency response" /></a></span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">In the image above, the output signal voltage level is shown sweeping the Gain potentiometer. The gain goes from 0 to 33dB as calculated before. The humpy shape of it is pretty common in overdrive/distortion pedals, reducing the harsh high-frequency harmonics (filter at 13.2KHz) and also making sure that the bass content does not saturate the tone (two filters at 723Hz and 16Hz)&nbsp;</span></p>
+<h2 style="color: #000000;"><span style="font-family: verdana, geneva;"><strong><span style="font-size: 12pt;"><a id="link13"></a>1.3 Marshall Guvnor Clipping Stage.</span></strong></span></h2>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">This block uses an op-amp (in inverting topology) to increase the voltage gain even more after the Input Stage. Two&nbsp;<span style="color: #333333;">back to back diodes (D1 and D2) connected to ground are used clip the guitar signal. This type diode clipping (also used in the <span style="color: #3366ff;"><a href="../boss-ds1-analysis/index.html" style="color: #3366ff;">Boss DS1</a></span>. the <span style="color: #3366ff;"><a href="../proco-rat/index.html" style="color: #3366ff;">RAT</a></span>, the <span style="color: #3366ff;"><a href="../mxr-distortion-plus-analysis/index.html" style="color: #3366ff;">Distortion+</a></span>, and the <span style="color: #3366ff;"><a href="../klon-centaur-analysis/index.html" style="color: #3366ff;">Kon Centaur</a></span>) adds a <em>hard-clip</em>&nbsp;sound, making the audio signal to clip with a hard knee which generates a strong distortion.</span>&nbsp;</span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/b5a2f96440ea.png"><img src="../_assets/b5a2f96440ea.png" alt="marshall guvnor clipping stage" width="600" height="370" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<ul>
+<li><span style="font-family: verdana, geneva; font-size: 10pt;"><strong>The C4 cap</strong> is just a bypass cap to eliminate any DC from the previous stage. It does not affect the audio band.</span></li>
+<li><span style="font-family: verdana, geneva; font-size: 10pt;"><strong>The 2PDT footswitc</strong>h action connects the D3 LED to the ground when the pedal is engaged. When the pedal is OFF, the input of the op-amp is grounding to prevent the circuit to go into oscillation.&nbsp;</span></li>
+<li><span style="color: #000000; font-family: verdana, geneva; font-size: 10pt;"><strong>The C5 capacitor</strong>&nbsp;in terms of audio signal, this cap is redundant because the DC is blocked with C4. But when the pedal is off, the DPDT footswitch will connect the pin 6 (biased at 4.5V) to ground, so this C5 cap prevents the DC short between +4.5V and 0V. Marshall uses a big value (100nF) so the audio signal will not be affected by it.</span></li>
+<li><span style="font-family: verdana, geneva; font-size: 10pt;"><strong>The R6 resistor</strong>&nbsp;limits the amount of current into the back-to-back diodes, 1K<span style="color: #333333;">&Omega; is a standard value, other pedals like the<span style="color: #333333;"></span><span style="color: #3366ff;"><a href="../proco-rat/index.html" style="font-family: verdana, geneva; font-size: 13.3333px; color: #3366ff;">Pro-Co Rat uses 1K&Omega;</a></span>, the&nbsp;<span style="color: #3366ff;"><a href="../boss-ds1-analysis/index.html" style="color: #3366ff;">Boss DS-1 uses 2.2K</a></span><span style="color: #333333;"><span style="color: #3366ff;"><a href="../boss-ds1-analysis/index.html" style="color: #3366ff;">&Omega;</a></span>, and the <span style="color: #3366ff;"><a href="../_assets/bf7e14957233.png" style="color: #3366ff;">Klon Centaur 1K&Omega;</a></span>.</span></span></span></li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="font-family: verdana, geneva; font-size: 12pt; color: #000000;"><strong>Clipping Stage Voltage Gain: </strong></span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">The R4 resistor together with R5 will define the voltage gain of this op-amp, using the formula:</span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">Gv= - R5/R4 = - 680K&Omega;/10K&Omega; = -68 (36dB)</span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">In the graph below the Clipping Stage Frequency Response is shown (with different lines showing the Gain potentiometer action): The total gain is around 70dBs (33.3dB from the Input Stage + 36 from the Clipping Stage). 70dB is an enormous amount of gain, especially if we compare it with similar overdrive pedals like the&nbsp;<a href="/boss-ds1-analysis#transistor-booster" style="color: #3366ff; font-family: verdana, geneva; font-size: 15px;">Boss DS-1 (35dB)</a>, the&nbsp;<span style="color: #3366ff;"><a href="../klon-centaur-analysis/index.html" style="color: #3366ff;">Klon Centaur&nbsp;</a>(</span><span style="color: #444444;"><span style="color: #3366ff;"><a href="../klon-centaur-analysis/index.html" style="color: #3366ff;">40dB</a>)</span>,&nbsp;</span><span style="color: #444444;">&nbsp;or&nbsp;</span><span style="color: #3366ff;"><a href="/tube-screamer-analysis#clip-stage" style="color: #3366ff; font-size: 15px;">Tube Screamer (41dB)</a>&nbsp;</span>or the <span style="color: #3366ff;"><a href="/mxr-distortion-plus-analysis#link12" style="color: #3366ff;">Distortion + (46dB)</a></span><span style="color: #3366ff;">.</span> </span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">We have this super-high 70dB gain because the next Tone Control stage will attenuate the signal around 10 to 20dB, some extra gain will balance the signal loss.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;"><a href="../_assets/44da627eafb7.png"><img src="../_assets/44da627eafb7.png" alt="marshall guvnor clipping stage frequency response" width="843" height="280" style="display: block; margin-left: auto; margin-right: auto;" title="marshall guvnor clipping stage frequency response" /></a></span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;"></span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;"><strong>The Marshall Guv'nor clipping diodes: Red LEDs.</strong></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt;"></span><span style="font-size: 10pt;">Marshall uses red LED diodes in the Guvnor effect. They are the most important factor in the overdrive/distortion tone. Marshall is known for the intensive use of LEDs as clipping diodes in many of its designs: The Marshall Drivemaster and all the solid state Marshall amps (MG10, MG15, MG30, MG50DFX, MG100DFX)&nbsp;<span style="color: #3366ff;"><a href="/marshall-mg10#link4" style="color: #3366ff;">use 1 green and 1 red diode in the clipping stage</a>.</span> Seems like LEDs have something that match with the Marshall tone and they are an important part of the sound signature.&nbsp;&nbsp;</span></span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/655600b0d30e.jpg"><img src="../_assets/655600b0d30e.jpg" alt="marshall guvnor diodes red led" width="233" height="92" style="display: block; margin-left: auto; margin-right: auto;" title="marshall guvnor diodes red led" /></a></span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">These red diodes have a big forward voltage&nbsp;<span style="font-size: 13.3333px;">(Vf=1.8 to 2V)&nbsp;<span style="font-size: 13.3333px;">and a&nbsp;</span><em style="font-family: verdana, geneva; font-size: 13.3333px;">hard-saturation</em>&nbsp;behavior compared to&nbsp;germanium diodes&nbsp;</span>Vf=0.3 (with a softer-knee,&nbsp;<span style="color: #3366ff;"><a href="/mxr-distortion-plus-analysis#link13" style="color: #3366ff;">used in the MXR Distortion +</a></span>) or silicon diodes Vf=0.7V (similar hard-knee,&nbsp;<span style="color: #3366ff;"><a href="/boss-ds1-analysis#op-amp" style="color: #3366ff;">used in the Boss DS-1</a></span>). This high LED Vf will add extra head-room and volume to the distorted output signal.</span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">&nbsp;<a href="../_assets/d0f2fac76e5a.png"><img src="../_assets/d0f2fac76e5a.png" alt="marshall guvnor clipping" width="1000" height="334" style="display: block; margin-left: auto; margin-right: auto;" title="marshall guvnor clipping" /></a></span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">In the image above, the junction between the 2 diodes (D1&amp;D2) and the 1K<span style="font-family: verdana, geneva; font-size: 13.3333px;">&Omega;</span> R6 is measured. As the Gain potentiometer increases the voltage gain of the op-amps the signal starts to clip and form the "hard-knee" shape. The clipping point is around 1.8 to 2V.</span></p>
+<h1><span style="color: #000000; font-family: verdana, geneva;"><span style="font-size: 14pt; color: #000000;"><a id="link14"></a><strong>1.4 Marshall Guv'nor Tone Control Stage.</strong></span></span></h1>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">Unlike many other distortion/overdrive pedals, the Guvnor includes an independent control for bass, mid and treble:</span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/a1f17af9c100.png"><img src="../_assets/a1f17af9c100.png" alt="marshall guvnor tonestack" width="362" height="363" style="display: block; margin-left: auto; margin-right: auto;" title="marshall guvnor tonestack tone control" /></a></span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">The circuit is a variation of the classic FMV tonestack. FMV is an abbreviation for the tone control topology used in most of Fender, Marshall and Vox amps (and many others). All these companies have a countless number of variations and the one used on the Marshall Guvnor is one of them.</span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p><span style="font-size: 12pt; font-family: verdana, geneva; color: #000000;"><strong>Tone control Frequency Response:</strong></span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">The Guv'nor tone control is highly interactive, this is usually not a good thing (adjusting one of the controls will affect the other two) but seems that in the end, the Guv'nor players got used to it and its ability to create many different voicings. This is an interesting feature of the pedal, you can adjust the tone to suit pretty much any amplifier.</span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">Find below 4 graphs showing:</span></p>
+<ol>
+<li><span style="font-family: verdana, geneva; font-size: 10pt;">All the pots moving from 0 to 10 at the same time.</span></li>
+<li><span style="font-family: verdana, geneva; font-size: 10pt;">Mid and Treble at 50% and doing a<strong> Bass</strong> swipe.</span></li>
+<li><span style="font-family: verdana, geneva; font-size: 10pt;">Bass and Treble at 50% and doing a <strong>Mid</strong> swipe.</span></li>
+<li><span style="font-family: verdana, geneva; font-size: 10pt;">Bass and Mid at 50% and doing a <strong>Treble</strong> swipe.</span></li>
+</ol>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">We are not commenting on the graphs because they are self-explanatory. You can create many tone variations but almost all of them contain a typical Marshall subtle mid-frequency scoop (between 1KHz to 3KHz).</span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/6981c699622e.png"><img src="../_assets/6981c699622e.png" alt="marshall guvnor freq response all" width="800" height="266" style="display: block; margin-left: auto; margin-right: auto;" title="marshall guvnor freq response all" /></a></span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/d35c225fdaa8.png"><img src="../_assets/d35c225fdaa8.png" alt="marshall guvnor freq response bass" width="800" height="266" style="display: block; margin-left: auto; margin-right: auto;" title="marshall guvnor freq response bass" /></a></span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/1b296dc3ecd4.png"><img src="../_assets/1b296dc3ecd4.png" alt="marshall guvnor freq response mid" width="800" height="262" style="display: block; margin-left: auto; margin-right: auto;" title="marshall guvnor freq response mid" /></a>&nbsp;</span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/94d2337a15ca.png"><img src="../_assets/94d2337a15ca.png" alt="marshall guvnor freq response treble" width="800" height="262" style="display: block; margin-left: auto; margin-right: auto;" title="marshall guvnor freq response treble" /></a></span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 14pt;"><strong><a id="link15"></a><span style="color: #000000;">1.5 Marshall Guv'nor Output Stage.</span></strong></span></span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">The output stage is a passive volume control. It also contains one last low pass filter (R11&amp;C13) and the effects LOOP arrangement.</span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/6ffc59fb3caf.png"><img src="../_assets/6ffc59fb3caf.png" alt="marshall guvnor output stage" width="369" height="326" style="display: block; margin-left: auto; margin-right: auto;" title="marshall guvnor output stage" /></a></span></p>
+<p>&nbsp;</p>
+<ul>
+<li><span style="font-family: verdana, geneva; font-size: 10pt;"><strong>The 100K VR5 potentiometer</strong>&nbsp;bleeds part of the signal to ground in order to adjust the pedal volume.</span></li>
+<li><span style="font-family: verdana, geneva; font-size: 10pt;"><strong>R11 and C13</strong>&nbsp;create a low pass filter with&nbsp;fc&nbsp;= 15.3KHz (fc=1/(2x&pi;xR11xC13)). This is an unusual filter (also used in the Marshall Drive Master) because the 22K series resistor with the output will increase the output impedance, something not ideal.</span></li>
+</ul>
+<p><span style="color: #000000;"></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva; color: #000000;"><strong>How the Loop jack works:</strong></span></p>
+<ul>
+<li><span style="font-size: 10pt; font-family: verdana, geneva;">When the effect is OFF, the input jack is directly connected to the output jack, the R1 2.2M<span style="font-size: 13.3333px;">&Omega; will stay connected which is not ideal but nothing to worry about. </span></span></li>
+<li><span style="font-family: verdana, geneva; font-size: 10pt;">When the effect is engaged (ON) - but nothing connected to the loop jack. The output of the pedal (R11-C13 joint) will go to the output jack.</span></li>
+<li><span style="font-family: verdana, geneva; font-size: 10pt;">When the effect is engaged (ON) - and some pedals connected to the loop jack.&nbsp;<span style="font-size: 13.3333px;">The output of the pedal (R11-C13 joint) will go to the tip of the loop jack, then the signal will pass through the external pedal chain, return to the ring of the loop jack and finally to the output jack.</span></span>
+<ul>
+<li><span style="font-family: verdana, geneva;"><span style="font-size: 10pt;">To do this a custom made Y cable, so you can introduce the extra pedals </span>between the<span style="font-size: 10pt;"> Tip and the Ring.</span></span></li>
+</ul>
+</li>
+</ul>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="../_assets/0aea4b3f35a5.jpg"><img src="../_assets/0aea4b3f35a5.jpg" alt="marshall guvnor loop cable" width="234" height="201" style="display: block; margin-left: auto; margin-right: auto;" title="marshall guvnor loop cable" /></a></span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; font-family: verdana, geneva; color: #000000;"><strong>Output Stage Frequency Response:</strong></span></p>
+<p><span style="font-family: verdana, geneva;"><img src="../_assets/05f0083afd50.png" alt="marshall guvnor vol control" width="800" height="317" style="display: block; margin-left: auto; margin-right: auto;" title="marshall guvnor volume level control" /></span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">In the graph above, the freq response of the volume control is shown. You can see how it rolls off after 15.3KHz (just at the very end of it) due to the R11&amp;C13 low pass filter. This very last filter will attenuate the harsh high-frequency harmonics created by the clipping at the end of the audio band.</span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: verdana, geneva; color: #000000; font-size: 10pt;"><strong>Marshall Guvnor Output Impedance.</strong></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">As a rule of thumb, it is good for a guitar pedal to have a low output impedance, it avoids tone-sucking and interaction between pedals in the chain. Values around tens of K&Omega; are the usual. It is calculated as:</span></p>
+<p style="padding-left: 60px;"><span style="font-size: 10pt; font-family: verdana, geneva;">Zout = R11 + VR5&nbsp;&nbsp;</span></p>
+<p style="padding-left: 60px;"><span style="font-size: 10pt; font-family: verdana, geneva;">Zout = 22K +&nbsp; 0 (considering the ideal situation of Level set to max)</span></p>
+<p style="padding-left: 60px;"><span style="font-family: verdana, geneva; font-size: 10pt;">Zout = 22K&nbsp;</span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: verdana, geneva;"><strong><span style="font-size: 14pt; color: #000000;"><span style="color: #000000;"><a id="link2"></a>2. Resources</span></span></strong></span></p>
+<ul>
+<li><span style="font-family: verdana, geneva; font-size: 10pt; color: #3366ff;"><a href="http://www.pedalsandeffects.com/blog/2015/11/12/vintage-pedal-of-the-week-marshall" style="color: #3366ff;">Marshall The Guvnor by Pedals and Effects.&nbsp;</a></span></li>
+<li><span style="font-family: verdana, geneva; font-size: 10pt; color: #3366ff;"><a href="https://reverb.com/news/inside-marshalls-the-guvnor-with-analog-mike" style="color: #3366ff;">Inside Marshall's The Guv'nor with Analog Mike by Reverb.com</a><a href="https://reverb.com/news/inside-marshalls-the-guvnor-with-analog-mike" style="color: #3366ff;"></a></span></li>
+<li><span style="font-family: verdana, geneva; font-size: 10pt; color: #3366ff;"><a href="http://www.8dayzaweek.com/MarshallGuvnor1985MK1.html" style="color: #3366ff;">Marshall Guv'nor MK 1 by 8dayzaweek.</a></span></li>
+<li><span style="font-family: verdana, geneva; font-size: 10pt; color: #3366ff;"><a href="https://www.ssguitar.com/index.php?topic=711.0" style="color: #3366ff;">Teemuk Kyttala Solid State Amplifiers pdf</a></span></li>
+</ul>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;"></span></p>
+<p><span style="color: #333333; font-family: verdana, geneva; font-size: 13.3333px;">My sincere appreciation to Pan and Aaron B. for your help with this analysis.</span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;"><span style="font-size: 10pt;"></span><span style="color: #333333; font-size: 10pt; text-align: right;">Thanks for reading, all feedback is appreciated: <span id="cloak31dcc9bc79c505e98d031f412de1f0b6">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
+				document.getElementById('cloak31dcc9bc79c505e98d031f412de1f0b6').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy31dcc9bc79c505e98d031f412de1f0b6 = '&#105;nf&#111;' + '&#64;';
+				addy31dcc9bc79c505e98d031f412de1f0b6 = addy31dcc9bc79c505e98d031f412de1f0b6 + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';
+				var addy_text31dcc9bc79c505e98d031f412de1f0b6 = '&#105;nf&#111;' + '&#64;' + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';document.getElementById('cloak31dcc9bc79c505e98d031f412de1f0b6').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy31dcc9bc79c505e98d031f412de1f0b6 + '\'>'+addy_text31dcc9bc79c505e98d031f412de1f0b6+'<\/a>';
+		</script></span></span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;"><span style="font-size: 12pt;"><span style="color: #333333; font-size: 10pt;"></span></span></span></p>
+<p style="margin-top: 12px; line-height: 18px; color: #555555; font-family: Arial, Helvetica, sans-serif; text-align: center;"><span style="color: #808080; font-size: 8pt; font-family: verdana, geneva;"><span style="color: #0000ff;"><a href="../rights/index.html" style="font-weight: bold; color: #0063e1;"><span style="color: #0000ff;">Some Rights Reserved</span></a></span>, you are free to copy, share, remix and use all material.<br />Trademarks, brand names and logos are the property of their respective owners.</span></p>	</section>
+  
+  <!-- footer -->
+    <!-- //footer -->
+
+			<hr class="divider-vertical" /><ul class="pager pagenav">
+	<li class="previous">
+		<a class="hasTooltip" title="Dallas Rangemaster Treble Booster Analysis" aria-label="Previous article: Dallas Rangemaster Treble Booster Analysis" href="../dallas-rangemaster/index.html" rel="prev">
+			<span class="icon-chevron-left" aria-hidden="true"></span> <span aria-hidden="true">Prev</span>		</a>
+	</li>
+	<li class="next">
+		<a class="hasTooltip" title="You Can Build the Perfect Germanium Fuzz" aria-label="Next article: You Can Build the Perfect Germanium Fuzz" href="../germanium-fuzz/index.html" rel="next">
+			<span aria-hidden="true">Next</span> <span class="icon-chevron-right" aria-hidden="true"></span>		</a>
+	</li>
+</ul>
+	
+	
+	</article>
+<!-- //Article -->
+
+
+</div><div><a href="http://www.artio.net" style="font-size: 8px; visibility: visible; display: inline;" title="Web development, Joomla, CMS, CRM, Online shop software, databases">Joomla SEF URLs by Artio</a></div>
+		</div>
+		<!-- //MAIN CONTENT -->
+
+		<!-- SIDEBAR RIGHT -->
+		<div class="t3-sidebar t3-sidebar-right col-xs-12 col-sm-4  col-md-3 ">
+			<div class="t3-module module " id="Mod28"><div class="module-inner"><h3 class="module-title "><span>New Updates</span></h3><div class="module-ct"><ul class="latestnews mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../arduino-audio-meter/index.html" itemprop="url">
+			<span itemprop="name">
+				Arduino Audio Meter			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../dallas-rangemaster/index.html" itemprop="url">
+			<span itemprop="name">
+				Dallas Rangemaster Treble Booster Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../time-manipulator/index.html" itemprop="url">
+			<span itemprop="name">
+				Time Manipulator - Arduino Delay/Echo/Reverb			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="index.html" itemprop="url">
+			<span itemprop="name">
+				Marshall The Guvnor Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../germanium-fuzz/index.html" itemprop="url">
+			<span itemprop="name">
+				You Can Build the Perfect Germanium Fuzz			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../mxr-distortion-plus-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				MXR Distortion + Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod29"><div class="module-inner"><h3 class="module-title "><span>Most Visited</span></h3><div class="module-ct"><ul class="mostread mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../tube-screamer-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Tube Screamer Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../fuzz-face/index.html" itemprop="url">
+			<span itemprop="name">
+				Fuzz Face Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../proco-rat/index.html" itemprop="url">
+			<span itemprop="name">
+				Pro Co Rat Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../boss-ds1-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Boss DS-1 Distortion Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../klon-centaur-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Klon Centaur Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../big-muff-pi-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Big Muff Pi Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod184"><div class="module-inner"><h3 class="module-title "><span>Follow us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><span style="font-size: 10pt; color: #333333;">You can also follow us on:</span></p>
+<p><a href="https://www.facebook.com/ElectroSmash"><img src="../_assets/df34a2b41b54.png" alt="facebook" /></a>&nbsp;&nbsp; <a href="https://plus.google.com/+Electrosmash/about"><img src="../_assets/3ffc52860091.png" alt="google" /></a>&nbsp;&nbsp; <a href="https://www.instagram.com/electro.smash/"><img src="../_assets/45b0b0fe2d4b.png" alt="instagram" /></a></p>
+<p><a href="https://www.pinterest.com/electrosmash/"><img src="../_assets/05310d9fcf2a.png" alt="pinterest" /></a>&nbsp;&nbsp; <a href="https://www.youtube.com/user/ElectroSmashTV"><img src="../_assets/d920883b3613.png" alt="youtube" /></a>&nbsp;&nbsp; <a href="https://twitter.com/electro_smash"><img src="../_assets/52581f7264eb.png" alt="twitter" /></a></p></div>
+</div></div></div>
+		</div>
+		<!-- //SIDEBAR RIGHT -->
+
+	</div>
+</div> 
+
+
+
+  
+
+
+  
+
+
+	
+<!-- BACK TOP TOP BUTTON -->
+<div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top hidden-xs hidden-sm affix-top">
+  <button class="btn btn-primary" title="Back to Top"><i class="fa fa-caret-up"></i></button>
+</div>
+<script type="text/javascript">
+(function($) {
+	// Back to top
+	$('#back-to-top').on('click', function(){
+		$("html, body").animate({scrollTop: 0}, 500);
+		return false;
+	});
+    $(window).on('load', function(){
+        // hide button to top if the document height not greater than window height*2;using window load for more accurate calculate.    
+        if ((parseInt($(window).height())*2)>(parseInt($(document).height()))) {
+            $('#back-to-top').hide();
+        } 
+    });
+})(jQuery);
+</script>
+<!-- BACK TO TOP BUTTON -->
+
+<!-- FOOTER -->
+<footer id="t3-footer" class="wrap t3-footer">
+
+			<!-- FOOTER SPOTLIGHT -->
+		<div class="container hidden-xs">
+				<!-- SPOTLIGHT -->
+	<div class="t3-spotlight t3-footer-sl  row">
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod185"><div class="module-inner"><h3 class="module-title "><span>About us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../about-us/index.html">&nbsp;&nbsp;<img src="../_assets/420f9f181bc0.jpg" alt="smash electro" /></a></p>
+<p><a href="../about-us/index.html"><span style="font-size: 10pt; color: #333333;">Smashing audio electronics since MMXIII</span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod183"><div class="module-inner"><h3 class="module-title "><span>Email Newsletter</span></h3><div class="module-ct"><div class="acymailing_module" id="acymailing_module_formAcymailing67411">
+	<div class="acymailing_fulldiv" id="acymailing_fulldiv_formAcymailing67411"  >
+		<form id="formAcymailing67411" action="/" onsubmit="return submitacymailingform('optin','formAcymailing67411')" method="post" name="formAcymailing67411"  >
+		<div class="acymailing_module_form" >
+						<table class="acymailing_form">
+				<tr>
+												<td class="acyfield_email acy_requiredField">
+								<input id="user_email_formAcymailing67411"  onfocus="if(this.value == 'example@email.com') this.value = '';" onblur="if(this.value=='') this.value='example@email.com';" class="inputbox" type="text" name="user[email]" style="width:90%" value="example@email.com" title="example@email.com"/>
+							</td> </tr><tr>
+					
+					<td  class="acysubbuttons">
+												<input class="button subbutton btn btn-primary" type="submit" value="Subscribe" name="Submit" onclick="try{ return submitacymailingform('optin','formAcymailing67411'); }catch(err){alert('The form could not be submitted '+err);return false;}"/>
+											</td>
+				</tr>
+			</table>
+						<input type="hidden" name="ajax" value="0" />
+			<input type="hidden" name="acy_source" value="module_183" />
+			<input type="hidden" name="ctrl" value="sub"/>
+			<input type="hidden" name="task" value="notask"/>
+			<input type="hidden" name="redirect" value="https%3A%2F%2Fwww.electrosmash.com%2Fmarshall-guvnor-analysis"/>
+			<input type="hidden" name="redirectunsub" value="https%3A%2F%2Fwww.electrosmash.com%2Fmarshall-guvnor-analysis"/>
+			<input type="hidden" name="option" value="com_acymailing"/>
+						<input type="hidden" name="hiddenlists" value="1"/>
+			<input type="hidden" name="acyformname" value="formAcymailing67411" />
+									</div>
+		</form>
+	</div>
+	</div>
+
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod186"><div class="module-inner"><h3 class="module-title "><span>Contact us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../contact-us/index.html"><span style="font-size: 10pt; color: #333333;">e-mail us at <span id="cloake145c580bf69d025173b425e77dfe0f1">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
+				document.getElementById('cloake145c580bf69d025173b425e77dfe0f1').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addye145c580bf69d025173b425e77dfe0f1 = '&#105;nf&#111;' + '&#64;';
+				addye145c580bf69d025173b425e77dfe0f1 = addye145c580bf69d025173b425e77dfe0f1 + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';
+				var addy_texte145c580bf69d025173b425e77dfe0f1 = '&#105;nf&#111;' + '&#64;' + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';document.getElementById('cloake145c580bf69d025173b425e77dfe0f1').innerHTML += '<a ' + path + '\'' + prefix + ':' + addye145c580bf69d025173b425e77dfe0f1 + '\'>'+addy_texte145c580bf69d025173b425e77dfe0f1+'<\/a>';
+		</script></span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod188"><div class="module-inner"><h3 class="module-title "><span>Rights</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p style="text-align: left;">&nbsp;&nbsp;<a href="https://creativecommons.org/licenses/by-nc/3.0/"><img src="../_assets/b0e99d439c44.png" alt="88x31" /></a></p>
+<p style="text-align: left;"><img src="../_assets/fe2636cdea5c.png" alt="open source logo" width="180" height="38" /></p>
+<p style="text-align: left;"><img src="../_assets/8281c4ec3a3b.png" alt="open hardware logo" width="180" height="38" /></p>
+<p style="text-align: left;">&nbsp;</p></div>
+</div></div></div>
+							</div>
+			</div>
+<!-- SPOTLIGHT -->
+		</div>
+		<!-- //FOOTER SPOTLIGHT -->
+	
+	<section class="t3-copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 copyright ">
+					
+          <small>
+            <a href="http://twitter.github.io/bootstrap/" title="Bootstrap by Twitter" target="_blank">Bootstrap</a> is a front-end framework of Twitter, Inc. Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" title="MIT License" target="_blank">MIT License.</a>
+          </small>
+          <small>
+            <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> font licensed under <a href="http://scripts.sil.org/OFL">SIL OFL 1.1</a>.
+          </small>
+				</div>
+							</div>
+		</div>
+	</section>
+
+</footer>
+<!-- //FOOTER -->
+
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29544239-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

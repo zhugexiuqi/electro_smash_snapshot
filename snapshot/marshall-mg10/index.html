@@ -1,0 +1,938 @@
+
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr"
+	  class='com_content view-article itemid-526 j31 mm-hover '>
+
+<head>
+	<base href="../index/index.html" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Marshall, MG10, MG-10, MG, 10, analysis, study, technology, circuit, schematic, amplifier, frequency, response, input, clipping, overdrive, clean, filter, tone, contour, current, feedback, speaker, cone, topology, input, output, impedance,  " />
+	<meta name="rights" content="Creative Commons: Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0) " />
+	<meta name="author" content="JR" />
+	<meta name="description" content="Marshall MG10 Schematic,Power Supply,Input Stage,Input Impedance,Frequency Response,Overdrive Channel,Clean Channel,Tone Control,Low Pass Filter,Power Amplifier,Zobel Network and Feedback Loop,Speaker Cone," />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>ElectroSmash - Marshall MG10 Analysis.</title>
+	<link href="index.html" rel="canonical" />
+	<link href="../_assets/d87243966412.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../_assets/26f5cf410b61.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/15ff046a2fe3.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/dd09f39c1b89.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"989123e426c69b454b5cc29855c407e2","system.paths":{"root":"","base":""}}</script>
+	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+	<script src="../_assets/132a733708b3.js" type="text/javascript"></script>
+	<script src="../_assets/b8bcbb2f005c.js" type="text/javascript" async="async"></script>
+	<script type="text/javascript">
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });	if(typeof acymailingModule == 'undefined'){
+				var acymailingModule = [];
+			}
+			
+			acymailingModule['emailRegex'] = /^[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+)*\@([a-z0-9-]+\.)+[a-z0-9]{2,10}$/i;
+
+			acymailingModule['NAMECAPTION'] = 'Name';
+			acymailingModule['NAME_MISSING'] = 'Please enter your name';
+			acymailingModule['EMAILCAPTION'] = 'example@email.com';
+			acymailingModule['VALID_EMAIL'] = 'Please enter a valid e-mail address';
+			acymailingModule['ACCEPT_TERMS'] = 'Please check the Terms and Conditions';
+			acymailingModule['CAPTCHA_MISSING'] = 'The captcha is invalid, please try again';
+			acymailingModule['NO_LIST_SELECTED'] = 'Please select the lists you want to subscribe to';
+		
+acymailingModule['excludeValuesformAcymailing28641'] = [];
+acymailingModule['excludeValuesformAcymailing28641']['name'] = 'Name';
+acymailingModule['excludeValuesformAcymailing28641']['email'] = 'example@email.com';
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });
+	</script>
+
+	
+<!-- META FOR IOS & HANDHELD -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<style type="text/stylesheet">
+		@-webkit-viewport   { width: device-width; }
+		@-moz-viewport      { width: device-width; }
+		@-ms-viewport       { width: device-width; }
+		@-o-viewport        { width: device-width; }
+		@viewport           { width: device-width; }
+	</style>
+	<script type="text/javascript">
+		//<![CDATA[
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement("style");
+			msViewportStyle.appendChild(
+				document.createTextNode("@-ms-viewport{width:auto!important}")
+			);
+			document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+		}
+		//]]>
+	</script>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="apple-mobile-web-app-capable" content="YES"/>
+<!-- //META FOR IOS & HANDHELD -->
+
+
+
+
+<!-- Le HTML5 shim and media query for IE8 support -->
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script type="text/javascript" src="../_assets/010a3c86157d.js"></script>
+<![endif]-->
+
+<!-- You can add Google Analytics here or use T3 Injection feature -->
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="../_assets/76d3e1341c39.css" type="text/css" />
+<![endif]-->
+	</head>
+
+<body>
+
+<div class="t3-wrapper corporate"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
+
+	
+<!-- MAIN NAVIGATION -->
+<header id="t3-mainnav" class="wrap navbar navbar-default navbar-fixed-top t3-mainnav">
+
+	<!-- OFF-CANVAS -->
+		<!-- //OFF-CANVAS -->
+
+	<div class="container">
+
+		<!-- NAVBAR HEADER -->
+		<div class="navbar-header">
+
+			<!-- LOGO -->
+			<div class="logo logo-image">
+				<div class="logo-image">
+					<a href="/" title="ElectroSmash">
+													<img class="logo-img" src="../_assets/115794d6d5b8.png" alt="ElectroSmash" />
+						
+												
+						<span>ElectroSmash</span>
+					</a>
+				</div>
+			</div>
+			<!-- //LOGO -->
+
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-collapse">
+					<i class="fa fa-bars"></i>
+				</button>
+			
+	    
+		</div>
+		<!-- //NAVBAR HEADER -->
+
+		<!-- NAVBAR MAIN -->
+				<nav class="t3-navbar-collapse navbar-collapse collapse"></nav>
+		
+		<nav class="t3-navbar navbar-collapse collapse">
+			<div  class="t3-megamenu"  data-responsive="true">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav navbar-nav level0">
+<li itemprop='name'  data-id="435" data-level="1">
+<a itemprop='url' class=""  href="/"   data-target="#">Home </a>
+
+</li>
+<li itemprop='name' class="dropdown mega" data-id="510" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Chips<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="492" data-level="2">
+<a itemprop='url' class=""  href="../jrc4558-analysis/index.html"   data-target="#">JRC4558  </a>
+
+</li>
+<li itemprop='name'  data-id="519" data-level="2">
+<a itemprop='url' class=""  href="../mn3007-bucket-brigade-devices/index.html"   data-target="#">MN3007 BBDs </a>
+
+</li>
+<li itemprop='name'  data-id="468" data-level="2">
+<a itemprop='url' class=""  href="../lm386-analysis/index.html"   data-target="#">LM386 </a>
+
+</li>
+<li itemprop='name'  data-id="1643" data-level="2">
+<a itemprop='url' class=""  href="../pt2399-analysis/index.html"   data-target="#">PT2399 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="active dropdown mega" data-id="444" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Amps<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="993" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="489" data-level="2">
+<a itemprop='url' class=""  href="../little-gem-analysis/index.html"   data-target="#">Little Gem Amp </a>
+
+</li>
+<li itemprop='name' class="current active" data-id="526" data-level="2">
+<a itemprop='url' class=""  href="index.html"   data-target="#">Marshall MG10 </a>
+
+</li>
+<li itemprop='name'  data-id="491" data-level="2">
+<a itemprop='url' class=""  href="../noisy-cricket-analysis/index.html"   data-target="#">Noisy Cricket  </a>
+
+</li>
+<li itemprop='name'  data-id="490" data-level="2">
+<a itemprop='url' class=""  href="../ruby-amp-analysis/index.html"   data-target="#">Ruby Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="488" data-level="2">
+<a itemprop='url' class=""  href="../smokey-amp-analysis/index.html"   data-target="#">Smokey Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="746" data-level="2">
+<a itemprop='url' class=""  href="http://www.electrosmash.com/schematics#amps"   data-target="#">Amps Schematics.</a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="511" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Pedals<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  style="width: 600px"  data-width="600"><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="515" data-level="2">
+<a itemprop='url' class=""  href="../back-talk-analysis/index.html"   data-target="#">Back Talk Reverse Delay </a>
+
+</li>
+<li itemprop='name'  data-id="518" data-level="2">
+<a itemprop='url' class=""  href="../big-muff-pi-analysis/index.html"   data-target="#">Big Muff Pi  </a>
+
+</li>
+<li itemprop='name'  data-id="524" data-level="2">
+<a itemprop='url' class=""  href="../boss-ce-2-analysis/index.html"   data-target="#">Boss CE-2 Chorus </a>
+
+</li>
+<li itemprop='name'  data-id="1088" data-level="2">
+<a itemprop='url' class=""  href="../boss-ds1-analysis/index.html"   data-target="#">Boss DS-1 Distortion </a>
+
+</li>
+<li itemprop='name'  data-id="1713" data-level="2">
+<a itemprop='url' class=""  href="../dallas-rangemaster/index.html"   data-target="#">Dallas Rangemaster </a>
+
+</li>
+<li itemprop='name'  data-id="905" data-level="2">
+<a itemprop='url' class=""  href="../crybaby-gcb-95/index.html"   data-target="#">Dunlop CryBaby GCB-95  </a>
+
+</li>
+<li itemprop='name'  data-id="842" data-level="2">
+<a itemprop='url' class=""  href="../fuzz-face/index.html"   data-target="#">Fuzz Face </a>
+
+</li>
+<li itemprop='name'  data-id="1664" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="512" data-level="2">
+<a itemprop='url' class=""  href="../tube-screamer-analysis/index.html"   data-target="#">Ibanez Tube Screamer </a>
+
+</li>
+<li itemprop='name'  data-id="1433" data-level="2">
+<a itemprop='url' class=""  href="../klon-centaur-analysis/index.html"   data-target="#">Klon Centaur </a>
+
+</li>
+</ul>
+</div></div>
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="548" data-level="2">
+<a itemprop='url' class=""  href="../mxr-microamp/index.html"   data-target="#">MXR MicroAmp </a>
+
+</li>
+<li itemprop='name'  data-id="1667" data-level="2">
+<a itemprop='url' class=""  href="../marshall-guvnor-analysis/index.html"   data-target="#">Marshall Guvnor </a>
+
+</li>
+<li itemprop='name'  data-id="1632" data-level="2">
+<a itemprop='url' class=""  href="../mxr-distortion-plus-analysis/index.html"   data-target="#">MXR Distortion + </a>
+
+</li>
+<li itemprop='name'  data-id="1244" data-level="2">
+<a itemprop='url' class=""  href="../mxr-dyna-comp-analysis/index.html"   data-target="#">MXR Dyna Comp </a>
+
+</li>
+<li itemprop='name'  data-id="573" data-level="2">
+<a itemprop='url' class=""  href="../mxr-phase90/index.html"   data-target="#">MXR Phase 90 </a>
+
+</li>
+<li itemprop='name'  data-id="553" data-level="2">
+<a itemprop='url' class=""  href="../proco-rat/index.html"   data-target="#">ProCo Rat </a>
+
+</li>
+<li itemprop='name'  data-id="520" data-level="2">
+<a itemprop='url' class=""  href="../sitar-swami-analysis/index.html"   data-target="#">Sitar Swami </a>
+
+</li>
+<li itemprop='name'  data-id="525" data-level="2">
+<a itemprop='url' class=""  href="../vox-v847-analysis/index.html"   data-target="#">Vox V847 Wah Wah </a>
+
+</li>
+<li itemprop='name'  data-id="547" data-level="2">
+<a itemprop='url' class=""  href="../emg81/index.html"   data-target="#">EMG81 Pickup </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="796" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Projects<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="1108" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-uno/index.html"   data-target="#">pedalSHIELD UNO </a>
+
+</li>
+<li itemprop='name'  data-id="797" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield/index.html"   data-target="#">pedalSHIELD DUE </a>
+
+</li>
+<li itemprop='name'  data-id="1437" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-mega/index.html"   data-target="#">pedalSHIELD MEGA </a>
+
+</li>
+<li itemprop='name'  data-id="1312" data-level="2">
+<a itemprop='url' class=""  href="../pedal-pi/index.html"   data-target="#">Pedal-Pi </a>
+
+</li>
+<li itemprop='name'  data-id="1662" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="1663" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="1668" data-level="2">
+<a itemprop='url' class=""  href="../time-manipulator/index.html"   data-target="#">Time Manipulator </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name'  data-id="745" data-level="1">
+<a itemprop='url' class=""  href="../forum-electrosmash/index.html"   data-target="#">Forum </a>
+
+</li>
+<li itemprop='name'  data-id="816" data-level="1">
+<a itemprop='url' class=""  href="../shop/index.html"   data-target="#">Shop</a>
+
+</li>
+</ul>
+</div>
+
+		</nav>
+    <!-- //NAVBAR MAIN -->
+
+	</div>
+</header>
+<!-- //MAIN NAVIGATION -->
+
+
+
+
+
+
+  
+
+
+  
+
+
+	
+<div id="t3-mainbody" class="container t3-mainbody">
+	<div class="row">
+
+		<!-- MAIN CONTENT -->
+		<div id="t3-content" class="t3-content col-xs-12 col-sm-8  col-md-9">
+						<div class="item-page clearfix">
+
+
+<!-- Article -->
+<article>
+	<meta itemprop="inLanguage" content="en-GB" />
+	<meta itemprop="url" content="index.html" />
+
+      
+<header class="article-header clearfix">
+	<h1 class="article-title" itemprop="headline">
+					<a href="index.html" itemprop="url" title="Marshall MG10 Amplifier Analysis">
+				Marshall MG10 Amplifier Analysis</a>
+			</h1>
+
+			</header>
+    
+    
+  <!-- Aside -->
+    <!-- //Aside -->
+
+  
+  
+  
+	
+  
+	
+	<section class="article-content clearfix">
+		<p><span style="font-size: 10pt; color: #333333;">The MG-10 is a 10W solid stage guitar amplifier by Marshall. It features 6-1/2" speaker, 2 channels: clean and overdrive, volume and tone controls, MP3 input and additional headphones output. It <span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">gives a solid robust feeling,&nbsp;</span>built like a tank in chipboard wood with a weight of 4.8Kgs and&nbsp;<span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">296x314x175cms dimensions</span>.</span></p>
+<p><a href="../_assets/53b25cc614f4.png"><img src="../_assets/53b25cc614f4.png" alt="marshall-mg10-intro" width="600" height="172" style="display: block; margin-left: auto; margin-right: auto;" title="Marshall MG10 Amplifier" /></a></p>
+<p><span style="font-size: 10pt; color: #333333;">Although its sound features are not the finest, this practice amplifier is popular because it is cheap, reliable and it is Marshall. The clean channel plays fairly well, the overdrive channel sound is pretty flat and thin if you plan to use distortion better use a pedal or a guitar effects processor before it. The tone control adds some limits and the amp emits practically no noise. For the money, it is not a bad home amp, small, portable and with the fancy logo.</span></p>
+ 
+<p><strong style="color: inherit; font-size: 42px;"><span style="font-size: 14pt; color: #000000;">Table of contents:</span></strong></p>
+<p><span style="font-size: 10pt; color: #0000ff;"><a href="/marshall-mg10#link1"><span style="color: #0000ff;">1. Marshall MG10 Schematic.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff;"><a href="/marshall-mg10#link2"><span style="color: #0000ff;">2. Power Supply</span></a></span><br /><span style="font-size: 10pt; color: #0000ff;"><a href="/marshall-mg10#link3"><span style="color: #0000ff;">3. Input Stage.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/marshall-mg10#link31"><span style="color: #0000ff;">3.1 Marshall MG10 Input Impedance.</span></a></span><br /><span style="color: #0000ff;"><span style="font-size: 10pt;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/marshall-mg10#link32"><span style="color: #0000ff;">3.2 Input Stage Frequency Response</span></a></span>.</span><br /><span style="font-size: 10pt; color: #0000ff;"><a href="/marshall-mg10#link4"><span style="color: #0000ff;">4. Overdrive Channel.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/marshall-mg10#link41"><span style="color: #0000ff;">4.1 Overdrive Channel Frequency Response.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff;"><a href="/marshall-mg10#link5"><span style="color: #0000ff;">5. Clean Channel.&nbsp;&nbsp;&nbsp;&nbsp;</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</span><br /><span style="font-size: 10pt; color: #0000ff;"><a href="/marshall-mg10#link6"><span style="color: #0000ff;">6. Tone Control.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff;"><a href="/marshall-mg10#link7"><span style="color: #0000ff;">7. Low Pass Filter.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff;"><a href="/marshall-mg10#link8"><span style="color: #0000ff;">8. Power Amplifier.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/marshall-mg10#link81"><span style="color: #0000ff;">8.1 Zobel Network and Feedback Loop.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff;"><a href="/marshall-mg10#link9"><span style="color: #0000ff;">9. Speaker Cone.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff;"><a href="/marshall-mg10#link10"><span style="color: #0000ff;">10. Resources.</span></a></span></p>
+<p><br /><strong><span style="font-size: 14pt; color: #000000;"><a id="link1" name="link1"></a>1. Marshall MG10 Schematic.</span></strong></p>
+<p><span style="font-size: 10pt; color: #333333;">The Marshall MG-10 circuit can be broken down into 6 blocks:&nbsp; Input Stage, Overdrive Stage, Tone Control, Filter, Power Supply and Power Amplifier:</span></p>
+<p><a href="../_assets/b6a40b1a283c.jpg"><img src="../_assets/c9de59b91827.jpg" alt="marshall-mg10-schematic-parts" width="800" height="431" style="display: block; margin-left: auto; margin-right: auto;" title="Marshall MG10 Schematic Blocks" /></a><span style="font-size: 10pt; color: #333333;">The pre-amplifier is designed using 4 op-amp stages for signal amplification and filtering; a simple passive tone control and a low pass filter complete the pre-amp. The TDA2030A 14W monolithic solid state IC is used for the power amplifier. This architecture also used in the MG15 with small modifications.<br /></span></p>
+<p><a href="../_assets/df4e0bc011c1.jpg"><span style="font-size: 10pt; color: #333333;"><img src="../_assets/df4e0bc011c1.jpg" alt="marshall-mg10-front-panel" width="503" height="124" style="display: block; margin-left: auto; margin-right: auto;" title="Marshall MG10 Front Panel" /></span></a></p>
+<p><span style="font-size: 10pt; color: #333333;">The Amplifier has 4 knobs: Clean and Distortion Channel Volumes, Gain, and Tone. The Gain knob controls the level of overdrive, the Tone knob adjusts the amount of treble in the sound and the Level knobs control the output volume of the amplifier.</span></p>
+<p><span style="font-size: 10pt; color: #333333;"></span></p>
+<p><span style="color: #000000;"><strong><span style="font-size: 10pt;">Marshall MG10 PCB Layout.</span></strong></span></p>
+<p style="text-align: left;"><span style="font-size: 10pt; color: #333333;">The printed circuit board is constructed to be integrated into the metal chassis which is screwed up to the chipboard cabinet. The PCB is attached to the chassis using the input/output jacks and potentiometers, not using additional screws. For better heat sinking, the power amplifier and the transformer are attached directly to the frame.</span><a href="/images/tech/mg10/marshall-mg10-amplifier-1000.png"><img src="../_assets/38fcd1969c70.png" alt="Marshall MG10 Amplifier Guts" width="500" height="306" style="display: block; margin-left: auto; margin-right: auto;" title="Marshall MG10 Amplifier Guts" /></a><span style="font-size: 10pt; color: #333333;">The single layer PCB uses standard DIP integrated circuits and passive insertion components. All connectors and knobs are directly soldered over the board minimizing the number of cables.</span><a href="../_assets/653c1f91b461.png"><span style="font-size: 10pt; color: #333333;"><img src="../_assets/6053666aa48e.png" alt="Marshall MG10 PCB" width="500" height="177" style="display: block; margin-left: auto; margin-right: auto;" title="Marshall MG10 PCB" /></span></a></p>
+<p style="text-align: left;"><span style="color: #000000;"><strong><span style="font-size: 10pt;">Marshall MG10 Part List / Bill of Materials.</span></strong></span></p>
+<p style="text-align: left;"><span style="color: #000000;"><span style="font-size: 10pt;"><span style="font-size: 12pt; color: #333333;"><span style="font-size: 10pt;">In the first row the quantity of items are shown:</span></span></span></span></p>
+<p style="text-align: left;"><span style="color: #333333;"><span style="font-size: 10pt;">&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; &nbsp;CX1,CX2&nbsp;&nbsp; &nbsp;&nbsp; 472p<br />&nbsp;&nbsp; &nbsp;2&nbsp;&nbsp; &nbsp;C1,C12&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;0.022u<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;C2&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10p<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;C3&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 0.1u<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;C4&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 10pF<br />&nbsp;&nbsp; &nbsp;5&nbsp;&nbsp; &nbsp;C5,C6,C9,C17,C24&nbsp;&nbsp; &nbsp;10u<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;C7&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 0.15u<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;C8&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 220p<br />&nbsp;&nbsp; &nbsp;3&nbsp;&nbsp; &nbsp;C10,C39,C40 10n<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;C11&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 560p<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;C13&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;1nF<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;C14&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;470p<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;C15&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;47pF<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;C16&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;100nF<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;C19&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;0.0015u<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;C20&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;0.0022u<br />&nbsp;&nbsp; &nbsp;3&nbsp;&nbsp; &nbsp;C21,C29,C30&nbsp;&nbsp; &nbsp;100n<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;C22&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;4.7n<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;C23&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;1000u<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;C25&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;220n<br />&nbsp;&nbsp; &nbsp;4&nbsp;&nbsp; &nbsp;C27,C28,C31,C32&nbsp;&nbsp; &nbsp;47u<br />&nbsp;&nbsp; &nbsp;2&nbsp;&nbsp; &nbsp;C33,C34&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;2200u<br />&nbsp;&nbsp; &nbsp;4&nbsp;&nbsp; &nbsp;D1,D2,D7,D8 1N4148<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;D3,D4,D5,D6 1N4007<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;JRA-1102&nbsp;&nbsp; &nbsp;FUSE<br />&nbsp;&nbsp; &nbsp;2&nbsp;&nbsp; &nbsp;SW1:A/B&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: #333333; font-size: 10pt;">DPDT</span><br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;LED1&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GREEN<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;LED2&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RED<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;LED3&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Red 5mm<br />&nbsp;&nbsp; &nbsp;2&nbsp;&nbsp; &nbsp;R1,R46&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 10K<br />&nbsp;&nbsp; &nbsp;4&nbsp;&nbsp; &nbsp;VR2,R2,R6,R9&nbsp;&nbsp; &nbsp;1M<br />&nbsp;&nbsp; &nbsp;4&nbsp;&nbsp; &nbsp;R3,R5,R44,R45&nbsp;&nbsp; &nbsp;1K<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;R4&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; 6K8<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;R7&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; 820<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;R8&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; 560<br />&nbsp;&nbsp; &nbsp;2&nbsp;&nbsp; &nbsp;R10,R11&nbsp;&nbsp; &nbsp;&nbsp; 47K<br />&nbsp;&nbsp; &nbsp;5&nbsp;&nbsp; &nbsp;R13,R14,R18,R19,R26&nbsp;&nbsp; &nbsp;100K<br />&nbsp;&nbsp; &nbsp;2&nbsp;&nbsp; &nbsp;R15,R24&nbsp;&nbsp; &nbsp;&nbsp; 390<br />&nbsp;&nbsp; &nbsp;4&nbsp;&nbsp; &nbsp;R20,R21,R29,R30&nbsp;&nbsp; &nbsp;3K3<br />&nbsp;&nbsp; &nbsp;2&nbsp;&nbsp; &nbsp;R22,R23&nbsp;&nbsp; &nbsp;&nbsp; 330<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;R25&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;3K9<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;R28&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;560K<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;R31&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;1K5<br />&nbsp;&nbsp; &nbsp;4&nbsp;&nbsp; &nbsp;R32,R38,R39,R40&nbsp;&nbsp; &nbsp;33<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;R34&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;0.1<br />&nbsp;&nbsp; &nbsp;2&nbsp;&nbsp; &nbsp;R35,R36&nbsp;&nbsp; &nbsp;&nbsp; 180<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;R37&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;2K2<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;R41&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;680<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;SP1 8ohm&nbsp;&nbsp; &nbsp;SPEAKER<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;Transformer<br />&nbsp;&nbsp; &nbsp;2&nbsp;&nbsp; &nbsp;VR1,VR3&nbsp;&nbsp; &nbsp;&nbsp; 5K<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;VR4&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;50K<br />&nbsp;&nbsp; &nbsp;2&nbsp;&nbsp; &nbsp;ZD1,ZD2&nbsp;&nbsp; &nbsp; 15V/0.5W<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;IC&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; BA4560<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp;&nbsp; IC&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; TL072<br />&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;IC&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; TDA2030A</span></span></p>
+<p style="text-align: left;"><span style="color: #000000;"><strong><span style="font-size: 10pt;"></span></strong></span></p>
+<p><span style="font-size: 14pt; color: #000000;"><a id="link2" name="link2"></a><strong>2. Power Supply</strong></span></p>
+<p><span style="font-size: 10pt; color: #333333;">The Power Supply Stage provides energy and bias voltage to all the circuitry, the whole power consumption is estimated in 40W:</span><a href="../_assets/1f745c6cb8cd.png"><img src="../_assets/1f745c6cb8cd.png" alt="Marshall MG10 Power Supply" width="704" height="261" style="display: block; margin-left: auto; margin-right: auto;" title="Marshall MG10 Power Supply" /></a></p>
+<p><span style="font-size: 10pt; color: #333333;">The schematic is based in a 220VAC to &plusmn;12.6VAC center tapped transformer with a full wave rectifier followed by a shunt regulator.</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;"><span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">The capacitors CX<sub>1</sub> and CX<sub>2</sub> are surge suppressor filters that attenuate mains and switching transients.</span></span></li>
+<li><span style="font-size: 10pt; color: #333333;">The Fuse protects the device from dangerous inrush currents shutting down everything in case of failure.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">The power-on LED<sub>3</sub> diode attached to +15V indicates the correct power supply state.</span></li>
+</ul>
+<p><span style="font-size: 10pt; color: #333333;">The rectifier is a circuit that converts AC into DC by allowing the current pass only into one direction. To do so a diode bridge (D<sub>3</sub>, D<sub>4</sub>, D<sub>5</sub>, and D<sub>6</sub>) is used in order to rectify the full wave of the input 220AC signal.</span></p>
+<p><span style="color: #333333; font-size: 10pt;"><span style="color: #000000;"><strong>Supply Regulation</strong></span>:</span></p>
+<p><span style="font-size: 10pt; color: #333333;"><span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">A Shunt Regulator is used t</span>o stabilize the supply at 15V. It is simple circuit based on a single Zener diode (two diodes ZD<sub>1</sub> and ZD<sub>2</sub> for dual supply <span class="st">&plusmn;</span>15).</span></p>
+<p><span style="font-size: 10pt; color: #333333;">The output voltage of the regulator can never be higher than the Zener voltage (15V). The resistors R<sub>35</sub> and R<sub>36</sub> separate the regulator&rsquo;s input and output voltage (including ripple) from each other and prevents the Zener from directly loading and shunting the supply.&nbsp;</span><span style="color: #333333; font-size: 10pt;">Shunt regulator is always quite inefficient due to the constant power loss over the series resistors.</span></p>
+<h1><span style="font-size: 14pt; color: #000000;"><a id="link3" name="link3"></a><strong>3. Input Stage.</strong></span></h1>
+<p><span style="font-size: 10pt; color: #333333;">The Input Stage is a non-inverting operational amplifier that will provide high input impedance, voltage gain, and signal filtering.</span><a href="../_assets/e59813011b4c.png"><img src="../_assets/e59813011b4c.png" alt="Marshall MG10 Input Stage" width="433" height="281" style="display: block; margin-left: auto; margin-right: auto;" title="Marshall MG10 Input Stage" /></a></p>
+<p><span style="font-size: 10pt; color: #333333;"><span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">The input stage may be affected by transient-voltage/current spikes caused by faulty equipment or DC fluctuation.&nbsp;</span>D<sub>1</sub> and D<sub>2</sub> (1N4148) back-to-back diodes connected between the supply rails and input are limiter clamping diodes, used to protect the circuit from input signals above 15V+V<sub>F</sub> (15.65V) or below -15V-V<sub>F</sub> (-15.65V) which can damage the circuitry.</span></p>
+<p><span style="font-size: 10pt; color: #333333;">The Voltage Gain of this stage is frequency dependant, but in the mid frequencies, the value of the non inverting amplifier gain is:</span></p>
+<p><div class="latex " >\[ G_{V}=1+\frac{R_{4}}{R_{3}//R_{7}}=1+\frac{6.8K}{1K//820}= 16.1 \, (24dB) \]</div></p>
+<h2><strong><span style="font-size: 12pt; color: #000000;"><a id="link31" name="link31"></a>3.1 Marshall MG10 Input Impedance.</span></strong></h2>
+<p><span style="font-size: 10pt; color: #333333;">The input impedance on the Marshall MG10 is the input resistor R<sub>1</sub> plus the parallel of R<sub>2</sub></span><span style="font-size: 10pt; color: #333333;"><span style="font-size: small;">&nbsp;and the TL072 input resistance (106M</span><span class="st" style="font-size: 10pt;">&Omega; in the datasheet</span><span style="font-size: small;">).</span></span></p>
+<p><span><div class="latex " >\[Z_{in}=R_{1} + R_{2}//Z_{in \: TL072}=10K + 1M//106M = 1.01Mohm\]</div></span></p>
+<p><span style="font-size: 10pt; color: #333333;">It can be considered as good input impedance, not loading the guitar pickups and preventing tone sucking (as a rule of thumb the input impedance of an amplifier should be at least 1M<span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">&Omega;</span>).</span></p>
+<p><span style="font-size: 10pt; color: #333333;"></span></p>
+<h2><span style="font-size: 12pt; color: #000000;"><a id="link32" name="link32"></a><strong>3.2 Input Stage Frequency Response.</strong></span></h2>
+<p><span style="font-size: 10pt; color: #333333;">The input cap C<sub>1, <span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">forms a high-pass filter, in conjunction with a resistor R</span><span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">1</span><span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">, R</span><span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">2</span><span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;"> and the op-amp input resistance removing possible hum. It stabilizes and isolates the rest of the circuit from the input.</span></sub></span></p>
+<p><span style="font-size: 10pt; color: #333333;">There is also a second order high pass filter, implemented by the parallel gain network which introduces 2 poles at f<sub>c1</sub> and f<sub>c2</sub>:</span></p>
+<p><div class="latex " >\[f_{c1}=\frac{1}{2 \pi \cdot R_{7} \cdot C_{7}} ==\frac{1}{2 \pi \cdot 820 \cdot 0.15 \mu F } = 1.29 KHz\]</div></p>
+<p><div class="latex " >\[f_{c2}=\frac{1}{2 \pi \cdot R_{3} \cdot C_{3}} ==\frac{1}{2 \pi \cdot 1K \cdot 0.1 \mu F } = 1.59 KHz\]</div></p>
+<p><span style="color: #333333; font-size: 10pt;">Therefore the harmonics below 1.4 KHz approx. are attenuated at 40dB/dec.</span></p>
+<p><a href="../_assets/02054787785f.png"><img src="../_assets/02054787785f.png" alt="Marshall MG10 Input Stage Frequency Response" width="700" height="227" style="display: block; margin-left: auto; margin-right: auto;" title="Marshall MG10 Input Stage Frequency Response" /></a></p>
+<p><span style="color: #333333; font-size: 10pt;">There is two small 10pF capacitors (C<sub>2</sub> and C<sub>4</sub>) that act as low pass filters, softening harsh content of the waveform and giving more stability to the input stage</span></p>
+<h1><span style="font-size: 14pt; color: #000000;"><a id="link4" name="link4"></a><strong>4. Overdrive Channel - Clipping Amplifier.</strong></span></h1>
+<p><span style="color: #333333; font-size: 10pt;">The Clipping Amplifier is selected with the DPDT (Double Pole Double Throw) Switch1. The switch can also make the signal to bypass this part of the circuit resulting in a clean sound.</span><a href="../_assets/29ad6fbe522d.png"><img src="../_assets/29ad6fbe522d.png" alt="Marshall MG10 Overdrive Stage" width="437" height="331" style="display: block; margin-left: auto; margin-right: auto;" title="Marshall MG10 Overdrive Stage" /></a></p>
+<p><span style="font-size: 10pt; color: #333333;">It is made of a variable gain inverting op-amp amplifier with two diodes to perform the clip action and two filters in the feedback loop to shape the amount of clipping and the frequency at which it occurs.</span></p>
+<p><span style="color: #000000;"><strong><span style="font-size: 10pt;">Voltage Gain:</span></strong></span></p>
+<p><span style="font-size: 10pt; color: #333333;">Not considering for the moment the diodes LED<sub>1</sub> and LED<sub>2</sub>, and the capacitor C<sub>8</sub>, the gain of an inverting op-amp stage is defined by the formula:</span></p>
+<p><div class="latex " >\[G_{V}= - \frac{R_{6}//VR_{2}}{R_{8}}\]</div></p>
+<p><span style="font-size: 10pt; color: #333333;">The gain of the stage can be varied changing the overdrive VR<sub>2</sub> control setting, resulting in a max gain of:</span></p>
+<p><div class="latex " >\[G_{Vmax}\rightarrow VR_{2}=1M\rightarrow G_{Vmax}= \frac{500K}{560}=892 \: (59dB)\]</div></p>
+<p><span style="font-size: 10pt;"><span style="text-decoration: underline;">note:</span> <span style="color: #333333;">The G<sub>Vmin</sub> can be considered as 1 (0dB) despite the values of VR<sub>2</sub> below 560<span class="st">&Omega; that will create a <em>negative </em>gain (less than 1).</span></span></span></p>
+<p><span style="color: #333333; font-size: 10pt;">However, the voltage gain of this stage will not reach values like 892 (59dB). As it will be seen in the next point the gain is limited by the clipping diodes action. The top gain will be around 20 and the additional range (from 20 to 892) will set the sharpness of the clipped signal.</span></p>
+<p><span style="color: #333333; font-size: 10pt;"><span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">The gain of the clipping circuit is huge (892 max.) if it is compared with other success overdrive designs like the Tube Screamer (118 max.). This fact together with the use of red/green LED diodes for the clipping action instead of silicone ones, results in a harsh distortion with abrupt and drastic waveform, not very responsive, also known as the <em>bee tin</em>.</span></span></p>
+<p><span style="color: #333333; font-size: 10pt;"><span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">After the op-amp there is a&nbsp;</span><span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">R</span><sub style="color: #333333; line-height: 17.981481552124023px;">46&nbsp;</sub><span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">VR</span><sub style="color: #333333; line-height: 17.981481552124023px;">3</sub><span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">&nbsp;voltage divider that introduces a min.</span><span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">&nbsp;attenuation of &nbsp;VR</span><sub style="color: #333333; line-height: 17.981481552124023px;">3</sub><span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">/(VR</span><sub style="color: #333333; line-height: 17.981481552124023px;">3</sub><span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">+R</span><sub style="color: #333333; line-height: 17.981481552124023px;">6</sub><span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">) = 5K/15K = 0.3 = -10dB.</span></span></p>
+<p><span style="color: #000000;">&nbsp;<strong><span style="font-size: 10pt;">Clipping Diodes:</span></strong></span></p>
+<p><span style="font-size: 10pt; color: #333333;">The symmetric clipping is produced by 2 diodes LED<sub>1</sub> and LED<sub>2</sub> in the feedback loop of the amplifier; <span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">LED<sub>1</sub> clips the positive semi-cycle signal while LED<sub>2</sub> trims the negative signal semi cycle. Using different diode colors may add a small degree of asymmetry to the clipping, which is considered more tube-like sounding.</span></span></p>
+<p><span style="font-size: 10pt; color: #333333;">When the voltage difference (positive or negative) between the op-amp output and the (-) input is bigger than the led diodes forward voltage V<sub>F</sub>, the diode will turn on.&nbsp;<span style="line-height: 17.981481552124023px; color: #333333; font-size: 10pt;">As the diode turns on forward biased, the equivalent resistance of the diode goes from an open circuit (very high) to a very low value (few ohms), changing the gain of the inverting op-amp from a high value down to 1 and&nbsp;</span><em style="line-height: 17.981481552124023px; color: #333333; font-size: 10pt;">clipping</em><span style="line-height: 17.981481552124023px; color: #333333; font-size: 10pt;">&nbsp;the signal.</span></span></p>
+<p><span style="font-size: 10pt; color: #333333;">Clipping when </span><div class="latex " >\[V_{out}-V_{in}&gt;V_{F}\]</div></p>
+<p><span style="font-size: 10pt; color: #333333;"><span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">With V<sub>F</sub> for led diodes is around 2V and Vin from a guitar of 100mV approx. With a gain of 20 or higher, the signal will be clipped. &nbsp;&nbsp;</span></span></p>
+<p>&nbsp;</p>
+<h2><strong><span style="font-size: 12pt; color: #000000;"><a id="link41" name="link41"></a>4.1 Clipping Amplifier Frequency response.</span></strong></h2>
+<p><a href="../_assets/83ebc92d1d40.png"><img src="../_assets/83ebc92d1d40.png" alt="Marshall MG10 Clipping Amplifier Frequency Response" width="702" height="233" style="display: block; margin-left: auto; margin-right: auto;" title="Marshall MG10 Clipping Amplifier Frequency Response" /></a></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">The big capacitor C<sub>6</sub> (10uF) filters the bass harmonics below the audio range (<span class="st">~</span>50 Hz.).</span></li>
+<li><span style="font-size: 10pt; color: #333333;">The small C<sub>8</sub> (220pF) acts&nbsp;<span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">softening the corners of the clipped waveform and mellowing out the high end of the distortion. The cut-off frequency depends on the overdrive potentiometer VR<sub>2</sub>. With maximum gain f<sub>c</sub>= 1/(2<span class="st">&pi;</span> x 220pF x 1M<span class="st">&Omega;</span>) = 723Hz, reducing the gain the cut-off shifts to the high frequencies.</span></span>&nbsp;</li>
+</ul>
+<h1><strong><span style="font-size: 14pt; color: #000000;"><a id="link5" name="link5"></a>5. Clean Channel.</span></strong></h1>
+<p><span style="font-size: 10pt; color: #333333;">When the clean channel is selected, the whole Clipping Stage is bypassed. The signal is taken from the input stage and feed to the VR<sub>1</sub> potentiometer in the typical passive Volume configuration.</span></p>
+<p><span style="font-size: 10pt; color: #333333;"></span></p>
+<h1><span style="font-size: 14pt; color: #000000;"><a id="link6" name="link6"></a><strong>6. Tone Control.</strong></span></h1>
+<p><span style="font-size: 10pt; color: #333333;">The Marshall MG10 is using a simplified <em>Contour</em> tone control which adjusts the tone with only one potentiometer VR<sub>4</sub>.</span><a href="../_assets/5e1dd98db4d1.png"><img src="../_assets/5e1dd98db4d1.png" alt="Marshall MG10 Tone Control" width="319" height="278" style="display: block; margin-left: auto; margin-right: auto;" title="Marshall MG10 Tone Control" /></a></p>
+<p><span style="font-size: 10pt; color: #333333;">The circuit is an asymmetric notch filter, with the stop band situated at 1 KHz approx.&nbsp;</span></p>
+<p><a href="../_assets/36a735d093cd.png"><img src="../_assets/36a735d093cd.png" alt="Marshall MG10 Contour Tone" width="701" height="238" style="display: block; margin-left: auto; margin-right: auto;" title="Marshall MG10 Contour Tone" /></a></p>
+<p><span style="font-size: 10pt; color: #333333;">T<span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">he tone control adjusts the mid-range of the signal. <span style="font-size: 10pt; color: #333333;"><span style="color: #333333; font-size: 13.3333px; line-height: 17.9815px;">Keeping the bass and treble while reducing or eliminating the center mid-range 1KHz results in what is popularly known as a <em>scooped</em> sound</span></span>, popular among metal players. The bass and treble cannot be modified, so the control is limited.&nbsp;<br /></span></span></p>
+<p><span style="color: #333333; font-size: small;">Due to the asymmetry, after the stop band the high-frequency contents will lose up to 10dB.&nbsp;</span></p>
+<p><span style="font-size: 10pt; color: #333333;"><span style="text-decoration: underline; background-color: #ffffff; color: #000000;">Note:</span> Tone circuit input is grounded via the input jack to reduce noise and pops when the guitar is not plugged.</span></p>
+<p><span style="font-size: 10pt; color: #333333;"></span></p>
+<h1><strong><span style="font-size: 14pt; color: #000000;"><a id="link7" name="link7"></a>7. Filter</span></strong></h1>
+<p><span style="color: #333333; font-size: 10pt;">After the Tone Control, there is severe low pass filter made of two consecutive active filters: 2nd order Sallen key + 3rd order Sallen key.</span></p>
+<p><span style="font-size: 10pt; color: #333333;">The aim of this filtering is to completely remove high-frequency harmonics before the power amplification in order to adjust the waveform contents to the speaker cone frequency band and avoid noisy harsh responses.</span><a href="../_assets/e7911f60b0d2.png"><img src="../_assets/e7911f60b0d2.png" alt="Marshall MG10 Filter" width="656" height="225" style="display: block; margin-left: auto; margin-right: auto;" title="Marshall MG10 Filter" /></a></p>
+<p><span style="font-size: 10pt; color: #333333;">The mathematics to calculate the cut frequency of this filters are similar to the <a href="/boss-ce-2-analysis#link7">Boss CE2 Sallen Key Filters</a>. Alternatively, the simple <a href="http://sim.okawa-denshi.jp/en/OPseikiLowkeisan.htm">2nd</a> or <a href="http://sim.okawa-denshi.jp/en/Sallenkey3Lowkeisan.htm">3rd Order Sallen-Key Low Pass Filter Design Tool by Okawa Electric Design</a> can be used to get the cut-off frequencies.</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">In the Second Order Sallen Key:&nbsp;</span></li>
+</ul>
+<p style="margin-left: 60px;"><span style="font-size: 10pt; color: #333333;">fc<sub>0</sub> = 10.7 KHz</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">Third Order Sallen Key: A common configuration to implement 3rd order Sallen-Key is using a passive 1st order RC filter + a 2nd order standard Sallen-Key.</span></li>
+</ul>
+<p style="margin-left: 60px;"><span style="font-size: 10pt; color: #333333;">fc<sub>1</sub> = 461.5 Hz<br />fc<sub>2</sub> = 1. 65 KHz<br />fc<sub>3</sub> = 4.1 KHz</span></p>
+<p><span style="color: #333333; font-size: 10pt;">The Filter will remove a big content of the high frequencies as shown below:</span></p>
+<p><a href="../_assets/df7299a6c407.png"><img src="../_assets/df7299a6c407.png" alt="Marshall MG10 Filter Frequency" width="700" height="241" style="display: block; margin-left: auto; margin-right: auto;" title="Marshall MG10 Filter Frequency" /></a></p>
+<p><span style="font-size: 10pt; color: #333333;"><a id="link8" name="link8"></a><strong>&nbsp;</strong></span><strong><span style="font-size: 14pt; color: #000000;">8. Power Amplifier.</span></strong></p>
+<p><span style="font-size: 10pt; color: #333333;">The Marshall MG-10 uses the TDA2030A monolithic Power Amplifier, it is intended for use as a low-frequency class AB amplifier. Typically it provides 14W output power (d = 0.5%), the guaranteed output power is 12W on a 4<span style="color: #222222; font-family: arial, sans-serif; font-size: small; line-height: 16px;">&Omega;</span> load and 8W on an 8<span style="color: #222222; font-family: arial, sans-serif; font-size: small; line-height: 16px;">&Omega;</span>.</span><a href="../_assets/efd25f42c81e.png"><img src="../_assets/efd25f42c81e.png" alt="Marshall MG10 Power Amplifier" width="724" height="440" style="display: block; margin-left: auto; margin-right: auto;" title="Marshall MG10 Power Amplifier" /></a></p>
+<p><span style="font-size: 10pt; color: #333333;">The IC incorporates internal short circuit protection system for automatically limiting the dissipated power so as to keep the working point of the output transistors within their safe operating area. A thermal shut-down system is also included.</span></p>
+<p><a href="../_assets/393e64db50cc.png"><span style="font-size: 10pt; color: #333333;"><img src="../_assets/393e64db50cc.png" alt="Marshall MG10 Power Amplifier Frequency" width="701" height="235" style="display: block; margin-left: auto; margin-right: auto;" title="Marshall MG10 Power Amplifier Frequency" /></span></a></p>
+<h2><span style="font-size: 10pt; color: #00ff00;"><a id="link81" name="link81"></a><strong><span style="color: #000000; font-size: 12pt;">8.1 The Zobel Network and Feedback Loop.</span></strong></span></h2>
+<p><span style="font-size: 10pt; color: #333333;">The impedance equalization circuit for the load, also known as a Zobel circuit, is used to counteract the rising impedance of a voice coil caused by inductive reactance. &nbsp;</span></p>
+<p><span style="font-size: 10pt; color: #333333;">Using a Zobel the power amp is stabilized and clean tones restored, wiping some spurs that manifested themselves as spiky farting on otherwise clean tones. Typical component values of a Zobel Network, which consist of series connected resistor and capacitor are 10 to 100 nF caps and a resistance close to the speaker impedance.</span></p>
+<ul>
+<li><span style="color: #333333; font-size: 10pt;">R<sub>ZOBEL</sub> = R<sub>32</sub>//<sub>R38</sub>//R<sub>39</sub>//R<sub>40</sub>//R<sub>41</sub> = 33//33//33//33 = 8.25<span style="color: #222222; font-family: arial, sans-serif; font-size: small; line-height: 15.981481552124023px;">&Omega;</span></span></li>
+<li><span style="color: #333333; font-size: 10pt;">Capacitor <span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">C<sub>25</sub> is 220nF (a general value also used in other Marshall designs)</span></span></li>
+</ul>
+<p><strong><span style="color: #000000; font-size: 10pt;"></span></strong></p>
+<p><strong><span style="color: #000000; font-size: 10pt;">Power Amp Feedback:</span></strong></p>
+<p><span style="color: #333333; font-size: 10pt;">The power amplifier uses feedback current compensation.&nbsp;<span style="color: #333333; font-size: 13.333333969116211px; line-height: 17.981481552124023px;">The current feedback voltage is obtained by passing the speaker return current through a current sensing resistor R<sub>34</sub> (0.1<span style="color: #222222; font-family: arial, sans-serif; font-size: small; line-height: 15.962963104248047px;">&Omega;</span>/2W). C<sub>34</sub> blocks any AC voltage feedback, only allowing DC and very low frequencies to pass.</span> The current feedback signal from R<sub>34</sub> gets divided down by R<sub>31</sub>, C<sub>24</sub> blocks any DC feedback through that path that.</span></p>
+<p><span style="font-size: 10pt; color: #333333;">The feedback makes amplifier remains more stable and the amount of distortion is greatly reduced will reduce the Gain. Other effects are promoting lower speaker damping, and mid scooped frequency response.</span></p>
+<p><span style="font-size: 10pt; color: #333333;"></span></p>
+<h1><span style="font-size: 14pt; color: #000000;"><a id="link9" name="link9"></a><strong>9. Marshall MG10 Speaker Cone.</strong></span></h1>
+<p><span style="font-size: 10pt; color: #333333;">The speaker cone labeled as 160RFB08-1 and manufactured by CHANGZHOU CHUNIL CORP established in Changzhou, China in 2004. It was invested by Munil Chun who has over 30 years speaker engineering experience in Korea.</span></p>
+<p><a href="../_assets/33e5c7375f05.JPG"><img src="../_assets/33e5c7375f05.JPG" alt="Marshall MG10 Speaker" width="390" height="202" style="display: block; margin-left: auto; margin-right: auto;" title="Marshall MG10 Speaker" /></a></p>
+<p><span style="font-size: 10pt; color: #333333;">The Specifications of the speaker are:&nbsp;</span></p>
+<table border="1" style="width: 435px;" cellspacing="0" cellpadding="0">
+<tbody>
+<tr style="height: 13.5pt;">
+<td colspan="2" class="xl26" style="width: 320pt; height: 13.5pt; text-align: center;" width="435" height="18"><span style="color: #000000; font-size: 10pt;">General Specifications</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">nominal diameter</span></td>
+<td><span style="color: #333333; font-size: 10pt;">6 1/2" ,160 mm</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">power rating</span></td>
+<td><span style="color: #333333; font-size: 10pt;">10 watts <span class="font6">RMS</span></span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">nominal impedance</span></td>
+<td><span style="color: #333333; font-size: 10pt;">8 ohms</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">sensitivity (1W/1M)</span></td>
+<td><span style="color: #333333; font-size: 10pt;">91 dB</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">frequency range</span></td>
+<td><span style="color: #333333; font-size: 10pt;">110 - 13.000 Hz</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">chassis type</span></td>
+<td><span style="color: #333333; font-size: 10pt;">pressed steel</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">voice coil diameter</span></td>
+<td><span style="color: #333333; font-size: 10pt;">1" 25 mm</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">voice coil material</span></td>
+<td><span style="color: #333333; font-size: 10pt;">round copper</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">magnet type</span></td>
+<td><span style="color: #333333; font-size: 10pt;">ceramic</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">magnet weight</span></td>
+<td class="xl25"><span style="color: #333333; font-size: 10pt;">5.3. oz,&nbsp;&nbsp; 0.15 kg</span></td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-size: 10pt; color: #333333;"><span style="color: #333333;"></span></span></p>
+<table border="1" style="width: 435px;" cellspacing="0" cellpadding="0">
+<tbody>
+<tr style="height: 13.5pt;">
+<td colspan="2" class="xl26" style="height: 13.5pt; text-align: center;" height="18"><span style="color: #000000; font-size: 10pt;">Thiele &amp; Small Parameters</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">Fs</span></td>
+<td class="xl24"><span style="color: #333333; font-size: 10pt;">110 Hz</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">Re</span></td>
+<td class="xl24"><span style="color: #333333; font-size: 10pt;">6.5 ohms</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">Qes</span></td>
+<td class="xl24"><span style="color: #333333; font-size: 10pt;">2.035</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">QMS</span></td>
+<td class="xl24"><span style="color: #333333; font-size: 10pt;">8.458</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">Qts</span></td>
+<td class="xl24"><span style="color: #333333; font-size: 10pt;">1.640</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">Vas</span></td>
+<td class="xl24"><span style="color: #333333; font-size: 10pt;">13.514 ℓ</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">Sd</span></td>
+<td class="xl24"><span style="color: #333333; font-size: 10pt;">16.742 m<sup>2</sup></span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">No</span></td>
+<td class="xl24"><span style="color: #333333; font-size: 10pt;">0.859 %</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">Mms</span></td>
+<td class="xl24"><span style="color: #333333; font-size: 10pt;">6.146 g</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">Cms</span></td>
+<td class="xl24"><span style="color: #333333; font-size: 10pt;">339.520 ㎛/N</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">Mmd</span></td>
+<td class="xl24"><span style="color: #333333; font-size: 10pt;">4.900 g</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333;">BL</span></td>
+<td class="xl24"><span style="color: #333333;">3.686Tm</span></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table border="1" style="width: 435px;" cellspacing="0" cellpadding="0">
+<tbody>
+<tr style="height: 13.5pt;">
+<td colspan="2" class="xl26" style="height: 13.5pt; text-align: center;" height="18"><span style="color: #000000; font-size: 10pt;">Mounting information</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">diameter</span></td>
+<td><span style="color: #333333; font-size: 10pt;">6.5&nbsp;&nbsp; ", 165 mm</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">overall depth</span></td>
+<td><span style="color: #333333; font-size: 10pt;">2.40 ", 61mm</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">bolt circle diameter</span></td>
+<td class="xl25"><span style="color: #333333; font-size: 10pt;">6.10 ", 155 mm</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">baffle cutout diameter</span></td>
+<td><span style="color: #333333; font-size: 10pt;">5.70 ", 145 mm</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">mounting slot dimensions</span></td>
+<td><span style="color: #333333; font-size: 10pt;">0.20*0.27 ",&nbsp;&nbsp; 5*7 mm</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">number of mounting slots</span></td>
+<td class="xl24"><span style="color: #333333; font-size: 10pt;">4</span></td>
+</tr>
+<tr style="height: 13.5pt;">
+<td style="height: 13.5pt;" height="18"><span style="color: #333333; font-size: 10pt;">unit weight</span></td>
+<td><span style="color: #333333; font-size: 10pt;">17.64 oz, 0.5 kg</span></td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-size: 10pt; color: #333333;"><span style="color: #333333;"></span></span></p>
+<p><span style="font-size: 10pt; color: #333333;">The amplifier speaker colors a lot the tone, being physically impossible to construct a speaker that would have a flat response on a wide band. The response do not shift are than 3dB, considered high quality. The Marshall MG10 response varies around 5dB.</span><a href="../_assets/85700b1629bf.jpg"><img src="../_assets/85700b1629bf.jpg" alt="Marshall MG10 Speaker SPL" width="599" height="361" style="display: block; margin-left: auto; margin-right: auto;" title="Marshall MG10 Speaker SPL" /></a></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">The frequency response rolls-off heavily after 5 KHz, this is characteristic for guitar speakers and very typical for all 8&rdquo; to 15&rdquo; drivers intended for woofer or mid-range duty.&nbsp;</span><span style="color: #333333; font-size: 10pt;">The early high-frequency cut is beneficial in guitar amplification since it attenuates harsh sounding frequencies caused by signal clipping.</span></li>
+<li><span style="color: #333333; font-size: 10pt;">There is another drop in bandwidth at approximately below 80 Hz, very close to the fundamental frequency of the open low E string. Limiting all frequencies below 80 Hz can add a great deal of clarity to the sound.</span></li>
+</ul>
+<p><a href="../_assets/f5c6959d9dd0.jpg"><img src="../_assets/f5c6959d9dd0.jpg" alt="Marshall MG10 Speaker Impedance" width="600" height="362" style="display: block; margin-left: auto; margin-right: auto;" title="Marshall MG10 Speaker Impedance" /></a></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">The graph shows the typical <em>mid scooped</em> impedance curve. It has high impedance at speaker resonance (<span style="font-size: 10pt; color: #333333;"><span class="st">~</span></span>100 Hz). &nbsp;It also has rising impedance with increasing frequency because it contains an inductor (the voice coil). Inductors impede the flow of alternating current: the higher the frequency, the greater the impedance.&nbsp;</span></li>
+</ul>
+<p><span style="font-size: 10pt; color: #333333;"></span></p>
+<h1><span style="font-size: 10pt; color: #333333;"><span style="color: #000000; font-size: 14pt;"><a id="link10" name="link10"></a><strong>10. Resources.</strong></span><br /></span></h1>
+<p><span style="font-size: 10pt; color: #333333;"><span><span style="color: #0000ff;"><a href="http://music-electronics-forum.com/t21820/"><span style="color: #0000ff;">Power Amplifier Feedback</span></a></span> by Music Electronics Forum.<br /><span style="color: #0000ff;"><a href="http://www.amparchives.com/"><span style="color: #0000ff;">All Marshall MG Series Schematics</span></a></span> by Amp Archives. </span></span></p>
+<p><span style="font-size: 10pt; color: #333333;"><span>&nbsp;</span></span></p>
+<p><span style="font-size: 10pt;"></span></p>
+<p>&nbsp;</p>
+<p style="text-align: right;"><span style="font-size: 10pt;"><span style="font-size: 12pt;"><span style="color: #333333; font-size: 10pt;">Thanks for reading, all feedback is appreciated &nbsp; &nbsp;<img src="../_assets/26a349a17744.jpg" alt="jr(at)ElectroSmash.com " /></span></span></span></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><span style="color: #808080; font-size: 8pt;"><span style="color: #0000ff;"><a href="../rights/index.html"><span style="color: #0000ff;">Some Rights Reserved</span></a></span>, you are free to copy, share, remix and use all material.<br />Trademarks, brand names and logos are the property of their respective owners.</span></p>
+<p><span style="font-size: 10pt; color: #333333;"><span>&nbsp;</span></span></p>	</section>
+  
+  <!-- footer -->
+    <!-- //footer -->
+
+	
+	
+	</article>
+<!-- //Article -->
+
+
+</div><div><a href="http://www.artio.net" style="font-size: 8px; visibility: visible; display: inline;" title="Web development, Joomla, CMS, CRM, Online shop software, databases">Joomla SEF URLs by Artio</a></div>
+		</div>
+		<!-- //MAIN CONTENT -->
+
+		<!-- SIDEBAR RIGHT -->
+		<div class="t3-sidebar t3-sidebar-right col-xs-12 col-sm-4  col-md-3 ">
+			<div class="t3-module module " id="Mod28"><div class="module-inner"><h3 class="module-title "><span>New Updates</span></h3><div class="module-ct"><ul class="latestnews mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../arduino-audio-meter/index.html" itemprop="url">
+			<span itemprop="name">
+				Arduino Audio Meter			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../dallas-rangemaster/index.html" itemprop="url">
+			<span itemprop="name">
+				Dallas Rangemaster Treble Booster Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../time-manipulator/index.html" itemprop="url">
+			<span itemprop="name">
+				Time Manipulator - Arduino Delay/Echo/Reverb			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../marshall-guvnor-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Marshall The Guvnor Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../germanium-fuzz/index.html" itemprop="url">
+			<span itemprop="name">
+				You Can Build the Perfect Germanium Fuzz			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../mxr-distortion-plus-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				MXR Distortion + Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod29"><div class="module-inner"><h3 class="module-title "><span>Most Visited</span></h3><div class="module-ct"><ul class="mostread mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../tube-screamer-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Tube Screamer Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../fuzz-face/index.html" itemprop="url">
+			<span itemprop="name">
+				Fuzz Face Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../proco-rat/index.html" itemprop="url">
+			<span itemprop="name">
+				Pro Co Rat Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../boss-ds1-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Boss DS-1 Distortion Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../klon-centaur-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Klon Centaur Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../big-muff-pi-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Big Muff Pi Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod184"><div class="module-inner"><h3 class="module-title "><span>Follow us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><span style="font-size: 10pt; color: #333333;">You can also follow us on:</span></p>
+<p><a href="https://www.facebook.com/ElectroSmash"><img src="../_assets/df34a2b41b54.png" alt="facebook" /></a>&nbsp;&nbsp; <a href="https://plus.google.com/+Electrosmash/about"><img src="../_assets/3ffc52860091.png" alt="google" /></a>&nbsp;&nbsp; <a href="https://www.instagram.com/electro.smash/"><img src="../_assets/45b0b0fe2d4b.png" alt="instagram" /></a></p>
+<p><a href="https://www.pinterest.com/electrosmash/"><img src="../_assets/05310d9fcf2a.png" alt="pinterest" /></a>&nbsp;&nbsp; <a href="https://www.youtube.com/user/ElectroSmashTV"><img src="../_assets/d920883b3613.png" alt="youtube" /></a>&nbsp;&nbsp; <a href="https://twitter.com/electro_smash"><img src="../_assets/52581f7264eb.png" alt="twitter" /></a></p></div>
+</div></div></div>
+		</div>
+		<!-- //SIDEBAR RIGHT -->
+
+	</div>
+</div> 
+
+
+
+  
+
+
+  
+
+
+	
+<!-- BACK TOP TOP BUTTON -->
+<div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top hidden-xs hidden-sm affix-top">
+  <button class="btn btn-primary" title="Back to Top"><i class="fa fa-caret-up"></i></button>
+</div>
+<script type="text/javascript">
+(function($) {
+	// Back to top
+	$('#back-to-top').on('click', function(){
+		$("html, body").animate({scrollTop: 0}, 500);
+		return false;
+	});
+    $(window).on('load', function(){
+        // hide button to top if the document height not greater than window height*2;using window load for more accurate calculate.    
+        if ((parseInt($(window).height())*2)>(parseInt($(document).height()))) {
+            $('#back-to-top').hide();
+        } 
+    });
+})(jQuery);
+</script>
+<!-- BACK TO TOP BUTTON -->
+
+<!-- FOOTER -->
+<footer id="t3-footer" class="wrap t3-footer">
+
+			<!-- FOOTER SPOTLIGHT -->
+		<div class="container hidden-xs">
+				<!-- SPOTLIGHT -->
+	<div class="t3-spotlight t3-footer-sl  row">
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod185"><div class="module-inner"><h3 class="module-title "><span>About us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../about-us/index.html">&nbsp;&nbsp;<img src="../_assets/420f9f181bc0.jpg" alt="smash electro" /></a></p>
+<p><a href="../about-us/index.html"><span style="font-size: 10pt; color: #333333;">Smashing audio electronics since MMXIII</span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod183"><div class="module-inner"><h3 class="module-title "><span>Email Newsletter</span></h3><div class="module-ct"><div class="acymailing_module" id="acymailing_module_formAcymailing28641">
+	<div class="acymailing_fulldiv" id="acymailing_fulldiv_formAcymailing28641"  >
+		<form id="formAcymailing28641" action="index.html" onsubmit="return submitacymailingform('optin','formAcymailing28641')" method="post" name="formAcymailing28641"  >
+		<div class="acymailing_module_form" >
+						<table class="acymailing_form">
+				<tr>
+												<td class="acyfield_email acy_requiredField">
+								<input id="user_email_formAcymailing28641"  onfocus="if(this.value == 'example@email.com') this.value = '';" onblur="if(this.value=='') this.value='example@email.com';" class="inputbox" type="text" name="user[email]" style="width:90%" value="example@email.com" title="example@email.com"/>
+							</td> </tr><tr>
+					
+					<td  class="acysubbuttons">
+												<input class="button subbutton btn btn-primary" type="submit" value="Subscribe" name="Submit" onclick="try{ return submitacymailingform('optin','formAcymailing28641'); }catch(err){alert('The form could not be submitted '+err);return false;}"/>
+											</td>
+				</tr>
+			</table>
+						<input type="hidden" name="ajax" value="0" />
+			<input type="hidden" name="acy_source" value="module_183" />
+			<input type="hidden" name="ctrl" value="sub"/>
+			<input type="hidden" name="task" value="notask"/>
+			<input type="hidden" name="redirect" value="https%3A%2F%2Fwww.electrosmash.com%2Fmarshall-mg10"/>
+			<input type="hidden" name="redirectunsub" value="https%3A%2F%2Fwww.electrosmash.com%2Fmarshall-mg10"/>
+			<input type="hidden" name="option" value="com_acymailing"/>
+						<input type="hidden" name="hiddenlists" value="1"/>
+			<input type="hidden" name="acyformname" value="formAcymailing28641" />
+									</div>
+		</form>
+	</div>
+	</div>
+
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod186"><div class="module-inner"><h3 class="module-title "><span>Contact us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../contact-us/index.html"><span style="font-size: 10pt; color: #333333;">e-mail us at <span id="cloak0b8918bb8a96103dbb898330e349db94">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
+				document.getElementById('cloak0b8918bb8a96103dbb898330e349db94').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy0b8918bb8a96103dbb898330e349db94 = '&#105;nf&#111;' + '&#64;';
+				addy0b8918bb8a96103dbb898330e349db94 = addy0b8918bb8a96103dbb898330e349db94 + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';
+				var addy_text0b8918bb8a96103dbb898330e349db94 = '&#105;nf&#111;' + '&#64;' + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';document.getElementById('cloak0b8918bb8a96103dbb898330e349db94').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy0b8918bb8a96103dbb898330e349db94 + '\'>'+addy_text0b8918bb8a96103dbb898330e349db94+'<\/a>';
+		</script></span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod188"><div class="module-inner"><h3 class="module-title "><span>Rights</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p style="text-align: left;">&nbsp;&nbsp;<a href="https://creativecommons.org/licenses/by-nc/3.0/"><img src="../_assets/b0e99d439c44.png" alt="88x31" /></a></p>
+<p style="text-align: left;"><img src="../_assets/fe2636cdea5c.png" alt="open source logo" width="180" height="38" /></p>
+<p style="text-align: left;"><img src="../_assets/8281c4ec3a3b.png" alt="open hardware logo" width="180" height="38" /></p>
+<p style="text-align: left;">&nbsp;</p></div>
+</div></div></div>
+							</div>
+			</div>
+<!-- SPOTLIGHT -->
+		</div>
+		<!-- //FOOTER SPOTLIGHT -->
+	
+	<section class="t3-copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 copyright ">
+					
+          <small>
+            <a href="http://twitter.github.io/bootstrap/" title="Bootstrap by Twitter" target="_blank">Bootstrap</a> is a front-end framework of Twitter, Inc. Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" title="MIT License" target="_blank">MIT License.</a>
+          </small>
+          <small>
+            <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> font licensed under <a href="http://scripts.sil.org/OFL">SIL OFL 1.1</a>.
+          </small>
+				</div>
+							</div>
+		</div>
+	</section>
+
+</footer>
+<!-- //FOOTER -->
+
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29544239-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

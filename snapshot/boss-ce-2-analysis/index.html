@@ -1,0 +1,941 @@
+
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr"
+	  class='com_content view-article itemid-435 home j31 mm-hover '>
+
+<head>
+	<base href="../index/index.html" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="CE2,roland,boss,chorus,CE-2,CE 2,circuit,schematic,diagram,layout,bom,part,list,power,supply,jfet,switch,aca,psa,adapter,pre-emphasis,de-emphasis,operational,anti-aliasing,reconstruction,anti-imaging,sallen-key,lfo,low,frequency,oscillator,input,buffer,bb" />
+	<meta name="rights" content="Creative Commons: Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0) " />
+	<meta name="author" content="JR" />
+	<meta name="description" content="Chorus Effect,Architecture,Circuit, Achematic,Layout,Components Part List,JFET Bypass Switch, Power Supply,Boss ACA vs. PSA Power Supply Adapters,Input Buffer,Input Impedance,Pre-De Emphasis Filters,Shelving Filters with Operational Amplifiers,Inverting O" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>ElectroSmash - Boss CE-2 Analysis</title>
+	<link href="index.html" rel="canonical" />
+	<link href="../_assets/d87243966412.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../_assets/26f5cf410b61.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/15ff046a2fe3.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/dd09f39c1b89.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"b134947614e73d85f35c8557e8a6f8b8","system.paths":{"root":"","base":""}}</script>
+	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+	<script src="../_assets/323c609448d2.js" type="text/javascript"></script>
+	<script src="../_assets/b8bcbb2f005c.js" type="text/javascript" async="async"></script>
+	<script type="text/javascript">
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });	if(typeof acymailingModule == 'undefined'){
+				var acymailingModule = [];
+			}
+			
+			acymailingModule['emailRegex'] = /^[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+)*\@([a-z0-9-]+\.)+[a-z0-9]{2,10}$/i;
+
+			acymailingModule['NAMECAPTION'] = 'Name';
+			acymailingModule['NAME_MISSING'] = 'Please enter your name';
+			acymailingModule['EMAILCAPTION'] = 'example@email.com';
+			acymailingModule['VALID_EMAIL'] = 'Please enter a valid e-mail address';
+			acymailingModule['ACCEPT_TERMS'] = 'Please check the Terms and Conditions';
+			acymailingModule['CAPTCHA_MISSING'] = 'The captcha is invalid, please try again';
+			acymailingModule['NO_LIST_SELECTED'] = 'Please select the lists you want to subscribe to';
+		
+acymailingModule['excludeValuesformAcymailing57441'] = [];
+acymailingModule['excludeValuesformAcymailing57441']['name'] = 'Name';
+acymailingModule['excludeValuesformAcymailing57441']['email'] = 'example@email.com';
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });
+	</script>
+
+	
+<!-- META FOR IOS & HANDHELD -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<style type="text/stylesheet">
+		@-webkit-viewport   { width: device-width; }
+		@-moz-viewport      { width: device-width; }
+		@-ms-viewport       { width: device-width; }
+		@-o-viewport        { width: device-width; }
+		@viewport           { width: device-width; }
+	</style>
+	<script type="text/javascript">
+		//<![CDATA[
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement("style");
+			msViewportStyle.appendChild(
+				document.createTextNode("@-ms-viewport{width:auto!important}")
+			);
+			document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+		}
+		//]]>
+	</script>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="apple-mobile-web-app-capable" content="YES"/>
+<!-- //META FOR IOS & HANDHELD -->
+
+
+
+
+<!-- Le HTML5 shim and media query for IE8 support -->
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script type="text/javascript" src="../_assets/010a3c86157d.js"></script>
+<![endif]-->
+
+<!-- You can add Google Analytics here or use T3 Injection feature -->
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="../_assets/76d3e1341c39.css" type="text/css" />
+<![endif]-->
+	</head>
+
+<body>
+
+<div class="t3-wrapper corporate"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
+
+	
+<!-- MAIN NAVIGATION -->
+<header id="t3-mainnav" class="wrap navbar navbar-default navbar-fixed-top t3-mainnav">
+
+	<!-- OFF-CANVAS -->
+		<!-- //OFF-CANVAS -->
+
+	<div class="container">
+
+		<!-- NAVBAR HEADER -->
+		<div class="navbar-header">
+
+			<!-- LOGO -->
+			<div class="logo logo-image">
+				<div class="logo-image">
+					<a href="/" title="ElectroSmash">
+													<img class="logo-img" src="../_assets/115794d6d5b8.png" alt="ElectroSmash" />
+						
+												
+						<span>ElectroSmash</span>
+					</a>
+				</div>
+			</div>
+			<!-- //LOGO -->
+
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-collapse">
+					<i class="fa fa-bars"></i>
+				</button>
+			
+	    
+		</div>
+		<!-- //NAVBAR HEADER -->
+
+		<!-- NAVBAR MAIN -->
+				<nav class="t3-navbar-collapse navbar-collapse collapse"></nav>
+		
+		<nav class="t3-navbar navbar-collapse collapse">
+			<div  class="t3-megamenu"  data-responsive="true">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav navbar-nav level0">
+<li itemprop='name' class="current active" data-id="435" data-level="1">
+<a itemprop='url' class=""  href="/"   data-target="#">Home </a>
+
+</li>
+<li itemprop='name' class="dropdown mega" data-id="510" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Chips<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="492" data-level="2">
+<a itemprop='url' class=""  href="../jrc4558-analysis/index.html"   data-target="#">JRC4558  </a>
+
+</li>
+<li itemprop='name'  data-id="519" data-level="2">
+<a itemprop='url' class=""  href="../mn3007-bucket-brigade-devices/index.html"   data-target="#">MN3007 BBDs </a>
+
+</li>
+<li itemprop='name'  data-id="468" data-level="2">
+<a itemprop='url' class=""  href="../lm386-analysis/index.html"   data-target="#">LM386 </a>
+
+</li>
+<li itemprop='name'  data-id="1643" data-level="2">
+<a itemprop='url' class=""  href="../pt2399-analysis/index.html"   data-target="#">PT2399 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="444" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Amps<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="993" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="489" data-level="2">
+<a itemprop='url' class=""  href="../little-gem-analysis/index.html"   data-target="#">Little Gem Amp </a>
+
+</li>
+<li itemprop='name'  data-id="526" data-level="2">
+<a itemprop='url' class=""  href="../marshall-mg10/index.html"   data-target="#">Marshall MG10 </a>
+
+</li>
+<li itemprop='name'  data-id="491" data-level="2">
+<a itemprop='url' class=""  href="../noisy-cricket-analysis/index.html"   data-target="#">Noisy Cricket  </a>
+
+</li>
+<li itemprop='name'  data-id="490" data-level="2">
+<a itemprop='url' class=""  href="../ruby-amp-analysis/index.html"   data-target="#">Ruby Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="488" data-level="2">
+<a itemprop='url' class=""  href="../smokey-amp-analysis/index.html"   data-target="#">Smokey Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="746" data-level="2">
+<a itemprop='url' class=""  href="http://www.electrosmash.com/schematics#amps"   data-target="#">Amps Schematics.</a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="511" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Pedals<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  style="width: 600px"  data-width="600"><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="515" data-level="2">
+<a itemprop='url' class=""  href="../back-talk-analysis/index.html"   data-target="#">Back Talk Reverse Delay </a>
+
+</li>
+<li itemprop='name'  data-id="518" data-level="2">
+<a itemprop='url' class=""  href="../big-muff-pi-analysis/index.html"   data-target="#">Big Muff Pi  </a>
+
+</li>
+<li itemprop='name'  data-id="524" data-level="2">
+<a itemprop='url' class=""  href="index.html"   data-target="#">Boss CE-2 Chorus </a>
+
+</li>
+<li itemprop='name'  data-id="1088" data-level="2">
+<a itemprop='url' class=""  href="../boss-ds1-analysis/index.html"   data-target="#">Boss DS-1 Distortion </a>
+
+</li>
+<li itemprop='name'  data-id="1713" data-level="2">
+<a itemprop='url' class=""  href="../dallas-rangemaster/index.html"   data-target="#">Dallas Rangemaster </a>
+
+</li>
+<li itemprop='name'  data-id="905" data-level="2">
+<a itemprop='url' class=""  href="../crybaby-gcb-95/index.html"   data-target="#">Dunlop CryBaby GCB-95  </a>
+
+</li>
+<li itemprop='name'  data-id="842" data-level="2">
+<a itemprop='url' class=""  href="../fuzz-face/index.html"   data-target="#">Fuzz Face </a>
+
+</li>
+<li itemprop='name'  data-id="1664" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="512" data-level="2">
+<a itemprop='url' class=""  href="../tube-screamer-analysis/index.html"   data-target="#">Ibanez Tube Screamer </a>
+
+</li>
+<li itemprop='name'  data-id="1433" data-level="2">
+<a itemprop='url' class=""  href="../klon-centaur-analysis/index.html"   data-target="#">Klon Centaur </a>
+
+</li>
+</ul>
+</div></div>
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="548" data-level="2">
+<a itemprop='url' class=""  href="../mxr-microamp/index.html"   data-target="#">MXR MicroAmp </a>
+
+</li>
+<li itemprop='name'  data-id="1667" data-level="2">
+<a itemprop='url' class=""  href="../marshall-guvnor-analysis/index.html"   data-target="#">Marshall Guvnor </a>
+
+</li>
+<li itemprop='name'  data-id="1632" data-level="2">
+<a itemprop='url' class=""  href="../mxr-distortion-plus-analysis/index.html"   data-target="#">MXR Distortion + </a>
+
+</li>
+<li itemprop='name'  data-id="1244" data-level="2">
+<a itemprop='url' class=""  href="../mxr-dyna-comp-analysis/index.html"   data-target="#">MXR Dyna Comp </a>
+
+</li>
+<li itemprop='name'  data-id="573" data-level="2">
+<a itemprop='url' class=""  href="../mxr-phase90/index.html"   data-target="#">MXR Phase 90 </a>
+
+</li>
+<li itemprop='name'  data-id="553" data-level="2">
+<a itemprop='url' class=""  href="../proco-rat/index.html"   data-target="#">ProCo Rat </a>
+
+</li>
+<li itemprop='name'  data-id="520" data-level="2">
+<a itemprop='url' class=""  href="../sitar-swami-analysis/index.html"   data-target="#">Sitar Swami </a>
+
+</li>
+<li itemprop='name'  data-id="525" data-level="2">
+<a itemprop='url' class=""  href="../vox-v847-analysis/index.html"   data-target="#">Vox V847 Wah Wah </a>
+
+</li>
+<li itemprop='name'  data-id="547" data-level="2">
+<a itemprop='url' class=""  href="../emg81/index.html"   data-target="#">EMG81 Pickup </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="796" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Projects<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="1108" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-uno/index.html"   data-target="#">pedalSHIELD UNO </a>
+
+</li>
+<li itemprop='name'  data-id="797" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield/index.html"   data-target="#">pedalSHIELD DUE </a>
+
+</li>
+<li itemprop='name'  data-id="1437" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-mega/index.html"   data-target="#">pedalSHIELD MEGA </a>
+
+</li>
+<li itemprop='name'  data-id="1312" data-level="2">
+<a itemprop='url' class=""  href="../pedal-pi/index.html"   data-target="#">Pedal-Pi </a>
+
+</li>
+<li itemprop='name'  data-id="1662" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="1663" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="1668" data-level="2">
+<a itemprop='url' class=""  href="../time-manipulator/index.html"   data-target="#">Time Manipulator </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name'  data-id="745" data-level="1">
+<a itemprop='url' class=""  href="../forum-electrosmash/index.html"   data-target="#">Forum </a>
+
+</li>
+<li itemprop='name'  data-id="816" data-level="1">
+<a itemprop='url' class=""  href="../shop/index.html"   data-target="#">Shop</a>
+
+</li>
+</ul>
+</div>
+
+		</nav>
+    <!-- //NAVBAR MAIN -->
+
+	</div>
+</header>
+<!-- //MAIN NAVIGATION -->
+
+
+
+
+
+
+  
+
+
+  
+
+
+	
+<div id="t3-mainbody" class="container t3-mainbody">
+	<div class="row">
+
+		<!-- MAIN CONTENT -->
+		<div id="t3-content" class="t3-content col-xs-12 col-sm-8  col-md-9">
+						<div class="item-page clearfix">
+
+
+<!-- Article -->
+<article>
+	<meta itemprop="inLanguage" content="en-GB" />
+	<meta itemprop="url" content="index.html" />
+
+      
+<header class="article-header clearfix">
+	<h1 class="article-title" itemprop="headline">
+					<a href="index.html" itemprop="url" title="Boss CE-2 Analysis">
+				Boss CE-2 Analysis</a>
+			</h1>
+
+			</header>
+    
+    
+  <!-- Aside -->
+    <!-- //Aside -->
+
+  
+  
+  
+	
+  
+	
+	<section class="article-content clearfix">
+		<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The Chorus Ensemble CE-2 is a chorus pedal by Roland/Boss released in 1979. It adds a dreamy modulated sound that creates a dramatic ambient guitar tone.&nbsp;</span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">After the great success of the bulky Chorus Ensemble CE-1 issued in 1976, which was based on the Roland Jazz Chorus JC-120 Amplifier integrated chorus effect, Boss decided to revise and release a similar sounding effect but in a compact size modifying the circuitry.&nbsp;The CE-2 builds on the legacy of the CE-1 with reduced features: mono output instead of stereo, no vibrato mode, no integrated power supply, no level and no intensity controls.</span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/d46f88d23ff0.png"><img src="../_assets/d46f88d23ff0.png" alt="boss-ce-2-pedal" width="272" height="203" style="display: block; margin-left: auto; margin-right: auto;" title="Boss CE-2 Pedal" longdesc="Boss CE-2 Pedal" /></a></span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The CE-1 was designed more to be a multi-instrument effect, with a 50K low input impedance suitable for keyboards. The CE-2 has higher input impedance and boosted mid frequencies, both arrangements very suitable for electric guitars.</span><br /><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Roland stopped marketing the CE-2 in 1982, however still produced until 1990. There are basically 3 versions of the pedal:</span></p>
+<ul>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Made in Japan - black label (1979-1984)</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Made in Japan - green label (1984-1988)&nbsp;</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Made in Taiwan - green label (1988-1991)</span></li>
+</ul>
+ 
+<h1><span style="font-family: verdana, geneva;"><span style="font-size: 14pt;"></span><span style="color: #000000;"><strong><span style="font-size: 14pt;">Table of Contents.</span></strong></span></span></h1>
+<p style="padding-left: 30px;"><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="/boss-ce-2-analysis#link1">1. The Chorus Effect.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ce-2-analysis#link11">1.1 Chorus Effect Architecture.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="/boss-ce-2-analysis#link2">2. Roland/Boss CE-2 Circuit.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ce-2-analysis#link21">2.1 Boss CE-2 Layout.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ce-2-analysis#link22">2.2 Roland/Boss CE-2 Components Part List.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="/boss-ce-2-analysis#link3">3. JFET Bypass Switch.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="/boss-ce-2-analysis#link4">4. Power Supply.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ce-2-analysis#link41">4.1 Boss ACA vs. PSA Power Supply Adapters.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="/boss-ce-2-analysis#link5">5. Input Buffer.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp;&nbsp;&nbsp;&nbsp;<a href="/boss-ce-2-analysis#link51"> 5.1 Boss CE-2 Input Impedance.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="/boss-ce-2-analysis#link6">6. Pre-De Emphasis Filters.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ce-2-analysis#link61">6.1 Shelving Filters with Operational Amplifiers.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ce-2-analysis#link611">6.1.1 Inverting OpAmp shelving Filters.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ce-2-analysis#link612">6.1.2 Non-Inverting OpAmp shelving Filters.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ce-2-analysis#link62">6.2 Pre-Emphasis Filter.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ce-2-analysis#link63">6.3 De-Emphasis Filter.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="/boss-ce-2-analysis#link7">7. Anti-Aliasing &amp; Reconstruction Filters.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ce-2-analysis#link71">7.1 The Sallen-Key Filter Topology:</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ce-2-analysis#link72">7.2 Anti-Aliasing Filter.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ce-2-analysis#link73">7.3 Reconstruction Filter.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="/boss-ce-2-analysis#link8">8. Bucket Brigade Device Stage.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ce-2-analysis#link81">8.1 Low-Frequency Oscillator.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="/boss-ce-2-analysis#link9">9. Resources.</a></span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">&nbsp;&nbsp;&nbsp;&nbsp; <a href="/boss-ce-2-analysis#link91">9.1 Datasheets.</a></span></p>
+<p><span style="font-size: 14pt; color: #99cc00; font-family: verdana, geneva;"></span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p><span style="font-family: verdana, geneva;"><strong><span style="font-size: 14pt; color: #99cc00;"><a id="link1" name="link1"></a><span style="color: #000000;">1. The Chorus Effect</span></span></strong></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The&nbsp;<em>Chorus</em>&nbsp;or&nbsp;<em>Celeste</em>&nbsp;effect was integrated into Hammond organs since the 1940s. Some early stand-alone stompboxes like Vibra-Chorus and Uni-Vibe by Shin-Ei were released in 1960s, creating some degree of phase shifting or chorus modulation.</span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">As a matter of fact, the Roland/Boss CE-1 Chorus Ensemble taken from the JC-120 amp circuit is renowned as the&nbsp;<em>Mother of Chorus</em>, being the standard for the modern chorus sound. The CE-2 follows the same tonal response.</span></p>
+<h1><span style="font-size: 14pt; color: #000000; font-family: verdana, geneva;"><a id="link11" name="link11"></a><strong>1.1 Chorus Effect Architecture.</strong></span></h1>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The chorus is a delay based effect: the resulting sound is a mix of the original input signal and the incoming audio run through a BBD delay time device:</span><br /><span style="font-family: verdana, geneva;"><a href="../_assets/497af384a421.PNG"><span style="color: #333333;"><img src="../_assets/497af384a421.PNG" alt="Boss CE-2 Architecture" width="497" height="151" style="display: block; margin-left: auto; margin-right: auto;" title="Boss CE-2 Architecture" longdesc="Boss CE-2 Architecture" /></span></a></span></p>
+<p><span style="color: #333333; font-family: verdana, geneva;"><span style="color: #333333;"><span style="font-size: 10pt;">Before and after the BBD delay action, there are some stages needed to avoid signal degradation: Pre/De-Emphasis and Anti-Aliasing/Reconstruction filters.</span></span></span></p>
+<p><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">The amount of delay to be applied is modulated by an LFO (Low-Frequency Oscillator). The usual delay times are around 5 to 50ms and LFO oscillating frequencies are up to 20Hz.</span></span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The most used LFO waveforms are sine and triangle:</span></p>
+<ul>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The sine waveform produces a very smooth sound as the pitch is constantly changing.</span></li>
+<li><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">The triangle LFO only produces two pitches and the change between the pitches is sudden. CE-2 uses triangle LFO waveforms.</span><a href="../_assets/14099d8e5e78.png"><span style="color: #333333; font-size: 10pt;"><img src="../_assets/14099d8e5e78.png" alt="chorus-oscillation" width="427" height="86" style="font-size: 10pt; display: block; margin-left: auto; margin-right: auto;" title="chorus-oscillation" longdesc="chorus-oscillation" /></span></a></span></li>
+</ul>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The common controls in chorus pedals are:</span></p>
+<ul>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"><strong><span style="color: #000000;">Modulation Rate/Speed/Period:</span> </strong>Adjusts the LFO frequency in the hertz region (range of the natural human vibrato).</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"><strong><span style="color: #000000;">Delay:</span></strong> Adjusts the amount of delay to be applied to the modulated signal.</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"><strong><span style="color: #000000;">Depth/Modulation Range:</span></strong> Adjusts the amount of modulation to be applied to the delay time.</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"><span style="color: #000000;"><strong>Mix</strong>:</span> Adjusts the blend between the original dry and modulated wet signals.</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"><span style="color: #000000;"><strong>Stereo Option</strong>:</span> Some designs include stereo output that creates richer chorus and a wider stereo image. There are several possibilities:</span>
+<ul>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Some pedals (Boss CE-1) have two outputs: A dry output with no effect, and the wet output where the signal is modulated. Hearing both signals together the chorus effect is created.</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Some pedals (Boss CE-3) have two outputs: on one side it adds the wet effected signal to the dry signal, and on the other side it subtracts the effected signal from the dry signal.&nbsp;</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Another approach is to generate a double wet output signal, using two independent delays which share the same LFO (Low-Frequency Oscillator) but modulated 180 degrees out of phase.&nbsp;</span></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"><strong><span style="color: #000000;">Vibrato Option:</span></strong> In this mode, only the dry signal is eliminated, keeping only at the output the wet modulated signal.</span></li>
+</ul>
+<h1><span style="font-size: 14pt; color: #000000; font-family: verdana, geneva;"><a id="link2" name="link2"></a><strong>2. Roland/Boss CE-2 Circuit.</strong></span></h1>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The CE-2 schematic can be broken down into some simpler blocks: JFET Bypass Switch, Power Supply, Input Buffer, Pre-De Emphasis Filters, Anti-Aliasing &amp; Reconstruction Filters and Bucket Brigade Device Stage.&nbsp;</span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/de9d233de8b2.png"><img src="../_assets/d088caba0758.png" alt="Boss CE-2 Schematic Blocks" width="800" height="334" style="display: block; margin-left: auto; margin-right: auto;" title="Boss CE-2 Schematic Blocks" longdesc="Boss CE-2 Schematic Blocks" /></a><span style="color: #333333; font-size: 10pt;"><span style="color: #000000;">Note</span>: The components are labeled following the original Roland/Boss PCB numeration.</span></span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The circuit is designed around the MN3007 1024 stage BBD (IC3) and the MN3101 clock driver (IC4). The input and output circuits use the dual op-amp uPC4558C IC, while the LFO is implemented with the help of a TL022LP op-amp. Some additional active filtering is applied using Sallen-Key transistor stages.&nbsp;</span><br /><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The effect response is commanded using two controls:</span></p>
+<ul>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The Rate knob adjusts the frequency of the LFO generator, adjusting the vibrato pitch.</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The Depth potentiometer sets the amplitude of the LFO triangular signal, which is related to the amount of modulation.</span></li>
+</ul>
+<h2><span style="font-size: 12pt; color: #000000; font-family: verdana, geneva;"><a id="link21" name="link21"></a><strong>2.1 Boss CE-2 Layout.</strong></span></h2>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The printed circuit board is designed to tightly fit into the standard boss enclosure:</span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/b4560cb63a06.png"><img src="../_assets/b4560cb63a06.png" alt="Boss CE-2 Layout" width="480" height="245" style="display: block; margin-left: auto; margin-right: auto;" title="Boss CE-2 Layout" longdesc="Boss CE-2 Layout" /></a></span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">It is a single layer PCB with insertion components. The top of the board contains all the pads to attach the cables to be connected to the jack connectors, potentiometers, and the footswitch.</span></p>
+<h2><span style="font-size: 12pt; color: #000000; font-family: verdana, geneva;"><a id="link22" name="link22"></a><strong>2.2 Roland/Boss CE-2 Components Part List / Bill of Materials:</strong></span></h2>
+<p><span style="font-size: 12pt; color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">In the first row the quantity of items are shown, the values of the capacitors are in micro farads.</span><br /></span></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">2&nbsp;&nbsp; &nbsp;C1,C28: &nbsp;&nbsp; 0.047</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;C2: &nbsp;&nbsp; 0.47/50V</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">2&nbsp;&nbsp; &nbsp;C3,C15: &nbsp;&nbsp; 0.0068</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">2&nbsp;&nbsp; &nbsp;C4,C16: &nbsp;&nbsp; 100pF</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">3&nbsp;&nbsp; &nbsp;C5,C10,C14: &nbsp;&nbsp; 0.033</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">2&nbsp;&nbsp; &nbsp;C6,C11: &nbsp;&nbsp; 0.0033</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">2&nbsp;&nbsp; &nbsp;C7,C12: &nbsp;&nbsp; 0.0082</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">2&nbsp;&nbsp; &nbsp;C8,C13: &nbsp;&nbsp; 470pF</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">2&nbsp;&nbsp; &nbsp;C9,C17: &nbsp;&nbsp; 1/50V</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;C18: &nbsp;&nbsp; 47/6.3V</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;C19: &nbsp;&nbsp; 0.1</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;C21: &nbsp;&nbsp; 0.01uF</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;C22: &nbsp;&nbsp; 47pF</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;C23: &nbsp;&nbsp; 0.01</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">4&nbsp;&nbsp; &nbsp;C24,C25,C26,C27: &nbsp;&nbsp; 470p</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;C29: &nbsp;&nbsp; 100/16V</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;C30: &nbsp;&nbsp; 220/10V</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">5&nbsp;&nbsp; &nbsp;D1,D3,D4,D5,D8: &nbsp;&nbsp; 1S1588</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;D2: &nbsp;&nbsp; IS1588</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;D6: &nbsp;&nbsp; RD5.1EB</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;D7: &nbsp;&nbsp; RD11EB</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;Foot Switch&nbsp;&nbsp; </span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">2&nbsp;&nbsp; &nbsp;IC1: &nbsp;&nbsp; 4558</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">2&nbsp;&nbsp; &nbsp;IC2: &nbsp;&nbsp; TL022</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;IC3: &nbsp;&nbsp; MN3007</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;IC4: &nbsp;&nbsp; MN3101</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">2&nbsp;&nbsp;&nbsp; JACK OUT, JACK IN </span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp;&nbsp; POWER CONN</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">3&nbsp;&nbsp; &nbsp;Q1,Q2,Q3: &nbsp;&nbsp; BC239BP/ZTX</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">5&nbsp;&nbsp; &nbsp;Q4,Q5,Q6,Q7,Q8: &nbsp;&nbsp; 2SC945</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;Q9: &nbsp;&nbsp; 2SK30A</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">2&nbsp;&nbsp; &nbsp;R1,R42: &nbsp;&nbsp; 1K</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;R2: &nbsp;&nbsp; 470K</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">14&nbsp;&nbsp; VR3,R3,R5,R7,R9,R10,R11,R12,R16,R17,R18,R19,R23,R31: 10K</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">6&nbsp;&nbsp; &nbsp;R4,R6,R21,R22,R24,R30: &nbsp;&nbsp; 47K</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">6&nbsp;&nbsp; &nbsp;VR1 RATE,VR2 DEPTH,R8,R26,R45,R46: &nbsp;&nbsp; 100K</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">5&nbsp;&nbsp; &nbsp;R13,R27,R28,R36,R37: &nbsp;&nbsp; 4K7</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">5&nbsp;&nbsp; &nbsp;R14,R43,R44,R47,R48: &nbsp;&nbsp; 56K</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;R15: &nbsp;&nbsp; 330K</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">5&nbsp;&nbsp; &nbsp;R20,R32,R41,R49,R50: &nbsp;&nbsp; 1M</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;R25: &nbsp;&nbsp; 470</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">2&nbsp;&nbsp; &nbsp;R29,R39: &nbsp;&nbsp; 33K</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;R35: &nbsp;&nbsp; 220K</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;R38: &nbsp;&nbsp; 150K</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;R40: &nbsp;&nbsp; 2K7</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;R51: &nbsp;&nbsp; 3K9</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;R52: &nbsp;&nbsp; 33</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;R53: &nbsp;&nbsp; 100</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">1&nbsp;&nbsp; &nbsp;SLP-135B&nbsp;&nbsp; &nbsp;LED</span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<h2><span style="color: #000000; font-size: 12pt; font-family: verdana, geneva;"><a id="link23" name="link23"></a><strong>2.3 Boss CE-2 True Bypass Alternative:</strong></span></h2>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">In the original CE-2 pedal when the effect deactivated, the input signal will always pass through the Input Buffer and the Pre/De-Emphasis filters, despite symmetric, they might add some coloring to the guitar tone.</span><a href="../_assets/09b1ea47c40a.png"><span style="font-size: 10pt; color: #333333;"><img src="../_assets/f933da2596e1.png" alt="Boss CE-2 True Bypass Schematic" width="800" height="301" style="display: block; margin-left: auto; margin-right: auto;" title="Boss CE-2 True Bypass Schematic" longdesc="Boss CE-2 True Bypass Schematic" /></span></a></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Considering the fact that <span style="font-size: 10pt;">the input impedance of the CE-2 is low, around 407<span style="font-size: 10pt;"><span style="font-size: 10pt;"><span class="st">K&Omega;</span></span></span>, it might result in the loading of the guitar pickups. As a rule of thumb, the input impedance should be at least 1 M<span class="st">&Omega;</span>.</span></span></p>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;"><span style="color: #333333;">For these reasons new CE-2 clones and old modded units, often include true bypass (<span style="font-size: 10pt;"><span style="font-size: 10pt;"><em>Triple Pole Double Throw</em>&nbsp;3PDT</span></span> switch) <span style="font-size: 10pt;">gives the cleanest possible path for the bypassed signal. It also carries other benefits like the number of components used in the pedal and using a light indicator and a&nbsp;</span></span><span style="color: #333333; font-size: 10pt;">power-on LED at the same time.&nbsp;</span></span></p>
+<h1><span style="font-size: 14pt; color: #000000; font-family: verdana, geneva;"><a id="link3" name="link3"></a><strong>3. JFET Bypass Switch.</strong></span></h1>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The JFET Bypass is made of one switch Q<sub>9</sub> and a toggle block formed by Q<sub>6</sub> and Q<sub>7</sub> to manage the switch. This configuration can activate/deactivate the effect using a simple push button.&nbsp;</span><br /><span style="font-family: verdana, geneva;"><a href="../_assets/bcb698b68430.png"><img src="../_assets/bcb698b68430.png" alt="Boss CE-2 JFET Switch" width="485" height="420" style="display: block; margin-left: auto; margin-right: auto;" title="Boss CE-2 JFET Switch" longdesc="Boss CE-2 JFET Switch" /></a></span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The JFET Bypass Switch enables two possible toggle configurations:&nbsp;</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">It can turn the effect on, activating the Q<sub>9</sub> BJT and allowing the wet signal to be taken into consideration by the output stage summing amplifier.</span></li>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">It can turn the effect off, deactivating the Q<sub>9</sub> BJT and isolating the wet signal from the summing amplifier.</span></li>
+</ul>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The Boss/Roland pedals have similar switching setup to the Ibanez/Maxon. For a detailed information check the<a href="/tube-screamer-analysis#switch"> Tube Screamer Switching Circuit.</a></span></p>
+<h1><span style="font-size: 14pt; color: #000000; font-family: verdana, geneva;"><a id="link4" name="link4"></a><strong>4. Power Supply.</strong></span></h1>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The Power Supply Stage provides the electrical power and bias voltage to all the circuitry, the whole power consumption is low and estimated around 9mA:</span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/29c8cd99176c.png"><img src="../_assets/29c8cd99176c.png" alt="Boss CE-2 Power Supply" width="332" height="352" style="display: block; margin-left: auto; margin-right: auto;" title="Boss CE-2 Power Supply" longdesc="Boss CE-2 Power Supply" /></a></span><br /><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">- The diode D<sub>7</sub> protects the pedal against adapter reverse polarity connections.</span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">- The resistor voltage divider composed by R<sub>27</sub>, R<sub>28</sub>, and VR<sub>3</sub>), generates 4.5V to be used as a bias voltage in some stages. The resistors junction (+4.5V) is decoupled to ground with a large value electrolytic capacitor C<sub>18</sub> 47uF. The VR<sub>3</sub> potentiometer is able to finely trim the 4.5 voltage: sometimes due to the loading of all stages, the 4.5 voltage might suffer some offset, the BBDs are sensitive to the bias, adjusting VR3 will bring maximum clean headroom.</span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">- The circuit formed by C<sub>29</sub>, R<sub>52</sub> and C<sub>30</sub> is a Pi CRC second order low pass filter, with an attenuation roll-off of &ndash;40 dB/decade over the cut-off frequency (22Hz). The 9V regulated line will bring the supply for the Bucket Brigade Stage, rejecting high-frequency harmonics which are especially harmful in BBDs signal processing due to the clocking noise of the MN3101 clock driver.</span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/fc87a7e731b2.png"><span style="color: #333333; font-size: 10pt;"><img src="../_assets/fc87a7e731b2.png" alt="boss-ce-2-power-supply-crc-filter" width="650" height="155" style="display: block; margin-left: auto; margin-right: auto;" title="boss-ce-2-power-supply-crc-filter" longdesc="boss-ce-2-power-supply-crc-filter" /></span></a></span></p>
+<ul>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The stereo in jack is used as an on-off switch, switching the battery (-) terminal to ground when the guitar jack is connected.</span></li>
+</ul>
+<h2><span style="font-size: 12pt; color: #000000; font-family: verdana, geneva;"><a id="link41" name="link41"></a><strong>4.1 Boss ACA vs. PSA Power Supply Adapters.</strong></span></h2>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The early Boss products like CE-2 with reduced power consumption used the ACA adapters which provide unregulated 12VDC (unregulated means that the output voltage drops when current consumption exceeds the maximum capacity, which is 250mA). This pedal was originally designed for an external 12V ACA supply adapter.&nbsp;</span><br /><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The series resistor R53 and diode D5 between the minus input on the power jack and ground are used to reduce the internal voltage supply. </span></p>
+<p style="margin-left: 30px;"><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">V = 12V -V<sub>F</sub> = 12V - 1.2V = 10.8V.</span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">With new products with higher power consumption, the PSA adapter was introduced which provides regulated 9VDC (regulated means that provide a constant voltage at any current under the max. capacity 200mA). This kind of adapter is the most common and used in all pedals nowadays.</span><br /><span style="font-family: verdana, geneva;"><a href="../_assets/5dcb1142bc5a.jpg"><img src="../_assets/5dcb1142bc5a.jpg" alt="Boss PSA Adapter" width="325" height="170" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">In order to make the old ACA pedals compatible, the resistor and diode can be removed and replaced with jumpers.</span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The Daisy chain Trick: Powering the old CE-2 pedals designed for ACA 12VDC input with either a newer 9V ACA or PSA adapter will not work properly. The voltage drop over the resistor and diode will under-power the pedal making the power-on LED glow faintly. One easy solution is to use a daisy chain cable together with another standard pedal. The link between the two pedals will short the resistor-diode circuit and the pedal will receive full power.</span></p>
+<h1><span style="font-family: verdana, geneva;"><strong><span style="font-size: 14pt; color: #000000;"><a id="link5" name="link5"></a>5. Input Buffer.</span></strong></span></h1>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The task of the Input Stage Buffer is to create a high input impedance so as to preserve signal integrity and avoid high-frequency signal loss. It is implemented with a plain Emitter Follower with unity voltage gain (G<sub>V</sub>=1):</span><br /><span style="font-family: verdana, geneva;"><a href="../_assets/a68c09979b52.png"><img src="../_assets/a68c09979b52.png" alt="boss ce 2 input buffer" width="343" height="252" style="display: block; margin-left: auto; margin-right: auto;" title="boss ce 2 input buffer" longdesc="boss ce 2 input buffer" /></a></span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The 2SC732TM-GR NPN transistor is a cheap high gain (&szlig;=200~400), low noise suitable for audio applications.&nbsp;</span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The capacitor C<sub>1</sub> forms a high-pass filter filtering the low frequency humming in conjunction with the input resistors R<sub>1</sub>, R<sub>2</sub> and the transistor stage input impedance. It also separates the guitar from any pedal DC potential, protecting the pickups in case of circuit failure.</span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"></span></p>
+<h2><span style="color: #000000; font-size: 12pt; font-family: verdana, geneva;"><a id="link51" name="link51"></a><strong>5.1 Boss CE-2 Input Impedance.</strong></span></h2>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">In order to calculate numerically the input impedance of the emitter follower, the hybrid-pi model can be used for analyzing the small signal behavior.</span></p>
+<p><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">The analysis of this parameter is similar to the Tube Screamer input stage, if you want to follow all the mathematics check the <a href="/tube-screamer-analysis#impedance">Tube Screamer Input Impedance Calculation</a></span><span style="color: #333333; font-size: 10pt;">, otherwise just stick to the general formula:</span></span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\Z_{in}=R_{1}+R_{2}//[r_{\pi}+(\beta+1) \cdot R_{3}]\]</div></span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\Z_{in}=1K+470K//[r_{\pi}+(300+1) \cdot 10K]\]</div></span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\Z_{in}=407K\]</div></span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Therefore, the CE-2 input resistance is 407K, almost the value of the biasing resistor R<sub>2</sub> (470K) which accounts for almost the entire signal loading at the input.&nbsp;</span></p>
+<p><br /><span style="color: #000000; font-size: 14pt; font-family: verdana, geneva;"><a id="link6" name="link6"></a><strong>6. Pre-Emphasis &amp; De-Emphasis Filters.</strong></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The assumption of using these filters is that applying treble emphasis (pre-emphasis) and a corresponding identical treble reduction (de-emphasis) to the dry signal, the output signal will end up with the same original tonal balance. But applying the same filtering to the delay signal, the output signal will reduce any hiss acquired via the delay path.</span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">For this purpose, two 1st order Shelving Filters are used in the input and output stages, each of these filters will create a zero and a pole, with a rising/falling slope of 6dB/octave or 20dB/decade.</span></p>
+<h2><span style="font-family: verdana, geneva;"><strong><span style="font-size: 12pt; color: #000000;"><a id="link61" name="link61"></a>6.1 Shelving Filters with Operational Amplifiers.</span></strong></span></h2>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The Shelving architecture is simple first-order filter function characterized by a frequency response with two different gains: Gain<sub>LOW</sub> and Gain<sub>HIGH</sub> between frequencies much higher and much lower than the corner frequencies.</span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">This filters can be implemented over operational amplifiers, using inverting or non-inverting topologies. Boss CE-2 uses the op-amp <strong>inverting</strong> architecture.</span></p>
+<p><span style="color: #333333; font-family: verdana, geneva; font-size: 13.3333px;"><strong>Note:</strong>&nbsp;In order to achieve clock noise attenuation properly, inverting shelving filters (pre &amp; post) are mandatory. Blending non-inverting &amp; inverting will give mismatched gain &amp; frequencies.&nbsp;<span style="color: #333333; font-family: verdana, geneva; font-size: 13.3333px;">The nature of <strong>non-inverting</strong> topology provides no attenuation and minimum gain=1.</span>&nbsp;Only <strong>inverting</strong> topology offers both gain &amp; attenuation, and both low &amp; high inverting shelving filters share exactly same resistors &amp; capacitors in reverse order, yielding matched frequencies and desired opposite gains, and this is why they are used in the Boss CE-2.</span></p>
+<h3><span style="font-size: 10pt; color: #000000; font-family: verdana, geneva;"><a id="link611" name="link611"></a><strong>6.1.1 Inverting OpAmp Shelving Filters.</strong></span></h3>
+<p><span style="font-size: 10pt; color: #000000; font-family: verdana, geneva;"></span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/397734faa81a.png"><span style="font-size: 10pt; color: #000000;"><img src="../_assets/397734faa81a.png" alt="opamp-inverting-shelving-filters" width="550" height="337" style="display: block; margin-left: auto; margin-right: auto;" title="opamp-inverting-shelving-filters" longdesc="opamp-inverting-shelving-filters" /></span></a></span></p>
+<table border="0" style="margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td>
+<p style="text-align: left;"><span style="font-size: 10pt; color: #000000; font-family: verdana, geneva;">&nbsp;Low-Pass Filter Formulas:</span></p>
+<p style="text-align: left;"><span style="font-family: verdana, geneva;"><div class="latex " >\[ \\G_{LOW} = -\frac{R_{2}}{R_{3}}\]</div></span></p>
+<p style="text-align: left;"><span style="font-family: verdana, geneva;"><div class="latex " >\[ \\G_{HIGH} = -\frac{R_{1}//R_{2}}{R_{3}}\]</div></span></p>
+<p style="text-align: left;"><span style="font-family: verdana, geneva;"><div class="latex " >\[ \\fc_{HIGH}=\frac{1}{2\cdot \pi \cdot C_{1} \cdot R_{1}}\]</div></span></p>
+<p style="text-align: left;"><span style="font-family: verdana, geneva;"><div class="latex " >\[ \\fc_{LOW}=\frac{1}{2\cdot \pi \cdot C_{1} \cdot (R_{1}+R_{2})}\]</div></span></p>
+<p style="text-align: left;"><span style="font-family: verdana, geneva;"><div class="latex " >\[\\ \frac{G_{LOW}}{G_{HIGH}} = \frac{f_{HIGH}}{f_{LOW}}\]</div></span></p>
+</td>
+<td><span style="color: #ffffff; font-family: verdana, geneva;">..........</span></td>
+<td>
+<p><span style="font-size: 10pt; color: #000000; font-family: verdana, geneva;">High-Pass Filter Formulas:</span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\G_{LOW} = -\frac{R_{3}}{R_{2}}\]</div></span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\G_{HIGH} = -\frac{R_{3}}{R_{1}//R_{2}}\]</div></span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\fc_{HIGH}=\frac{1}{2\cdot \pi \cdot C_{1} \cdot R_{1}}\]</div></span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\fc_{LOW}=\frac{1}{2\cdot \pi \cdot C_{1} \cdot (R_{1}+R_{2})}\]</div></span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\ \frac{G_{LOW}}{G_{HIGH}} = \frac{f_{LOW}}{f_{HIGH}}\]</div></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3><br /><span style="font-size: 10pt; color: #000000; font-family: verdana, geneva;"><span style="font-size: 10pt; color: #000000;"><a id="link612" name="link612"></a></span><strong>6.1.2 Non- Inverting OpAmp shelving Filters:</strong></span></h3>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/269f208b4cab.png"><span style="font-size: 10pt;"><img src="../_assets/269f208b4cab.png" alt="opamp-non-inverting-shelving-filters" width="551" height="338" style="display: block; margin-left: auto; margin-right: auto;" title="opamp-non-inverting-shelving-filters" longdesc="opamp-non-inverting-shelving-filters" /></span></a></span></p>
+<table border="0" style="margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td>
+<p style="text-align: left;"><span style="font-size: 10pt; color: #000000; font-family: verdana, geneva;">&nbsp;Low-Pass Filter Formulas:</span></p>
+<p style="text-align: left;"><span style="font-family: verdana, geneva;"><div class="latex " >\[\\G_{LOW} = 1 + \frac{R_{2}}{R_{1}}\]</div></span></p>
+<p style="text-align: left;"><span style="font-family: verdana, geneva;"><div class="latex " >\[\\G_{HIGH} = 1 \]</div></span></p>
+<p style="text-align: left;"><span style="font-family: verdana, geneva;"><div class="latex " >\[\\fc_{LOW}=\frac{1}{2 \cdot \pi \cdot C_{1} \cdot R_{2}}\]</div></span></p>
+<p style="text-align: left;"><span style="font-family: verdana, geneva;"><div class="latex " >\[\\fc_{HIGH}=\frac{1}{2 \cdot \pi \cdot C_{1} \cdot R_{1}//R_{2}}\]</div></span></p>
+<p style="text-align: left;"><span style="font-family: verdana, geneva;"><div class="latex " >\[\\G_{LOW} = \frac{f_{HIGH}}{f_{LOW}}\]</div></span></p>
+</td>
+<td><span style="color: #ffffff; font-family: verdana, geneva;">..........</span></td>
+<td>
+<p><span style="font-size: 10pt; color: #000000; font-family: verdana, geneva;">High-Pass Filter Formulas:</span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\G_{LOW} = 1 \]</div></span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\G_{HIGH} = 1 + \frac{R_{2}}{R_{1}}\]</div></span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\fc_{LOW}=\frac{1}{2\cdot \pi \cdot C_{1} \cdot (R_{1} + R_{2})}\]</div></span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\fc_{HIGH}=\frac{1}{2\cdot \pi \cdot C_{1} \cdot R_{1}}\]</div></span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\G_{HIGH} = \frac{f_{HIGH}}{f_{LOW}}\]</div></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">If R<sub>1</sub> were much smaller than R<sub>2</sub>, there would be a 20dB/decade roll-off between the two gains. If R<sub>2</sub> is not so much less, then the slope never quite makes it to 20dB/decade before it flattens out to the high frequency gain.</span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"><strong><span style="color: #000000;">Note:</span></strong> The ratio f<sub>HIGH</sub>/f<sub>LOW</sub> is equal to the ratio of Gain<sub>HIGH</sub>/Gain<sub>LOW</sub>. It is fixed, so if you want a lot of cut or boost in the shelf, then the frequencies where the shelf starts and ends will be further apart and vice versa.</span></p>
+<h2><span style="font-family: verdana, geneva;"><strong><span style="font-size: 12pt; color: #000000;"><a id="link62" name="link62"></a>6.2 Boss CE-2 Pre-Emphasis Filter.</span></strong></span></h2>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">The active Pre-emphasis Filter formed by the 4558 dual op-amp is designed to increase the magnitude of the high frequencies with respect to the mid-low frequencies, in order to enhance the overall S/N ratio by minimizing the adverse effects of attenuation and distortion created for the BBD stage:</span><a href="../_assets/374dbd012df1.png"><span style="font-size: 10pt; color: #333333;"><img src="../_assets/374dbd012df1.png" alt="boss ce-2 pre-emphasis filter" width="341" height="235" style="display: block; margin-left: auto; margin-right: auto;" title="boss ce-2 pre-emphasis filter" longdesc="boss ce-2 pre-emphasis filter" /></span></a></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">For the lows, the caps C<sub>3</sub> and C<sub>4</sub> are considered open circuits, leaving 47K at the input and 47K feedback and therefore resulting in a gain of 1. For high frequencies, there is a parallel path using 6n8 cap and 10K resistor, providing a gain of 5.7 above 2.4 KHz.</span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\G_{LOW} = -\frac{R_{6}}{R_{4}}= -\frac{47K}{47K} = -1 \:\: (0dB)\]</div></span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\G_{HIGH} = -\frac{R_{6}}{R_{4}//R_{5}}= -\frac{47K}{47K//10K} = -5.7 \:\: (15dB)\]</div></span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\fc_{LOW}=\frac{1}{2\cdot \pi \cdot (R_{5}+R_{4}) \cdot C_{3}}=\frac{1}{2\cdot \pi \cdot (10K+47K) \cdot 0.0068uF}=410\: Hz. \]</div></span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\fc_{HIGH}=\frac{1}{2\cdot \pi \cdot R_{5} \cdot C_{3}}=\frac{1}{2\cdot \pi \cdot 10K \cdot 0.0068uF}=2.341\: KHz. \]</div></span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The small 100pF C<sub>4</sub> capacitor across the feedback loop works as a low pass filter, mellowing out the high end of the signal and limiting the bandwidth which is a classic arrange in stompboxes input stages that also maintain HF stability.</span></li>
+</ul>
+<p><span style="color: #000000; font-size: 10pt; font-family: verdana, geneva;"></span></p>
+<p><span style="font-family: verdana, geneva;"><strong><span style="color: #000000; font-size: 10pt;">Pre-Emphasis Filter Frequency Response</span></strong></span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">As mention above, this circuit emphasizes the frequencies over 410 Hz. At 2.3KHz the gain keeps still at 15dB.</span></span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/9941250e624b.png"><img src="../_assets/9941250e624b.png" alt="boss ce-2 pre-emphasis frequency response" width="650" height="221" style="display: block; margin-left: auto; margin-right: auto;" title="boss ce-2 pre-emphasis frequency response" longdesc="boss ce-2 pre-emphasis frequency response" /></a></span></p>
+<h2><span style="font-family: verdana, geneva;"><strong><span style="font-size: 12pt; color: #000000;"><a id="link63" name="link63"></a>6.3 De-Emphasis Filter.</span></strong></span></h2>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The De-Emphasis Filter is the complement of the Pre-Emphasis Filter. It is also implemented over the 4558 dual op-amps and designed to attenuate the magnitude of the high frequencies with respect to the mid-low frequencies. This filter takes the unnatural sounding pre-emphasized audio and turns it back into its original response.&nbsp;</span></p>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">The op-amp is configured in the classic <em><a href="http://en.wikipedia.org/wiki/Operational_amplifier_applications#Summing_amplifier">summing amplifier</a></em> topology, the equal size of the weighting resistors R<sub>21</sub>=R<sub>22</sub>=R<sub>24</sub>=47K indicates that the mix ratio between the dry and the wet signal is 50%.</span><a href="../_assets/28c34c1e67b9.png"><img src="../_assets/28c34c1e67b9.png" alt="boss ce-2 de-emphasis filter" width="485" height="286" style="display: block; margin-left: auto; margin-right: auto;" title="boss ce-2 de-emphasis filter" longdesc="boss ce-2 de-emphasis filter" /></a></span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">To implement this filter, the same 6n8/10k previously used in the input stage is used in the feedback loop providing complementary treble cut over 2.34 KHz</span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\G_{LOW} = -\frac{R_{24}}{R_{21}}= -\frac{47K}{47K} = -1 \:\: (0dB)\]</div></span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\G_{HIGH} = -\frac{R_{24}//R_{23}}{R_{21}}= -\frac{47K//10K}{47K} = -0.17 \:\: (-15dB)\]</div></span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\fc_{HIGH}=\frac{1}{2\cdot \pi \cdot R_{23} \cdot C_{15}}=\frac{1}{2\cdot \pi \cdot 10K \cdot 0.0068uF}=2.341\: KHz. \]</div></span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\fc_{LOW}=\frac{1}{2\cdot \pi \cdot (R_{23}+R_{24}) \cdot C_{15}}=\frac{1}{2\cdot \pi \cdot (10K+47K) \cdot 0.0068uF}=410\: Hz.\]</div></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"></span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The small 100p C<sub>16</sub> capacitor across the feedback loop works as a low pass filter, mellowing out the high end of the signal and limiting the bandwidth which is a classic arrange in stompboxes input stages that also maintain HF stability.</span></li>
+</ul>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"></span></p>
+<p><span style="font-family: verdana, geneva;"><strong><span style="font-size: 10pt; color: #000000;">De-Emphasis Filter Frequency Response</span></strong></span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">As mention above, this circuit attenuates the frequencies over 410 Hz. At 2.3KHz the gain keep still at -15dB.&nbsp;</span><br /><span style="font-family: verdana, geneva;"><a href="../_assets/5edc0bc5e8f6.png"><img src="../_assets/5edc0bc5e8f6.png" alt="boss ce-2 de-emphasis frequency response" width="652" height="220" style="display: block; margin-left: auto; margin-right: auto;" title="boss ce-2 de-emphasis frequency response" longdesc="boss ce-2 de-emphasis frequency response" /></a></span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<h1><span style="color: #ff6600; font-size: 14pt; font-family: verdana, geneva;"><a id="link7" name="link7"></a><strong><span style="color: #000000;">7. Boss CE-2 Anti-Aliasing Filter &amp; Reconstruction Filters.</span></strong></span></h1>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Anti-alias filters are used to band-limit the input signal and remove the harmonic content at that is introduced by the BBD sampling process.&nbsp;</span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">In the reverse process, anti-imaging (or reconstruction) filters are used at the output of a sampled system to eliminate spectral images of the desired signal. These are generated at integer multiples of the sample rate. The ideal filter specification is the same as that for the anti-aliasing filter.</span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">For both Anti-Aliasing and Reconstruction filters, the Low pass Sallen-Key topology is used; creating a frequency response that removes very severely the high frequencies.</span></p>
+<h2><span style="color: #000000; font-size: 12pt; font-family: verdana, geneva;"><a id="link71" name="link71"></a><strong>7.1 The Sallen-Key Filter Topology.</strong></span></h2>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">The Sallen-Key is a simple filter architecture used to build second order active filters. It has a high input impedance and low output impedance, including a buffer amplifier implemented in this case over a BJT emitter/source follower.</span><a href="../_assets/833572d85ff6.png"><span style="color: #333333; font-size: 10pt;"><img src="../_assets/833572d85ff6.png" alt="sallen-key-low-pass-topologies" width="654" height="206" style="display: block; margin-left: auto; margin-right: auto;" title="sallen-key-low-pass-topologies" longdesc="sallen-key-low-pass-topologies" /></span></a></span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">A common configuration for BBD based designs is to use a 3rd order Sallen-Key, implemented using a passive 1st order RC filter + a 2nd order standard Sallen-Key.</span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The 3rd order Sallen-Key Function:</span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\H(s)=\frac{b_{0}}{a_{3}s^{3}+a_{3}s^{2}+a_{1}s+a_{0}}\]</div></span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\a_{0}=b_{0}=R^{3}\cdot C_{1}\cdot C_{2}\cdot C_{3}\]</div></span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\a_{1}=\frac{1}{R^{2}\cdot C_{1}\cdot C_{2}}+\frac{1}{R^{2}\cdot C_{2}\cdot C_{3}}\]</div></span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\a_{2}=\frac{1}{R\cdot C_{1}}+\frac{2}{R\cdot C_{2}}\]</div></span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\a_{3}=1\]</div></span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The equivalent block diagram:</span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\V_{in}(s)\rightarrow \frac{2 \pi f_{c1}}{s+2 \pi f_{c1}}\rightarrow \frac{(2 \pi f_{c2})^{2}}{s^{2}+2 \xi (2 \pi f_{c2})s+(2 \pi f_{c2})^{2}}\rightarrow V_{out}(s)\]</div></span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"></span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">So, you can make all the numbers or use the simple <em><a href="http://sim.okawa-denshi.jp/en/Sallenkey3Lowkeisan.htm">3rd Order Sallen-Key Low Pass Filter Design Tool</a></em> by Okawa Electric Design and get the cut-off frequencies.</span></p>
+<h2><span style="color: #000000; font-size: 12pt; font-family: verdana, geneva;"><a id="link72" name="link72"></a><strong>7.2 Boss CE-2 Anti-Aliasing Filter.</strong></span></h2>
+<p><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">The Anti-Aliasing Filter is an active low pass filter used before the signal sampler (BBD) in order to restrict the bandwidth of the signal to approximately satisfy the Nyquist-Shannon Sampling Theorem. In this way, the input signal is bandlimited to prevent aliasing.</span><a href="../_assets/5e90b522ebe9.png"><span style="font-size: 10pt; color: #333333;"><img src="../_assets/5e90b522ebe9.png" alt="Boss CE-2 Anti-Aliasing Filter" width="387" height="295" style="display: block; margin-left: auto; margin-right: auto;" title="Boss CE-2 Anti-Aliasing Filter" longdesc="Boss CE-2 Anti-Aliasing Filter" /></span></a></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Just before the anti-aliasing low pass filter, there is another passive high pass filter formed by R8 and C5, generating a cut-off frequency of 48Hz that will bandlimit and cut the humming of the incoming signal. The cut-off frequency can be calculated as:</span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\ f_{c}=\frac{1}{2\cdot \pi \cdot R_{8}\cdot C_{5}}=\frac{1}{2\cdot \pi \cdot 100K \cdot 0.033uF}= 48.2\, Hz\]</div></span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p><span style="font-family: verdana, geneva;"><strong><span style="font-size: 10pt; color: #000000;">Frequency Response of Anti-Aliasing Filter:</span></strong></span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/d976015b66e7.png"><img src="../_assets/d976015b66e7.png" alt="Boss CE-2 Anti-Aliasing Filter Frequency Response" width="650" height="233" style="display: block; margin-left: auto; margin-right: auto;" title="Boss CE-2 Anti-Aliasing Filter Frequency Response" longdesc="Boss CE-2 Anti-Aliasing Filter Frequency Response" /></a></span><br /><span style="font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">The frequency response is a band-pass filter, letting the harmonics between 48 Hz and 6.6 KHz. The low pass cut-off frequencies can be calculated as mention before, the poles are at</span><span style="font-size: 10pt; color: #333333;"> fc<sub>1</sub> = 6,6 KHz&nbsp; </span><span style="font-size: 10pt; color: #333333;">and fc<sub>2</sub> = 6,9 KHz</span></span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"></span></p>
+<p><span style="font-family: verdana, geneva;"><strong><span style="font-size: 12pt; color: #808000;"><a id="llink73" name="link73"></a><span style="color: #000000;">7.3 Boss CE-2 Reconstruction Filter.</span></span></strong></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">The Reconstruction Filter also called <em>Anti-Imaging Filter</em> is again a low pass filter used to construct a smooth analog signal from a sampled output. The output signal must be bandlimited, to remove the clock noise and prevent aliasing (meaning Fourier coefficients being reconstructed as low-frequency waves, not as higher frequency aliases).</span><img src="../_assets/8d899ec77f27.png" alt="Boss CE-2 Reconstruction Filter" width="377" height="289" style="display: block; margin-left: auto; margin-right: auto;" title="Boss CE-2 Reconstruction Filter" longdesc="Boss CE-2 Reconstruction Filter" /></span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Just before the anti-aliasing low pass filter, there is another passive high pass filter formed by R<sub>15</sub> and C<sub>10</sub>, generating a cut-off frequency of 48Hz that will bandlimit and cut the humming of the incoming signal. The cut-off frequency can be calculated as:</span></p>
+<p><span style="font-family: verdana, geneva;"><div class="latex " >\[\\f_{c}=\frac{1}{2\cdot \pi \cdot R_{15}\cdot C_{10}}=\frac{1}{2\cdot \pi \cdot 330K \cdot 0.033uF}= 14.6\, Hz\]</div> <span style="color: #333333; font-size: 10pt;"><br /></span></span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">This 14.6 Hz cut-off frequency seems to be the only difference between the filtering after and before the BBD, which is indeed mirrored. After the delay stage, slightly more bass pass through the circuit.</span></p>
+<p><span style="font-family: verdana, geneva;"><strong><span style="color: #000000; font-size: 10pt;">Frequency Response of Reconstruction Filter:</span></strong></span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/823e68002a46.png"><img src="../_assets/823e68002a46.png" alt="Boss CE-2 Reconstruction Filter Frequency Response" width="652" height="233" style="display: block; margin-left: auto; margin-right: auto;" title="Boss CE-2 Reconstruction Filter Frequency Response" longdesc="Boss CE-2 Reconstruction Filter Frequency Response" /></a></span><br /><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">The frequency response is a band-pass filter, letting the harmonics between 14.6Hz and 6.6 KHz. The low pass cut-off frequencies are the same as in the Anti-aliasing filter because the circuit is exactly the same</span> (fc<sub>1</sub> = 6,6 KHz and<span style="color: #333333; font-size: 10pt;"> fc<sub>2</sub> = 6,9 KHz).</span></span></p>
+<h1><span style="font-family: verdana, geneva;"><strong><span style="font-size: 14pt; color: #000000;"><a id="link8" name="link8"></a>8. The Bucket Brigade Device Stage.</span></strong></span></h1>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The BBD is the core of the circuit: the MN3007 which is well known for its fine audio response is used together with a clock signal generator MN3101. At the same time, a Low-Frequency Oscillator (LFO) is needed to drive the MN3101 in order to generate the variable delay time which is the gist of the chorus effect.</span></p>
+<ul>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"><strong><span style="color: #000000;">MN3007:</span></strong> is a 1024 stages BBD by Matsushita/Panasonic which provides a signal delay from 5.12 to 51.2ms. To create the chorus effect a delay from 5 to 40ms is needed, so this part is perfect for the task. It also has good S/N=80dB, low THD of 0.5% typ (V<sub>IN</sub>=0.78Vrms). The supply voltage range is from -10 to -15V.</span></li>
+</ul>
+<ul>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"><strong><span style="color: #000000;">MN3101</span>:</strong> Is a clock generator driver by Matsushita/Panasonic, in a small footprint package designed to match the MN3007 providing:</span>
+<ul>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">A two-phase clock, the frequency value is selected by the LFO.</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Stable V<sub>GG</sub> bias supply to the MN3007. This DC bias value (V<sub>GG</sub> = 4/15 x V<sub>CC</sub>) improves the BBD transfer efficiency.</span></li>
+</ul>
+</li>
+</ul>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/380e89ae49cf.png"><img src="../_assets/380e89ae49cf.png" alt="Boss CE-2 LFO + BBD" width="759" height="284" style="display: block; margin-left: auto; margin-right: auto;" title="Boss CE-2 LFO + BBD" longdesc="Boss CE-2 LFO + BBD" /></a></span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">In summary, the cap C<sub>22</sub> 47pF is charging-discharging at a fast rate (set by the Q<sub>5</sub> astable), but the starting voltage level of C<sub>22</sub> is commanded by the LFO signal,</span><span style="color: #333333; font-size: 10pt;"> sent through the Q<sub>4</sub> buffer:</span></span></p>
+<ul>
+<li><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">The&nbsp;<strong>Q<sub>5</sub></strong> transistor forms an RC astable oscillator with the MN3101. It is used to discharge the C<sub>22</sub> 47pF timing capacitor, which is charged through the R<sub>38</sub> 150K resistor.</span><span style="color: #333333; font-size: 10pt;"> Indeed, Q<sub>5</sub> together with the MN3101 will oscillate by itself at a constant frequency without Q<sub>4</sub> and its associated components.</span></span></li>
+</ul>
+<p style="padding-left: 60px;"><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">When the output of the double series inverters (pin 5) in the MN3101 goes high (in response to the cap charging to the CMOS threshold voltage as monitored by MN3101 pin 7) Q<sub>5</sub></span><span style="color: #333333; font-size: 10pt;"> turns on and discharges the cap, and the MN3101 output goes low again, turning the transistor off and allowing the cap to re-charge. The cycle repeats at an ultrasonic rate.</span></span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<ul>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The <strong>Q4</strong> transistor is an emitter follower that provides buffering to the triangle waveform from the LFO.</span><br /><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Immediately after C<sub>22</sub> discharge, the diode D1 is needed to isolate the output of Q4 transistor. This diode serves to charge it up again to an "offset" voltage corresponding to the present voltage at the LFO output. </span></li>
+</ul>
+<p style="padding-left: 60px;"><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">Actually the capacitor offset charging voltage = (Vout<sub>LFO</sub> - V<sub>be</sub>)/2 - VF<sub>diode</sub></span><span style="color: #333333; font-size: 10pt;"><br /></span></span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"></span></p>
+<h2><span style="font-size: 12pt; color: #000000; font-family: verdana, geneva;"><a id="link81" name="link81"></a><strong>8.1 Boss Ce-2 LFO</strong> <strong>Low-Frequency Oscillator.</strong></span></h2>
+<p><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">The chorus effect is created by the slow modulation of the delay time using a Low-Frequency Oscillator (LFO). As the LFO cycles, the delay time goes up and down and</span><span style="color: #333333; font-size: 10pt;"> therefore the delayed audio pitch slightly shifts up and down.</span></span></p>
+<p><span style="font-family: verdana, geneva;">&nbsp;<span style="color: #333333; font-size: 10pt;">The LFO is implemented using a dual op-amp TL022 in cascade; this op-amp has a low current consumption, which is good to prevent ticking in the power supply. </span><span style="color: #333333; font-size: 10pt;">Some ticking can be mixed with the audio when the LFO produces the rising or falling edge of a square wave and there is a very sudden surge in the current.</span></span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/67bed561a97a.png"><img src="../_assets/67bed561a97a.png" alt="boss-ce-2-lfo-circuit" width="370" height="235" style="display: block; margin-left: auto; margin-right: auto;" title="boss-ce-2-lfo-circuit" longdesc="boss-ce-2-lfo-circuit" /></a></span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The first operational amplifier in the chain generates the square wave, while the second operational amplifier generates the triangle signal. <br />This simple circuit provides a variable frequency triangular waveform whose amplitude is also variable.</span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">After the second op-amp, there is a low pass RC filter (R<sub>35</sub> C<sub>21</sub>) with a cut-off frequency of 72Hz (1/2<span class="st">&pi;</span>RC) which filters the LFO signal, removing all possible high-freq ticking noise.</span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/364576804f5b.png"><span style="color: #333333; font-size: 10pt;"><img src="../_assets/364576804f5b.png" alt="boss-ce-2-lfo-signals" width="643" height="208" style="display: block; margin-left: auto; margin-right: auto;" title="boss-ce-2-lfo-signals" longdesc="boss-ce-2-lfo-signals" /></span></a></span></p>
+<ul>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The first op-amp is in a threshold detector in positive feedback Trigger-Schmitt configuration.</span><br /><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The oscillation frequency can be calculated following the formula of <a href="http://www.ti.com/lit/an/slod006b/slod006b.pdf"><span style="color: #333333;">the Triangle Oscillator by Ron Mancini</span></a>:</span></li>
+</ul>
+<p><br /><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"><div class="latex " >\[ f_{OSC}= \frac{R_{30}}{4 \cdot C_{19}R_{29}R_{32}}=\frac{47K}{4 \cdot 0.1uF \cdot 33K \cdot 1M} = 3.5Hz \]</div></span></p>
+<p><br /><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">With Rate control at maximum position, the oscillation frequency is 3.5Hz, this value will decrease as the VR1 pot is trimmed.</span></p>
+<p><span style="font-family: verdana, geneva;"><a href="../_assets/aa38cfe14c94.png"><img src="../_assets/aa38cfe14c94.png" alt="boss-ce-2-lfo-square-signal" width="651" height="429" style="display: block; margin-left: auto; margin-right: auto;" title="boss-ce-2-lfo-square-signal" longdesc="boss-ce-2-lfo-square-signal" /></a></span></p>
+<ul>
+<li><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">The second op-amp is an Integrator which generates the ramp. The action of VR2 will modify the steepness of the ramp and therefore the amplitude or </span><span style="color: #333333; font-size: 10pt;">depth at a fixed frequency.</span></span></li>
+</ul>
+<p><span style="font-family: verdana, geneva;">&nbsp;<a href="../_assets/b67bd97526ee.png"><img src="../_assets/b67bd97526ee.png" alt="boss-ce-2-lfo-triangular" width="650" height="216" style="display: block; margin-left: auto; margin-right: auto;" title="boss-ce-2-lfo-triangular" longdesc="boss-ce-2-lfo-triangular" /></a></span></p>
+<h1><span style="color: #000000; font-size: 14pt; font-family: verdana, geneva;"><a id="link9" name="link9"></a><strong>9. Resources.</strong></span></h1>
+<p><span style="line-height: 17.993px; color: #333333; font-size: 10pt; font-family: verdana, geneva;">All CE-2 treads in <a href="http://www.diystompboxes.com/">DIYStompBoxes</a> and <a href="http://hammer.ampage.org/">Mark Hammer</a> explanations.</span><br style="line-height: 17.992992401123047px;" /><span style="line-height: 17.993px; color: #333333; font-size: 10pt; font-family: verdana, geneva;"><a href="http://www.bossarea.com/loadpage.asp?file=boxes/ce-2.xml">Boss CE-2 Information</a>&nbsp;by BossArea&nbsp;</span><br style="line-height: 17.992992401123047px;" /><span style="line-height: 17.993px; color: #333333; font-size: 10pt; font-family: verdana, geneva;"><a href="http://testtone.com/fundamentals/what-chorus-effect">Chorus Effect Explanation</a>&nbsp;by TestTone&nbsp;</span><br style="line-height: 17.992992401123047px;" /><span style="line-height: 17.993px; color: #333333; font-size: 10pt; font-family: verdana, geneva;"><a href="http://audacity.sourceforge.net/manual-1.2/effects_chorus.html">http://audacity.sourceforge.net/manual-1.2/effects_chorus.html</a></span><br style="line-height: 17.992992401123047px;" /><span style="line-height: 17.993px; color: #333333; font-size: 10pt; font-family: verdana, geneva;"><a href="http:/www.hobby-hour.com/guitar/chorus_effects.php">Chorus guitar effects</a>&nbsp;by Hobby Hour</span><br style="line-height: 17.992992401123047px;" /><span style="line-height: 17.993px; color: #333333; font-size: 10pt; font-family: verdana, geneva;">Tonepad&nbsp;<a href="http://www.tonepad.com/project.asp?id=53">CE-2 Cloning Project</a>&nbsp;</span><br style="line-height: 17.992992401123047px;" /><span style="line-height: 17.993px; color: #333333; font-size: 10pt; font-family: verdana, geneva;"><a href="../%20http:/www.freecircuits.net/circuit-63.html">Triangular Wave Generators</a>&nbsp;by FreeCircuits&nbsp;</span><br style="line-height: 17.992992401123047px;" /><span style="color: #333333; font-size: 13.3333px; line-height: 17.963px; font-family: verdana, geneva;"><a href="http://www.edn.com/design/analog/4363970/Design-second-and-third-order-Sallen-Key-filters-with-one-op-amp">3rd Order Sallen-Key Filter with one OpAmp</a> by EDN.</span><br /><span style="line-height: 17.993px; color: #333333; font-size: 10pt; font-family: verdana, geneva;"><a href="http://www.linkwitzlab.com/filters.htm#5">Shelving Filters </a>by Linkwitzlab.</span><br style="line-height: 17.981481552124023px;" /><span style="font-size: 13.5135px; line-height: 17.993px; font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;"><span style="line-height: 17.993px; color: #333333; font-size: 10pt;">Boss ACA and PSA adaptors by&nbsp;<a href="http://stinkfoot.se/archives/726">StinkFoot.</a>&nbsp;</span><br style="line-height: 17.9815px;" /><span style="font-size: 13.5135px; line-height: 17.993px;"><a href="http://www.diystompboxes.com/smfforum/index.php?topic=64805.0;wap2">Pre-Emphasis and De-Emphasis filters</a>&nbsp;<span style="font-size: 10pt; color: #333333;">in DIYStompBoxes.</span></span></span></span></p>
+<h2><span style="color: #000000; font-size: 12pt; font-family: verdana, geneva;"><a id="link91" name="link91"></a><strong>9.1 Datasheets.</strong></span></h2>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;">BOSS CE-2 Instructions pdf.&nbsp;</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">BOSS CE-2 Service Notes pdf.</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;">2SC732TM Transistor pdf.</span></p>
+<p><span style="font-family: verdana, geneva;">Our&nbsp;<span style="color: #333333; font-size: 13.3333px;">sincere appreciation to G. Franc,&nbsp; B. Maynard and Dror Sharon for your support.</span></span></p>
+<p style="text-align: right;"><span style="font-size: 10pt; font-family: verdana, geneva;"><span style="font-size: 12pt; color: #000000;"><span style="color: #333333; font-size: 10pt;">Thanks for reading, all feedback is appreciated&nbsp;&nbsp;<img src="../_assets/26a349a17744.jpg" alt="info(at)ElectroSmash.com " style="float: right;" /></span></span></span></p>
+<p style="text-align: center;"><span style="font-family: verdana, geneva;"></span></p>
+<p style="text-align: center;"><span style="color: #808080; font-size: 8pt; font-family: verdana, geneva;"><span style="color: #0000ff;"><a href="../rights/index.html"><span style="color: #0000ff;">Some Rights Reserved</span></a></span>, you are free to copy, share, remix and use all material.<br />Trademarks, brand names and logos are the property of their respective owners.</span></p>	</section>
+  
+  <!-- footer -->
+    <!-- //footer -->
+
+			<hr class="divider-vertical" /><ul class="pager pagenav">
+	<li class="previous">
+		<a class="hasTooltip" title="MXR Phase 90 Analysis" aria-label="Previous article: MXR Phase 90 Analysis" href="../mxr-phase90/index.html" rel="prev">
+			<span class="icon-chevron-left" aria-hidden="true"></span> <span aria-hidden="true">Prev</span>		</a>
+	</li>
+	<li class="next">
+		<a class="hasTooltip" title="Back Talk Reverse Delay Analysis" aria-label="Next article: Back Talk Reverse Delay Analysis" href="../back-talk-analysis/index.html" rel="next">
+			<span aria-hidden="true">Next</span> <span class="icon-chevron-right" aria-hidden="true"></span>		</a>
+	</li>
+</ul>
+	
+	
+	</article>
+<!-- //Article -->
+
+
+</div><div><a href="http://www.artio.net" style="font-size: 8px; visibility: visible; display: inline;" title="Web development, Joomla, CMS, CRM, Online shop software, databases">Joomla SEF URLs by Artio</a></div>
+		</div>
+		<!-- //MAIN CONTENT -->
+
+		<!-- SIDEBAR RIGHT -->
+		<div class="t3-sidebar t3-sidebar-right col-xs-12 col-sm-4  col-md-3 ">
+			<div class="t3-module module " id="Mod28"><div class="module-inner"><h3 class="module-title "><span>New Updates</span></h3><div class="module-ct"><ul class="latestnews mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../arduino-audio-meter/index.html" itemprop="url">
+			<span itemprop="name">
+				Arduino Audio Meter			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../dallas-rangemaster/index.html" itemprop="url">
+			<span itemprop="name">
+				Dallas Rangemaster Treble Booster Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../time-manipulator/index.html" itemprop="url">
+			<span itemprop="name">
+				Time Manipulator - Arduino Delay/Echo/Reverb			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../marshall-guvnor-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Marshall The Guvnor Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../germanium-fuzz/index.html" itemprop="url">
+			<span itemprop="name">
+				You Can Build the Perfect Germanium Fuzz			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../mxr-distortion-plus-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				MXR Distortion + Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod29"><div class="module-inner"><h3 class="module-title "><span>Most Visited</span></h3><div class="module-ct"><ul class="mostread mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../tube-screamer-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Tube Screamer Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../fuzz-face/index.html" itemprop="url">
+			<span itemprop="name">
+				Fuzz Face Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../proco-rat/index.html" itemprop="url">
+			<span itemprop="name">
+				Pro Co Rat Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../boss-ds1-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Boss DS-1 Distortion Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../klon-centaur-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Klon Centaur Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../big-muff-pi-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Big Muff Pi Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod184"><div class="module-inner"><h3 class="module-title "><span>Follow us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><span style="font-size: 10pt; color: #333333;">You can also follow us on:</span></p>
+<p><a href="https://www.facebook.com/ElectroSmash"><img src="../_assets/df34a2b41b54.png" alt="facebook" /></a>&nbsp;&nbsp; <a href="https://plus.google.com/+Electrosmash/about"><img src="../_assets/3ffc52860091.png" alt="google" /></a>&nbsp;&nbsp; <a href="https://www.instagram.com/electro.smash/"><img src="../_assets/45b0b0fe2d4b.png" alt="instagram" /></a></p>
+<p><a href="https://www.pinterest.com/electrosmash/"><img src="../_assets/05310d9fcf2a.png" alt="pinterest" /></a>&nbsp;&nbsp; <a href="https://www.youtube.com/user/ElectroSmashTV"><img src="../_assets/d920883b3613.png" alt="youtube" /></a>&nbsp;&nbsp; <a href="https://twitter.com/electro_smash"><img src="../_assets/52581f7264eb.png" alt="twitter" /></a></p></div>
+</div></div></div>
+		</div>
+		<!-- //SIDEBAR RIGHT -->
+
+	</div>
+</div> 
+
+
+
+  
+
+
+  
+
+
+	
+<!-- BACK TOP TOP BUTTON -->
+<div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top hidden-xs hidden-sm affix-top">
+  <button class="btn btn-primary" title="Back to Top"><i class="fa fa-caret-up"></i></button>
+</div>
+<script type="text/javascript">
+(function($) {
+	// Back to top
+	$('#back-to-top').on('click', function(){
+		$("html, body").animate({scrollTop: 0}, 500);
+		return false;
+	});
+    $(window).on('load', function(){
+        // hide button to top if the document height not greater than window height*2;using window load for more accurate calculate.    
+        if ((parseInt($(window).height())*2)>(parseInt($(document).height()))) {
+            $('#back-to-top').hide();
+        } 
+    });
+})(jQuery);
+</script>
+<!-- BACK TO TOP BUTTON -->
+
+<!-- FOOTER -->
+<footer id="t3-footer" class="wrap t3-footer">
+
+			<!-- FOOTER SPOTLIGHT -->
+		<div class="container hidden-xs">
+				<!-- SPOTLIGHT -->
+	<div class="t3-spotlight t3-footer-sl  row">
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod185"><div class="module-inner"><h3 class="module-title "><span>About us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../about-us/index.html">&nbsp;&nbsp;<img src="../_assets/420f9f181bc0.jpg" alt="smash electro" /></a></p>
+<p><a href="../about-us/index.html"><span style="font-size: 10pt; color: #333333;">Smashing audio electronics since MMXIII</span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod183"><div class="module-inner"><h3 class="module-title "><span>Email Newsletter</span></h3><div class="module-ct"><div class="acymailing_module" id="acymailing_module_formAcymailing57441">
+	<div class="acymailing_fulldiv" id="acymailing_fulldiv_formAcymailing57441"  >
+		<form id="formAcymailing57441" action="/" onsubmit="return submitacymailingform('optin','formAcymailing57441')" method="post" name="formAcymailing57441"  >
+		<div class="acymailing_module_form" >
+						<table class="acymailing_form">
+				<tr>
+												<td class="acyfield_email acy_requiredField">
+								<input id="user_email_formAcymailing57441"  onfocus="if(this.value == 'example@email.com') this.value = '';" onblur="if(this.value=='') this.value='example@email.com';" class="inputbox" type="text" name="user[email]" style="width:90%" value="example@email.com" title="example@email.com"/>
+							</td> </tr><tr>
+					
+					<td  class="acysubbuttons">
+												<input class="button subbutton btn btn-primary" type="submit" value="Subscribe" name="Submit" onclick="try{ return submitacymailingform('optin','formAcymailing57441'); }catch(err){alert('The form could not be submitted '+err);return false;}"/>
+											</td>
+				</tr>
+			</table>
+						<input type="hidden" name="ajax" value="0" />
+			<input type="hidden" name="acy_source" value="module_183" />
+			<input type="hidden" name="ctrl" value="sub"/>
+			<input type="hidden" name="task" value="notask"/>
+			<input type="hidden" name="redirect" value="https%3A%2F%2Fwww.electrosmash.com%2Fboss-ce-2-analysis"/>
+			<input type="hidden" name="redirectunsub" value="https%3A%2F%2Fwww.electrosmash.com%2Fboss-ce-2-analysis"/>
+			<input type="hidden" name="option" value="com_acymailing"/>
+						<input type="hidden" name="hiddenlists" value="1"/>
+			<input type="hidden" name="acyformname" value="formAcymailing57441" />
+									</div>
+		</form>
+	</div>
+	</div>
+
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod186"><div class="module-inner"><h3 class="module-title "><span>Contact us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../contact-us/index.html"><span style="font-size: 10pt; color: #333333;">e-mail us at <span id="cloak30c8a5a2f6ed582eb307d1af473cf379">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
+				document.getElementById('cloak30c8a5a2f6ed582eb307d1af473cf379').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy30c8a5a2f6ed582eb307d1af473cf379 = '&#105;nf&#111;' + '&#64;';
+				addy30c8a5a2f6ed582eb307d1af473cf379 = addy30c8a5a2f6ed582eb307d1af473cf379 + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';
+				var addy_text30c8a5a2f6ed582eb307d1af473cf379 = '&#105;nf&#111;' + '&#64;' + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';document.getElementById('cloak30c8a5a2f6ed582eb307d1af473cf379').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy30c8a5a2f6ed582eb307d1af473cf379 + '\'>'+addy_text30c8a5a2f6ed582eb307d1af473cf379+'<\/a>';
+		</script></span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod188"><div class="module-inner"><h3 class="module-title "><span>Rights</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p style="text-align: left;">&nbsp;&nbsp;<a href="https://creativecommons.org/licenses/by-nc/3.0/"><img src="../_assets/b0e99d439c44.png" alt="88x31" /></a></p>
+<p style="text-align: left;"><img src="../_assets/fe2636cdea5c.png" alt="open source logo" width="180" height="38" /></p>
+<p style="text-align: left;"><img src="../_assets/8281c4ec3a3b.png" alt="open hardware logo" width="180" height="38" /></p>
+<p style="text-align: left;">&nbsp;</p></div>
+</div></div></div>
+							</div>
+			</div>
+<!-- SPOTLIGHT -->
+		</div>
+		<!-- //FOOTER SPOTLIGHT -->
+	
+	<section class="t3-copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 copyright ">
+					
+          <small>
+            <a href="http://twitter.github.io/bootstrap/" title="Bootstrap by Twitter" target="_blank">Bootstrap</a> is a front-end framework of Twitter, Inc. Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" title="MIT License" target="_blank">MIT License.</a>
+          </small>
+          <small>
+            <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> font licensed under <a href="http://scripts.sil.org/OFL">SIL OFL 1.1</a>.
+          </small>
+				</div>
+							</div>
+		</div>
+	</section>
+
+</footer>
+<!-- //FOOTER -->
+
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29544239-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

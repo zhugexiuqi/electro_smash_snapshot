@@ -1,0 +1,800 @@
+
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr"
+	  class='com_content view-article itemid-525 j31 mm-hover '>
+
+<head>
+	<base href="../index/index.html" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="wah, wah wah, vox, v847, circuit, schematic, explanation, study, analysis, technology, Q factor, impedance, inductor, gain, input stage, output, stage, more mid, components, parts, bom, layout, effect, " />
+	<meta name="rights" content="Creative Commons: Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0) " />
+	<meta name="author" content="JR" />
+	<meta name="description" content="The Wah-Wah Effect, Vox V847 Circuit, Frequency Response, V847 Layout, Circuit Bias, Vox V847 Components Part List / Bill of Materials., Input Stage, Gain, Vox V847 Input Impedance, Output Stage, Output impedance, How the Wah-Wah works, Vox V847 Wah Modif" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>ElectroSmash - Vox V847 Analysis</title>
+	<link href="index.html" rel="canonical" />
+	<link href="../_assets/d87243966412.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../_assets/26f5cf410b61.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/15ff046a2fe3.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/dd09f39c1b89.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"95b57d3eb97041a9ad60fd42f40cba15","system.paths":{"root":"","base":""}}</script>
+	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+	<script src="../_assets/323c609448d2.js" type="text/javascript"></script>
+	<script src="../_assets/b8bcbb2f005c.js" type="text/javascript" async="async"></script>
+	<script type="text/javascript">
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });	if(typeof acymailingModule == 'undefined'){
+				var acymailingModule = [];
+			}
+			
+			acymailingModule['emailRegex'] = /^[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+)*\@([a-z0-9-]+\.)+[a-z0-9]{2,10}$/i;
+
+			acymailingModule['NAMECAPTION'] = 'Name';
+			acymailingModule['NAME_MISSING'] = 'Please enter your name';
+			acymailingModule['EMAILCAPTION'] = 'example@email.com';
+			acymailingModule['VALID_EMAIL'] = 'Please enter a valid e-mail address';
+			acymailingModule['ACCEPT_TERMS'] = 'Please check the Terms and Conditions';
+			acymailingModule['CAPTCHA_MISSING'] = 'The captcha is invalid, please try again';
+			acymailingModule['NO_LIST_SELECTED'] = 'Please select the lists you want to subscribe to';
+		
+acymailingModule['excludeValuesformAcymailing95441'] = [];
+acymailingModule['excludeValuesformAcymailing95441']['name'] = 'Name';
+acymailingModule['excludeValuesformAcymailing95441']['email'] = 'example@email.com';
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });
+	</script>
+
+	
+<!-- META FOR IOS & HANDHELD -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<style type="text/stylesheet">
+		@-webkit-viewport   { width: device-width; }
+		@-moz-viewport      { width: device-width; }
+		@-ms-viewport       { width: device-width; }
+		@-o-viewport        { width: device-width; }
+		@viewport           { width: device-width; }
+	</style>
+	<script type="text/javascript">
+		//<![CDATA[
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement("style");
+			msViewportStyle.appendChild(
+				document.createTextNode("@-ms-viewport{width:auto!important}")
+			);
+			document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+		}
+		//]]>
+	</script>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="apple-mobile-web-app-capable" content="YES"/>
+<!-- //META FOR IOS & HANDHELD -->
+
+
+
+
+<!-- Le HTML5 shim and media query for IE8 support -->
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script type="text/javascript" src="../_assets/010a3c86157d.js"></script>
+<![endif]-->
+
+<!-- You can add Google Analytics here or use T3 Injection feature -->
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="../_assets/76d3e1341c39.css" type="text/css" />
+<![endif]-->
+	</head>
+
+<body>
+
+<div class="t3-wrapper corporate"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
+
+	
+<!-- MAIN NAVIGATION -->
+<header id="t3-mainnav" class="wrap navbar navbar-default navbar-fixed-top t3-mainnav">
+
+	<!-- OFF-CANVAS -->
+		<!-- //OFF-CANVAS -->
+
+	<div class="container">
+
+		<!-- NAVBAR HEADER -->
+		<div class="navbar-header">
+
+			<!-- LOGO -->
+			<div class="logo logo-image">
+				<div class="logo-image">
+					<a href="/" title="ElectroSmash">
+													<img class="logo-img" src="../_assets/115794d6d5b8.png" alt="ElectroSmash" />
+						
+												
+						<span>ElectroSmash</span>
+					</a>
+				</div>
+			</div>
+			<!-- //LOGO -->
+
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-collapse">
+					<i class="fa fa-bars"></i>
+				</button>
+			
+	    
+		</div>
+		<!-- //NAVBAR HEADER -->
+
+		<!-- NAVBAR MAIN -->
+				<nav class="t3-navbar-collapse navbar-collapse collapse"></nav>
+		
+		<nav class="t3-navbar navbar-collapse collapse">
+			<div  class="t3-megamenu"  data-responsive="true">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav navbar-nav level0">
+<li itemprop='name'  data-id="435" data-level="1">
+<a itemprop='url' class=""  href="/"   data-target="#">Home </a>
+
+</li>
+<li itemprop='name' class="dropdown mega" data-id="510" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Chips<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="492" data-level="2">
+<a itemprop='url' class=""  href="../jrc4558-analysis/index.html"   data-target="#">JRC4558  </a>
+
+</li>
+<li itemprop='name'  data-id="519" data-level="2">
+<a itemprop='url' class=""  href="../mn3007-bucket-brigade-devices/index.html"   data-target="#">MN3007 BBDs </a>
+
+</li>
+<li itemprop='name'  data-id="468" data-level="2">
+<a itemprop='url' class=""  href="../lm386-analysis/index.html"   data-target="#">LM386 </a>
+
+</li>
+<li itemprop='name'  data-id="1643" data-level="2">
+<a itemprop='url' class=""  href="../pt2399-analysis/index.html"   data-target="#">PT2399 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="444" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Amps<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="993" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="489" data-level="2">
+<a itemprop='url' class=""  href="../little-gem-analysis/index.html"   data-target="#">Little Gem Amp </a>
+
+</li>
+<li itemprop='name'  data-id="526" data-level="2">
+<a itemprop='url' class=""  href="../marshall-mg10/index.html"   data-target="#">Marshall MG10 </a>
+
+</li>
+<li itemprop='name'  data-id="491" data-level="2">
+<a itemprop='url' class=""  href="../noisy-cricket-analysis/index.html"   data-target="#">Noisy Cricket  </a>
+
+</li>
+<li itemprop='name'  data-id="490" data-level="2">
+<a itemprop='url' class=""  href="../ruby-amp-analysis/index.html"   data-target="#">Ruby Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="488" data-level="2">
+<a itemprop='url' class=""  href="../smokey-amp-analysis/index.html"   data-target="#">Smokey Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="746" data-level="2">
+<a itemprop='url' class=""  href="http://www.electrosmash.com/schematics#amps"   data-target="#">Amps Schematics.</a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="active dropdown mega" data-id="511" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Pedals<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  style="width: 600px"  data-width="600"><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="515" data-level="2">
+<a itemprop='url' class=""  href="../back-talk-analysis/index.html"   data-target="#">Back Talk Reverse Delay </a>
+
+</li>
+<li itemprop='name'  data-id="518" data-level="2">
+<a itemprop='url' class=""  href="../big-muff-pi-analysis/index.html"   data-target="#">Big Muff Pi  </a>
+
+</li>
+<li itemprop='name'  data-id="524" data-level="2">
+<a itemprop='url' class=""  href="../boss-ce-2-analysis/index.html"   data-target="#">Boss CE-2 Chorus </a>
+
+</li>
+<li itemprop='name'  data-id="1088" data-level="2">
+<a itemprop='url' class=""  href="../boss-ds1-analysis/index.html"   data-target="#">Boss DS-1 Distortion </a>
+
+</li>
+<li itemprop='name'  data-id="1713" data-level="2">
+<a itemprop='url' class=""  href="../dallas-rangemaster/index.html"   data-target="#">Dallas Rangemaster </a>
+
+</li>
+<li itemprop='name'  data-id="905" data-level="2">
+<a itemprop='url' class=""  href="../crybaby-gcb-95/index.html"   data-target="#">Dunlop CryBaby GCB-95  </a>
+
+</li>
+<li itemprop='name'  data-id="842" data-level="2">
+<a itemprop='url' class=""  href="../fuzz-face/index.html"   data-target="#">Fuzz Face </a>
+
+</li>
+<li itemprop='name'  data-id="1664" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="512" data-level="2">
+<a itemprop='url' class=""  href="../tube-screamer-analysis/index.html"   data-target="#">Ibanez Tube Screamer </a>
+
+</li>
+<li itemprop='name'  data-id="1433" data-level="2">
+<a itemprop='url' class=""  href="../klon-centaur-analysis/index.html"   data-target="#">Klon Centaur </a>
+
+</li>
+</ul>
+</div></div>
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="548" data-level="2">
+<a itemprop='url' class=""  href="../mxr-microamp/index.html"   data-target="#">MXR MicroAmp </a>
+
+</li>
+<li itemprop='name'  data-id="1667" data-level="2">
+<a itemprop='url' class=""  href="../marshall-guvnor-analysis/index.html"   data-target="#">Marshall Guvnor </a>
+
+</li>
+<li itemprop='name'  data-id="1632" data-level="2">
+<a itemprop='url' class=""  href="../mxr-distortion-plus-analysis/index.html"   data-target="#">MXR Distortion + </a>
+
+</li>
+<li itemprop='name'  data-id="1244" data-level="2">
+<a itemprop='url' class=""  href="../mxr-dyna-comp-analysis/index.html"   data-target="#">MXR Dyna Comp </a>
+
+</li>
+<li itemprop='name'  data-id="573" data-level="2">
+<a itemprop='url' class=""  href="../mxr-phase90/index.html"   data-target="#">MXR Phase 90 </a>
+
+</li>
+<li itemprop='name'  data-id="553" data-level="2">
+<a itemprop='url' class=""  href="../proco-rat/index.html"   data-target="#">ProCo Rat </a>
+
+</li>
+<li itemprop='name'  data-id="520" data-level="2">
+<a itemprop='url' class=""  href="../sitar-swami-analysis/index.html"   data-target="#">Sitar Swami </a>
+
+</li>
+<li itemprop='name' class="current active" data-id="525" data-level="2">
+<a itemprop='url' class=""  href="index.html"   data-target="#">Vox V847 Wah Wah </a>
+
+</li>
+<li itemprop='name'  data-id="547" data-level="2">
+<a itemprop='url' class=""  href="../emg81/index.html"   data-target="#">EMG81 Pickup </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="796" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Projects<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="1108" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-uno/index.html"   data-target="#">pedalSHIELD UNO </a>
+
+</li>
+<li itemprop='name'  data-id="797" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield/index.html"   data-target="#">pedalSHIELD DUE </a>
+
+</li>
+<li itemprop='name'  data-id="1437" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-mega/index.html"   data-target="#">pedalSHIELD MEGA </a>
+
+</li>
+<li itemprop='name'  data-id="1312" data-level="2">
+<a itemprop='url' class=""  href="../pedal-pi/index.html"   data-target="#">Pedal-Pi </a>
+
+</li>
+<li itemprop='name'  data-id="1662" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="1663" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="1668" data-level="2">
+<a itemprop='url' class=""  href="../time-manipulator/index.html"   data-target="#">Time Manipulator </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name'  data-id="745" data-level="1">
+<a itemprop='url' class=""  href="../forum-electrosmash/index.html"   data-target="#">Forum </a>
+
+</li>
+<li itemprop='name'  data-id="816" data-level="1">
+<a itemprop='url' class=""  href="../shop/index.html"   data-target="#">Shop</a>
+
+</li>
+</ul>
+</div>
+
+		</nav>
+    <!-- //NAVBAR MAIN -->
+
+	</div>
+</header>
+<!-- //MAIN NAVIGATION -->
+
+
+
+
+
+
+  
+
+
+  
+
+
+	
+<div id="t3-mainbody" class="container t3-mainbody">
+	<div class="row">
+
+		<!-- MAIN CONTENT -->
+		<div id="t3-content" class="t3-content col-xs-12 col-sm-8  col-md-9">
+						<div class="item-page clearfix">
+
+
+<!-- Article -->
+<article>
+	<meta itemprop="inLanguage" content="en-GB" />
+	<meta itemprop="url" content="index.html" />
+
+      
+<header class="article-header clearfix">
+	<h1 class="article-title" itemprop="headline">
+					<a href="index.html" itemprop="url" title="Vox V847 Wah-Wah Analysis">
+				Vox V847 Wah-Wah Analysis</a>
+			</h1>
+
+			</header>
+    
+    
+  <!-- Aside -->
+    <!-- //Aside -->
+
+  
+  
+  
+	
+  
+	
+	<section class="article-content clearfix">
+		<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">The V847 is a Wah-Wah pedal designed by&nbsp;<span style="font-size: 13px;">Lester Kushner and Brad Plunkett</span>&nbsp;and released in 1967 by VOX. It emulates the sound of a trumpet being muted, modifying the guitar tone like a human voice saying the syllable <em>wah</em>.</span></p>
+<p><span style="color: #333333; background-color: #ffffff;"><a href="../_assets/0bb466529eb3.png"><span style="font-size: 10pt; color: #333333; background-color: #ffffff;"><img src="../_assets/429e8b886cb0.png" alt="vox-v847-pedal-small" width="400" height="224" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></span></p>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">Vox produced several versions of the Wah-Wah with small circuit adjustments:</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; background-color: #ffffff;"><strong><span style="color: #000000;">Vox V847:</span></strong> It is the classic Wah-Wah model. No true bypass.</span></li>
+<li><span style="font-size: 10pt; color: #333333; background-color: #ffffff;"><strong><span style="color: #000000;">Vox V847A:</span></strong> Updated version of the classic model, including SMD resistors and an additional input buffer stage.</span></li>
+<li><span style="font-size: 10pt; color: #333333; background-color: #ffffff;"><span style="color: #000000;"><strong>Vox V846HW</strong>:</span> It is hand-wired in turret board construction and <em>premium</em> components.</span></li>
+<li><span style="font-size: 10pt; color: #333333; background-color: #ffffff;"><strong><span style="color: #000000;">Vox V845:</span></strong> Based on the specifications of the original pedal developed by VOX in the '60s.</span></li>
+<li><span style="font-size: 10pt; color: #333333; background-color: #ffffff;"><strong><span style="color: #000000;">Vox V848 Clyde McCoy:</span></strong> featuring True Bypass and AC input.</span></li>
+</ul>
+ 
+<p><span style="background-color: #ffffff;"></span></p>
+<p>&nbsp;</p>
+<p><span style="color: #000000;"><strong><span style="font-size: 14pt;">Table of Contents.</span>&nbsp;</strong></span></p>
+<p style="padding-left: 30px;"><span style="font-size: 10pt; background-color: #ffffff;"><a href="/vox-v847-analysis#link1"><span style="background-color: #ffffff;">1. The Wah-Wah Effect.</span></a></span><br /><span style="font-size: 10pt; background-color: #ffffff;"><a href="/vox-v847-analysis#link2"><span style="background-color: #ffffff;">2. The Vox V847 Circuit.</span></a></span><br /><span style="font-size: 10pt; background-color: #ffffff;">&nbsp; &nbsp; &nbsp;<a href="/vox-v847-analysis#link21"><span style="background-color: #ffffff;">2.1 The Vox V847 Wah Frequency Response.</span></a></span><br /><span style="font-size: 10pt; background-color: #ffffff;">&nbsp; &nbsp; &nbsp;<a href="/vox-v847-analysis#link22"><span style="background-color: #ffffff;">2.2 The Vox V847 Layout.</span><br /><span style="font-size: 10pt; background-color: #ffffff;">&nbsp; &nbsp;&nbsp; </span></a><a href="/vox-v847-analysis#link23"><span style="background-color: #ffffff;">2.3 The Vox V847 Circuit Bias.</span><br /><span style="font-size: 10pt; background-color: #ffffff;">&nbsp; &nbsp; &nbsp;</span></a><a href="/vox-v847-analysis#link24"><span style="background-color: #ffffff;">2.4 The Vox V847 Components Part List / Bill of Materials.</span></a></span><br /><span style="font-size: 10pt; background-color: #ffffff;"><a href="/vox-v847-analysis#link3"><span style="background-color: #ffffff;">3. Input Stage.</span></a></span><br /><span style="font-size: 10pt; background-color: #ffffff;">&nbsp; &nbsp; &nbsp;<a href="/vox-v847-analysis#link31"><span style="background-color: #ffffff;">3.1 Input Stage Gain.</span></a></span><br /><span style="font-size: 10pt; background-color: #ffffff;">&nbsp; &nbsp; &nbsp;<a href="/vox-v847-analysis#link32"><span style="background-color: #ffffff;">3.2 Vox V847 Input Impedance.</span></a></span><br /><span style="font-size: 10pt; background-color: #ffffff;"><a href="/vox-v847-analysis#link4"><span style="background-color: #ffffff;">4. Output Stage</span></a></span><br /><span style="font-size: 10pt; background-color: #ffffff;">&nbsp; &nbsp; &nbsp;<a href="/vox-v847-analysis#link41"><span style="background-color: #ffffff;">4.1 Vox V847 Output impedance.</span></a></span><br /><span style="font-size: 10pt; background-color: #ffffff;"><a href="/vox-v847-analysis#link5"><span style="background-color: #ffffff;">5. How the Wah-Wah works.</span></a></span><br /><span style="font-size: 10pt; background-color: #ffffff;"><a href="/vox-v847-analysis#link6"><span style="background-color: #ffffff;">6. Vox V847 Wah Modifications.</span></a></span><br /><span style="font-size: 10pt; background-color: #ffffff;">&nbsp; &nbsp; &nbsp;<a href="/vox-v847-analysis#link61"><span style="background-color: #ffffff;">6.1 Modifying the Wah-Wah Q factor.</span></a></span><br /><span style="font-size: 10pt; background-color: #ffffff;">&nbsp; &nbsp; &nbsp;<a href="/vox-v847-analysis#link62"><span style="background-color: #ffffff;">6.2 Modifying the Sweep Range.</span></a></span><br /><span style="font-size: 10pt; background-color: #ffffff;">&nbsp; &nbsp; &nbsp;<a href="/vox-v847-analysis#link63"><span style="background-color: #ffffff;">6.3 More Bass and Gain Modification.</span></a></span><br /><span style="font-size: 10pt; background-color: #ffffff;">&nbsp; &nbsp; &nbsp;<a href="/vox-v847-analysis#link64"><span style="background-color: #ffffff;">6.4 More Mid Content Modification.</span></a></span><br /><span style="font-size: 10pt; background-color: #ffffff;">&nbsp; &nbsp; &nbsp;<a href="/vox-v847-analysis#link65"><span style="background-color: #ffffff;">6.5 The V847 Wah-Wah Inductor.</span></a></span><br /><span style="font-size: 10pt; background-color: #ffffff;"><a href="/vox-v847-analysis#link7"><span style="background-color: #ffffff;">7. Resources.</span></a></span></p>
+<p><span style="font-size: 10pt; background-color: #ffffff;"></span></p>
+<h1><span style="font-size: 14pt; color: #800000; background-color: #ffffff;"><a id="link1" name="link1"></a><strong><span style="color: #000000;">1. The Wah-Wah Effect.</span></strong></span></h1>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">The Wah-Wah pedal was invented in November 1966 by Lester Kushner and Brad Plunkett at Warwick Electronics, a division of Whirlpool that owned Thomas Organ Company and Vox. The creation of the Wah-Wah effect seems to be a fluke during the solid-state redesign of the Vox Super Beatle/USA Amplifier. </span></p>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">Vox first units were made in Italy by <span>Jen Elettronica (OEM)</span>&nbsp;and called <em>The Clyde McCoy Wah-Wah</em> model after the famous trumpet player whose 1931 hit <em>Sugar Blues</em> popularized the Wah-Wah sound. Thomas Organ then wanted the effect branded as its own for the American market, changing it to Cry Baby which was sold in parallel to the Italian Vox V846.</span></p>
+<p><span style="background-color: #ffffff;"></span></p>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">Warwick Electronics Inc. was granted US patent 3530224 <a href="http://www.muzique.com/schem/wah-patent.pdf"><span style="color: #333333; background-color: #ffffff;"><em>Foot-Controlled Continuously Variable Preference Circuit for Musical Instruments</em></span></a> on September 22, 1970.</span></p>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">The Wah-Wah effect is basically a tone control. The frequency response of it is a band-pass filter which boosts the resonant frequency and attenuates above and below harmonics. The action of rocketing the pedal shifts the resonant frequency. When the pedal is pushed all the way down, the high frequencies are emphasized, and conversely, when the pedal is all the way up, the bass is boosted.</span></p>
+<p><a href="../_assets/8a51db03718f.png"><span style="background-color: #ffffff;"><img src="../_assets/8a51db03718f.png" alt="Wah Wah Effect " width="551" height="181" style="display: block; margin-left: auto; margin-right: auto;" title="Wah Wah Effect " /></span></a></p>
+<h1><span style="font-size: 14pt; color: #ff6600; background-color: #ffffff;"><a id="link2" name="link2"></a><strong><span style="color: #000000;">2. The Vox V847 Circuit.</span></strong></span></h1>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">The V847 simple schematic can be broken down into two blocks: Input Stage and Output Stage. </span></p>
+<p><span style="background-color: #ffffff;"><a href="../_assets/6a3ca98b8792.png"><span style="background-color: #ffffff;"><img src="../_assets/b77627821003.png" alt="Vox V847 Wah Schematic Blocks" width="600" height="261" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></span></p>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">The circuit is built using 2 cascaded transistor stages with a couple of passive components and an inductor; this reduced design makes the power consumption below 1mA. </span></p>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">The gist of the design remains in how the resonant frequency of an LC filter made up of a fixed inductor L<sub>1</sub> and a fixed capacitor C<sub>2</sub> can be moved using a variable resistor VR1.</span></p>
+<p><span style="font-size: 10pt; color: #ff6600; background-color: #ffffff;"></span></p>
+<h2><strong><span style="font-size: 12pt; color: #ff6600; background-color: #ffffff;"><span style="line-height: 17.9815px;"><a id="link21" name="link21"></a><span style="color: #000000;">2.1 Vox V847 Wah Frequency Response.</span></span></span></strong></h2>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;"><span style="line-height: 17.9815px; font-size: 10pt;">The frequency response is characterized by a resonant peak centered in 750 Hz (pedal in a mid position) and can be swept up and down from 450 Hz to 1.6 KHz. The selected frequencies are amplified up to 18dB while the surrounding ones are attenuated as the below image shows:</span></span></p>
+<p><a href="../_assets/7dae6f51f15e.png"><span style="background-color: #ffffff;"><img src="../_assets/7dae6f51f15e.png" alt="Vox V847 Frequency Response " width="648" height="208" style="display: block; margin-left: auto; margin-right: auto;" title="Vox V847 Frequency Response" /></span></a></p>
+<h2><strong><span style="font-size: 12pt; color: #ff9900; background-color: #ffffff;"><a id="link22" name="link22"></a><span style="color: #000000;">2.2 The Vox V847 Layout.</span></span></strong></h2>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">The printed circuit board is designed to fit without problems inside the big pedal enclosure.</span></p>
+<p><span style="background-color: #ffffff;"><a href="../_assets/39ff6a78297d.png"><span style="background-color: #ffffff;"><img src="../_assets/88540c3f51a8.png" alt="vox-v847-inside-small" width="400" height="341" style="display: block; margin-left: auto; margin-right: auto;" /></span></a><span style="font-size: 10pt;">The Vox V847 uses a single layer PCB with insertion components. The side of the board contains a Molex style connector to attach the cables to be connected to the potentiometer, footswitch and jack connectors.<a href="../_assets/8d737b718e8d.png"><img src="../_assets/8d737b718e8d.png" alt="Vox V847 PCB" width="373" height="312" style="display: block; margin-left: auto; margin-right: auto;" title="Vox V847 PCB" /></a></span></span></p>
+<p><span style="background-color: #ffffff;"></span></p>
+<p><span style="font-size: 12pt; color: #000000;"><strong><a id="link23" style="color: #000000;" name="link23"></a>2.3 The Vox V847 Circuit Bias.</strong></span></p>
+<p>In th<span style="font-size: 10pt;">e i</span><span style="font-size: 10pt; color: #333333; background-color: #ffffff;"><span style="line-height: 18px;">mage below, the most important DC bias points are shown. It can be useful in order to troubleshoot and trace circuit failures:</span></span></p>
+<h2><span style="font-size: 12pt; background-color: #ffffff;"><a href="../_assets/1bfbef6d9df9.png"><img src="../_assets/1bfbef6d9df9.png" alt="vox-v847-circuit-bias" width="633" height="276" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></h2>
+<h2><span style="font-size: 12pt; color: #000000; background-color: #ffffff;"><a id="link24" name="link24"></a><strong>2.4 Vox V847 Components Part List / Bill of Materials.</strong></span></h2>
+<p style="margin-left: 30px;"><span style="font-size: 10pt; color: #ff9900; background-color: #ffffff;"><span style="color: #333333;">Q<sub>1</sub></span><span style="color: #333333;">&nbsp;&nbsp;&nbsp; MPSA18</span></span><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">Q<sub>2</sub>&nbsp;&nbsp;&nbsp; MPSA18</span><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">C<sub>1</sub>&nbsp;&nbsp;&nbsp; 0.01uF</span><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">C<sub>2</sub>&nbsp;&nbsp;&nbsp; 0.01uF</span><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">C<sub>3</sub>&nbsp;&nbsp;&nbsp; 4.7uF</span><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">C<sub>4</sub>&nbsp;&nbsp;&nbsp; 0.22uF</span><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">C<sub>5</sub>&nbsp;&nbsp;&nbsp; 0.22uF</span><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">L<sub>1</sub>&nbsp;&nbsp;&nbsp; 500mH</span><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">R<sub>1</sub>&nbsp;&nbsp;&nbsp; 68K&Omega;</span><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">R<sub>2</sub>&nbsp;&nbsp;&nbsp; 1K5&Omega;</span><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">R<sub>3</sub>&nbsp;&nbsp;&nbsp; 22K&Omega;</span><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">R<sub>4</sub>&nbsp;&nbsp;&nbsp; 510&Omega;</span><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">R<sub>5</sub>&nbsp;&nbsp;&nbsp; 470K&Omega;</span><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">R<sub>6</sub>&nbsp;&nbsp;&nbsp; 470K&Omega;</span><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">R<sub>7</sub>&nbsp;&nbsp;&nbsp; 33K&Omega;</span><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">R<sub>8</sub>&nbsp;&nbsp;&nbsp; 100K&Omega;</span><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">R<sub>9</sub>&nbsp;&nbsp;&nbsp; 1K&Omega;</span><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">R<sub>10</sub>&nbsp;&nbsp; 10K&Omega;</span><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">VR1&nbsp;&nbsp; 100K&Omega;</span><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">Input/Output Jack Connector.</span><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">True Bypass Switch.</span></p>
+<h1><strong><span style="font-size: 14pt; color: #000000; background-color: #ffffff;"><a id="llink3" name="link3"></a>3. &nbsp;V847 Input Stage.</span></strong></h1>
+<p><span style="background-color: #ffffff;"><span style="font-size: 10pt; color: #333333;">The Input Stage is a Common-Emitter Amplifier with Voltage Shunt Feedback:</span><a href="../_assets/36e8c8633050.png"><img src="../_assets/36e8c8633050.png" alt="Vox V847 Input Stage" width="536" height="281" style="display: block; margin-left: auto; margin-right: auto;" title="Vox V847 Input Stage" /></a></span></p>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">The input capacitor C<sub>1</sub> isolates the guitar from any pedal DC potential, protecting the pickups in case of circuit failure. Resistors R<sub>8</sub> and R<sub>6</sub> form a voltage divider for determining the bias applied to the base of Q<sub>1</sub> through the inductor and resistor R<sub>2</sub>.</span></p>
+<h2><span style="font-size: 12pt; color: #000000; background-color: #ffffff;"><a id="link31" name="link31"></a><strong>3.1 Input Stage Gain.</strong></span></h2>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">In common emitter amps, the approximate voltage gain is collector resistance divided by the emitter resistance (G<sub>V</sub> = R<sub>C</sub>/R<sub>E</sub> = 22K/510 = 43 = 32dB), but the effect of the feedback network has to be taken into consideration, reducing in practice the gain to 18dB.<br /></span></p>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">The feedback network from collector to base is composed by the resistance R<sub>6</sub> 470K and R<sub>8</sub> 100K to ground (The inductor in parallel with the resistor R<sub>7</sub> 33K, can be considered as a shortcut). </span></p>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">This feedback topology is a method to apply negative feedback to the amplifier, while it results in a reduced overall voltage gain and transistor input impedance, a number of improvements are obtained like stabilized voltage gain, improved frequency response and immunity against variations in temperature and transistors Beta.</span><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">The measures and simulations indicate that the gain of this stage is around 18dB. </span></p>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">The output of the BJT amp is connected to the 100K potentiometer VR1 in a voltage divider configuration, which means that with the rocketing foot action, the gain of the first stage is regulated, from 18dB to 1dB.</span></p>
+<p><span style="font-size: 12pt; background-color: #ffffff;"></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; color: #000000; background-color: #ffffff;"><a id="link32" name="link32"></a><strong>3.2 Vox V847 Input Impedance.</strong></span></p>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">In order to calculate the input impedance of the V847 the hybrid-pi model is used for analyzing the small signal behavior:</span><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">Z<sub>in</sub> = R<sub>1</sub> + (R<sub>2</sub>&rsquo; // Rin<sub>Common Emitter Amp</sub>)</span></p>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">Where:</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">R1 = Input resistor which is 68K.</span></li>
+<li><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">R2'= R2 can be considered as connected to ground, as it is indeed attached to the Q2 emitter that has a very low output impedance.</span></li>
+<li><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">Rin <sub>of the Common Emitter Amp</sub> = r<span class="st">&pi; + <span style="line-height: 17.9815px;">(<span style="line-height: 17.963px;">&beta;+1</span>)xR<sub>4</sub> = (400+1)x510 = 204K</span></span></span></li>
+</ul>
+<p><span style="background-color: #ffffff;"><div class="latex " >\[ Z_{in}= 68K + (1.5K // 204K) = 68 + (\frac{1.5 \cdot 204}{1.5 + 204})= 69.5K \]</div><br /></span></p>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">The parallel combination of R<sub>2</sub> and the input resistance of the Common Emitter are much smaller than R<sub>1</sub> due to the feedback loop and the emitter resistance R Hence, the value of the input resistor R<sub>1</sub>=68K accounts for almost the entire signal loading at the input. As a rule of thumb a good input impedance for a guitar pedal is around 1M<span class="st">&Omega;, t</span>he 68K it is indeed low input impedance and the guitar signal might suffer tone sucking (loss of high frequencies).</span></p>
+<p><a href="../_assets/9936165b9e20.png"><span style="background-color: #ffffff;"><img src="../_assets/9936165b9e20.png" alt="Vox V847 Input Impedance Graph" width="649" height="206" style="display: block; margin-left: auto; margin-right: auto;" title="Vox V847 Input Impedance Graph" /></span></a></p>
+<p><span style="font-size: small; color: #333333; background-color: #ffffff;">In the graph above, the input impedance is measured in 69.7K<span class="st">&Omega;, acknowledging with the calculated value of <span style="font-size: small; line-height: 17.9815px;">69.5K</span><span class="st" style="font-size: small; line-height: 17.9815px;">&Omega;.</span></span></span></p>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">Increasing the 68K R1 input resistor, the input impedance is also increased but it also forms a voltage divider at the input, reducing the available voltage gain.</span></p>
+<h1><span style="font-size: 14pt; color: #000000; background-color: #ffffff;"><a id="link4" name="link4"></a><strong>4. Output Stage.</strong></span></h1>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">The second stage is an emitter follower working&nbsp;as a low output impedance amplifier of approximately unity gain:</span></p>
+<p><a href="../_assets/82a32913705a.png"><span style="background-color: #ffffff;"><img src="../_assets/82a32913705a.png" alt="Vox V847 Output Stage" width="404" height="269" style="display: block; margin-left: auto; margin-right: auto;" title="Vox V847 Output Stage" /></span></a></p>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">This block will buffer the signal taken from the wiper of the VR1 potentiometer.</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">The bias of the base is obtained from the collector of Q<sub>1</sub> through the resistor R<sub>5</sub>.</span></li>
+<li><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">Resistor R<sub>10</sub> is a DC return for the emitter follower.&nbsp;</span></li>
+<li><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">Resistor R<sub>9</sub> in the collector is included to suppress the tendency to oscillation.</span></li>
+</ul>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">The output jack of the pedal is taken before the variable resistor VR1 and is not affected by the position of the slider. Therefore, the position of the potentiometer does not affect the output level.</span></p>
+<p><span style="font-size: 10pt; background-color: #ffffff;"></span></p>
+<h2><span style="font-size: 12pt; color: #ff6600; background-color: #ffffff;"><a id="link41" name="link41"></a><strong><span style="color: #000000;">4.1 Vox V847 Output impedance.</span></strong></span></h2>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">Once again the output impedance can be estimated using the hybrid-pi model, but in this case, the formula is complex and does not give any intuitive idea. Alternatively, the value can be calculated using PSpice accurate simulation, showing the results below:</span></p>
+<p><a href="../_assets/8d77e28f1ef4.png"><span style="background-color: #ffffff;"><img src="../_assets/8d77e28f1ef4.png" alt="Vox V847 Output Impedance" width="653" height="208" style="display: block; margin-left: auto; margin-right: auto;" title="Vox V847 Output Impedance" /></span></a></p>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">The position of the VR1 potentiometer effects the value of the output impedance, but the overall number is between 630 <span class="st">&Omega; and 8.6K<span class="st">&Omega;, which can be considered as good output impedance.</span></span></span></p>
+<h1><span style="font-size: 14pt; color: #000000; background-color: #ffffff;"><a id="link5" name="link5"></a><strong>5. How the Wah-Wah works.</strong></span></h1>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">The core of the wah design remains in the cap C<sub>2</sub> which close the feedback loop between the output (Q<sub>2</sub> emitter) and the input stage of the circuit:</span></p>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">The Input Stage amplifies the feedbacked signal coming from the Q2 emitter through C<sub>2</sub> and R<sub>2</sub>.&nbsp; Because of this amplification of the signal applied across the C2 capacitor, the <em>apparent reactance</em> seen by the input signal looking into the capacitor is different from the real one.</span></p>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">This apparent magnitude of the cap C2 reactance magnitude depends on the gain of the signal of the first stage. The gain of the first stage is determined by the position of the slider VR1:</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">If the slider is set to <em>lower position</em>, Gain = min, Current flow through feedback cap C2 = min, Apparent reactance = max, Apparent capacitance = min.</span></li>
+<li><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">If the slider is set to <em>upper position</em>, Gain = max, Current flow through feedback cap C2 = max, Apparent reactance = min, Apparent capacitance = max.&nbsp;</span></li>
+</ul>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">Connecting a complementary reactance (inductor L<sub>1</sub>) will produce a resonant circuit which is adjusted by tuning the apparent capacitance of C<sub>2</sub>.</span></p>
+<p><br /><strong><span style="font-size: 10pt; color: #000000; background-color: #ffffff;">Note:</span></strong></p>
+<ul>
+<li><span style="line-height: 17.9815px; font-size: 10pt; color: #333333; background-color: #ffffff;">The impedance of an element can be expressed as Z = R + jX&nbsp;</span>
+<ul>
+<li><span style="font-size: 10pt; line-height: 17.9815px; color: #333333;">In ideal resistors Z = R (impedance = resistance [<span class="st">&Omega;</span>])</span></li>
+<li><span style="font-size: 10pt; line-height: 17.9815px; color: #333333;">In ideal capacitor Z = jX (impedance = reactance [<span class="st">&Omega;</span>])</span></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><span style="color: #333333; background-color: #ffffff;"><span style="font-size: 10pt;">Capacitor Reactance: It is the opposition of the Capacitor to the change of voltage through it.&nbsp;</span><span style="font-size: 10pt;">The built-up electric field resists the change of voltage between the capacitor pins.&nbsp;</span><span style="font-size: 10pt;">(reactance)XC = -1/wC(capacitance) <br /></span></span></li>
+</ul>
+<ul>
+<li><span style="color: #333333; background-color: #ffffff;"><span style="font-size: 10pt;">Reactance is measured in Ohms, not Farads.&nbsp;</span><span style="font-size: 10pt;">The Farads is the measure of the capacitance, an inherited&nbsp;property of the capacitor element.</span></span></li>
+</ul>
+<h1><span style="font-size: 14pt; color: #000000; background-color: #ffffff;"><a id="link6" name="link6"></a><strong>6. Vox V847 Wah Modifications.</strong></span></h1>
+<p>There are some popular modifications that players do to their pedals, you will see how they work and how do they affect the guitar signal:</p>
+<h2><strong><span style="font-size: 12pt; color: #000000; background-color: #ffffff;"><a id="link61" name="link61"></a>6.1 Modifying the Wah-Wah Q factor.</span></strong></h2>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">The Quality Factor is a parameter that characterizes a resonator's bandwidth relative to its center frequency, that is how narrow or spread is the selected frequency band. </span><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">The 33K resistor R7 is introduced to adjust this value, allowing surrounding resonant frequencies to be amplified too. In other words, R7 sets the sharpness of the resonant peak.</span><br /><a href="../_assets/daf46c5cc733.png"><span style="background-color: #ffffff;"><img src="../_assets/daf46c5cc733.png" alt="Vox V847 Quality Q Factor" width="649" height="210" style="display: block; margin-left: auto; margin-right: auto;" title="Vox V847 Quality Q Factor" /></span></a><br /><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">In the graph above, the effect of the R7 is shown, increasing its value, the <em>Q factor</em> is reduced, and the filter bell is spread. This modification is also known as &ldquo;Vocal Mod&rdquo;,&nbsp; some users replace the 33K for a bigger one like 39K, 68K or even 100K to have more vocal sounding.</span></p>
+<h2><strong><span style="font-size: 12pt; color: #ff6600; background-color: #ffffff;"><a id="link62" name="link62"></a><span style="color: #000000;">6.2. Modifying the Sweep Range.</span></span></strong></h2>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">The C<sub>2</sub> capacitor primary determines the center frequency of the wah sweep. Changing its value moves the whole wah sweep range up or down. </span><br /><span style="color: #333333; background-color: #ffffff;"><span style="font-size: 10pt;">In the images below the shift of the sweep&nbsp;range can be appreciated, using 0.1uF, 0.01uF (default) and 0.001uF.</span></span></p>
+<p><a href="../_assets/e2aa9fbf18e8.png"><span style="background-color: #ffffff;"><img src="../_assets/e2aa9fbf18e8.png" alt="vox-v847-0.001u-sweep" width="650" height="208" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+<p><a href="../_assets/a4dd3f8a1178.png"><span style="background-color: #ffffff;"><img src="../_assets/a4dd3f8a1178.png" alt="vox-v847-0.01u-sweep" width="651" height="209" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+<p><a href="../_assets/8629a75c1af9.png"><span style="background-color: #ffffff;"><img src="../_assets/8629a75c1af9.png" alt="vox-v847-0.1u-sweep" width="649" height="205" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">Bigger values move it down towards bass, smaller values move it up. Bass players like to increase the value (typically 0.068&micro;F) for a better bass wah response.</span></p>
+<h2><strong><span style="font-size: 12pt; color: #000000; background-color: #ffffff;"><a id="link63" name="link63"></a>6.3 More Bass and Gain Modification.</span></strong></h2>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">The emitter resistor R<sub>4</sub> controls the gain level of the effected signal. Reducing its value will result in a slight addition of gain and bass content. In the figure below, it is shown how smaller R<sub>4</sub> values modify the frequency response:</span><br /><a href="../_assets/70b5a6608e62.png"><span style="background-color: #ffffff;"><img src="../_assets/70b5a6608e62.png" alt="vox-v847-more-bass-gain-mod" width="650" height="207" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+<h2><span style="font-size: 12pt; color: #000000; background-color: #ffffff;"><a id="link64" name="link64"></a><strong>6.4 More Mid Content Modification.</strong></span></h2>
+<p><span style="font-size: 10pt; background-color: #ffffff;"><span style="color: #333333;">This mod subtle sets the midrange content. Increasing the value of the stock R<sub>2</sub> 1K5, the heel-down position will sound slightly more strong and emphasized. Typical values for this mod are 2K and 2K7.</span><a href="../_assets/718fb9f79976.png"><img src="../_assets/718fb9f79976.png" alt="vox-v847-more-mid-mod" width="648" height="203" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<h2><strong><span style="font-size: 12pt; color: #000000; background-color: #ffffff;"><a id="link65" name="link65"></a>6.5 The V847 Wah-Wah Inductor.</span></strong></h2>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">In most <em>classic</em> pedals, there is some component which is often impossible/difficult to find or expensive and it is the one which, of course, gives the best sound or the <em>legendary original tone</em>. In this case the Fasel inductor from the first series </span></p>
+<p><a href="../_assets/692574efddfd.png"><span style="background-color: #ffffff;"><img src="../_assets/692574efddfd.png" alt="Wah Wah Inductors" width="500" height="160" style="display: block; margin-left: auto; margin-right: auto;" title="Wah Wah Inductors" /></span></a></p>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">There are several options in the market: The Dunlop Yellow/Red Fasel, TDK, Sabbadius Soul Inductor, Coloursound Inductor, Wipple inductor, SOD inductors, miniature audio transformers and coils from industrial filters.</span></p>
+<p><span style="font-size: 10pt; color: #333333; background-color: #ffffff;">Everything with a DC resistance between 10 to 100<span class="st">&Omega;</span>&nbsp;(15<span class="st">&Omega;</span> typ.), and inductance (if you can measure it) between 200mH to 1H (500mH typ.) can be used.</span></p>
+<h1><span style="font-size: 14pt; color: #000000; background-color: #ffffff;"><a id="link7" name="link7"></a><strong>7. Resources.</strong></span></h1>
+<p style="margin-left: 30px;"><span style="background-color: #ffffff;"><span style="font-size: 10pt;"><a href="http://www.geofex.com/article_folders/wahpedl/wahped.htm"><span style="background-color: #ffffff;">The Technology of Wah Pedals</span></a> <span style="color: #333333;">by Geofex</span></span>.</span><br /><a href="http://www.muzique.com/schem/wah-patent.pdf"><span style="background-color: #ffffff;"><span style="font-size: 10pt; background-color: #ffffff;">Vox Wah Wah Patent&nbsp;(US3530224)</span></span></a></p>
+<p>&nbsp;</p>
+<p><strong><span style="font-size: 12pt; color: #000000; background-color: #ffffff;">5.1 Datasheets.</span></strong></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt; background-color: #ffffff;"><span style="color: #333333;">V845 V846-HW V847</span> <a href="http://www.voxamps.de/uploads/media/V845_V846HW_V847_OM_EFGS3.pdf"><span style="background-color: #ffffff;">Owner's Manual</span></a>.</span></p>
+<p><span style="font-size: 10pt; background-color: #ffffff;"></span></p>
+<p style="text-align: right;"><span style="font-size: 10pt; background-color: #ffffff;"><span style="font-size: 12pt;"><span style="color: #333333; font-size: 10pt;">Thanks for reading, all feedback is appreciated &nbsp; &nbsp;<img src="../_assets/26a349a17744.jpg" alt="jr(at)ElectroSmash.com " /></span></span></span></p>
+<p style="text-align: center;"><span style="background-color: #ffffff;"></span></p>
+<p style="text-align: center;"><span style="color: #808080; font-size: 8pt; background-color: #ffffff;"><span style="color: #0000ff;"><a href="../rights/index.html"><span style="color: #0000ff; background-color: #ffffff;">Some Rights Reserved</span></a></span>, you are free to copy, share, remix and use all material.<br />Trademarks, brand names and logos are the property of their respective owners.</span></p>
+<p><span style="font-size: 10pt; background-color: #ffffff;"></span></p>	</section>
+  
+  <!-- footer -->
+    <!-- //footer -->
+
+			<hr class="divider-vertical" /><ul class="pager pagenav">
+	<li class="previous">
+		<a class="hasTooltip" title="pedalSHIELD DUE Arduino Guitar Pedal." aria-label="Previous article: pedalSHIELD DUE Arduino Guitar Pedal." href="../pedalshield/index.html" rel="prev">
+			<span class="icon-chevron-left" aria-hidden="true"></span> <span aria-hidden="true">Prev</span>		</a>
+	</li>
+</ul>
+	
+	
+	</article>
+<!-- //Article -->
+
+
+</div><div><a href="http://www.artio.net" style="font-size: 8px; visibility: visible; display: inline;" title="Web development, Joomla, CMS, CRM, Online shop software, databases">Joomla SEF URLs by Artio</a></div>
+		</div>
+		<!-- //MAIN CONTENT -->
+
+		<!-- SIDEBAR RIGHT -->
+		<div class="t3-sidebar t3-sidebar-right col-xs-12 col-sm-4  col-md-3 ">
+			<div class="t3-module module " id="Mod28"><div class="module-inner"><h3 class="module-title "><span>New Updates</span></h3><div class="module-ct"><ul class="latestnews mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../arduino-audio-meter/index.html" itemprop="url">
+			<span itemprop="name">
+				Arduino Audio Meter			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../dallas-rangemaster/index.html" itemprop="url">
+			<span itemprop="name">
+				Dallas Rangemaster Treble Booster Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../time-manipulator/index.html" itemprop="url">
+			<span itemprop="name">
+				Time Manipulator - Arduino Delay/Echo/Reverb			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../marshall-guvnor-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Marshall The Guvnor Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../germanium-fuzz/index.html" itemprop="url">
+			<span itemprop="name">
+				You Can Build the Perfect Germanium Fuzz			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../mxr-distortion-plus-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				MXR Distortion + Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod29"><div class="module-inner"><h3 class="module-title "><span>Most Visited</span></h3><div class="module-ct"><ul class="mostread mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../tube-screamer-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Tube Screamer Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../fuzz-face/index.html" itemprop="url">
+			<span itemprop="name">
+				Fuzz Face Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../proco-rat/index.html" itemprop="url">
+			<span itemprop="name">
+				Pro Co Rat Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../boss-ds1-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Boss DS-1 Distortion Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../klon-centaur-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Klon Centaur Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../big-muff-pi-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Big Muff Pi Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod184"><div class="module-inner"><h3 class="module-title "><span>Follow us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><span style="font-size: 10pt; color: #333333;">You can also follow us on:</span></p>
+<p><a href="https://www.facebook.com/ElectroSmash"><img src="../_assets/df34a2b41b54.png" alt="facebook" /></a>&nbsp;&nbsp; <a href="https://plus.google.com/+Electrosmash/about"><img src="../_assets/3ffc52860091.png" alt="google" /></a>&nbsp;&nbsp; <a href="https://www.instagram.com/electro.smash/"><img src="../_assets/45b0b0fe2d4b.png" alt="instagram" /></a></p>
+<p><a href="https://www.pinterest.com/electrosmash/"><img src="../_assets/05310d9fcf2a.png" alt="pinterest" /></a>&nbsp;&nbsp; <a href="https://www.youtube.com/user/ElectroSmashTV"><img src="../_assets/d920883b3613.png" alt="youtube" /></a>&nbsp;&nbsp; <a href="https://twitter.com/electro_smash"><img src="../_assets/52581f7264eb.png" alt="twitter" /></a></p></div>
+</div></div></div>
+		</div>
+		<!-- //SIDEBAR RIGHT -->
+
+	</div>
+</div> 
+
+
+
+  
+
+
+  
+
+
+	
+<!-- BACK TOP TOP BUTTON -->
+<div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top hidden-xs hidden-sm affix-top">
+  <button class="btn btn-primary" title="Back to Top"><i class="fa fa-caret-up"></i></button>
+</div>
+<script type="text/javascript">
+(function($) {
+	// Back to top
+	$('#back-to-top').on('click', function(){
+		$("html, body").animate({scrollTop: 0}, 500);
+		return false;
+	});
+    $(window).on('load', function(){
+        // hide button to top if the document height not greater than window height*2;using window load for more accurate calculate.    
+        if ((parseInt($(window).height())*2)>(parseInt($(document).height()))) {
+            $('#back-to-top').hide();
+        } 
+    });
+})(jQuery);
+</script>
+<!-- BACK TO TOP BUTTON -->
+
+<!-- FOOTER -->
+<footer id="t3-footer" class="wrap t3-footer">
+
+			<!-- FOOTER SPOTLIGHT -->
+		<div class="container hidden-xs">
+				<!-- SPOTLIGHT -->
+	<div class="t3-spotlight t3-footer-sl  row">
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod185"><div class="module-inner"><h3 class="module-title "><span>About us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../about-us/index.html">&nbsp;&nbsp;<img src="../_assets/420f9f181bc0.jpg" alt="smash electro" /></a></p>
+<p><a href="../about-us/index.html"><span style="font-size: 10pt; color: #333333;">Smashing audio electronics since MMXIII</span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod183"><div class="module-inner"><h3 class="module-title "><span>Email Newsletter</span></h3><div class="module-ct"><div class="acymailing_module" id="acymailing_module_formAcymailing95441">
+	<div class="acymailing_fulldiv" id="acymailing_fulldiv_formAcymailing95441"  >
+		<form id="formAcymailing95441" action="index.html" onsubmit="return submitacymailingform('optin','formAcymailing95441')" method="post" name="formAcymailing95441"  >
+		<div class="acymailing_module_form" >
+						<table class="acymailing_form">
+				<tr>
+												<td class="acyfield_email acy_requiredField">
+								<input id="user_email_formAcymailing95441"  onfocus="if(this.value == 'example@email.com') this.value = '';" onblur="if(this.value=='') this.value='example@email.com';" class="inputbox" type="text" name="user[email]" style="width:90%" value="example@email.com" title="example@email.com"/>
+							</td> </tr><tr>
+					
+					<td  class="acysubbuttons">
+												<input class="button subbutton btn btn-primary" type="submit" value="Subscribe" name="Submit" onclick="try{ return submitacymailingform('optin','formAcymailing95441'); }catch(err){alert('The form could not be submitted '+err);return false;}"/>
+											</td>
+				</tr>
+			</table>
+						<input type="hidden" name="ajax" value="0" />
+			<input type="hidden" name="acy_source" value="module_183" />
+			<input type="hidden" name="ctrl" value="sub"/>
+			<input type="hidden" name="task" value="notask"/>
+			<input type="hidden" name="redirect" value="https%3A%2F%2Fwww.electrosmash.com%2Fvox-v847-analysis"/>
+			<input type="hidden" name="redirectunsub" value="https%3A%2F%2Fwww.electrosmash.com%2Fvox-v847-analysis"/>
+			<input type="hidden" name="option" value="com_acymailing"/>
+						<input type="hidden" name="hiddenlists" value="1"/>
+			<input type="hidden" name="acyformname" value="formAcymailing95441" />
+									</div>
+		</form>
+	</div>
+	</div>
+
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod186"><div class="module-inner"><h3 class="module-title "><span>Contact us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../contact-us/index.html"><span style="font-size: 10pt; color: #333333;">e-mail us at <span id="cloakf4244c8b8aed84797e3cb27dabef81be">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
+				document.getElementById('cloakf4244c8b8aed84797e3cb27dabef81be').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyf4244c8b8aed84797e3cb27dabef81be = '&#105;nf&#111;' + '&#64;';
+				addyf4244c8b8aed84797e3cb27dabef81be = addyf4244c8b8aed84797e3cb27dabef81be + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';
+				var addy_textf4244c8b8aed84797e3cb27dabef81be = '&#105;nf&#111;' + '&#64;' + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';document.getElementById('cloakf4244c8b8aed84797e3cb27dabef81be').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyf4244c8b8aed84797e3cb27dabef81be + '\'>'+addy_textf4244c8b8aed84797e3cb27dabef81be+'<\/a>';
+		</script></span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod188"><div class="module-inner"><h3 class="module-title "><span>Rights</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p style="text-align: left;">&nbsp;&nbsp;<a href="https://creativecommons.org/licenses/by-nc/3.0/"><img src="../_assets/b0e99d439c44.png" alt="88x31" /></a></p>
+<p style="text-align: left;"><img src="../_assets/fe2636cdea5c.png" alt="open source logo" width="180" height="38" /></p>
+<p style="text-align: left;"><img src="../_assets/8281c4ec3a3b.png" alt="open hardware logo" width="180" height="38" /></p>
+<p style="text-align: left;">&nbsp;</p></div>
+</div></div></div>
+							</div>
+			</div>
+<!-- SPOTLIGHT -->
+		</div>
+		<!-- //FOOTER SPOTLIGHT -->
+	
+	<section class="t3-copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 copyright ">
+					
+          <small>
+            <a href="http://twitter.github.io/bootstrap/" title="Bootstrap by Twitter" target="_blank">Bootstrap</a> is a front-end framework of Twitter, Inc. Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" title="MIT License" target="_blank">MIT License.</a>
+          </small>
+          <small>
+            <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> font licensed under <a href="http://scripts.sil.org/OFL">SIL OFL 1.1</a>.
+          </small>
+				</div>
+							</div>
+		</div>
+	</section>
+
+</footer>
+<!-- //FOOTER -->
+
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29544239-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

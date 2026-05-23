@@ -1,0 +1,841 @@
+
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr"
+	  class='com_content view-article itemid-435 home j31 mm-hover '>
+
+<head>
+	<base href="../index/index.html" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Klon, Centaur, analysis, study, guitar, pedal, circuit, schematic,calculation, TL072, True Bypass, 3PDT, clipping, diodes, 1N34A, opamp, filter, mid-hump, mids, feedforward, loop, signature, myth, stages, parts, Bill, Finnegan," />
+	<meta name="rights" content="Creative Commons: Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0) " />
+	<meta name="author" content="Ray" />
+	<meta name="description" content="Klon Centaur Guitar Pedal Analysis, Input Stage, Op-Amp Gain Stage, Summing Stage, Tone control, Output Stage and Power Supply." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>ElectroSmash - Klon Centaur Analysis</title>
+	<link href="index.html" rel="canonical" />
+	<link href="../_assets/d87243966412.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../_assets/26f5cf410b61.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/15ff046a2fe3.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/dd09f39c1b89.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"c275227a487ccf28511534c91409ee89","system.paths":{"root":"","base":""}}</script>
+	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+	<script src="../_assets/323c609448d2.js" type="text/javascript"></script>
+	<script src="../_assets/b8bcbb2f005c.js" type="text/javascript" async="async"></script>
+	<script type="text/javascript">
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });	if(typeof acymailingModule == 'undefined'){
+				var acymailingModule = [];
+			}
+			
+			acymailingModule['emailRegex'] = /^[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+)*\@([a-z0-9-]+\.)+[a-z0-9]{2,10}$/i;
+
+			acymailingModule['NAMECAPTION'] = 'Name';
+			acymailingModule['NAME_MISSING'] = 'Please enter your name';
+			acymailingModule['EMAILCAPTION'] = 'example@email.com';
+			acymailingModule['VALID_EMAIL'] = 'Please enter a valid e-mail address';
+			acymailingModule['ACCEPT_TERMS'] = 'Please check the Terms and Conditions';
+			acymailingModule['CAPTCHA_MISSING'] = 'The captcha is invalid, please try again';
+			acymailingModule['NO_LIST_SELECTED'] = 'Please select the lists you want to subscribe to';
+		
+acymailingModule['excludeValuesformAcymailing59241'] = [];
+acymailingModule['excludeValuesformAcymailing59241']['name'] = 'Name';
+acymailingModule['excludeValuesformAcymailing59241']['email'] = 'example@email.com';
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });
+	</script>
+
+	
+<!-- META FOR IOS & HANDHELD -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<style type="text/stylesheet">
+		@-webkit-viewport   { width: device-width; }
+		@-moz-viewport      { width: device-width; }
+		@-ms-viewport       { width: device-width; }
+		@-o-viewport        { width: device-width; }
+		@viewport           { width: device-width; }
+	</style>
+	<script type="text/javascript">
+		//<![CDATA[
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement("style");
+			msViewportStyle.appendChild(
+				document.createTextNode("@-ms-viewport{width:auto!important}")
+			);
+			document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+		}
+		//]]>
+	</script>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="apple-mobile-web-app-capable" content="YES"/>
+<!-- //META FOR IOS & HANDHELD -->
+
+
+
+
+<!-- Le HTML5 shim and media query for IE8 support -->
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script type="text/javascript" src="../_assets/010a3c86157d.js"></script>
+<![endif]-->
+
+<!-- You can add Google Analytics here or use T3 Injection feature -->
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="../_assets/76d3e1341c39.css" type="text/css" />
+<![endif]-->
+	</head>
+
+<body>
+
+<div class="t3-wrapper corporate"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
+
+	
+<!-- MAIN NAVIGATION -->
+<header id="t3-mainnav" class="wrap navbar navbar-default navbar-fixed-top t3-mainnav">
+
+	<!-- OFF-CANVAS -->
+		<!-- //OFF-CANVAS -->
+
+	<div class="container">
+
+		<!-- NAVBAR HEADER -->
+		<div class="navbar-header">
+
+			<!-- LOGO -->
+			<div class="logo logo-image">
+				<div class="logo-image">
+					<a href="/" title="ElectroSmash">
+													<img class="logo-img" src="../_assets/115794d6d5b8.png" alt="ElectroSmash" />
+						
+												
+						<span>ElectroSmash</span>
+					</a>
+				</div>
+			</div>
+			<!-- //LOGO -->
+
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-collapse">
+					<i class="fa fa-bars"></i>
+				</button>
+			
+	    
+		</div>
+		<!-- //NAVBAR HEADER -->
+
+		<!-- NAVBAR MAIN -->
+				<nav class="t3-navbar-collapse navbar-collapse collapse"></nav>
+		
+		<nav class="t3-navbar navbar-collapse collapse">
+			<div  class="t3-megamenu"  data-responsive="true">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav navbar-nav level0">
+<li itemprop='name' class="current active" data-id="435" data-level="1">
+<a itemprop='url' class=""  href="/"   data-target="#">Home </a>
+
+</li>
+<li itemprop='name' class="dropdown mega" data-id="510" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Chips<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="492" data-level="2">
+<a itemprop='url' class=""  href="../jrc4558-analysis/index.html"   data-target="#">JRC4558  </a>
+
+</li>
+<li itemprop='name'  data-id="519" data-level="2">
+<a itemprop='url' class=""  href="../mn3007-bucket-brigade-devices/index.html"   data-target="#">MN3007 BBDs </a>
+
+</li>
+<li itemprop='name'  data-id="468" data-level="2">
+<a itemprop='url' class=""  href="../lm386-analysis/index.html"   data-target="#">LM386 </a>
+
+</li>
+<li itemprop='name'  data-id="1643" data-level="2">
+<a itemprop='url' class=""  href="../pt2399-analysis/index.html"   data-target="#">PT2399 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="444" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Amps<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="993" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="489" data-level="2">
+<a itemprop='url' class=""  href="../little-gem-analysis/index.html"   data-target="#">Little Gem Amp </a>
+
+</li>
+<li itemprop='name'  data-id="526" data-level="2">
+<a itemprop='url' class=""  href="../marshall-mg10/index.html"   data-target="#">Marshall MG10 </a>
+
+</li>
+<li itemprop='name'  data-id="491" data-level="2">
+<a itemprop='url' class=""  href="../noisy-cricket-analysis/index.html"   data-target="#">Noisy Cricket  </a>
+
+</li>
+<li itemprop='name'  data-id="490" data-level="2">
+<a itemprop='url' class=""  href="../ruby-amp-analysis/index.html"   data-target="#">Ruby Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="488" data-level="2">
+<a itemprop='url' class=""  href="../smokey-amp-analysis/index.html"   data-target="#">Smokey Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="746" data-level="2">
+<a itemprop='url' class=""  href="http://www.electrosmash.com/schematics#amps"   data-target="#">Amps Schematics.</a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="511" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Pedals<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  style="width: 600px"  data-width="600"><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="515" data-level="2">
+<a itemprop='url' class=""  href="../back-talk-analysis/index.html"   data-target="#">Back Talk Reverse Delay </a>
+
+</li>
+<li itemprop='name'  data-id="518" data-level="2">
+<a itemprop='url' class=""  href="../big-muff-pi-analysis/index.html"   data-target="#">Big Muff Pi  </a>
+
+</li>
+<li itemprop='name'  data-id="524" data-level="2">
+<a itemprop='url' class=""  href="../boss-ce-2-analysis/index.html"   data-target="#">Boss CE-2 Chorus </a>
+
+</li>
+<li itemprop='name'  data-id="1088" data-level="2">
+<a itemprop='url' class=""  href="../boss-ds1-analysis/index.html"   data-target="#">Boss DS-1 Distortion </a>
+
+</li>
+<li itemprop='name'  data-id="1713" data-level="2">
+<a itemprop='url' class=""  href="../dallas-rangemaster/index.html"   data-target="#">Dallas Rangemaster </a>
+
+</li>
+<li itemprop='name'  data-id="905" data-level="2">
+<a itemprop='url' class=""  href="../crybaby-gcb-95/index.html"   data-target="#">Dunlop CryBaby GCB-95  </a>
+
+</li>
+<li itemprop='name'  data-id="842" data-level="2">
+<a itemprop='url' class=""  href="../fuzz-face/index.html"   data-target="#">Fuzz Face </a>
+
+</li>
+<li itemprop='name'  data-id="1664" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="512" data-level="2">
+<a itemprop='url' class=""  href="../tube-screamer-analysis/index.html"   data-target="#">Ibanez Tube Screamer </a>
+
+</li>
+<li itemprop='name'  data-id="1433" data-level="2">
+<a itemprop='url' class=""  href="index.html"   data-target="#">Klon Centaur </a>
+
+</li>
+</ul>
+</div></div>
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="548" data-level="2">
+<a itemprop='url' class=""  href="../mxr-microamp/index.html"   data-target="#">MXR MicroAmp </a>
+
+</li>
+<li itemprop='name'  data-id="1667" data-level="2">
+<a itemprop='url' class=""  href="../marshall-guvnor-analysis/index.html"   data-target="#">Marshall Guvnor </a>
+
+</li>
+<li itemprop='name'  data-id="1632" data-level="2">
+<a itemprop='url' class=""  href="../mxr-distortion-plus-analysis/index.html"   data-target="#">MXR Distortion + </a>
+
+</li>
+<li itemprop='name'  data-id="1244" data-level="2">
+<a itemprop='url' class=""  href="../mxr-dyna-comp-analysis/index.html"   data-target="#">MXR Dyna Comp </a>
+
+</li>
+<li itemprop='name'  data-id="573" data-level="2">
+<a itemprop='url' class=""  href="../mxr-phase90/index.html"   data-target="#">MXR Phase 90 </a>
+
+</li>
+<li itemprop='name'  data-id="553" data-level="2">
+<a itemprop='url' class=""  href="../proco-rat/index.html"   data-target="#">ProCo Rat </a>
+
+</li>
+<li itemprop='name'  data-id="520" data-level="2">
+<a itemprop='url' class=""  href="../sitar-swami-analysis/index.html"   data-target="#">Sitar Swami </a>
+
+</li>
+<li itemprop='name'  data-id="525" data-level="2">
+<a itemprop='url' class=""  href="../vox-v847-analysis/index.html"   data-target="#">Vox V847 Wah Wah </a>
+
+</li>
+<li itemprop='name'  data-id="547" data-level="2">
+<a itemprop='url' class=""  href="../emg81/index.html"   data-target="#">EMG81 Pickup </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="796" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Projects<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="1108" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-uno/index.html"   data-target="#">pedalSHIELD UNO </a>
+
+</li>
+<li itemprop='name'  data-id="797" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield/index.html"   data-target="#">pedalSHIELD DUE </a>
+
+</li>
+<li itemprop='name'  data-id="1437" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-mega/index.html"   data-target="#">pedalSHIELD MEGA </a>
+
+</li>
+<li itemprop='name'  data-id="1312" data-level="2">
+<a itemprop='url' class=""  href="../pedal-pi/index.html"   data-target="#">Pedal-Pi </a>
+
+</li>
+<li itemprop='name'  data-id="1662" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="1663" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="1668" data-level="2">
+<a itemprop='url' class=""  href="../time-manipulator/index.html"   data-target="#">Time Manipulator </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name'  data-id="745" data-level="1">
+<a itemprop='url' class=""  href="../forum-electrosmash/index.html"   data-target="#">Forum </a>
+
+</li>
+<li itemprop='name'  data-id="816" data-level="1">
+<a itemprop='url' class=""  href="../shop/index.html"   data-target="#">Shop</a>
+
+</li>
+</ul>
+</div>
+
+		</nav>
+    <!-- //NAVBAR MAIN -->
+
+	</div>
+</header>
+<!-- //MAIN NAVIGATION -->
+
+
+
+
+
+
+  
+
+
+  
+
+
+	
+<div id="t3-mainbody" class="container t3-mainbody">
+	<div class="row">
+
+		<!-- MAIN CONTENT -->
+		<div id="t3-content" class="t3-content col-xs-12 col-sm-8  col-md-9">
+						<div class="item-page clearfix">
+
+
+<!-- Article -->
+<article>
+	<meta itemprop="inLanguage" content="en-GB" />
+	<meta itemprop="url" content="index.html" />
+
+      
+<header class="article-header clearfix">
+	<h1 class="article-title" itemprop="headline">
+					<a href="index.html" itemprop="url" title="Klon Centaur Analysis">
+				Klon Centaur Analysis</a>
+			</h1>
+
+			</header>
+    
+    
+  <!-- Aside -->
+    <!-- //Aside -->
+
+  
+  
+  
+	
+  
+	
+	<section class="article-content clearfix">
+		<p>The Klon Centaur in an overdrive guitar pedal designed by Bill Finnegan with the help of 2 <a href="http://web.mit.edu/">MIT</a> Electronic Engineers between 1990 and 1994. The initial idea was to improve the TubeScreamer transient response and the midrange-bass frequencies in order to create a <em>big open sound</em> with a hint of tube clipping: the so-called<em> transparent overdrive</em>.</p>
+<p><a href="../_assets/2e11d78f96d6.jpg"><img src="../_assets/559519cbb45c.jpg" alt="Klon Centaur intro small" style="display: block; margin-left: auto; margin-right: auto;" width="358" height="289" /></a></p>
+<p>The design process took more than 4 years and the result was a mythic $329 hand build pedal that was running in production for 15 years. Nowadays the original models are highly appreciated, you just need to <a href="https://www.ebay.com/sch/i.html?_from=R40&amp;_trksid=p2380057.m570.l1313.TR0.TRC0.H0.Xoriginal+klon+centaur.TRS0&amp;_nkw=original+klon+centaur&amp;_sacat=0">check eBay to see how high it goes.</a></p>
+ 
+<p>&nbsp;</p>
+<p><strong><span style="font-size: 14pt;">Table of Contents:</span></strong></p>
+<p><span style="font-size: 10pt; color: #3366ff;"><strong>1.</strong> <a href="/klon-centaur-analysis#circuit" style="color: #3366ff;">Klon Centaur Circuit.</a></span><br /><span style="font-size: 10pt; color: #3366ff;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<strong> &nbsp;1.1</strong> <a href="/klon-centaur-analysis#layout" style="color: #3366ff;">Klon Centaur Circuit Layout.</a></span><br /><span style="font-size: 10pt; color: #3366ff;"><strong>2</strong>. <a href="/klon-centaur-analysis#power_supply" style="color: #3366ff;">Power Supply.</a></span><br /><span style="font-size: 10pt; color: #3366ff;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<strong>2.1</strong> <a href="/klon-centaur-analysis#big_power_supply" style="color: #3366ff;">The importance of a big fat power supply.</a></span><br /><span style="font-size: 10pt; color: #3366ff;"><strong>3.</strong> <a href="/klon-centaur-analysis#input_buffer" style="color: #3366ff;">The Input Buffer.</a></span><br /><span style="font-size: 10pt; color: #3366ff;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<strong>3.1</strong> <a href="/klon-centaur-analysis#input_impedance" style="color: #3366ff;">Klon Centaur Input Impedance Calculation.</a></span><br /><span style="font-size: 10pt; color: #3366ff;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<strong>3.2</strong> <a href="/klon-centaur-analysis#TL072" style="color: #3366ff;">Klon Centaur op-amp: The TL072.</a></span><br /><span style="font-size: 10pt; color: #3366ff;"><strong>4.</strong> <a href="/klon-centaur-analysis#op_amp_gain_stage" style="color: #3366ff;">The Op-Amp Gain Stage.</a></span><br /><span style="font-size: 10pt; color: #3366ff;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<strong>4.1</strong> <a href="/klon-centaur-analysis#gain_calculation" style="color: #3366ff;">Gain Calculation.</a></span><br /><span style="font-size: 10pt; color: #3366ff;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<strong>4.2</strong> <a href="/klon-centaur-analysis#germanium_diodes" style="color: #3366ff;">Germanium Clipping Diodes.</a></span><br /><span style="font-size: 10pt; color: #3366ff;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<strong>4.3</strong> <a href="/klon-centaur-analysis#feedforward" style="color: #3366ff;">FeedForward Networks.</a></span><br /><span style="font-size: 10pt; color: #3366ff;"><strong>5.</strong> <a href="/klon-centaur-analysis#summing_op_amp" style="color: #3366ff;">The Summing Op-Amp</a>.</span><br /><span style="font-size: 10pt; color: #3366ff;"><strong>6.</strong> <a href="/klon-centaur-analysis#tone_control" style="color: #3366ff;">Klon Centaur Tone Control.</a></span><br /><span style="font-size: 10pt; color: #3366ff;"><strong>7.</strong> <a href="/klon-centaur-analysis#output_stage" style="color: #3366ff;">The Output Stage.</a></span><br /><span style="font-size: 10pt; color: #3366ff;"><strong>8.</strong> <a href="/klon-centaur-analysis#bypass_mode" style="color: #3366ff;">Bypass Mode</a>.</span><br /><span style="font-size: 10pt; color: #3366ff;"><strong>9.</strong> <a href="/klon-centaur-analysis#sound_signature" style="color: #3366ff;">Klon Centaur Sound Signature.</a></span><br /><span style="font-size: 10pt; color: #3366ff;"><strong>10.</strong> <a href="/klon-centaur-analysis#resources" style="color: #3366ff;">Analysis Resources.</a></span></p>
+<p>&nbsp;</p>
+<p><strong><span style="font-size: 14pt;"><a id="circuit"></a><span style="color: #000000;">1. Klon Centaur Circuit.</span></span></strong></p>
+<p>The <a href="../_assets/4d3647149f59.png">Klon Centaur schematic</a> could be broken down into 5 parts: Input Stage, Op-Amp Gain Stage, Summing Stage, Tone control, Output Stage and Power Supply:</p>
+<p><a href="../_assets/bf7e14957233.png"><img src="../_assets/d6077cb199dc.png" alt="Klon Centaur Schematic Parts" style="display: block; margin-left: auto; margin-right: auto;" title="Klon Centaur Schematic Parts" width="861" height="303" /></a></p>
+<p>The circuit is quite original, showing a mix of academic electronic design together with pure experimental/think-out-of-the-box blocks. The development process was based on long listening tests, trying different resistors &amp; caps values and listening to the sound variation, this is why the bill of materials has so many references and tricky values.</p>
+<p>The op-amp used is simple TL072, proving that for a great sounding guitar pedal no exotic/mojo/expensive parts are needed, just pure and smart electronic design.</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt;"><strong><a id="layout"></a><span style="color: #000000;">1.1 Klon Centaur Circuit Layout.</span></strong></span></p>
+<p>The circuit uses a single layer PCB with standard through-hole components. In the parts of the circuit where double side PCB are needed (tracks crossing), there are links (wired bridges) that make the manufacture easier and cheaper. However, all the potentiometers, jacks and the battery are wired and hand soldered to the PCB which makes it quite labor intensive.</p>
+<p>This PCB is famous for being covered with black epoxy resin (gooped) in order to prevent people from replicating it.</p>
+<p><a href="../_assets/dc8038bd8620.jpg"><img src="../_assets/919bc88e0287.jpg" alt="klon centaur analysis small" style="display: block; margin-left: auto; margin-right: auto;" /></a></p>
+<p><span style="color: #000000;"><strong>Klon Centaur Models: Gold vs Silver</strong></span> - During its 15 years of production, the Klon enclosure and circuit had some variations in color and graphics, but in theory, the minimal variations between the years do not affect the sound:</p>
+<p><img src="../_assets/757f402d61d2.jpg" alt="klon centaur silver vs gold small" style="display: block; margin-left: auto; margin-right: auto;" title="klon centaur silver vs gold small" width="606" height="249" /></p>
+<p><em>&ldquo;The fact is, under the hood they&rsquo;re all basically the same. In 1995 I made three small changes: I added a resistor to give the circuit some protection against a static charge delivered to its input&mdash;a change that has no sonic effect. I also had the circuit board redesigned with a ground plane for better grounding&mdash;again, no sonic effect except the potential for a little less hum. And I added a resistor to give the circuit a very small amount of additional low-mid response&mdash;I wanted it to have a little more roundness when used with, say, a Strat into a Super Reverb. I made no other changes.&rdquo; - Bill Finnegan, Premier Guitar interview -&nbsp;</em></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 14pt;"><strong><a id="power_supply"></a><span style="color: #000000;">2. Power Supply.</span></strong></span></p>
+<p>The power supply uses the MAX1044, a voltage converter that can invert, double, divide, or multiply an input voltage:</p>
+<p><a href="../_assets/c1b8b05d5817.png"><img src="../_assets/84567be4d236.png" alt="klon centaur power supply" style="display: block; margin-left: auto; margin-right: auto;" width="655" height="267" /></a></p>
+<p>The key factor in the power supply is that the IC is used in an unorthodox way; this part is normally used as a "Simple Negative Converter" <span style="text-decoration: underline;">or</span> as a "Positive Voltage Multiplier", but in the Klon circuit (and against the datasheet) from the 9V battery, the TC1044 makes all the functions at the same time: doubling the voltage (+18V), inverting it (-9V), and halving it (+4.5V using a resistor divider).</p>
+<p><img src="../_assets/a47f7f7a9422.png" alt="max1044 configurations" style="display: block; margin-left: auto; margin-right: auto;" title="max1044 configurations" width="655" height="197" /></p>
+<p><br />This variety of voltages is crucial to the circuit and used in different areas to create the sound signature of the pedal:</p>
+<ul>
+<li>&nbsp;<strong>9V:</strong> used in the first stages of the circuit (input buffer and op-amp amplifier) this arrangement is the standard used in most guitar pedals. Nothing special here.</li>
+<li><strong>18V and -9V:</strong> used in the last stages of the pedal, allowing double headroom and also as it is explained later on, to give more slew-rate adding sound character.</li>
+<li><strong>+4.5V</strong>: used as virtual ground in every stage of the circuit.</li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt;"><strong><a id="big_power_supply"></a><span style="color: #000000;">2.1 The importance of a BIG FAT power supply.</span></strong></span></p>
+<p>The second op-amp is powered between +18V and -9V, giving a total of 27V of headroom.</p>
+<p>If an op-amp has a higher power supply rails, it will also have a higher slew rate and therefore it would be able to reproduce with higher fidelity faster guitar signals (transients) and higher harmonics. This factor is pretty important for the Klon Centaur distortion sound signature.</p>
+<p><img src="../_assets/574726cae0ca.png" alt="op amp slew rate vs power supply" style="display: block; margin-left: auto; margin-right: auto;" title="op amp slew rate vs power supply" onmouseover="this.src='../op amp slew rate vs power supply/index.html';" onmouseout="this.src='../_assets/574726cae0ca.png';" width="280" height="222" /></p>
+<p><span style="text-decoration: underline;"><strong>Note</strong></span>: The Slew Rate of an op-amp describes how fast the output voltage can change in response to an immediate change in voltage at the input. The higher the value (measured in V/&micro;s) of slew rate, the faster the output can change and the more easily it can reproduce high-frequency signals.The TL072 has a 13-V/&mu;s slew rate, which is above the average op-amp slew-rate (10V/us).</p>
+<p>After the distortion stage, the following op-amp is&nbsp;fed with a high power supply (+18V,-9V) so it would be able to keep up with the fast rate and complex waveforms of the clipped guitar signal.</p>
+<p>&nbsp;&nbsp;</p>
+<p><span style="font-size: 14pt; color: #000000;"><strong><a id="input_buffer"></a>3. The Input Buffer.</strong></span></p>
+<p>The input stage is a simple buffer based on the TL072 op-amp. The task of this circuit is to isolate the guitar pedal electronics from the external world, providing a high input impedance (avoiding sound coloration) and DC isolation.</p>
+<p><img src="../_assets/8b3c219d651f.png" alt="klon centaur input buffer" style="display: block; margin-left: auto; margin-right: auto;" title="klon centaur input buffer" width="389" height="231" /></p>
+<ul>
+<li>The R1 input resistor will limit the amount of current going into the op-amp, protecting it against electrostatic discharges (ESD).</li>
+<li>The C1 input capacitor stops any DC coming from the guitar and together with R2 will form a high pass filter (fc=1/2*&pi;*RC = 1/2x3.14x1M&Omega;x0.1uF = 1.5Hz) 1.5HZ is completely out of the audio spectrum and will not affect the original signal or add any tone/coloring to the signal.</li>
+<li>R2 is a biasing resistor, adding virtual ground (+4.5V) at the non-inverting (+) pin of the op-amp. As a rule of thumb, the value of this resistor is at least 10 times the value of the resistors that make the virtual ground ( R27 and R30 are 27K&Omega;).</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong style="font-size: 12pt;"><a id="input_impedance"></a><span style="color: #000000;">3.1 Klon Centaur Input Impedance Calculation.</span></strong></p>
+<p>The input impedance is calculated as:</p>
+<p style="padding-left: 30px;">Zin = R1 + ( R2 // TL072<sub>Zin</sub> )</p>
+<p>The TL072 is a JFET op-amp, so it has a massive input Impedance (Zin = 10<sup>12</sup>&Omega; in the datasheet). The Zin is calculated as:</p>
+<p style="padding-left: 30px;">Zin = R1 + R2 = 10K&Omega; + 1M&Omega; = 1M&Omega; approx.</p>
+<p>1M&Omega; is a good high input impedance that will avoid loading guitar pickups and tone sucking.</p>
+<p>&nbsp;</p>
+<p><strong style="font-size: 12pt;"><a id="TL072"></a><span style="color: #000000;">3.2 Klon Centaur op-amp: The TL072.</span></strong></p>
+<p>The Klon Centaur is an engineering exercise of how to make a great sounding guitar pedal without using any exotic part or obsolete integrated circuit.</p>
+<p>TL072 op-amp is a JFET op-amp, therefore it has low bias current (that will reduce battery consumption) and high input impedance (keeping the signal integrity and adding minimum tone coloration). It is also a cheap and easy-to-find op-amp broadly used in all kinds of audio circuits.</p>
+<p>Regarding the TL072 clipping behavior, when it goes into clipping and the signal hits its negative rail, the op-amp promptly inverts its phase, so the circuit either latches up or shows a hard clipping behavior (even going into oscillation). The positive common mode limit is in contrast trouble-free.</p>
+<p>&nbsp;&nbsp;</p>
+<p><span style="font-size: 14pt;"><strong><a id="op_amp_gain_stage"></a><span style="color: #000000;">4. The Op-Amp Gain Stage.</span></strong></span></p>
+<p>The Op-Amp Gain Stage will boost and clip the input signal depending on the position of the <em>Gain</em> potentiometer. This stage will also filter the original guitar waveform tailoring the frequency response.</p>
+<p><img src="../_assets/d6ea9c554f35.png" alt="klon centaur op amp gain stage circuit" style="display: block; margin-left: auto; margin-right: auto;" title="klon centaur op amp gain stage circuit" width="763" height="442" /><br /><strong><span style="font-size: 12pt;"><a id="gain_calculation"></a><span style="color: #000000;">4.1 Gain Calculation.</span></span></strong><br />This a priory simple non-inverting topology gain calculation turns out complicated due to the fact that the C7 and C8 capacitors in parallel with the R11 and R12 resistors shape the frequency response interacting with each other:</p>
+<p><a href="../_assets/660de2815bd6.png"><img src="../_assets/660de2815bd6.png" alt="klon centaur op amp gain stage" style="display: block; margin-left: auto; margin-right: auto;" title="klon centaur op amp gain stage" width="700" height="246" /></a></p>
+<p>In the graph above it can be seen that the maximum gain is 40dB (100 times) around 1KHz and it decreases as the freq rolls lower or higher. This maximum gain is in line with what other similar pedals have: <a href="/boss-ds1-analysis#transistor-booster">Boss DS-1 (35dB)</a>&nbsp;or&nbsp;<a href="/tube-screamer-analysis#clip-stage">Tube Screamer (41dB)</a>.</p>
+<p>This big 40dB gain will make the TL072 go into clipping, the signal will hit the power supply rails when the gain is set to high values.</p>
+<p>The "mid hump" around 1KHz helps the guitar sound to&nbsp;stand out over the rest of the band, was also observed in some previous pedals (<a href="/tube-screamer-analysis#frequency">Tube Screamer humps at 723Hz</a> and the <a href="/proco-rat#link6">ProCo Rat at 1KHz</a> ).</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt;"><strong><a id="germanium_diodes"></a><span style="color: #000000;">4.2 Germanium Clipping Diodes.</span></strong></span><br />According to Bill Finnegan (Klon Centaur Designer), the type of diodes used in the Op-Amp Stage make a great difference in the sound:</p>
+<p style="padding-left: 30px;"><em>"These diodes are the most important factor in how the circuit sounds when it's being used to create distortion"</em></p>
+<p><img src="../_assets/fad8f0768366.jpg" alt="1n34a" style="display: block; margin-left: auto; margin-right: auto;" title="1n34a" width="259" height="49" /></p>
+<p style="padding-left: 30px;"><em>"I have always used a germanium diode with the part number 1N34A, but you should understand that this particular part has since the 1950s or so been manufactured by literally hundreds of different companies, and having listened to as many different ones as I have, I can say with confidence that they all sound somewhat different in my circuit, and often they sound VERY different."</em></p>
+<p>The clipping diodes define the distortion sound signature, it is built using 2 back to back diodes that shunt the signal to ground, this clipping method gives a <em>hard-clipping</em> sound also used in many other pedals (MXR Distortion+, RAT and Boss-DS1).</p>
+<p><a href="../_assets/c917392eeebb.png"><img src="../_assets/c917392eeebb.png" alt="klon centaur clipping diodes" style="display: block; margin-left: auto; margin-right: auto;" title="klon centaur clipping diodes" width="700" height="252" /></a></p>
+<p>In the image above, the signal after the resistor R13 is shown, as the gain potentiometer goes higher, the diodes start to compress the signal, with a soft knee first and more aggressive at the end.</p>
+<p>The 1N34A germanium diodes have a forward voltage VF=0.35 which is quite low compared to silicon diodes that usually have 0.7V drop, resulting in a harder compression of the signal.</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; color: #000000;"><strong><a id="feedforward"></a>4.3 FeedForward Networks.</strong></span><br />In parallel with the Op-Amp Gain Stage, there are 2 <em>FeedForward</em> networks, they have different tasks:</p>
+<p><a href="../_assets/c2374616b678.png"><img src="../_assets/c2374616b678.png" alt="klon centaur networks" style="display: block; margin-left: auto; margin-right: auto;" title="klon centaur networks" width="700" height="396" /></a></p>
+<ul>
+<li><strong><span style="color: #000000;"><span style="text-decoration: underline;">Network 1</span>:</span></strong> Formed by R7, C16, and R19. It is a low-pass filter that attenuates the harmonics over 106Hz (fc=1/(2x&pi;xR7xC16)). This clean and filtered signal is added to the distorted signal coming from the Op-Amp Gain Stage, adding some lower end to the final sound.</li>
+</ul>
+<ul>
+<li><strong><span style="color: #000000;"><span style="text-decoration: underline;">Network 2</span>:</span></strong> This one is more complex, it includes the secondary gang of the Gain potentiometer. This gang works <em>against</em> the primary gang in the Op-Amp Gain Stage, that is to say, that as the op-amp output signal goes louder, this 2nd feedforward network signal goes quieter (and vice-versa) giving balance to the mix.<br />According to Finnegan, this network<em>&nbsp;&ldquo;optimizes the circuit&rsquo;s overall tonal response for whatever the main gain stage is generating in the way of level and distortion.&rdquo;</em></li>
+</ul>
+<p>&nbsp;</p>
+<p><strong><span style="font-size: 14pt;"><a id="summing_op_amp"></a><span style="color: #000000;">5. The Summing Op-Amp.</span></span></strong></p>
+<p>This op-amp will add the output signal of the Op-Amp Gain Stage and the two Feed-Forward Networks mentioned above. This circuit is quite important for the sound signature because it sums the distorted-clipped signal (coming from the Op-Amp Gain Stage) and the clean signals (coming from the FeedForward Networks). This sum creates a signal that has dynamics and not just pure distortion. This sound was later called&nbsp;<em>transparent overdrive.</em>&nbsp;</p>
+<p><a href="../_assets/99b7c5afea0a.png"><img src="../_assets/99b7c5afea0a.png" alt="klon centaur summing op amp" style="display: block; margin-left: auto; margin-right: auto;" title="klon centaur summing op amp" width="529" height="312" /></a></p>
+<p>&nbsp;</p>
+<p>The amount of gain that this op-amp introduces is enormous, around 100dB (see graph below), it is like this because each of the three paths (Op-Amp Gain Stage, Feed-Forward Network 1 and 2) that end at the input of this op-amp receive a smaller amount of gain that sums up:&nbsp;</p>
+<p><a href="../_assets/2d058fbc1258.png"><img src="../_assets/2d058fbc1258.png" alt="klon centaur summing amplifier" style="display: block; margin-left: auto; margin-right: auto;" title="klon centaur summing amplifier" width="700" height="250" /></a></p>
+<ul>
+<li>The Resistor R20 and the cap C13 form a low pass filter, attenuating frequencies above 495Hz (fc=1/(2x&pi;xR20xC13)) that accentuates a bit more the mid-hump boost.</li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="font-size: 14pt;"><strong><a id="tone_control"></a><span style="color: #000000;">6. Klon Centaur Tone Control.</span></strong></span></p>
+<p>The tone control is an Active High Pass Shelving Equalizer. It passes all freqs up to 400Hz and the frequencies above that point get boosted or cut:</p>
+<p><a href="../_assets/a40f64618f3d.png"><img src="../_assets/a40f64618f3d.png" alt="klon centaur tone control circuit" style="display: block; margin-left: auto; margin-right: auto;" title="klon centaur tone control circuit" width="409" height="338" /></a></p>
+<ul>
+<li>The default gain of this block is set at unity gain (1). The frequency at which the equalizer with either&nbsp;adds&nbsp;gain (boost) or attenuation (cut) to the signal is determined by the following equation:</li>
+</ul>
+<p style="padding-left: 60px;">fc = 1 / (2x&pi;xR22xC14) = 408Hz.</p>
+<p style="padding-left: 60px;">Frequencies above 408Hz will have boost or cut.</p>
+<ul>
+<li>The gain of the pass band&nbsp; is defined by R24/R22 = 1 (unity gain)</li>
+</ul>
+<ul>
+<li>The gain of the boost/cut band is defined by the formula:</li>
+</ul>
+<p style="padding-left: 60px;">Gvmax= (RV2+R23)/R21 = (14.7/1.8) = 8.16 (18.24dB)</p>
+<p style="padding-left: 60px;">Gvmin= R23/(RV2+R21)&nbsp; = (4.7/11.8) = 0.4 (-8dB)</p>
+<p><span style="color: #000000;"><strong><span style="text-decoration: underline;">Note</span></strong></span>: The shelving filters have many uses in audio, in the <a href="/boss-ce-2-analysis#link6">Boss CE-2 Chorus guitar pedal are used as pre/de-emphasis filters</a>&nbsp;in order to reduce the noise during the signal processing.</p>
+<p>As described before, this circuit will add or remove treble to the final signal:</p>
+<p><a href="../_assets/48c6a64192d6.png"><img src="../_assets/48c6a64192d6.png" alt="klon centaur tone control" style="display: block; margin-left: auto; margin-right: auto;" title="klon centaur tone control" width="700" height="243" /></a></p>
+<ul>
+<li>The gain on the&nbsp;pass-band&nbsp;or on the boost/cut band could be adjusted following the formulas described before.</li>
+<li>The tone control in the Klon Centaur is generally accepted as a good control which is able to adjust the sound of almost any guitar into any amp.&nbsp;</li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="font-size: 14pt;"><strong><a id="output_stage"></a><span style="color: #000000;">7. The Output Stage.</span></strong></span></p>
+<p>&nbsp;The last stage will adjust the output level of the signal, it is a simple 10K potentiometer that will shunt part of the signal to ground:</p>
+<p style="text-align: center;"><a href="../_assets/6fbf0ba492e1.png"><img src="../_assets/6fbf0ba492e1.png" alt="klon centaur output stage" title="klon centaur output stage" width="700" height="279" /></a></p>
+<ul>
+<li>&nbsp;The C15 capacitor will remove any DC from the output signal. It also creates a high pass filter together with RV3. The cut frequency will depend on the potentiometer value, so as the volume level is decreased, the cut frequency goes higher, starting at fc= 1/(2x&pi;xC15xRV3)= 3.38Hz.</li>
+</ul>
+<p style="padding-left: 60px;"><span style="text-decoration: underline;">Note:</span> This cut frequency shift is not a problem because even with the output volume at 10% (RV=1K), the&nbsp;fc&nbsp;would be 33.8Hz that will not add coloring to the output signal.</p>
+<ul>
+<li>The two 68K&Omega; together with the 100K&Omega; resistors are usually referred as<em> anti-pop resistors</em>, they will avoid abrupt pop sounds when the output jack is connected. This network was not placed in the early versions of the circuit and although the intention could be to kill pop sounds, the fact is that these resistors create a<em>&nbsp;marginal summing output network:</em></li>
+</ul>
+<p style="padding-left: 60px;">When the effect is on, part of the clean signal will bleed through the R243 to the output. In the same way, when the pedal is off, part of the dirty-effected signal will bleed to the clean output. The contribution is around 1dB and very likely to be not audible.</p>
+<p>The frequency response of the Output Stage looks like this:</p>
+<p><img src="../_assets/0a53c11aa912.png" alt="klon centaur output stage frequency response" style="display: block; margin-left: auto; margin-right: auto;" title="klon centaur output stage frequency response" width="700" height="251" /></p>
+<p><strong style="font-size: 14pt;"><a id="bypass_mode"></a><span style="color: #000000;">8. Bypass Mode.</span></strong></p>
+<p>The Klon Centaur does not use a 3PDT switch (aka True Bypass), so when the effect is disabled, the guitar signal still passes through the Input Buffer and two high-pass filters created by C1&amp;R2 and C2&amp;R3. These high-pass filters with cut frequencies of&nbsp;fc=1/(2x&pi;0.1uFx1M)=1.5Hz and fc=1/(2x&pi;4.7uFx100K)=0.3Hz&nbsp; will not modify the guitar signal. They will just remove the DC content from the signal.</p>
+<p><a href="../_assets/15cdbc46c945.png"><img src="../_assets/15cdbc46c945.png" alt="klon centaur bypass mode" style="display: block; margin-left: auto; margin-right: auto;" title="klon centaur bypass mode" width="700" height="247" /></a></p>
+<p>&nbsp;</p>
+<p>The frequency response when deactivated is flat, with a roll-off on the low frequencies (fc=1.5Hz and fc=0.3Hz) and not affecting audio frequencies:&nbsp;</p>
+<p><a href="../_assets/7fbc7d37c844.png"><img src="../_assets/7fbc7d37c844.png" alt="klon centaur bypass mode" style="display: block; margin-left: auto; margin-right: auto;" title="klon centaur bypass mode" width="700" height="252" /></a></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 14pt; color: #000000;"><strong><a id="sound_signature"></a><span style="color: #000000;">9. Klon Centaur Sound Signature.</span></strong></span></p>
+<p>The original Klon Centaur prices are shocking, but is it just hype? does it sound so cool? clearly, after looking at the circuit there are some features never seen on other designs.&nbsp;</p>
+<p>The Klon Centaur has a unique electronic design, mixing classic bits that you can see on many other guitar pedals (like the input buffer, the back to back diodes&nbsp;to ground after the op-amp gain stage) and some other innovative blocks like the power supply architecture, the feed-forward networks, and the double gang gain potentiometer.</p>
+<p>The way that the guitar waveform is processed is quite innovative:</p>
+<ol>
+<li>The Input&nbsp; Buffer keeps the signal pristine and protects the pedal from external factors (figure 1 - left).</li>
+<li>After that, the signal is split into 3 paths: one part of the signal going through the second op-amp and two parts going through the feedforward networks 1 &amp; 2.- This is the key: the waveform at this point looks like shark teeth, due to the different phases that the signal acquires on the feedforward networks. When all the signals are joined before the Summing Amp (figure 1 - center) the signal is bent creating an interesting shape. Other famous pedals like the <a href="/tube-screamer-analysis#myth">Tube Screamer also creates a beautiful lopsided shape</a> over the distorted signal.</li>
+<li>Furthermore, this signal is later amplified by the summing amplifier with has a power supply headroom of 27V, quite unusual for a guitar pedal which also provides a good slew-rate in order to keep all the dynamics and rich harmonics (figure 3 - right).</li>
+</ol>
+<p><a href="../_assets/ceb01a9994ff.png"><img src="../_assets/ceb01a9994ff.png" alt="klon centaur sound signature" style="display: block; margin-left: auto; margin-right: auto;" title="klon centaur sound signature" width="800" height="173" /></a></p>
+<p>In addition to this basic explanation, there are plenty of other factors that make this effect special and add sound character to the guitar distortion; the double gang gain potentiometer that balances the distortion, the tone control that helps to interact with any kind of guitar or the selected germanium clipping diodes, to name some.</p>
+<h1 style="font-size: 45px; margin: 21px 0px 10.5px; color: #444444;"><span style="color: #000000; font-size: 14pt;"><a id="resources"></a><strong>10. Analysis Resources.</strong></span></h1>
+<p><a href="https://www.premierguitar.com/articles/20210-builder-profile-klons-bill-finnegan">PREMIERGuitar Bill Finnegan Interview</a>.</p>
+<p><a href="http://www.interfacebus.com/equalizer-design-opamp-schematic.html">Equalizer Circuits</a>&nbsp;by Electronic Engineering Dictionary.</p>
+<p><a href="http://www.coda-effects.com/p/klon-centaur-circuit-analysis.html">Koln Centaur Study</a>&nbsp;by Coda Effects.</p>
+<p><a href="https://www.eetimes.com/document.asp?doc_id=1278805&amp;print=yes">TL072 Behaviour</a> by Douglas Self.&nbsp;</p>
+<p><a href="http://www.interfacebus.com/equalizer-design-opamp-schematic.html"></a></p>
+<p><span style="color: #333333; font-family: verdana, geneva; font-size: 13.3333px;">My sincere appreciation to D. Pereira, Charles.D,&nbsp;P. Babiak and A.&nbsp;Hofseth for their help with this analysis.</span></p>
+<p>&nbsp;</p>
+<p style="text-align: left;"><span style="color: #333333; font-size: 13.3333px; text-align: right;">Thanks for reading, all feedback is appreciated <strong><span id="cloak7e641517c89db01fa90fdc130f411d49">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
+				document.getElementById('cloak7e641517c89db01fa90fdc130f411d49').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy7e641517c89db01fa90fdc130f411d49 = '&#105;nf&#111;' + '&#64;';
+				addy7e641517c89db01fa90fdc130f411d49 = addy7e641517c89db01fa90fdc130f411d49 + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';
+				var addy_text7e641517c89db01fa90fdc130f411d49 = '&#105;nf&#111;' + '&#64;' + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';document.getElementById('cloak7e641517c89db01fa90fdc130f411d49').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy7e641517c89db01fa90fdc130f411d49 + '\'>'+addy_text7e641517c89db01fa90fdc130f411d49+'<\/a>';
+		</script></strong></span></p>	</section>
+  
+  <!-- footer -->
+    <!-- //footer -->
+
+			<hr class="divider-vertical" /><ul class="pager pagenav">
+	<li class="previous">
+		<a class="hasTooltip" title="MXR Distortion + Analysis" aria-label="Previous article: MXR Distortion + Analysis" href="../mxr-distortion-plus-analysis/index.html" rel="prev">
+			<span class="icon-chevron-left" aria-hidden="true"></span> <span aria-hidden="true">Prev</span>		</a>
+	</li>
+	<li class="next">
+		<a class="hasTooltip" title="MXR Dyna Comp Analysis" aria-label="Next article: MXR Dyna Comp Analysis" href="../mxr-dyna-comp-analysis/index.html" rel="next">
+			<span aria-hidden="true">Next</span> <span class="icon-chevron-right" aria-hidden="true"></span>		</a>
+	</li>
+</ul>
+	
+	
+	</article>
+<!-- //Article -->
+
+
+</div><div><a href="http://www.artio.net" style="font-size: 8px; visibility: visible; display: inline;" title="Web development, Joomla, CMS, CRM, Online shop software, databases">Joomla SEF URLs by Artio</a></div>
+		</div>
+		<!-- //MAIN CONTENT -->
+
+		<!-- SIDEBAR RIGHT -->
+		<div class="t3-sidebar t3-sidebar-right col-xs-12 col-sm-4  col-md-3 ">
+			<div class="t3-module module " id="Mod28"><div class="module-inner"><h3 class="module-title "><span>New Updates</span></h3><div class="module-ct"><ul class="latestnews mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../arduino-audio-meter/index.html" itemprop="url">
+			<span itemprop="name">
+				Arduino Audio Meter			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../dallas-rangemaster/index.html" itemprop="url">
+			<span itemprop="name">
+				Dallas Rangemaster Treble Booster Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../time-manipulator/index.html" itemprop="url">
+			<span itemprop="name">
+				Time Manipulator - Arduino Delay/Echo/Reverb			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../marshall-guvnor-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Marshall The Guvnor Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../germanium-fuzz/index.html" itemprop="url">
+			<span itemprop="name">
+				You Can Build the Perfect Germanium Fuzz			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../mxr-distortion-plus-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				MXR Distortion + Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod29"><div class="module-inner"><h3 class="module-title "><span>Most Visited</span></h3><div class="module-ct"><ul class="mostread mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../tube-screamer-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Tube Screamer Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../fuzz-face/index.html" itemprop="url">
+			<span itemprop="name">
+				Fuzz Face Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../proco-rat/index.html" itemprop="url">
+			<span itemprop="name">
+				Pro Co Rat Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../boss-ds1-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Boss DS-1 Distortion Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="index.html" itemprop="url">
+			<span itemprop="name">
+				Klon Centaur Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../big-muff-pi-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Big Muff Pi Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod184"><div class="module-inner"><h3 class="module-title "><span>Follow us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><span style="font-size: 10pt; color: #333333;">You can also follow us on:</span></p>
+<p><a href="https://www.facebook.com/ElectroSmash"><img src="../_assets/df34a2b41b54.png" alt="facebook" /></a>&nbsp;&nbsp; <a href="https://plus.google.com/+Electrosmash/about"><img src="../_assets/3ffc52860091.png" alt="google" /></a>&nbsp;&nbsp; <a href="https://www.instagram.com/electro.smash/"><img src="../_assets/45b0b0fe2d4b.png" alt="instagram" /></a></p>
+<p><a href="https://www.pinterest.com/electrosmash/"><img src="../_assets/05310d9fcf2a.png" alt="pinterest" /></a>&nbsp;&nbsp; <a href="https://www.youtube.com/user/ElectroSmashTV"><img src="../_assets/d920883b3613.png" alt="youtube" /></a>&nbsp;&nbsp; <a href="https://twitter.com/electro_smash"><img src="../_assets/52581f7264eb.png" alt="twitter" /></a></p></div>
+</div></div></div>
+		</div>
+		<!-- //SIDEBAR RIGHT -->
+
+	</div>
+</div> 
+
+
+
+  
+
+
+  
+
+
+	
+<!-- BACK TOP TOP BUTTON -->
+<div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top hidden-xs hidden-sm affix-top">
+  <button class="btn btn-primary" title="Back to Top"><i class="fa fa-caret-up"></i></button>
+</div>
+<script type="text/javascript">
+(function($) {
+	// Back to top
+	$('#back-to-top').on('click', function(){
+		$("html, body").animate({scrollTop: 0}, 500);
+		return false;
+	});
+    $(window).on('load', function(){
+        // hide button to top if the document height not greater than window height*2;using window load for more accurate calculate.    
+        if ((parseInt($(window).height())*2)>(parseInt($(document).height()))) {
+            $('#back-to-top').hide();
+        } 
+    });
+})(jQuery);
+</script>
+<!-- BACK TO TOP BUTTON -->
+
+<!-- FOOTER -->
+<footer id="t3-footer" class="wrap t3-footer">
+
+			<!-- FOOTER SPOTLIGHT -->
+		<div class="container hidden-xs">
+				<!-- SPOTLIGHT -->
+	<div class="t3-spotlight t3-footer-sl  row">
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod185"><div class="module-inner"><h3 class="module-title "><span>About us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../about-us/index.html">&nbsp;&nbsp;<img src="../_assets/420f9f181bc0.jpg" alt="smash electro" /></a></p>
+<p><a href="../about-us/index.html"><span style="font-size: 10pt; color: #333333;">Smashing audio electronics since MMXIII</span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod183"><div class="module-inner"><h3 class="module-title "><span>Email Newsletter</span></h3><div class="module-ct"><div class="acymailing_module" id="acymailing_module_formAcymailing59241">
+	<div class="acymailing_fulldiv" id="acymailing_fulldiv_formAcymailing59241"  >
+		<form id="formAcymailing59241" action="/" onsubmit="return submitacymailingform('optin','formAcymailing59241')" method="post" name="formAcymailing59241"  >
+		<div class="acymailing_module_form" >
+						<table class="acymailing_form">
+				<tr>
+												<td class="acyfield_email acy_requiredField">
+								<input id="user_email_formAcymailing59241"  onfocus="if(this.value == 'example@email.com') this.value = '';" onblur="if(this.value=='') this.value='example@email.com';" class="inputbox" type="text" name="user[email]" style="width:90%" value="example@email.com" title="example@email.com"/>
+							</td> </tr><tr>
+					
+					<td  class="acysubbuttons">
+												<input class="button subbutton btn btn-primary" type="submit" value="Subscribe" name="Submit" onclick="try{ return submitacymailingform('optin','formAcymailing59241'); }catch(err){alert('The form could not be submitted '+err);return false;}"/>
+											</td>
+				</tr>
+			</table>
+						<input type="hidden" name="ajax" value="0" />
+			<input type="hidden" name="acy_source" value="module_183" />
+			<input type="hidden" name="ctrl" value="sub"/>
+			<input type="hidden" name="task" value="notask"/>
+			<input type="hidden" name="redirect" value="https%3A%2F%2Fwww.electrosmash.com%2Fklon-centaur-analysis"/>
+			<input type="hidden" name="redirectunsub" value="https%3A%2F%2Fwww.electrosmash.com%2Fklon-centaur-analysis"/>
+			<input type="hidden" name="option" value="com_acymailing"/>
+						<input type="hidden" name="hiddenlists" value="1"/>
+			<input type="hidden" name="acyformname" value="formAcymailing59241" />
+									</div>
+		</form>
+	</div>
+	</div>
+
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod186"><div class="module-inner"><h3 class="module-title "><span>Contact us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../contact-us/index.html"><span style="font-size: 10pt; color: #333333;">e-mail us at <span id="cloak858a0f28b158c1d88ea363fb544c576c">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
+				document.getElementById('cloak858a0f28b158c1d88ea363fb544c576c').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy858a0f28b158c1d88ea363fb544c576c = '&#105;nf&#111;' + '&#64;';
+				addy858a0f28b158c1d88ea363fb544c576c = addy858a0f28b158c1d88ea363fb544c576c + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';
+				var addy_text858a0f28b158c1d88ea363fb544c576c = '&#105;nf&#111;' + '&#64;' + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';document.getElementById('cloak858a0f28b158c1d88ea363fb544c576c').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy858a0f28b158c1d88ea363fb544c576c + '\'>'+addy_text858a0f28b158c1d88ea363fb544c576c+'<\/a>';
+		</script></span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod188"><div class="module-inner"><h3 class="module-title "><span>Rights</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p style="text-align: left;">&nbsp;&nbsp;<a href="https://creativecommons.org/licenses/by-nc/3.0/"><img src="../_assets/b0e99d439c44.png" alt="88x31" /></a></p>
+<p style="text-align: left;"><img src="../_assets/fe2636cdea5c.png" alt="open source logo" width="180" height="38" /></p>
+<p style="text-align: left;"><img src="../_assets/8281c4ec3a3b.png" alt="open hardware logo" width="180" height="38" /></p>
+<p style="text-align: left;">&nbsp;</p></div>
+</div></div></div>
+							</div>
+			</div>
+<!-- SPOTLIGHT -->
+		</div>
+		<!-- //FOOTER SPOTLIGHT -->
+	
+	<section class="t3-copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 copyright ">
+					
+          <small>
+            <a href="http://twitter.github.io/bootstrap/" title="Bootstrap by Twitter" target="_blank">Bootstrap</a> is a front-end framework of Twitter, Inc. Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" title="MIT License" target="_blank">MIT License.</a>
+          </small>
+          <small>
+            <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> font licensed under <a href="http://scripts.sil.org/OFL">SIL OFL 1.1</a>.
+          </small>
+				</div>
+							</div>
+		</div>
+	</section>
+
+</footer>
+<!-- //FOOTER -->
+
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29544239-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

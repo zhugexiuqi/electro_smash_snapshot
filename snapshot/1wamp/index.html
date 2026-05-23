@@ -1,0 +1,1451 @@
+
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr"
+	  class='com_content view-article itemid-435 home j31 mm-hover '>
+
+<head>
+	<base href="../index/index.html" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="1wamp, one wamp, 1watt, electric, guitar, amplifier,small,  portable, headphones, LM386, JFET, J201, practise, tube-sound, open, hardware, source, big muff pi, tone, control, gain, vol, clean, crunch, distortion, pcb, mp3, aux, input, power, 9V, battery" />
+	<meta name="rights" content="Creative Commons: Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0) " />
+	<meta name="author" content="ray" />
+	<meta name="description" content="1Wamp is an open-hardware project based on the Tillman guitar pre-amp, the Big Muff Pi tone control and the Smokey Amplifier.//VIDEOThe preamp stage with two J201 transistors is designed to give a tube-like sound, the BMP tone stage is versatile and" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>ElectroSmash - 1Wamp Electroc Guitar Amplifier.</title>
+	<link href="index.html" rel="canonical" />
+	<link href="../_assets/d87243966412.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../_assets/26f5cf410b61.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/15ff046a2fe3.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/dd09f39c1b89.css" rel="stylesheet" type="text/css" media="all" />
+	<style type="text/css">
+.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}.jatex-inline{display:inline;}
+                            .jatex-inline div.MathJax_Display{display: inline !important; width: auto;}
+	</style>
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"231f067fe11367841a2870515dedfdaa","system.paths":{"root":"","base":""}}</script>
+	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+	<script src="../_assets/132a733708b3.js" type="text/javascript"></script>
+	<script src="../_assets/b8bcbb2f005c.js" type="text/javascript" async="async"></script>
+	<script type="text/javascript">
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });	if(typeof acymailingModule == 'undefined'){
+				var acymailingModule = [];
+			}
+			
+			acymailingModule['emailRegex'] = /^[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+)*\@([a-z0-9-]+\.)+[a-z0-9]{2,10}$/i;
+
+			acymailingModule['NAMECAPTION'] = 'Name';
+			acymailingModule['NAME_MISSING'] = 'Please enter your name';
+			acymailingModule['EMAILCAPTION'] = 'example@email.com';
+			acymailingModule['VALID_EMAIL'] = 'Please enter a valid e-mail address';
+			acymailingModule['ACCEPT_TERMS'] = 'Please check the Terms and Conditions';
+			acymailingModule['CAPTCHA_MISSING'] = 'The captcha is invalid, please try again';
+			acymailingModule['NO_LIST_SELECTED'] = 'Please select the lists you want to subscribe to';
+		
+acymailingModule['excludeValuesformAcymailing27041'] = [];
+acymailingModule['excludeValuesformAcymailing27041']['name'] = 'Name';
+acymailingModule['excludeValuesformAcymailing27041']['email'] = 'example@email.com';
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });
+	</script>
+
+	
+<!-- META FOR IOS & HANDHELD -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<style type="text/stylesheet">
+		@-webkit-viewport   { width: device-width; }
+		@-moz-viewport      { width: device-width; }
+		@-ms-viewport       { width: device-width; }
+		@-o-viewport        { width: device-width; }
+		@viewport           { width: device-width; }
+	</style>
+	<script type="text/javascript">
+		//<![CDATA[
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement("style");
+			msViewportStyle.appendChild(
+				document.createTextNode("@-ms-viewport{width:auto!important}")
+			);
+			document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+		}
+		//]]>
+	</script>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="apple-mobile-web-app-capable" content="YES"/>
+<!-- //META FOR IOS & HANDHELD -->
+
+
+
+
+<!-- Le HTML5 shim and media query for IE8 support -->
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script type="text/javascript" src="../_assets/010a3c86157d.js"></script>
+<![endif]-->
+
+<!-- You can add Google Analytics here or use T3 Injection feature -->
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="../_assets/76d3e1341c39.css" type="text/css" />
+<![endif]-->
+	</head>
+
+<body>
+
+<div class="t3-wrapper corporate"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
+
+	
+<!-- MAIN NAVIGATION -->
+<header id="t3-mainnav" class="wrap navbar navbar-default navbar-fixed-top t3-mainnav">
+
+	<!-- OFF-CANVAS -->
+		<!-- //OFF-CANVAS -->
+
+	<div class="container">
+
+		<!-- NAVBAR HEADER -->
+		<div class="navbar-header">
+
+			<!-- LOGO -->
+			<div class="logo logo-image">
+				<div class="logo-image">
+					<a href="/" title="ElectroSmash">
+													<img class="logo-img" src="../_assets/115794d6d5b8.png" alt="ElectroSmash" />
+						
+												
+						<span>ElectroSmash</span>
+					</a>
+				</div>
+			</div>
+			<!-- //LOGO -->
+
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-collapse">
+					<i class="fa fa-bars"></i>
+				</button>
+			
+	    
+		</div>
+		<!-- //NAVBAR HEADER -->
+
+		<!-- NAVBAR MAIN -->
+				<nav class="t3-navbar-collapse navbar-collapse collapse"></nav>
+		
+		<nav class="t3-navbar navbar-collapse collapse">
+			<div  class="t3-megamenu"  data-responsive="true">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav navbar-nav level0">
+<li itemprop='name' class="current active" data-id="435" data-level="1">
+<a itemprop='url' class=""  href="/"   data-target="#">Home </a>
+
+</li>
+<li itemprop='name' class="dropdown mega" data-id="510" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Chips<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="492" data-level="2">
+<a itemprop='url' class=""  href="../jrc4558-analysis/index.html"   data-target="#">JRC4558  </a>
+
+</li>
+<li itemprop='name'  data-id="519" data-level="2">
+<a itemprop='url' class=""  href="../mn3007-bucket-brigade-devices/index.html"   data-target="#">MN3007 BBDs </a>
+
+</li>
+<li itemprop='name'  data-id="468" data-level="2">
+<a itemprop='url' class=""  href="../lm386-analysis/index.html"   data-target="#">LM386 </a>
+
+</li>
+<li itemprop='name'  data-id="1643" data-level="2">
+<a itemprop='url' class=""  href="../pt2399-analysis/index.html"   data-target="#">PT2399 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="444" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Amps<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="993" data-level="2">
+<a itemprop='url' class=""  href="index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="489" data-level="2">
+<a itemprop='url' class=""  href="../little-gem-analysis/index.html"   data-target="#">Little Gem Amp </a>
+
+</li>
+<li itemprop='name'  data-id="526" data-level="2">
+<a itemprop='url' class=""  href="../marshall-mg10/index.html"   data-target="#">Marshall MG10 </a>
+
+</li>
+<li itemprop='name'  data-id="491" data-level="2">
+<a itemprop='url' class=""  href="../noisy-cricket-analysis/index.html"   data-target="#">Noisy Cricket  </a>
+
+</li>
+<li itemprop='name'  data-id="490" data-level="2">
+<a itemprop='url' class=""  href="../ruby-amp-analysis/index.html"   data-target="#">Ruby Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="488" data-level="2">
+<a itemprop='url' class=""  href="../smokey-amp-analysis/index.html"   data-target="#">Smokey Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="746" data-level="2">
+<a itemprop='url' class=""  href="http://www.electrosmash.com/schematics#amps"   data-target="#">Amps Schematics.</a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="511" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Pedals<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  style="width: 600px"  data-width="600"><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="515" data-level="2">
+<a itemprop='url' class=""  href="../back-talk-analysis/index.html"   data-target="#">Back Talk Reverse Delay </a>
+
+</li>
+<li itemprop='name'  data-id="518" data-level="2">
+<a itemprop='url' class=""  href="../big-muff-pi-analysis/index.html"   data-target="#">Big Muff Pi  </a>
+
+</li>
+<li itemprop='name'  data-id="524" data-level="2">
+<a itemprop='url' class=""  href="../boss-ce-2-analysis/index.html"   data-target="#">Boss CE-2 Chorus </a>
+
+</li>
+<li itemprop='name'  data-id="1088" data-level="2">
+<a itemprop='url' class=""  href="../boss-ds1-analysis/index.html"   data-target="#">Boss DS-1 Distortion </a>
+
+</li>
+<li itemprop='name'  data-id="1713" data-level="2">
+<a itemprop='url' class=""  href="../dallas-rangemaster/index.html"   data-target="#">Dallas Rangemaster </a>
+
+</li>
+<li itemprop='name'  data-id="905" data-level="2">
+<a itemprop='url' class=""  href="../crybaby-gcb-95/index.html"   data-target="#">Dunlop CryBaby GCB-95  </a>
+
+</li>
+<li itemprop='name'  data-id="842" data-level="2">
+<a itemprop='url' class=""  href="../fuzz-face/index.html"   data-target="#">Fuzz Face </a>
+
+</li>
+<li itemprop='name'  data-id="1664" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="512" data-level="2">
+<a itemprop='url' class=""  href="../tube-screamer-analysis/index.html"   data-target="#">Ibanez Tube Screamer </a>
+
+</li>
+<li itemprop='name'  data-id="1433" data-level="2">
+<a itemprop='url' class=""  href="../klon-centaur-analysis/index.html"   data-target="#">Klon Centaur </a>
+
+</li>
+</ul>
+</div></div>
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="548" data-level="2">
+<a itemprop='url' class=""  href="../mxr-microamp/index.html"   data-target="#">MXR MicroAmp </a>
+
+</li>
+<li itemprop='name'  data-id="1667" data-level="2">
+<a itemprop='url' class=""  href="../marshall-guvnor-analysis/index.html"   data-target="#">Marshall Guvnor </a>
+
+</li>
+<li itemprop='name'  data-id="1632" data-level="2">
+<a itemprop='url' class=""  href="../mxr-distortion-plus-analysis/index.html"   data-target="#">MXR Distortion + </a>
+
+</li>
+<li itemprop='name'  data-id="1244" data-level="2">
+<a itemprop='url' class=""  href="../mxr-dyna-comp-analysis/index.html"   data-target="#">MXR Dyna Comp </a>
+
+</li>
+<li itemprop='name'  data-id="573" data-level="2">
+<a itemprop='url' class=""  href="../mxr-phase90/index.html"   data-target="#">MXR Phase 90 </a>
+
+</li>
+<li itemprop='name'  data-id="553" data-level="2">
+<a itemprop='url' class=""  href="../proco-rat/index.html"   data-target="#">ProCo Rat </a>
+
+</li>
+<li itemprop='name'  data-id="520" data-level="2">
+<a itemprop='url' class=""  href="../sitar-swami-analysis/index.html"   data-target="#">Sitar Swami </a>
+
+</li>
+<li itemprop='name'  data-id="525" data-level="2">
+<a itemprop='url' class=""  href="../vox-v847-analysis/index.html"   data-target="#">Vox V847 Wah Wah </a>
+
+</li>
+<li itemprop='name'  data-id="547" data-level="2">
+<a itemprop='url' class=""  href="../emg81/index.html"   data-target="#">EMG81 Pickup </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="796" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Projects<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="1108" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-uno/index.html"   data-target="#">pedalSHIELD UNO </a>
+
+</li>
+<li itemprop='name'  data-id="797" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield/index.html"   data-target="#">pedalSHIELD DUE </a>
+
+</li>
+<li itemprop='name'  data-id="1437" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-mega/index.html"   data-target="#">pedalSHIELD MEGA </a>
+
+</li>
+<li itemprop='name'  data-id="1312" data-level="2">
+<a itemprop='url' class=""  href="../pedal-pi/index.html"   data-target="#">Pedal-Pi </a>
+
+</li>
+<li itemprop='name'  data-id="1662" data-level="2">
+<a itemprop='url' class=""  href="index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="1663" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="1668" data-level="2">
+<a itemprop='url' class=""  href="../time-manipulator/index.html"   data-target="#">Time Manipulator </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name'  data-id="745" data-level="1">
+<a itemprop='url' class=""  href="../forum-electrosmash/index.html"   data-target="#">Forum </a>
+
+</li>
+<li itemprop='name'  data-id="816" data-level="1">
+<a itemprop='url' class=""  href="../shop/index.html"   data-target="#">Shop</a>
+
+</li>
+</ul>
+</div>
+
+		</nav>
+    <!-- //NAVBAR MAIN -->
+
+	</div>
+</header>
+<!-- //MAIN NAVIGATION -->
+
+
+
+
+
+
+  
+
+
+  
+
+
+	
+<div id="t3-mainbody" class="container t3-mainbody">
+	<div class="row">
+
+		<!-- MAIN CONTENT -->
+		<div id="t3-content" class="t3-content col-xs-12 col-sm-8  col-md-9">
+						<div class="item-page clearfix">
+
+
+<!-- Article -->
+<article>
+	<meta itemprop="inLanguage" content="en-GB" />
+	<meta itemprop="url" content="index.html" />
+
+      
+<header class="article-header clearfix">
+	<h1 class="article-title" itemprop="headline">
+					<a href="index.html" itemprop="url" title="1Wamp Electric Guitar Amplifier - Open Hardware">
+				1Wamp Electric Guitar Amplifier - Open Hardware</a>
+			</h1>
+
+			</header>
+    
+    
+  <!-- Aside -->
+    <!-- //Aside -->
+
+  
+  
+  
+	
+  
+	
+	<section class="article-content clearfix">
+		<p><span style="font-size: 10pt; color: #333333;">1Wamp is a one Watt small guitar amplifier based on a JFET guitar pre-amp, the Big Muff Pi tone control, and the LM386 power amplifier. This portable amp is an open hardware project designed by ElectroSmash using only free /&nbsp;<a href="http://kicad-pcb.org/">open-source tools</a>.<br /></span></p>
+<p style="text-align: center;"><iframe src="https://www.youtube.com/embed/cFPIS3gorQA" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p><span style="font-size: 10pt; color: #333333;">The preamp stage with two J201 transistors is designed to give a tube-like sound, the BMP tone stage is able to produce a big range of tones and the LM386 output stage can drive any kind of speaker, from headphones to a Marshall 2x12 cabinet.</span></p>
+ 
+<p><a href="../_assets/d01f612d8c45.jpg"><img src="../_assets/c44ca60c5a66.jpg" alt="1Wamp functions" width="471" height="267" style="display: block; margin-left: auto; margin-right: auto;" /></a><br /><span style="font-size: 10pt; color: #333333;">This project is perfect as a room practice amplifier loaded with all the features of the big amps:</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">Tone/Volume/Gain controls.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">Speaker/Cabinet output.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">Headphones output with integrated attenuator switch.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">Aux/mp3 input.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">Battery Clip.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">9V DC boss style power input jack.</span></li>
+</ul>
+<p><br /><strong><span style="font-size: 10pt; color: #000000;"><span style="font-size: 14pt;">1Wamp Schematic</span></span></strong></p>
+<p><span style="font-size: 10pt; color: #333333;">The circuit can be broken down into 5 simpler blocks: JFET Input Stage, Tone Control, JFET Booster, LM386 Power Amplifier and </span><span style="font-size: 10pt; color: #333333;">Power Supply</span>:</p>
+<p><a href="../_assets/68fd224326e7.png"><img src="../_assets/14bf09bace4d.jpg" alt="1wamp schematic parts blocks" width="706" height="298" style="display: block; margin-left: auto; margin-right: auto;" title="1wamp schematic parts blocks" /></a></p>
+<p><span style="font-size: 10pt; color: #333333;">The functionality is simple: The input stage isolates the amp from the guitar, keeping the signal quality and avoiding tone sucking. Then the tone control shapes the frequency response adding more bass/treble to the mix. The JFET booster will recover the signal after the tone control and prepare it to the Power Amplifier stage that delivers up to 1W.</span><br /><span style="font-size: 10pt; color: #333333;">The aux/mp3 input adds any line level input signal to the guitar sound, allowing to practice with metronome/mp3/youtube backing tracks.</span></p>
+<p><span style="color: #000000;"><strong><span style="font-size: 10pt;">What is a pre-amplifier?: </span> </strong> </span><br /><span style="font-size: 10pt; color: #333333;">A pre-amplifier is the part that precedes power amplifier (JFET Input Stage, Tone Control, and JFET Booster). It prepares the signal for further amplification or in other words, the pre-amplifier is just a circuit that does some <em>preparing</em> for the signal, usually coloring and integrating small gain stages with good impedance matching, tone controls, and filter elements. This part does not generate any power to drive a speaker.<br /></span></p>
+<p><span style="color: #000000;"><strong><span style="font-size: 10pt;">What is a power amplifier?:</span> </strong> </span><br /><span style="font-size: 10pt; color: #333333;">The LM386 power amplifier block will amplify and deliver the voltage and more important the current to drive the load (headphones/speaker).</span><br /><span style="font-size: 10pt; color: #333333;">The stage will define the wattage of the amp, and should just deliver power without adding any color to the signal.<br /></span></p>
+<p>&nbsp;</p>
+<p style="margin-top: 12px; line-height: 18px; color: #555555; font-family: Arial,Helvetica,sans-serif; font-size: 12px;"><a href="../_assets/0ecd7cf170aa.jpg"><img src="../_assets/3a78bdaca559.jpg" alt="1Wamp intro" width="601" height="408" style="display: block; margin-left: auto; margin-right: auto;" /></a></p>
+<p>&nbsp;</p>
+<p style="margin-top: 12px; line-height: 18px; color: #555555; font-family: Arial,Helvetica,sans-serif; font-size: 12px;"><span style="color: #0000ff;"><a href="../product-category/amplifiers/1wamp/index.html" style="color: #0000ff;"><span style="font-size: 10pt;"></span><span style="font-size: 10pt;"><strong><span style="font-size: 14pt;">Order 1Wamp online.</span></strong></span></a></span></p>
+<p style="margin-top: 12px; line-height: 18px; color: #555555; font-family: Arial,Helvetica,sans-serif; font-size: 12px;"><span style="color: #333333; font-size: 10pt;">There are 2 options in the <a href="../index/index.html">online shop<span style="color: #0000ff;">:</span></a></span></p>
+<ol>
+<li><span style="color: #333333; font-size: 10pt;"><a href="../product-category/amplifiers/1wamp/index.html"><strong><span style="color: #0000ff;">Order the Full Kit:</span></strong>&nbsp;</a>This kit includes the PCB, Cover and all the components to build 1Wamp at home.</span></li>
+<li><span style="color: #333333; font-size: 10pt;"><span style="color: #0000ff;"><a href="../product-category/amplifiers/1wamp/index.html" style="font-weight: bold; text-decoration: none; color: #0000ff;">Order only the PCB.</a></span>&nbsp;It uses easy-to-find standard components and you can build the kit yourself.</span></li>
+</ol>
+<p style="margin-top: 12px; line-height: 18px; color: #555555; font-family: Arial,Helvetica,sans-serif; font-size: 12px;"><span style="font-size: 10pt; color: #333333;">If you have any question,&nbsp;<span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><span style="font-size: 10pt;"><a href="../contact/index.html" style="font-weight: bold; text-decoration: none; color: #1e4276;">contact us</a></span></span></span></span>:</span></p>
+<p>&nbsp;</p>
+<ul>
+<li><span style="font-size: 10pt;">There is a cool guide explaining&nbsp; <a href="../_assets/27b4fcb08b81.pdf">How to build 1Wamp in 5 Steps</a></span></li>
+</ul>
+<ul>
+<li><span style="font-size: 10pt;">All the <a href="../forum/1wamp/92-1wamp-schematic-layout-open-hardware-files/index.html">Kicad native files</a>,&nbsp; <a href="../_assets/25d3d67fb819.pdf">Schematic</a> and <a href="../_assets/a6578a488d13.pdf">Bill of Materials</a> are free.<br /></span></li>
+</ul>
+<ul>
+<li><span style="font-size: 10pt;">In <a href="../forum/1wamp/index.html">1Wamp Forum</a> you can check how to fit the PCB in an enclosure, use the light-plates, etc...</span></li>
+</ul>
+<h1><span style="color: #000000;"><strong><span style="font-size: 10pt; color: #000000;"><span style="font-size: 14pt;">Power Supply Stage:</span></span></strong></span></h1>
+<p><span style="font-size: 10pt; color: #333333;">The power stage provides</span><span style="font-size: 10pt; color: #333333;"> 9 volts to all the circuit stages, giving also protection against reverse polarity connections and additionally it filters the power line to remove any noise.</span></p>
+<p><a href="../_assets/b0cff08483b0.png"><span style="font-size: 10pt; color: #333333;"><strong><img src="../_assets/efaa3faf7938.png" alt="1wamp power supply circuit" width="568" height="297" style="display: block; margin-right: auto; margin-left: auto;" title="1wamp power supply circuit" /></strong></span></a></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">The 2.1 jack connector CONN4 can take any boss type 9V adapter (negative polarity), it is a nice idea to use one because power amplifiers drain batteries pretty fast by definition. This connector will automatically disconnect the battery from the circuit when an external 9V wall adapter is plugged.</span></li>
+</ul>
+<p><a href="../_assets/cb85c20dba5c.jpg"><img src="../_assets/cb85c20dba5c.jpg" alt="boss power supply polarity" width="459" height="80" style="display: block; margin-right: auto; margin-left: auto;" title="boss power supply polarity" /></a></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">The stereo guitar input jack is used as an on-off switch, connecting the battery (-) terminal to ground when the guitar jack is connected. When the mono input guitar jack is inserted, the points GND_B and GND_A are linked powering up the circuit.<br /></span></li>
+<li><span style="font-size: 10pt; color: #333333;">Diode D<sub>1</sub> is a polarity protection diode, securing the amplifier against accidentally reversed power connections. In this case, the 1N5817 diode is used because it resists up to 20V in a reversed connection and it has a low V<sub>F</sub>=0.4V, so the final power supply will be 9 - 0.4= 8.6V giving more headroom for clean sounds. A</span><span style="font-size: 10pt; color: #333333;">ny other general use diode like the 1N4148/1N4001 could be used as a substitute.</span></li>
+</ul>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">The LED D<sub>2</sub> will light when the circuit is ON (9V Battery or adapter + guitar connected). A high-efficiency diode is used to minimize the current used in this task.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">C<sub>9</sub>, R<sub>15</sub>, C<sub>10</sub>, and C<sub>11</sub> are a low pass filter aimed to remove all the ripple and noise from the power line. The placement of the components in the circuit is critical: </span>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">C<sub>9</sub> is close to the LM386 to decouple it.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">R<sub>15</sub> and C<sub>10</sub> C<sub>11</sub> form the most important part of the filter and it is located between the power-amp and the pre-amp. </span></li>
+<li><span style="font-size: 10pt; color: #333333;">C<sub>11</sub> is located close to the input stage to decouple it.</span></li>
+</ul>
+</li>
+</ul>
+<p><span style="font-size: 10pt; color: #333333;">The cut-frequency of the filter is defined by R<sub>15</sub> and C<sub>10</sub> and C<sub>11</sub> and can be calculated following the equation:</span></p>
+<p style="padding-left: 30px;"><div class="latex jatex-inline" >\[f_{c}=\frac{1}{2\pi R C}=\frac{1}{2\pi \cdot R_{15}\cdot (C_{10}+C_{11})}=\frac{1}{2\pi \cdot 1K \cdot (220uF+100nF)}=0.7Hz\]</div><span style="font-size: 10pt; color: #333333;"><br /></span></p>
+<p><span style="font-size: 10pt; color: #333333;">So, any humming noise over 0.7Hz will be removed by this filter.</span></p>
+<p><a href="../_assets/99e3b8b3de0b.png"><img src="../_assets/68d988f3a086.png" alt="1wamp power supply filter" style="display: block; margin-right: auto; margin-left: auto;" title="1wamp power supply filter" /></a><span style="color: #333333; font-size: 10pt;">There is more info about this filter and how to remove hum from LM386 designs in the <a href="/1wamp#layout">Layout Section</a>.</span></p>
+<p>&nbsp;</p>
+<h1><strong><span style="font-size: 10pt; color: #000000;"><span style="font-size: 14pt;"><a name="input"></a>JFET Input Stage</span> </span></strong></h1>
+<p><span style="font-size: 10pt; color: #333333;">The input stage is JFET pre-amplifier based on a Common Source Class-A amp with a high input impedance and medium output impedance. The JFET preamps became very popular in guitar circuits because they are simple, easy to build and able to deliver warmth tones.</span><br /><a href="../_assets/7888d4b58194.png"><span style="font-size: 10pt; color: #333333;"><strong><img src="../_assets/ff7718fce98f.png" alt="1wamp input stage circuit" width="369" height="292" style="display: block; margin-right: auto; margin-left: auto;" title="1wamp input stage circuit" /></strong></span></a></p>
+<p><span style="font-size: 10pt; color: #333333;">There are several famous guitar pedals that use this circuit topology: </span></p>
+<p style="padding-left: 30px;"><span style="font-size: 10pt; color: #333333;">- The <a href="http://www.till.com/articles/GuitarPreamp/" style="color: #333333;">Tillman Amplifier</a>, it uses an R2=6.8K and R3=2.2K, famous for giving a tube-like sound with 6dB of gain and asymmetrical clipping.</span></p>
+<p style="padding-left: 30px;"><span style="font-size: 10pt; color: #333333;">- The <a href="http://www.runoffgroove.com/fetzervalve.html" style="color: #333333;">Fetzer Valve</a> is popular as a stand-alone booster and as a building block in larger circuits. It is based on a white paper by Dimitri Danyuk <a href="http://www.diystompboxes.com/smfforum/index.php?topic=93889.0" style="color: #333333;">"Triode Emulator".</a> It proposes the use of a carefully chosen source resistor on the JFET amplifier to mimic a vacuum tube sound. It uses R2= 10K and R3=1K, giving a high gain of 14 dB.&nbsp;</span></p>
+<p style="padding-left: 30px;"><span style="font-size: 10pt; color: #333333;">- Low gain JFET preamp: The Tillman and Fetzer valve introduce a big amount of gain and sometimes could make difficult to get clean tones. If you prefer natural clean sounds and light overdrive R2= 2.2K and R3=1K can also be used, giving soft tones and mellow saturation.</span></p>
+<p style="margin-left: 30px;">&nbsp;</p>
+<p><span style="font-size: 10pt; color: #333333;">The whole 1Wamp circuit includes 2 of this JFET booster stages, so you can also combine these topologies as you like; Low Gain + Low Gain, Fezter + Low Gain, Tillman + Fetzer, etc...</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">D<sub>3</sub> and D<sub>4</sub> are 5.1V 1-Watt zener diodes. They are surge protection against static discharges, they clamp the input signal if the levels exceed &plusmn;5.1V. They are optional but JFETs have a sensitive gate and they can blow just with a spark at the jack in a dry day.</span><span style="font-size: 10pt; color: #333333;"> The 1N4733A part is used here due to its easy availability but any 5.1V 1W zener like the BZX85 5.1V could substitute it.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">R<sub>1</sub> determines the input impedance and references the JFET gate to ground. The value of this component is not critic, anything from 100K&Omega; to 2M&Omega; will work, you can read more about this resistor in the <a href="/1wamp#input_impedance">1Wamp Input Impedance section.</a></span></li>
+<li><span style="font-size: 10pt; color: #333333;">R<sub>2</sub> is the source resistor, it defines the I<sub>D</sub> bias current through the JFET and <span style="font-size: 10pt; color: #333333;">R<sub>3</sub> is the drain load resistor</span>. You can read how to calculate them in the next section. </span></li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="font-size: 10pt; color: #333333;"><span style="color: #000000;"><strong><span style="font-size: 12pt;">How to Calculate R<sub>S</sub> and R<sub>D</sub> in a JFET Common Source Amplifier:</span> </strong> </span><br /> </span></p>
+<p><span style="font-size: 10pt; color: #000000;"><strong>Intro - Background</strong></span></p>
+<p><span style="font-size: 10pt; color: #333333;">The source resistor R<sub>S</sub> (R<sub>3</sub> or R<sub>7</sub> in 1Wamp) and the drain resistor R<sub>D</sub> (R<sub>2</sub> or R<sub>8</sub> in 1Wamp) define all the important parameters and sound of the pre-amp.&nbsp;<span style="font-size: 10pt;">There are plenty of ways to design and calculate the components for a JFET amp: graphical methods, mathematical, experimenting... sometimes misleading and confusing. Here we describe the simplest way (in my opinion) to design and calculate R<sub>G</sub>, R<sub>S</sub>, and R<sub>D</sub> for this particular amp called "Self Biased Common Source JFET Amplifier".</span></span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">R<sub>G</sub>: The Gate resistor, keeps the gate voltage at 0V, it also defines the input impedance and prevents signal loading.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">R<sub>S</sub>: The Source resistor, defines the bias point of the amplifier.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">R<sub>D</sub>: The Drain resistor, defines the gain of the amp.</span></li>
+</ul>
+<p><span style="font-size: 10pt; color: #333333;">Fixed values: A JFET transistor has 2 important fixed parameters:</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">I<sub>DSS</sub>: Saturation Drain Current. It is the maximum current that flows through a JFET, which is when the gate voltage V<sub>G</sub> is 0V.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">V<sub>P</sub> or V<sub>GS(off)</sub>: The pinch-off voltage, it <span id="yui_3_17_2_3_1433535039910_874" class="ya-q-full-text">is the voltage required to shut down a JFET.</span></span></li>
+</ul>
+<p><span style="font-size: 10pt; color: #333333;">These parameters are indicated in the datasheet with big tolerances. In the J201, for example, <span style="font-size: 10pt; color: #333333;">V<sub>GS(off)</sub> goes from -0.3 to -1.5V</span> and I<sub>DSS</sub> could be anything from 0.2 to 1mA. Note that these values change from one transistor to another:</span></p>
+<p><a href="../_assets/886e1639e05b.png"><span style="font-size: 10pt;"><img src="../_assets/886e1639e05b.png" alt="j201 idss vgsoff characteristics" width="711" height="116" id="j201 idss vgsoff characteristics" style="display: block; margin-right: auto; margin-left: auto;" /></span></a></p>
+<p><span style="font-size: 10pt;">There is a <a href="http://www.diystompboxes.com/smfforum/index.php?topic=29513.0">JFET tester designed by RunoffGroove</a> that can accurately measure the I<sub>DSS</sub> and V<sub>GS(off)</sub> in a JFET. From our experience, <a href="../forum/1wamp/87-measuring-100-jfet-j201-transistors/index.html">measuring one hundred reliable J201 JFETS</a> we can average this values to:</span></p>
+<ul>
+<li><span style="font-size: 10pt;">I<sub>DSS</sub>= 0.7 mA (average value).</span></li>
+<li><span style="font-size: 10pt;">V<sub>GS(off)</sub>= -0.8 V (average value).</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="color: #000000;"><strong><span style="font-size: 10pt;">How to calculate R<sub>S</sub> and R<sub>D</sub> in 5 steps:</span></strong></span></p>
+<p><span style="font-size: 10pt;">The <em>Midpoint Bias</em> method sets the transistor to the midpoint of its transfer curve, allowing maximum headroom (the drain current swings with a&nbsp;&nbsp;maximum span between I<sub>DSS</sub> and 0 without clipping):</span></p>
+<ol>
+<li><span style="font-size: 10pt;">Calculate I<sub>DSS</sub> and V<sub>GS(off) </sub>from the datasheet, taking average values or using a <a href="http://www.diystompboxes.com/smfforum/index.php?topic=29513.0">JFET matcher</a>.</span></li>
+<li><span style="font-size: 10pt;">Calculate I<sub>D</sub>: as I<sub>D</sub> = I<sub>DSS</sub>/2 setting the midpoint bias.</span></li>
+<li><span style="font-size: 10pt;">Calculate V<sub>GS</sub>: using the formula V<sub>GS</sub>= V<sub>GS(off)</sub>/3.4 <br /></span></li>
+</ol>
+<p style="margin-left: 30px;"><input type="button" value="Click to show how to calculate the VGS formula:" onclick="if(document.getElementById('spoiler1') .style.display=='none') 
+{document.getElementById('spoiler1') .style.display=''; this.value = 'Hide Formula';}
+else{document.getElementById('spoiler1') .style.display='none';this.value = 'Click to show how to calculate the VGS formula:'; }" /></p>
+<div id="spoiler1" style="display: none;"><div class="latex jatex-inline" >\[I_{D}=I_{DSS} \cdot (1-\frac{V_{GS}}{V_{P}})^{2}\]</div> <div class="latex jatex-inline" >\[V_{GS}=V_{P}\cdot (1-\sqrt{\frac{I_{D}}{I_{DSS}}})\]</div> substituing: <div class="latex jatex-inline" >\[I_{D}= \frac{I_{DSS}}{2}\]</div> <div class="latex jatex-inline" >\[V_{GS}=V_{P}(1-\sqrt{\frac{\frac{I_{DSS}}{2}}{I_{DSS}}})\]</div> <div class="latex jatex-inline" >\[V_{GS}=V_{P}\cdot 0.293 = V_{P}\cdot \frac{1}{3.4}\]</div></div>
+<p style="margin-left: 90px;"><span style="font-size: 10pt;"><span style="text-decoration: underline;">note:</span> sometimes this number is also approached to V<sub>GS</sub>= V<sub>GS(off)</sub>/4</span></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt;">4. R<sub>S </sub>= V<sub>GS</sub>/I<sub>D</sub></span></p>
+<p style="margin-left: 30px;"><input type="button" value="Click to show how to calculate the RS formula:" onclick="if(document.getElementById('spoiler2') .style.display=='none') 
+{document.getElementById('spoiler2') .style.display=''; this.value = 'Hide Formula';}
+else{document.getElementById('spoiler2') .style.display='none';this.value = 'Click to show how to calculate the RS formula:'; }" /></p>
+<div id="spoiler2" style="display: none;">
+<p style="margin-left: 60px;"><span style="font-size: 10pt;">V<sub>GS</sub>= V<sub>G </sub>- V<sub>S</sub></span><br /><span style="font-size: 10pt;">V<sub>GS</sub>= (I<sub>G</sub>*R<sub>G</sub>) - (I<sub>S</sub>*R<sub>S</sub>)</span></p>
+<p style="margin-left: 60px;"><span style="font-size: 10pt;">With I<sub>G</sub>=0;</span></p>
+<p><span style="margin-left: 60px;">V<sub>GS</sub>= (0*R<sub>G</sub>) - (I<sub>D</sub>*R<sub>S</sub>) = I<sub>S</sub>*R<sub>D</sub></span></p>
+</div>
+<p>&nbsp;</p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt;">5. R<sub>D </sub>= [V<sub>CC </sub>/ (2*I<sub>D</sub>)] - (R<sub>S</sub>/2)</span></p>
+<p style="margin-left: 30px;"><input type="button" value="Click to show how to calculate the RD formula:" onclick="if(document.getElementById('spoiler3') .style.display=='none') 
+{document.getElementById('spoiler3') .style.display=''; this.value = 'Hide Formula';}
+else{document.getElementById('spoiler3') .style.display='none';this.value = 'Click to show how to calculate the RD formula:'; }" /></p>
+<div id="spoiler3" style="display: none;">
+<p style="margin-left: 60px;"><span style="font-size: 10pt;">If we want VD to seat in the middle point of its maximum excursion we have to take V<sub>S</sub> into consideration.</span></p>
+<ul>
+<li style="margin-left: 60px;"><span style="font-size: 10pt;">V<sub>Dmin</sub>= V<sub>S</sub> = R<sub>S</sub> * I<sub>D </sub></span></li>
+<li style="margin-left: 60px;"><span style="font-size: 10pt;">V<sub>Dmax</sub>= V<sub>CC</sub></span></li>
+<li style="margin-left: 60px;"><span style="font-size: 10pt;">V<sub>D|mid-point</sub>= (V<sub>Dmin</sub> + V<sub>Dmax</sub>) / 2</span></li>
+</ul>
+<p style="margin-left: 60px;"><div class="latex jatex-inline" >\[V_{D|midpoint}=V_{CC} -( R_{D} \cdot I_{D})\]</div><br /><div class="latex jatex-inline" >\[\frac{R_{S}\cdot I_{D}+ V_{CC}}{2}=V_{CC} -( R_{D} \cdot I_{D})\]</div><br /><div class="latex jatex-inline" >\[R_{D}=\frac{V_{CC}}{2I_{D}}-\frac{R_{S}}{2}\]</div> <span style="font-size: 10pt;"><br /></span></p>
+<p style="margin-left: 60px;"><span style="font-size: 10pt;"> <span style="text-decoration: underline;">note:</span> Sometimes in order to simplify maths, some designers take the midpoint bias point as V<sub>D</sub>=V<sub>CC</sub>/2. You can also use it, there is not a big difference in the end:</span></p>
+<p style="margin-left: 60px;"><div class="latex jatex-inline" >\[V_{D}=V_{CC} -( R_{D} \cdot I_{D})\]</div><br /><div class="latex jatex-inline" >\[V_{D}=\frac{V_{CC}}{2}\]</div><br /><div class="latex jatex-inline" >\[\frac{V_{CC}}{2}=V_{CC} -( R_{D} \cdot I_{D})\]</div><br /><div class="latex jatex-inline" >\[R_{D}=\frac{V_{CC}}{2\cdot ID}\]</div><span style="font-size: 10pt;"><br /></span></p>
+</div>
+<p>&nbsp;</p>
+<p><span style="font-size: 10pt;">The gain of this mid-point biased JFET amp will be defined by the equation:</span></p>
+<p><div class="latex jatex-inline" >\[A_{V}=-\frac{gm\cdot R_{D}}{1+gm\cdot R_{S}}\]</div><span style="font-size: 10pt;"><br /></span></p>
+<p><span style="font-size: 10pt;">Where</span></p>
+<p style="text-align: left;"><div class="latex jatex-inline" >\[ gm = gm0 \cdot (1-\frac{V_{GS}}{V_{P}})\]</div><br /><div class="latex jatex-inline" >\[ gm0= \frac{2I_{DSS}}{|V_{P}|}\]</div><br /><div class="latex jatex-inline" >\[ gm = \frac{2I_{DSS}}{|V_{P}|} \cdot (1-\frac{V_{GS}}{V_{P}})\]</div><span style="font-size: 10pt;"><br /></span></p>
+<p><span style="font-size: 10pt;">These 5 steps can be summarized in the following image:</span></p>
+<p><a href="../_assets/a8008bf27242.jpg"><img src="../_assets/e35b0b9e99a4.jpg" alt="jfet amplifier calculation parameters" width="726" height="360" style="display: block; margin-left: auto; margin-right: auto;" title="jfet amplifier calculation parameters" /></a></p>
+<p><span style="font-size: 10pt; color: #333333;">In this ideal mid-point biasing, the gain of the amp is limited by the values of R<sub>D</sub> and R<sub>S</sub> which in turn are limited by the intrinsic characteristics of the JFET (I<sub>DSS</sub> and V<sub>GS(off)</sub>), to trim the gain the value of R<sub>D</sub> can be reduced/increased. The midpoint is often traded for higher gain; changing the value of R<sub>D</sub> will modify the gain, but the clipping will be more prone to happen.<br /></span></p>
+<p><span style="font-size: 10pt; color: #333333;">To finish this notes about the JFET biasing, it should be said that there is some mysticism biasing the JFET, the values of R<sub>D</sub> and R<sub>S</sub> can be tuned by ear for the <em>best sound</em> or following complex mathematical analysis trying to replicate the tube sound.</span></p>
+<p><span style="font-size: 10pt; color: #333333;">Some designers prefer not to follow the ideal mid-point biasing and make their designs with some variations, to see that we will study the Tillman, the Fetzer Valve and the Low Gain Fet:</span></p>
+<p><span style="font-size: 10pt; color: #000000;"><strong>J201 Tillman pre-amp:</strong></span></p>
+<ol><ol>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">R<sub>G </sub>= 1M<span class="st">&Omega;</span></span></li>
+<li><span style="font-size: 10pt; color: #333333;">R<sub>S </sub>= 2.2K<span class="st">&Omega;</span></span></li>
+<li><span style="font-size: 10pt; color: #333333;">R<sub>D </sub>= 6.8K<span class="st">&Omega;</span></span></li>
+<li><span style="font-size: 10pt; color: #333333;">Considering I<sub>DSS </sub>= 0.7mA and V<sub>GS(off) </sub>= V<sub>P </sub>= -0.8V and V<sub>CC</sub>=9V.</span></li>
+</ul>
+</ol></ol>
+<p><span style="font-size: 10pt; color: #333333;">There is no simple formula to calculate I<sub>D </sub>and V<sub>GS. </sub>you will need to solve a system with 2 ecuations and 2 variables (I<sub>D</sub> and V<sub>GS</sub>):</span></p>
+<p><span style="font-size: 10pt; color: #333333;">I<sub>D</sub>= I<sub>DSS</sub>(1-V<sub>GS</sub>/V<sub>GS(off)</sub>)^2</span></p>
+<p><span style="font-size: 10pt; color: #333333;">V<sub>GS</sub>=-I<sub>D</sub>*R<sub>S</sub></span></p>
+<p><span style="font-size: 10pt; color: #333333;">Resolving we get the values:</span></p>
+<p style="margin-left: 30px;"><input type="button" value="Click to show the complete maths to calculate the Tillman Amp bias:" onclick="if(document.getElementById('spoiler4') .style.display=='none') 
+{document.getElementById('spoiler4') .style.display=''; this.value = 'Hide Formula';}
+else{document.getElementById('spoiler4') .style.display='none';this.value = 'Click to show the complete maths to calculate the Tillman Amp bias:'; }" /></p>
+<div id="spoiler4" style="display: none;">
+<p><span style="font-size: 10pt;">First of all, we have a system with 2 equations and 2 variables:</span></p>
+<div class="latex jatex-inline" >\[\\ I_{D}= I_{DSS}\cdot(1-\frac{V_{GS}}{V_{P}})^{2}\]</div> <div class="latex jatex-inline" >\[\\ V_{GS}= - I_{D}\cdot R_{S}\]</div> <span style="font-size: 10pt;">Substituing</span><br /><span style="font-size: 10pt;"><span style="font-size: 10pt;"> <div class="latex jatex-inline" >\[\\ I_{D}= I_{DSS}\cdot(1+\frac{ I_{D}\cdot R_{S}}{V_{P}})^{2}\]</div> <div class="latex jatex-inline" >\[\\ \]</div> <div class="latex jatex-inline" >\[\\ \frac{I_{D}}{I_{DSS}}=(1+\frac{ I_{D}\cdot R_{S}}{V_{P}})^{2}\]</div></span></span>
+<p><span style="font-size: 10pt;">Developing the square binomy</span><br /><span style="font-size: 10pt;"></span></p>
+<span style="font-size: 10pt;"><span style="font-size: 10pt;"><div class="latex jatex-inline" >\[\\ \frac{I_{D}}{I_{DSS}}=(1 + \frac{I_{D}^{2}\cdot R_{S}^{2}}{V_{P}^{2}}+\frac{2I_{D}\cdot R_{S}}{})\]</div></span></span>
+<p><span style="font-size: 10pt;">Grouping</span><br /><span style="font-size: 10pt;"></span></p>
+<span style="font-size: 10pt;"><span style="font-size: 10pt;"><div class="latex jatex-inline" >\[\\ I_{D}^{2}\cdot(\frac{R_{S}^{2}}{V_{P}^{2}})+I_{D}\cdot (\frac{2R_{S}}{V_{P}}-\frac{1}{I_{DSS}})+1=0)\]</div></span></span>
+<p><span style="font-size: 10pt;">Now the real values can be substitued: I<sub>DSS </sub>= 0.7mA and V<sub>GS(off) </sub>= V<sub>P </sub>= -0.8V</span><br /><span style="font-size: 10pt;"></span></p>
+<span style="font-size: 10pt;"><span style="font-size: 10pt;"><div class="latex jatex-inline" >\[\\ I_{D}^{2}\cdot(\frac{2.2^{2}}{0.8^{2}})+I_{D}\cdot (\frac{2\cdot 2.2}{-0.8}-\frac{1}{0.7})+1=0)\]</div> <div class="latex jatex-inline" >\[\\ \]</div> <div class="latex jatex-inline" >\[\\ I_{D}^{2}\cdot(7.5)-I_{D}\cdot (6.9)+1=0)\]</div></span></span>
+<p><span style="font-size: 10pt;">Resolving thie quadratic equacion (you can use <a href="http://www.webgraphing.com/quadraticequation_quadraticformula.jsp">any online calculator</a>, or make the maths)</span></p>
+<p><span style="font-size: 10pt;">We get 2 possible solutions, ID= 0.73mA or 0.18mA. ID&lt;IDSS so the first solution can be discarded.</span></p>
+<p><span style="font-size: 10pt;">I<sub>D</sub>= 0.18mA</span></p>
+<p><span style="font-size: 10pt;">V<sub>GS</sub>=-0.18*2.2=0.39V<br /></span></p>
+<p><span style="font-size: 10pt;">V<sub>D</sub>= V<sub>CC</sub>-(I<sub>D</sub>*R<sub>D</sub>)=9-(0.18*6.8)</span></p>
+<p><span style="font-size: 10pt;">A<sub>V</sub>= - ((gm*RD)/(1+gm*RS))</span></p>
+<p><span style="font-size: 10pt;">with:</span></p>
+<span style="font-size: 10pt;"><span style="font-size: 10pt;"><div class="latex jatex-inline" >\[ \\ gm=\frac{2I_{DSS}}{|V_{P}|}\cdot(1+\frac{I_{D}R_{S}}{V_{P}}) \]</div> <div class="latex jatex-inline" >\[\\ \]</div> <div class="latex jatex-inline" >\[ \\ gm=\frac{2\cdot0.7}{0.8}\cdot(1+\frac{0.18 \cdot 2.2}{-0.8}) \]</div> <div class="latex jatex-inline" >\[\\ \]</div> <div class="latex jatex-inline" >\[ \\ gm=0.8 \]</div></span></span>
+<p><span style="font-size: 10pt;">A<sub>V</sub>= -((0.8*6.8)/(1+0.8*2.2)) = -5.3/2.7= 1.9 times or 5.8dB</span></p>
+</div>
+<ol><ol>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">I<sub>D</sub>= 0.18mA</span></li>
+<li><span style="font-size: 10pt; color: #333333;">V<sub>GS</sub>=-0.37V</span></li>
+<li><span style="font-size: 10pt; color: #333333;">V<sub>D</sub>=7.8V</span></li>
+<li><span style="font-size: 10pt; color: #333333;">A<sub>V</sub>=5.9dB</span></li>
+</ul>
+</ol></ol>
+<p><span style="font-size: 10pt; color: #333333;">These results show that in the Tillman amp, the drain current I<sub>D</sub> is below I<sub>DSS</sub>/2 (0.3mA) and also V<sub>D</sub> is displaced (4.5V). These will make the amp to have a low amout of gain and the clipping will happen easier in the positive semicycle of the signal. The designer was not looking for a high-gain design and due to the popular acceptance of this circuit seems that it also sounds good.</span></p>
+<p><span style="font-size: 10pt;"></span></p>
+<p><span style="font-size: 10pt; color: #000000;"><strong>J201 Fetzer Valve</strong></span></p>
+<ol><ol>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">R<sub>G </sub>= 1M<span class="st">&Omega;</span></span></li>
+<li><span style="font-size: 10pt; color: #333333;">R<sub>S </sub>= 1K<span class="st">&Omega;</span></span></li>
+<li><span style="font-size: 10pt; color: #333333;">R<sub>D </sub>= 10K<span class="st">&Omega;</span></span></li>
+<li><span style="font-size: 10pt; color: #333333;">Considering I<sub>DSS </sub>= 0.7mA, V<sub>GS(off) </sub>= V<sub>P </sub>= -0.8V and V<sub>CC</sub>=9V.</span></li>
+</ul>
+</ol></ol>
+<p><span style="font-size: 10pt; color: #333333;">Summarizing the fetzer valve, Runoffgroove uses 2 equiations derived from Danyuk <em>Triode Emulator</em> paper to calculate R<sub>S</sub> and R<sub>D</sub>:</span></p>
+<p style="margin-left: 30px;"><span style="font-family: Arial,Helvetica; font-size: 10pt; color: #333333;">Rs = 0.83 * |Vp| / Idss = 0.83 * 0.8 / 0.7 = 0.9K<span class="st">&Omega;</span> <span class="st">approx. to</span> 1K<span class="st">&Omega;</span><br /> </span></p>
+<p style="margin-left: 30px;"><span style="font-family: Arial,Helvetica; font-size: 10pt; color: #333333;">Rd = 0.9 * (Vcc - 2*|Vp|) / Idss = 0.9 *(9 - 2*0.8) / 0.7 = 9.5K<span class="st">&Omega;</span> approx to 10K<span class="st">&Omega;</span><br /> </span></p>
+<p><span style="font-size: 10pt; color: #333333;">Using a similar approach that in the Tillman amp we can calculate the bias points:</span></p>
+<ol><ol>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">I<sub>D</sub>= 0.27mA</span></li>
+<li><span style="font-size: 10pt; color: #333333;">V<sub>GS</sub>=-0.27V</span></li>
+<li><span style="font-size: 10pt; color: #333333;">V<sub>D</sub>=6.3V</span></li>
+<li><span style="font-size: 10pt; color: #333333;">A<sub>V</sub>=14dB.</span></li>
+</ul>
+</ol></ol>
+<p><span style="font-size: 10pt; color: #333333;">In the Fetzer amp, the value of I<sub>D</sub> is very close the IDss/2, allowing a nice big span of this current. The value of R<sub>D</sub> also makes V<sub>D</sub> close to its ideal value. In this point, the transistor has a big amount of gain and seems that replicates the behavior of a vacuum tube.</span></p>
+<p><span style="font-size: 10pt; color: #000000;"><strong>J201 Low Gain Fet:</strong></span></p>
+<ol><ol>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">R<sub>G </sub>= 1M<span class="st">&Omega;</span></span></li>
+<li><span style="font-size: 10pt; color: #333333;">R<sub>S </sub>= 1K<span class="st">&Omega;</span></span></li>
+<li><span style="font-size: 10pt; color: #333333;">R<sub>D </sub>= 2.2K<span class="st">&Omega;</span></span></li>
+<li><span style="font-size: 10pt; color: #333333;">Considering I<sub>DSS </sub>= 0.7mA and V<sub>GS(off) </sub>= V<sub>P </sub>= -0.8V</span></li>
+</ul>
+</ol></ol>
+<p><span style="font-size: 10pt; color: #333333;">Following once again the maths of the Tillman amp ID and VGS can be calculated:</span></p>
+<ol><ol>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">I<sub>D</sub>=0.27</span></li>
+<li><span style="font-size: 10pt; color: #333333;">V<sub>GS</sub>=0.27</span></li>
+<li><span style="font-size: 10pt; color: #333333;">V<sub>D</sub>=8.4V</span></li>
+<li><span style="font-size: 10pt; color: #333333;">A<sub>V</sub>=1=0dB.</span></li>
+</ul>
+</ol></ol>
+<p><span style="font-size: 10pt; color: #333333;">The current in the Low Gain JFET amp is designed to be ideal (I<sub>DSS</sub>/2), and the V<sub>D</sub> point is intentionally shifted from the midpoint biasing, it will make the signal to clip in the positive semi-cycle easily. The LM386 does not need a high-level input so placing this amp/buffer before it, improves the sound quality.</span><span style="font-size: 10pt;"></span><span style="color: #000000; font-size: 10pt;"><strong><a name="input_impedance"></a></strong></span></p>
+<p>&nbsp;</p>
+<p><span style="color: #000000; font-size: 10pt;"><strong><a id="input_impedance"></a>Amplifier Input Impedance:</strong></span><br /><span style="font-size: 10pt;">These JFETs have the advantage over bipolar transistors of having an extremely high input impedance along with a low noise output making them ideal for use in amplifier circuits that have very small input signals. </span><br /><span style="font-size: 10pt;">The JFET input impedance can be considered infinite and only the value of the gate resistor (R<sub>1</sub>) will define the total value of it</span><br /><span style="font-size: 10pt;">Z<sub>IN</sub>= <span style="color: #545454; font-family: arial,sans-serif; font-size: small; line-height: 18.2px;">&infin;</span>&nbsp;// R<sub>1</sub> = R<sub>1</sub> = 1M&Omega;</span></p>
+<p><span style="font-size: 10pt;">The rule of thumb is to interface the guitar to an input impedance that is at least 1M&Omega;, it will keep the signal uncorrupted as foundations for the next stages avoiding tone sucking.</span></p>
+<p>&nbsp;</p>
+<p><br /><strong><span style="font-size: 14pt; color: #000000;">Tone Control</span></strong></p>
+<p><span style="font-size: 10pt; color: #333333;">The passive tone control is Big Muff Pi style, following a classic simple and effective design that generates a great variety of tones.</span></p>
+<p><a href="../_assets/c52acecc90d6.png"><img src="../_assets/0ccf2eebcdb8.png" alt="1wamp tone control circuit" width="403" height="352" style="display: block; margin-right: auto; margin-left: auto;" title="1wamp tone control circuit" /></a><br /><span style="font-size: 10pt; color: #333333;">This topology is a combination of a high pass filter (C<sub>1</sub>R<sub>5</sub>) and a low pass filter (R<sub>4</sub>C<sub>2</sub>) that are mixed together by a linear potentiometer POT1. The cut-off frequencies of both filters are designed so that their interweaving effect introduces a middle-frequency scoop/notch at 800Hz (see the graph below) when the potentiometer is set to middle.</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">High-Pass filter cut frequency</span> <div class="latex jatex-inline" >\[f_{c}=\frac{1}{2\pi R C}=\frac{1}{2\pi \cdot R_{5}\cdot (C_{1})}=\frac{1}{2\pi \cdot 22K \cdot 6.8nF}=1064Hz\]</div></li>
+<li><span style="font-size: 10pt; color: #333333;">Low-Pass filter cut frequency</span> <div class="latex jatex-inline" >\[f_{c}=\frac{1}{2\pi R C}=\frac{1}{2\pi \cdot R_{4}\cdot (C_{2})}=\frac{1}{2\pi \cdot 47K \cdot 10nF}=338Hz\]</div></li>
+</ul>
+<p><span style="color: #000000;"><strong><span style="font-size: 10pt;">1Wamp Tone Control Frequency Response:</span> </strong> </span><br /><span style="font-size: 10pt; color: #333333;">Find below the frequency response, showing from blue to red all values of the tone potentiometer:</span></p>
+<p><a href="../_assets/8e9e341fc39c.png"><span style="font-size: 10pt; color: #333333;"><img src="../_assets/8e9e341fc39c.png" alt="1wamp tone control frequency response" width="761" height="245" style="display: block; margin-right: auto; margin-left: auto;" title="1wamp tone control frequency response" /></span></a><br /><span style="font-size: 10pt; color: #333333;">The green response line has the tone pot set at mid point showing the 800Hz scoop. There is an overall 7dB loss and at the notch the loss is about -10dB in total at 800Hz. </span><span style="font-size: 10pt; color: #333333;">The blue and red colour curves have the tone at full bass/treble respectively.</span></p>
+<p><span style="font-size: 10pt; color: #333333;">T<span style="font-size: 10pt; color: #333333;">here are some tips using</span> BMP based tone controls:</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">To play clean sounds, the best is to use the pot more to the side of the treble, it will attenuate overloading bass signals and the resulting sound will be more sparkly and clean.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">To play rock/hard/metal any position is good, the distortion will be more metal-heavy on the bass side and more punk-fast on the treble.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><br /><span style="font-size: 10pt; color: #333333;"><span style="color: #000000;"><strong><span style="font-size: 14pt; color: #000000;">JFET Booster Stage.</span></strong></span><br /> </span></p>
+<p><span style="font-size: 10pt; color: #333333;">This second JFET stage is identical to the first one, it is designed primarily to recover the volume loss of -7dB during the passive tone stack and to introduce more harmonic content to boost the tube sound.</span></p>
+<p><a href="../_assets/1026e1833901.png"><img src="../_assets/dd7e27b04b4f.png" alt="1wamp jfet booster circuit." width="320" height="389" style="display: block; margin-right: auto; margin-left: auto;" title="1wamp jfet booster circuit." /></a></p>
+<p><span style="color: #333333; font-size: 10pt;">R<sub>6</sub>, R<sub>7</sub>, and R<sub>8</sub> are the gate, source and drain resistors. Their functionality is exactly the same as the R<sub>1</sub>, R<sub>2</sub> and R<sub>3</sub> resistors in the Input Stage. If you want to learn more about these resistors and how to calculate them check the <a href="/1wamp#input">Input Stage section.</a></span></p>
+<p><span style="font-size: 10pt; color: #333333;"></span></p>
+<p><strong><span style="font-size: 10pt;">LM386 Aux/mp3 input </span></strong><br /><span style="font-size: 10pt; color: #333333;">This auxiliary input mixes the guitar signal with an additional line-level input from a laptop/mp3/music player just before the power amplifier. Doing this it is easy to practice with backing tracks, metronomes or drum bases.</span></p>
+<ul>
+<li><a href="../_assets/433c379ac7eb.png"><img src="../_assets/433c379ac7eb.png" alt="1wamp lm386 mp3 aux input" width="465" height="148" style="display: block; margin-right: auto; margin-left: auto;" title="1wamp lm386 mp3 aux input" /></a><span style="font-size: 10pt;">R<sub>9</sub> and R<sub>10 </sub>resistors in series with the aux input prevent signal mixing problems while adjusting for differences in input strength between the line in and pre-amplified guitar signal. Any value between 10K&Omega; and 33K&Omega; will work without problems.</span></li>
+</ul>
+<ul>
+<li><span style="font-size: 10pt;">C<sub>12</sub> is a 100nF capacitor, placed to reduce any hum or interference that the input mini jack can catch if nothing is connected to it. <br /></span></li>
+</ul>
+<p><span style="font-size: 10pt;">An Aux/MP3 player is a&nbsp;low-impedance source. Placing a buffer in this input would be perfect (adding circuit complexity), but you may be able to work without them.</span><br /><br /><span style="font-size: 10pt;"> The LM386 has a 50K input impedance, so using summing resistor of any more than 50k is not ideal as the input voltage would be cut in half when using a 50k resistor (neglecting the booster stage impedance). <br /></span></p>
+<p><span style="font-size: 10pt;">The volume of the aux input is adjusted from the external device, for circuit simplicity, there are not pot to reduce the input level. Note also that the mp3/aux input is directly fed into the LM386 and using high distortion levels the aux input might suffer some distortion. This is the little price to pay for having a simple and practical direct input.</span></p>
+<p><br /><span style="font-size: 10pt;">Additionally, this input can also be used to connect a second guitar or a bass guitar with a jack to mini-jack adapter.</span><span style="font-size: 10pt; color: #333333;"><br /></span></p>
+<p><a href="../_assets/2467c4a0c2c5.jpg"><img src="../_assets/2467c4a0c2c5.jpg" alt="jack to minijack adapter" width="180" height="111" style="display: block; margin-right: auto; margin-left: auto;" title="jack to minijack adapter" /></a></p>
+<h1><strong><span style="font-size: 14pt; color: #000000;">LM386 Power Amplifier Stage.</span></strong></h1>
+<p><span style="font-size: 10pt; color: #333333;">The main power amplifier stage is based on the LM386 audio integrated amplifier. It is a popular choice for low powered guitar amplifiers due to its low quiescent current and ability to run on 9V. </span><span style="font-size: 10pt; color: #333333;">It has been used in a lot of popular amps like the <a href="../smokey-amp-analysis/index.html">Smokey Amp</a>, the <a href="../little-gem-analysis/index.html">Little Gem</a>, the <a href="../ruby-amp-analysis/index.html">Ruby Amp</a>, the Marshall MS-2 and the <a href="../noisy-cricket-analysis/index.html">Noisy Cricket</a>.</span></p>
+<p><a href="../_assets/af398e315f4e.png"><img src="../_assets/279a311fff08.png" alt="1wamp lm386 power amplifier circuit" width="723" height="265" style="display: block; margin-right: auto; margin-left: auto;" title="1wamp lm386 power amplifier circuit" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<ul>
+<li><span style="color: #333333; font-size: 10pt;">C<sub>4</sub> is a 47nF input capacitor, it prevents any DC voltage being presented to the amplifier's input. It also affects the circuit's bass response, changing this value to a higher capacitance (100nF) will make it more bassy but also more muddy, values from 22 to 47nF sound great.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">The POT2 functionality is explained in the <a href="/1wamp#volume_control"><em>Volume Potentiometer</em> section.</a></span></li>
+</ul>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">R<sub>11</sub> resistor is placed for the mp3/aux input which is connected to the same point as the TP4 (Test Point 4). If the POT2 is maxed down, the input of the LM386 will be grounded and the aux/mp3 signal won't be amplified. Connecting this series resistor a minimum load is always guaranteed for the auxiliary input.</span></li>
+</ul>
+<ul>
+<li><span style="color: #333333; font-size: 10pt;">The POT3 and R<sub>16</sub> functionality are described in the <a href="/1wamp#gain_control"><em>Gain Potentiometer</em> section.</a></span><span style="font-size: 10pt; color: #333333;"></span><span style="font-size: 10pt; color: #333333;"></span></li>
+</ul>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">The C<sub>5</sub> capacitor from pin 7 to ground avoids the power supply noise to be amplified and reach the output. In this way, the high-gain input stage of the chip is isolated from the supply noise hum, transients, etc.</span></li>
+</ul>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">R<sub>12</sub> and C<sub>6</sub> form the Zobel Network, its function is to make the power stage more stable removing oscillation, the values used, 10&Omega; and 47nF are standard because this network is aimed to compensate the load (speaker or headphones), not the amplifier, and the load is normally generic in audio amplifiers. The resistor is chosen to equal the nominal resistance (32&Omega;, 8&Omega;, 4&Omega;, etc.)</span>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">The capacitor is calculated using C= Le/R2, where Le= inductance of speaker's coil. </span></li>
+<li><span style="font-size: 10pt; color: #333333;">The physical location of this components is critical, they should be placed as close as possible to the chip, in some occasions Zobels mounted careless around the PCB cause oscillation.&nbsp;With the LM386, the best values are a 10 and a 47nF, they give the smoother distortion, raising the values of the R or the C will make the distortion more crispy and rough.</span></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">R<sub>13</sub> will reduce the volume for the headphones, any value between 300&Omega; and 1K&Omega; will work, the higher the value the lower the volume at the headphones. </span><span style="font-size: 10pt; color: #333333;">This output attenuator formed by the SW1, C<sub>7</sub>, C<sub>8</sub>, and R<sub>13</sub> is detailed in the <a href="/1wamp#attenuator"><em>LM386 Output Attenuator</em> section.</a></span></li>
+</ul>
+<p>&nbsp;</p>
+<h2><span style="color: #000000; font-size: 12pt;"><a name="volume_control"></a><strong>Volume Potentiometer.</strong></span></h2>
+<p><span style="color: #333333; font-size: 10pt;">The POT2 Volume potentiometer limits the amount of signal into the LM386. As the Volume is increased, you will start getting nice breakup. <br /></span></p>
+<p>&nbsp;</p>
+<h2><span style="color: #000000; font-size: 12pt;"><strong><a name="gain_control"></a>Gain Potentiometer.</strong><br /></span></h2>
+<p><span style="color: #000000;"><strong><span style="font-size: 10pt;">Why POT3 and R16 are mounted in parallel?</span> </strong> </span><br /><span style="font-size: 10pt; color: #333333;">The <span style="color: #333333; font-size: 13.3333px;">range of values of&nbsp;</span>PCB mounted potentiometers on the market is limited, finding 1K&Omega; pots with the correct footprint and shaft length could be difficult. Placing 50K potentiometer (easy to find) and 1K<span style="font-size: 10pt; color: #333333;">&Omega;</span> simple resistor in parallel will create a 1K<span style="font-size: 10pt; color: #333333;">&Omega;</span> potentiometer:</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">With the POT3 at max (50K): 50K&Omega;//1K&Omega;= (50Kx1K)(50K+1K)= 0.98K&Omega; = 1K&Omega; approx</span></li>
+<li><span style="font-size: 10pt; color: #333333;">With the POT3 at min (0K): 50K&Omega;//1K&Omega;= ( 0Kx1K)( 0K+1K)= 0</span></li>
+</ul>
+<p><span style="font-size: 10pt; color: #333333;">The resulting potentiometer will be logarithmic instead of linear, but with a high gain amp like this, it is not bad to have a more sensitive pot in the first half of the potentiometer. However, if you are able to find a 1K potentiometer you can place it instead of the parallel combination.</span></p>
+<p>&nbsp;</p>
+<p><span style="color: #000000;"><strong><span style="font-size: 10pt;">LM386 Voltage Gain Calculation</span> </strong> </span></p>
+<p><span style="color: #333333; font-size: 10pt;">The potentiometer (1K as explained above) placed between pins 1 and 8 to adjust the gain from 41 (28dB) to 200 (46db) following the general LM386 voltage gain formula taken from the datasheet:</span></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt; color: #333333;"><img src="http://latex.codecogs.com/gif.latex?%7BG%7D_%7Bv%5C:%20max%7D=%5Cfrac%7B%7BV%7D_%7Bout%7D%7D%7B%7BV%7D_%7Bin%7D%7D=2%5Cfrac%7B%7BZ%7D_%7B1-5%7D%7D%7B150%20+%20%7BZ%7D_%7B1-8%7D%7D=2%5Cfrac%7B15K%7D%7B150%20+%200%7D=%20200%20%5C:%20%2846dB%29" alt="" title="%7BG%7D_%7Bv\: max%7D=%5Cfrac%7B%7BV%7D_%7Bout%7D%7D%7B%7BV%7D_%7Bin%7D%7D=2%5Cfrac%7B%7BZ%7D_%7B1-5%7D%7D%7B150%20+%20%7BZ%7D_%7B1-8%7D%7D=2\frac{15K}{150 + 0}= 200 \: (46dB)" /></span></p>
+<p style="margin-left: 30px;"><img src="http://latex.codecogs.com/gif.latex?%7BG%7D_%7Bv%5C:%20min%7D=%5Cfrac%7B%7BV%7D_%7Bout%7D%7D%7B%7BV%7D_%7Bin%7D%7D=2%5Cfrac%7B%7BZ%7D_%7B1-5%7D%7D%7B150%20+%20%7BZ%7D_%7B1-8%7D%7D=2%5Cfrac%7B15K%7D%7B150%20+%20%281.35K%7C%7C1K%29%29%7D=%2041%20%5C:%20%2832dB%29" alt="" title="%7BG%7D_%7Bv\: min%7D=%5Cfrac%7B%7BV%7D_%7Bout%7D%7D%7B%7BV%7D_%7Bin%7D%7D=2%5Cfrac%7B%7BZ%7D_%7B1-5%7D%7D%7B150%20+%20%7BZ%7D_%7B1-8%7D%7D=2\frac{15K}{150 + (1.35K||1K))}= 41 \: (32dB)" /></p>
+<p><span style="color: #333333; font-size: 10pt;">Where Z<sub>1-5</sub> and Z<sub>1-8</sub> are the impedances between the respective pins. Note that Z<sub>1-5</sub> internal resistance is 15K<span style="color: #333333; font-size: 10pt;">&Omega;</span> and Z<sub>1-8</sub> is 1.35K<span style="color: #333333; font-size: 10pt;">&Omega;</span>.</span></p>
+<p><span style="font-size: 10pt; color: #333333;">If you want to read more about how to calculate the voltage gain, you can read the <a href="/ruby-amp-analysis#link13"><span style="color: #333333;">Voltage Gain Calculation in the Ruby Amp</span></a></span>.</p>
+<p>&nbsp;</p>
+<h2><span style="color: #000000; font-size: 12pt;"><a name="attenuator"></a><strong>LM386 Output Attenuator.</strong><br /></span></h2>
+<p><span style="color: #333333; font-size: 10pt;">The output power of the LM386 is too high for a pair of headphones. An average pair of headphones only need 1mW (into 32&Omega;) for a reasonable good volume. Depending on the LM386 model, it is able to deliver up to 1000mW (1W), so in order to reduce this output power below the threshold of pain, a series resistor is placed. This auxiliary load will take part of the power giving to the headphones the right amount of it.<br /></span></p>
+<p><span style="color: #333333; font-size: 10pt;">Frequency response of the output attenuator:</span></p>
+<p><a href="../_assets/032e3a199e83.png"><img src="../_assets/032e3a199e83.png" alt="LM386 output attenuator signals" width="692" height="209" style="display: block; margin-left: auto; margin-right: auto;" title="LM386 output attenuator signals" /></a></p>
+<p><span style="color: #333333; font-size: 10pt;">Placing an output attenuator will modify the frequency response, reducing the amount of bass into the headphones.</span></p>
+<ul>
+<li><span style="color: #333333; font-size: 10pt;"><span style="color: #000000;">Without attenuator (purple plot above):</span> There is a low pass filter formed by C<sub>7</sub> (220uF) and the speaker load (let's consider it as 8&Omega; driver), the cut-frequency is 90Hz (calculated as fc=1/(2<span class="st" data-hveid="57">&pi;</span>RC)), harmonics below 90HZ will be attenuated. Guitar signals do not have much content at that frequencies and also rolling off the bass helps small speakers from farting out. In fact, if you have a small speaker and it farts you should reduce this cap to something like 47-100uF (rolling the bass around 400Hz).</span></li>
+<li><span style="color: #333333; font-size: 10pt;"><span style="color: #000000;">With attenuator <span style="color: #333333; font-size: 10pt;"><span style="color: #000000;">(blue and red plots above)</span></span>:</span> The extra resistor in series and the load (32&Omega; headphones ) will roll off the bass below the audible frequencies. </span><span style="color: #333333; font-size: 10pt;">For this series resistor, any value between 300&Omega; and 1K&Omega; will reduce the volume to an acceptable level to most headphones. Some people use just a 10&Omega; resistor but from my experience, the volume is still too high. </span></li>
+</ul>
+<p><br /><span style="color: #000000;"><strong><span style="font-size: 10pt;"><a name="clipping"></a>LM386 Clipping - Overdrive - Distortion:</span> </strong> </span><br /><span style="font-size: 10pt; color: #333333;">Two types of clipping/distortion and a combination of them can be archived with an LM386 power amplifier:</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;"><span style="color: #000000;">Clipping at the <span style="text-decoration: underline;">output</span> of the LM386 by reaching the limits of the output voltage swing:</span> In this circuit, the LM386 has always minimum gain of 41 (32dB), the output will clip if the signal reaches 8Vpeak-to-peak using a 9V power supply.</span></li>
+</ul>
+<p style="margin-left: 30px;"><span style="font-size: 10pt; color: #333333;">The maximum input voltage that will make the output clip is 8Vpp/41=195mVpp, any voltage over this level will clip the output creating distortion tones. The Volume potentiometer (POT3) is placed to attenuate the incoming signal below this 195mVpp (clean tones) or over it (crunch-distortion)</span>.</p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;"><span style="color: #000000;">Clipping at the <span style="text-decoration: underline;">input</span> of the LM386 by the overload of the IC input limits: </span>The LM386 has an input voltage limits of <span style="font-size: 10pt;">&plusmn;</span>0.4V (listed in the datasheet). If the input signal goes even higher over <span style="font-size: 10pt; color: #333333;"><span style="font-size: 10pt;">&plusmn;</span>0.4V</span> the input stages of the LM386 will saturate creating even more distorted sounds.</span></li>
+</ul>
+<p>&nbsp;</p>
+<h1><span style="font-size: 14pt; color: #000000;"><a name="layout"></a><strong>1Wamp Layout.</strong></span></h1>
+<p><span style="font-size: 10pt; color: #333333;">The design and layout of the power supply in audio circuits with a pre-amp and power-amplifier stages is critical. If the power from the battery/adapter jack is given to the circuit following a wrong path, the noise of the power-amp could be added to the pre-amp stage, resulting in a positive feedback and creating noise or <span style="font-size: 10pt; color: #333333;">oscillation commonly called <em>motor-boating</em></span>. To avoid this, </span><span style="font-size: 10pt; color: #333333;">the power should be connected following this block diagram:</span></p>
+<p><a href="../_assets/abacf5684ecb.png"><strong><span style="font-size: 10pt; color: #333333;"><img src="../_assets/abacf5684ecb.png" alt="audio amplifier power supply architecture" width="380" height="166" style="display: block; margin-left: auto; margin-right: auto;" title="audio amplifier power supply architecture" /></span></strong></a></p>
+<p><span style="font-size: 10pt; color: #333333;">Rules to minimize noise in audio circuits:</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">Place a CRC network (low-pass filter) between the power-amp and the pre-amp. This is something that <a href="https://www.google.co.uk/search?q=marshall+jtm45+schematic&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ved=0CAcQ_AUoAWoVChMI48L0_pb3xgIVx9UUCh1iqAXN&amp;biw=1525&amp;bih=734&amp;dpr=0.9">has been there for decades</a>, if you check any old Marshall/Fender valve amplifier schematic you will spot a CRC between the power valves and the pre-amplifier (usually a 10K resistor and a cap of tens to hundreds of farads)</span></li>
+<li><span style="font-size: 10pt; color: #333333;">Place filter capacitors close to the part to be decoupled.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">Keep power and GND traces away from noise sources or critical components.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">Route the power and GND traces as thick as possible.</span></li>
+</ul>
+<p><span style="font-size: 10pt; color: #333333;"><span style="color: #000000;"><strong>Star grounding:</strong></span> Ground is the common reference potential, commonly determined to be zero volts. This ground is the shared return path from the power supply to all the stages of the circuit.</span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">Connecting the blocks of the circuit to ground in series will work, but a small voltage drop will be created in the ground signal due to the high currents and the (small) resistance of the ground track. The input stage is very sensitive to common noise introduced through the ground line, this noise could be added to the input signal and in the worst case create oscillation/positive feedback.</span></li>
+<li><span style="font-size: 10pt; color: #333333;">Connecting the blocks of the circuit in parallel finishing in a single point (star) the ground variances and interferences between parts is minimized.</span></li>
+</ul>
+<p><a href="../_assets/0b2311ff3c62.png"><span style="font-size: 10pt; color: #333333;"><img src="../_assets/2927249cfe8b.png" alt="1wamp star ground " width="396" height="226" style="display: block; margin-left: auto; margin-right: auto;" title="1wamp star ground " /></span></a></p>
+<p><span style="font-size: 10pt; color: #333333;">In the above image the center of the star ground is indicated, from this all the green ground tracks for the different subsystems (input jack, led, input stage, tone control, booster, power amp, output jack). These tracks flow in parallel and with similar lengths minimizing common noise.</span></p>
+<p>&nbsp;</p>
+<h1><span style="font-size: 10pt; color: #333333;"><span style="font-size: 14pt; color: #000000;"><a name="bias"></a><strong>1Wamp Bias Points and Signals:</strong></span><br /></span></h1>
+<p><span style="font-size: 10pt; color: #333333;"><span style="line-height: 18px;">The most important DC bias points of the 1Wamp are shown. It can be useful for troubleshooting:<br /></span></span></p>
+<p><a href="../_assets/d8c91c2c4eb6.jpg"><span style="font-size: 10pt; color: #333333;"><img src="../_assets/d8c91c2c4eb6.jpg" alt="1wamp bias points" width="792" height="334" style="display: block; margin-left: auto; margin-right: auto;" title="1wamp bias points" /></span></a></p>
+<p><span style="text-decoration: underline; font-size: 10pt; color: #333333;"><span>note:</span></span><span style="font-size: 10pt; color: #333333;">&nbsp;Y</span><span style="font-size: 10pt; color: #333333;"><span style="color: #333333; font-size: 13.3333px; line-height: 18px;">our values should be all shifted a bit up or down, depending on your power supply levels. For this graph, Vcc is ideal and equal to 9V.</span></span></p>
+<p style="margin-left: 30px;"><span style="color: #333333; font-size: 10pt;">- To get this voltage values, the POT1 (Tone) is in mid position, POT2 (Vol) is at maximum value and POT3 (Gain) is at the minimum value.</span><br /><span style="color: #333333; font-size: 10pt;">- V<sub>D1</sub> voltage is slightly lower than the calculated in the Tillman pre-amp section (7.8 VS 7.4). This is due to the loading of the tone control.</span><br /><br /></p>
+<h1><strong><span style="color: #000000; font-size: 14pt;">1Wamp Signals:</span></strong></h1>
+<p><span style="font-size: 10pt; color: #333333;">Using an oscilloscope the most important points of the amplifier are measured: input signal (TP1), after the first JFET stage (TP2), after the tone control (TP3), after the second JFET stage - input of LM386 (TP4) and output signal.</span></p>
+<p><span style="font-size: 10pt; color: #333333;">These waveforms were taken using different JFET topologies: with 2 Tillman JFETS, with 2 Fetzer Valves, and with 2 Low Gain JFETs:</span></p>
+<p><a href="../_assets/307d44450a9a.png"><img src="../_assets/307d44450a9a.png" alt="1wamp signals tillman" width="1000" height="251" style="display: block; margin-left: auto; margin-right: auto;" /></a><span style="font-size: 10pt; color: #333333;"></span></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">The signals above shows the amplification and waveforms at all the test points (TP) of the circuit using a <span style="color: #000000;">Tillman</span> topology in both transistor amplifiers. </span>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">The input stage has a gain of 4dB approx, slightly reduced from the calculated in the Input Stage section due to the loading of the Tone Stage and the real parameters of the JFET. </span></li>
+<li><span style="font-size: 10pt; color: #333333;">The Tone Control reduces the amplitude of the signal -10dB at 1KHz as expected and the last amplifier stage gives again 4dB of Gain. </span></li>
+<li><span style="font-size: 10pt; color: #333333;">The last two graphs show the output of the amplifier when the gain is set to its minimum and maximum value. This output signal goes from clean to clipping giving a nice range of action and sounds.</span></li>
+</ul>
+</li>
+</ul>
+<p><a href="../_assets/9c075895dd49.png"><img src="../_assets/9c075895dd49.png" alt="1wamp signals fetzer valve" width="1000" height="251" style="display: block; margin-left: auto; margin-right: auto;" title="1wamp signals fetzer valve" /></a></p>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">The images above show the signal of the circuit using the Fetzer Valve topology in both transistor amplifiers. In general, this circuits gives more gain than the Tillman, resulting in a higher and more clipped output signal. </span>
+<ul>
+<li><span style="font-size: 10pt; color: #333333;">The input stage has a gain of 11dB approx, slightly reduced from the calculated in the Input Stage section due to the loading of the Tone Stage and the real parameters of the JFET. </span></li>
+<li><span style="font-size: 10pt; color: #333333;">The Tone Control reduces the amplitude of the signal -10dB at 1KHz as expected and the last amplifier stage gives again 11dB of Gain. </span></li>
+<li><span style="font-size: 10pt; color: #333333;">The last two graphs show the output of the amplifier when the gain is set to its minimum and maximum value. This output signal goes from clipped to supper-clipped being perfect for overdriven tones and hard rock sounds.</span></li>
+</ul>
+</li>
+</ul>
+<p><a href="../_assets/1927b5e67ae2.png"><img src="../_assets/1927b5e67ae2.png" alt="1wamp signals jfet low gain" width="1000" height="251" style="display: block; margin-left: auto; margin-right: auto;" title="1wamp signals jfet low gain" /></a></p>
+<ul>
+<li><span style="font-size: 10pt;">The images above show the signal of the circuit using the JFET Low Gain topology in both transistor amplifiers. In general, these circuits give less gain than the Tillman, </span><span style="font-size: 10pt;">resulting in a range of clean and light asymmetric overdriven tones. </span>
+<ul>
+<li><span style="font-size: 10pt;">The input stage has a gain of 0dB, the Tone Control reduces the amplitude of the signal -10dB at 1KHz as expected and the last amplifier stage gives again 0dB of Gain. </span></li>
+</ul>
+</li>
+</ul>
+<p style="margin-left: 30px;"><span style="font-size: 10pt;">It might seem that the guitar signal at the input of the LM386 is too low (63mVpp) but it's not a problem, the LM386 does not require high-level waveforms at its input, in fact, signals over 195mVpp will be clipped as seen in the Clipping Section.</span></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt;">The last two graphs show the output of the amplifier when the gain is set to its minimum and maximum value. The output signal goes from clean to light asymmetric overdrive.</span></p>
+<p><span style="font-size: 10pt;"></span></p>
+<p><span style="text-decoration: underline; font-size: 10pt;">note:</span></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt;">- For all the images, the input signal is a 1KHz sinusoid with 200V<sub>PP</sub>, comparable with an average guitar signal.</span><br /><span style="font-size: 10pt;">- The POT1 (Tone) is set to mid, the POT2 (VOL) gain to max and the POT3 (Gain) varies from min to max in the last 2 images.</span><span style="font-size: 10pt; color: #333333;"> <br /></span></p>
+<p>&nbsp;<br /><span style="font-size: 10pt; color: #333333;"></span></p>
+<h1><span style="font-size: 14pt; color: #000000;"><a name="bom"></a><strong>1WAmp Bill of Materials / Part List:</strong></span></h1>
+<p><span style="font-size: 10pt;">The components for the 1Wamp are easy-to-find through-hole parts with the minimum number of references. There is plenty of alternatives and replacement parts although the J201 JFET is a bit tricky.<br /></span></p>
+<p><span style="font-size: 10pt;">Find below the complete bill of materials, with <a href="http://eu.mouser.com/">mouser</a>/<a href="http://www.farnell.com/">farnell</a> references and alternatives:</span></p>
+<table border="0" frame="VOID" rules="NONE" cellspacing="0"><colgroup><col width="145" /><col width="37" /><col width="100" /><col width="481" /><col width="156" /><col width="146" /></colgroup>
+<tbody>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #000000 #99cccc #99cccc #000000;" bgcolor="#FFFFFF" width="145" height="24"><span style="font-size: 10pt;"><strong><span style="color: #000000; font-family: Calibri;"></span></strong></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #000000 #99cccc #99cccc;" bgcolor="#FFFFFF" width="37"><span style="font-size: 10pt;"><strong><span style="color: #000000; font-family: Calibri;"></span></strong></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #000000 #99cccc #99cccc;" bgcolor="#FFFFFF" width="100"><span style="font-size: 10pt;"><strong><span style="color: #000000; font-family: Calibri;"></span></strong></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #000000 #99cccc #99cccc; text-align: center;" bgcolor="#FFFFFF" width="481"><span style="font-size: 14pt;"><strong><span style="color: #000000; font-family: Calibri;">1Wamp Bill of Materials</span></strong></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #000000 #99cccc #99cccc; text-align: center;" bgcolor="#FFFFFF" width="156"><span style="font-size: 10pt;"><strong><span style="color: #000000; font-family: Calibri;"></span></strong></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #000000 #000000 #99cccc #99cccc; text-align: center;" bgcolor="#FFFFFF" width="146"><span style="font-size: 10pt;"><strong><span style="color: #000000; font-family: Calibri;"></span></strong></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" bgcolor="#FFFFFF" height="20"><span style="font-family: verdana,geneva;"><strong><span style="color: #000000;">Reference</span></strong></span></td>
+<td style="border: 1px solid #99cccc;" bgcolor="#FFFFFF"><span style="font-family: verdana,geneva;"><strong><span style="color: #000000;">Qty</span></strong></span></td>
+<td style="border: 1px solid #99cccc;" bgcolor="#FFFFFF"><span style="font-family: verdana,geneva;"><strong><span style="color: #000000;">Value</span></strong></span></td>
+<td style="border: 1px solid #99cccc;" bgcolor="#FFFFFF"><span style="font-family: verdana,geneva;"><strong><span style="color: #000000;">Description</span></strong></span></td>
+<td style="text-align: center; border: 1px solid #99cccc;" bgcolor="#FFFFFF"><span style="font-family: verdana,geneva;"><strong><span style="color: #000000;">Mouser</span></strong></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;" bgcolor="#FFFFFF"><span style="font-family: verdana,geneva;"><strong><span style="color: #000000;">Farnell</span></strong></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" bgcolor="#DDEBF7" height="20"><span style="font-family: verdana,geneva;"><strong><span style="color: #000000;">Capacitors</span></strong></span></td>
+<td style="border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #000000; font-family: verdana,geneva;"></span></td>
+<td style="border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #000000; font-family: verdana,geneva;"></span></td>
+<td style="border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #000000; font-family: verdana,geneva;"></span></td>
+<td style="text-align: center; border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #000000; font-family: verdana,geneva;"></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;" bgcolor="#DDEBF7"><span style="color: #000000; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">C1</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">1</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">6.8n</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">CAP, FILM, PET, 6.8NF, 100V, RAD</span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">R82EC1680Z350J</span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">C2</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">1</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">10n</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">CAP, FILM, PET, 0.01UF, 100V, RAD</span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">R82EC2100DQ50J</span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">C3,C4,C6</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">3</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">47n</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">CAP, FILM, PET, 0.047UF, 100V, RAD</span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">R82EC2470DQ60J</span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">C5,C11,C12</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">3</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">100n</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">CAP, FILM, PET, 0.1UF, 100V, RAD </span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">R82EC3100DQ70J</span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">C7,C8,C9,C10</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">4</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">220uF</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">Aluminum Electrolytic Capacitor 16V</span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">REA221M1CBK-0811P</span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" bgcolor="#DDEBF7" height="20"><span style="font-family: verdana,geneva; color: #000000;"><strong>Resistors</strong></span></td>
+<td style="border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="text-align: center; border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">R12</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">1</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">10R</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">TH Metal Film, 10R, 1/4W, &plusmn;1%</span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;">MF25 10R</span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">R13,R15,R16</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">3</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">1K</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"><span style="color: #333333; font-family: verdana,geneva;">TH</span> Metal Film, 1K, <span style="color: #333333; font-family: verdana,geneva;">1/4W</span>, &plusmn;1%</span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;">MF25 1K</span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">R3,R8</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">2</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">2K2</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"><span style="color: #333333; font-family: verdana,geneva;">TH</span> Metal Film, 2.2K, <span style="color: #333333; font-family: verdana,geneva;">1/4W</span>, &plusmn;1%</span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;">MF25 2K2</span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">R2,R7,R11</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">3</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">6K8</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"><span style="color: #333333; font-family: verdana,geneva;">TH</span> Metal Film, 6.8K, <span style="color: #333333; font-family: verdana,geneva;">1/4W</span>, &plusmn;1%</span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;">MF25 6K8</span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">R5,R9,R10,R14</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">4</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">22K</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"><span style="color: #333333; font-family: verdana,geneva;">TH</span> Metal Film, 22K, <span style="color: #333333; font-family: verdana,geneva;">1/4W</span>, &plusmn;1%</span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;">MF25 22K</span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">R4</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">1</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">47K</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"><span style="color: #333333; font-family: verdana,geneva;">TH</span> Metal Film, 47k, <span style="color: #333333; font-family: verdana,geneva;">1/4W</span>, &plusmn;1%</span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;">MF25 47K</span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">R1,R6</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">2</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">1M</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"><span style="color: #333333; font-family: verdana,geneva;">TH</span> Metal Film, 1M, 1/4W, &plusmn;1%</span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;">MF25 1M</span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">Pot1,Pot2,Pot3</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">3</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">50K</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">Potentiometers 9MM 50K V/ADJ </span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;">RK09D113000D</span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" bgcolor="#DDEBF7" height="20"><span style="font-family: verdana,geneva; color: #000000;"><strong>Connectors</strong></span></td>
+<td style="border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="text-align: center; border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">CON1, CON3</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">2</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">6.35 jack</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">Neutrix 1/4 ST Chrome Conn PCB <br /></span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">NMJ6HCD2</span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">CON2</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">1</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">3.5 jack</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">Jack 3.5 mm st - CLIFF 4 POLE, PCB<br /></span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;">FC68125</span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">CONN4</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">1</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">2.1 jack</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">DC Power Conn 2.0mm PCB Jack</span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">KLDX-0202-AP-LT</span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;">MJ-179PH </span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" bgcolor="#DDEBF7" height="20"><span style="font-family: verdana,geneva; color: #000000;"><strong>Others</strong></span></td>
+<td style="border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="text-align: center; border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">D1</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">1</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">1N5817</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">Schottky Diodes Vr/20V Io/1A</span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">1N5817</span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">D2</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">1</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">LED</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">Standard LED - TH 3MM LED WHITE </span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">VLHW4100</span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">D3,D4</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">2</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">1N4733A</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">Zene Diode 5.1V 1W ZENER </span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">1N4733A</span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">8pin dip socket</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">1</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">8Pin socket</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">IC Sockets 8P DUAL </span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">4808-3000-CP</span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">Q1,Q2</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">2</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">J201</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">Plastic Knobs</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">3</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">6.35mm knob</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">Knob 6.35 mm shaft size.</span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">450-2023-GRX</span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">SW1</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">1</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">toggle switch</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">Toggle 3-Pin SPDT ON-ON</span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">612-100-A1111 </span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">9V Battery Conn.</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">1</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">Battery Clip</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">9V Battery Contacts 26AWG </span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">121-0526/I-GR</span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">U1</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">1</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">LM386</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">Audio Amplifier</span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">LM386N-4/NOPB</span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" bgcolor="#DDEBF7" height="20"><span style="font-family: verdana,geneva; color: #000000;"><strong>Mechanical</strong></span></td>
+<td style="border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="text-align: center; border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">PCB</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">1</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">1Wamp PCB</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">Plexiglas Cover</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">2</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">-</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">Nylon Spacer</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">4</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">m3x16</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">Spacers M3 x 16mm nylon</span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">R30-1611600</span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="21"><span style="color: #333333; font-family: verdana,geneva;">M3x12 screws</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">8</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">-</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;">M310-PRSTMCZ100</span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">Batt. optional clips</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">2</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">-</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">4.8X0.5MM </span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;">TAB38250568</span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" bgcolor="#DDEBF7" height="20"><span style="font-family: verdana,geneva; color: #000000;"><strong>* Additional Comp.</strong></span></td>
+<td style="border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="text-align: center; border: 1px solid #99cccc;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;" bgcolor="#DDEBF7"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #99cccc #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">R2, R7</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">2</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">10K</span></td>
+<td style="border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;">TH Metal Film 10K, 250 mW, &plusmn; 1%</span></td>
+<td style="text-align: center; border: 1px solid #99cccc;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #99cccc #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;">MF25 10K</span></td>
+</tr>
+<tr>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #000000 #000000;" height="20"><span style="color: #333333; font-family: verdana,geneva;">R3, R8</span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #000000;"><span style="color: #333333; font-family: verdana,geneva;">2</span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #000000;"><span style="color: #333333; font-family: verdana,geneva;">1K</span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #000000;"><span style="color: #333333; font-family: verdana,geneva;">TH Metal Film, 1K 250 mW, &plusmn; 1%</span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #99cccc #000000; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;"></span></td>
+<td style="border-width: 1px; border-style: solid; border-color: #99cccc #000000 #000000 #99cccc; text-align: center;"><span style="color: #333333; font-family: verdana,geneva;">MF25 1K</span></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt;"><strong>*Additional components:</strong> </span>The additional 2x10K and 2x1K will allow you to configure the JFET Stages as you like so you can choose between the J201 Tillman pre-amp (default),&nbsp; the J201 Fetzer Valve or the J201 Low Gain Fet. The difference between them is the amount of gain that they introduce (5.9dB, 14dB,&nbsp;and 0dB respectively). You can find more info in the JFET Input Stage section.</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt;"><strong><span style="font-size: 10pt;">Capacitors: Electrolitics, Film, Ceramics ...?</span></strong></span></p>
+<p><span style="font-size: 10pt;">For big values (&gt;1uF) use aluminum electrolytic, for medium size (1nF - 1uF) use Film and for small values (&lt;1nF) use ceramics. If you are not sure about using ceramics or film somewhere go for film; film capacitors are generally preferred over ceramics in audio path applications. There is a <a href="/electrosmash.com/pdf/beavis-audio-research-capacitors-article.pdf">great article about capacitors for audio by BeavisAudio.</a></span></p>
+<h1><span style="font-size: 14pt; color: #000000;"><a name="references"></a><strong>References:</strong></span></h1>
+<p style="margin-left: 30px;"><span style="font-size: 10pt;"><span style="color: #3366ff;"><a href="http://www.runoffgroove.com/fetzervalve.html" style="color: #3366ff;">Fetzer Valve Amplifier</a></span> by RunoffGroove.</span><br /><span style="font-size: 10pt;"><span style="color: #3366ff;"><a href="http://www.till.com/articles/GuitarPreamp/" style="color: #3366ff;">Tillman Amplifier</a></span> by Donald Tillman.</span><br /><span style="font-size: 10pt; color: #333333;"><span style="color: #3366ff;"><a href="http://www.thatraymond.com/downloads/solidstate_guitar_amplifiers_teemu_kyttala_v1.0.pdf"><span style="color: #3366ff;">Teemuk Kyttala Solid State Guitar Amplifiers</span></a>,</span> the Holy Scripture.</span><br /><span style="font-size: 10pt;"><span style="color: #3366ff;"><a href="http://www.kennethkuhn.com/students/ee351/jfet_basics.pdf" style="color: #3366ff;">JFET Basics</a></span>&nbsp;by Kenneth A. Kuhn</span><br /><span style="font-size: 10pt;"><span style="color: #3366ff;"><a href="http://www.electronics-tutorials.ws/amplifier/amp_3.html" style="color: #3366ff;">Common Source JFET Amplifier</a></span> by Electronic Tutorials.</span><br /><span style="font-size: 10pt;"><span style="color: #3366ff;"><a href="http://www.rason.org/Projects/jfetamp/jfetamp.htm" style="color: #3366ff;">JFET Preamplifier Circuits</a></span> by Mike Martell.</span><br /><span style="font-size: 10pt;"><span style="color: #3366ff;"><a href="../smokey-amp-analysis/index.html" style="color: #3366ff;">Smokey Amplifier</a></span> by ElectroSmash.</span><br /><span style="font-size: 10pt;"><span style="color: #3366ff;"><a href="../ruby-amp-analysis/index.html" style="color: #3366ff;">Ruby Amplifier</a> </span>by ElectroSmash.</span><br /><span style="font-size: 10pt;"></span><br /><span style="font-size: 10pt;"></span></p>
+<p><strong><span style="font-size: 10pt; color: #000000;">Spice model for the J201 JFET Transistor:</span></strong></p>
+<p style="margin-left: 30px;"><span style="color: #333333;">* J201 with VGSoff=-0.8V and IDSS=0.6mA</span><br /><span style="color: #333333;">.MODEL J201 NJF (VTO=-0.8 BETA=0.9375M LAMBDA=2M IS=114.5F RD=1 RS=1</span><br /><span style="color: #333333;">+ CGD=4.667P CGS=2.992P M=.2271 PB=.5 FC=.5 VTOTC=-2.5M BETATCE=-.5</span><br /><span style="color: #333333;">+ KF=604.2E-18)</span></p>
+<p><span style="font-size: 10pt; color: #333333;">If you want a JFET with a certain value of VGSoff and IDSS, just change the model so:</span></p>
+<p style="margin-left: 30px;"><span style="color: #333333;">VTO = VGSoff</span><br /><span style="color: #333333;">BETA = IDSS / (VGSoff^2)</span></p>
+<p><span style="font-size: 10pt;"><span style="color: #333333;">All credits</span>&nbsp;<a href="http://www.diystompboxes.com/smfforum/index.php?topic=71466.0">to stm in diystompboxes.com</a></span></p>
+<p>&nbsp;</p>
+<p><strong><span style="font-size: 10pt; color: #000000;">Spice model for the&nbsp;2N5457 JFET Transistor:</span></strong></p>
+<p style="margin-left: 30px;"><span style="color: #333333;">* 2N5457 with VGSoff=-1.6V and IDSS=3.3mA</span><br /><span style="color: #333333;">.MODEL 2N5457 NJF (VTO=-1.6 BETA=1.29M LAMBDA=2M RD=1 RS=1 CGD=6E-12</span><br /><span style="color: #333333;">+ CGS=2.25E-12 KF=6.5E-17 AF=0.5)</span></p>
+<p>&nbsp;</p>
+<p><strong><span style="font-size: 10pt; color: #000000;">Spice model for the&nbsp;MPF102 JFET Transistor:</span></strong></p>
+<p style="margin-left: 30px;"><span style="color: #333333;">* MPF102 with VGSoff=-2.5V and IDSS=6mA</span><br /><span style="color: #333333;">.MODEL MPF102 NJF (VTO=-2.5 BETA=0.96M LAMBDA=5M RD=1 RS=1 CGD=1.54248P</span><br /><span style="color: #333333;">+ CGS=2.567P PB=1.49 KF=7.90591F AF=499.953M)</span></p>
+<p>&nbsp;</p>
+<p style="text-align: right;"><span style="font-size: 10pt;"><span style="font-size: 12pt; color: #000000;"><span style="color: #333333; font-size: 10pt;">Thanks for reading, all feedback is appreciated&nbsp;&nbsp;<img src="../_assets/26a349a17744.jpg" alt="jr(at)ElectroSmash.com " style="float: right;" /></span></span></span></p>
+<p style="text-align: center;"><span style="color: #808080; font-size: 8pt;"><span style="color: #0000ff;"><a href="../rights/index.html"><span style="color: #0000ff;">Some Rights Reserved</span></a></span>, you are free to copy, share, remix and use all material.<br />Trademarks, brand names and logos are the property of their respective owners.</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>	</section>
+  
+  <!-- footer -->
+    <!-- //footer -->
+
+	
+	
+	</article>
+<!-- //Article -->
+
+
+</div><div><a href="http://www.artio.net" style="font-size: 8px; visibility: visible; display: inline;" title="Web development, Joomla, CMS, CRM, Online shop software, databases">Joomla SEF URLs by Artio</a></div>
+		</div>
+		<!-- //MAIN CONTENT -->
+
+		<!-- SIDEBAR RIGHT -->
+		<div class="t3-sidebar t3-sidebar-right col-xs-12 col-sm-4  col-md-3 ">
+			<div class="t3-module module " id="Mod28"><div class="module-inner"><h3 class="module-title "><span>New Updates</span></h3><div class="module-ct"><ul class="latestnews mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../arduino-audio-meter/index.html" itemprop="url">
+			<span itemprop="name">
+				Arduino Audio Meter			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../dallas-rangemaster/index.html" itemprop="url">
+			<span itemprop="name">
+				Dallas Rangemaster Treble Booster Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../time-manipulator/index.html" itemprop="url">
+			<span itemprop="name">
+				Time Manipulator - Arduino Delay/Echo/Reverb			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../marshall-guvnor-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Marshall The Guvnor Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../germanium-fuzz/index.html" itemprop="url">
+			<span itemprop="name">
+				You Can Build the Perfect Germanium Fuzz			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../mxr-distortion-plus-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				MXR Distortion + Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod29"><div class="module-inner"><h3 class="module-title "><span>Most Visited</span></h3><div class="module-ct"><ul class="mostread mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../tube-screamer-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Tube Screamer Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../fuzz-face/index.html" itemprop="url">
+			<span itemprop="name">
+				Fuzz Face Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../proco-rat/index.html" itemprop="url">
+			<span itemprop="name">
+				Pro Co Rat Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../boss-ds1-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Boss DS-1 Distortion Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../klon-centaur-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Klon Centaur Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../big-muff-pi-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Big Muff Pi Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod184"><div class="module-inner"><h3 class="module-title "><span>Follow us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><span style="font-size: 10pt; color: #333333;">You can also follow us on:</span></p>
+<p><a href="https://www.facebook.com/ElectroSmash"><img src="../_assets/df34a2b41b54.png" alt="facebook" /></a>&nbsp;&nbsp; <a href="https://plus.google.com/+Electrosmash/about"><img src="../_assets/3ffc52860091.png" alt="google" /></a>&nbsp;&nbsp; <a href="https://www.instagram.com/electro.smash/"><img src="../_assets/45b0b0fe2d4b.png" alt="instagram" /></a></p>
+<p><a href="https://www.pinterest.com/electrosmash/"><img src="../_assets/05310d9fcf2a.png" alt="pinterest" /></a>&nbsp;&nbsp; <a href="https://www.youtube.com/user/ElectroSmashTV"><img src="../_assets/d920883b3613.png" alt="youtube" /></a>&nbsp;&nbsp; <a href="https://twitter.com/electro_smash"><img src="../_assets/52581f7264eb.png" alt="twitter" /></a></p></div>
+</div></div></div>
+		</div>
+		<!-- //SIDEBAR RIGHT -->
+
+	</div>
+</div> 
+
+
+
+  
+
+
+  
+
+
+	
+<!-- BACK TOP TOP BUTTON -->
+<div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top hidden-xs hidden-sm affix-top">
+  <button class="btn btn-primary" title="Back to Top"><i class="fa fa-caret-up"></i></button>
+</div>
+<script type="text/javascript">
+(function($) {
+	// Back to top
+	$('#back-to-top').on('click', function(){
+		$("html, body").animate({scrollTop: 0}, 500);
+		return false;
+	});
+    $(window).on('load', function(){
+        // hide button to top if the document height not greater than window height*2;using window load for more accurate calculate.    
+        if ((parseInt($(window).height())*2)>(parseInt($(document).height()))) {
+            $('#back-to-top').hide();
+        } 
+    });
+})(jQuery);
+</script>
+<!-- BACK TO TOP BUTTON -->
+
+<!-- FOOTER -->
+<footer id="t3-footer" class="wrap t3-footer">
+
+			<!-- FOOTER SPOTLIGHT -->
+		<div class="container hidden-xs">
+				<!-- SPOTLIGHT -->
+	<div class="t3-spotlight t3-footer-sl  row">
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod185"><div class="module-inner"><h3 class="module-title "><span>About us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../about-us/index.html">&nbsp;&nbsp;<img src="../_assets/420f9f181bc0.jpg" alt="smash electro" /></a></p>
+<p><a href="../about-us/index.html"><span style="font-size: 10pt; color: #333333;">Smashing audio electronics since MMXIII</span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod183"><div class="module-inner"><h3 class="module-title "><span>Email Newsletter</span></h3><div class="module-ct"><div class="acymailing_module" id="acymailing_module_formAcymailing27041">
+	<div class="acymailing_fulldiv" id="acymailing_fulldiv_formAcymailing27041"  >
+		<form id="formAcymailing27041" action="/" onsubmit="return submitacymailingform('optin','formAcymailing27041')" method="post" name="formAcymailing27041"  >
+		<div class="acymailing_module_form" >
+						<table class="acymailing_form">
+				<tr>
+												<td class="acyfield_email acy_requiredField">
+								<input id="user_email_formAcymailing27041"  onfocus="if(this.value == 'example@email.com') this.value = '';" onblur="if(this.value=='') this.value='example@email.com';" class="inputbox" type="text" name="user[email]" style="width:90%" value="example@email.com" title="example@email.com"/>
+							</td> </tr><tr>
+					
+					<td  class="acysubbuttons">
+												<input class="button subbutton btn btn-primary" type="submit" value="Subscribe" name="Submit" onclick="try{ return submitacymailingform('optin','formAcymailing27041'); }catch(err){alert('The form could not be submitted '+err);return false;}"/>
+											</td>
+				</tr>
+			</table>
+						<input type="hidden" name="ajax" value="0" />
+			<input type="hidden" name="acy_source" value="module_183" />
+			<input type="hidden" name="ctrl" value="sub"/>
+			<input type="hidden" name="task" value="notask"/>
+			<input type="hidden" name="redirect" value="https%3A%2F%2Fwww.electrosmash.com%2F1wamp"/>
+			<input type="hidden" name="redirectunsub" value="https%3A%2F%2Fwww.electrosmash.com%2F1wamp"/>
+			<input type="hidden" name="option" value="com_acymailing"/>
+						<input type="hidden" name="hiddenlists" value="1"/>
+			<input type="hidden" name="acyformname" value="formAcymailing27041" />
+									</div>
+		</form>
+	</div>
+	</div>
+
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod186"><div class="module-inner"><h3 class="module-title "><span>Contact us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../contact-us/index.html"><span style="font-size: 10pt; color: #333333;">e-mail us at <span id="cloak489df2a09571593d5d7f7269e736f340">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
+				document.getElementById('cloak489df2a09571593d5d7f7269e736f340').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy489df2a09571593d5d7f7269e736f340 = '&#105;nf&#111;' + '&#64;';
+				addy489df2a09571593d5d7f7269e736f340 = addy489df2a09571593d5d7f7269e736f340 + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';
+				var addy_text489df2a09571593d5d7f7269e736f340 = '&#105;nf&#111;' + '&#64;' + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';document.getElementById('cloak489df2a09571593d5d7f7269e736f340').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy489df2a09571593d5d7f7269e736f340 + '\'>'+addy_text489df2a09571593d5d7f7269e736f340+'<\/a>';
+		</script></span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod188"><div class="module-inner"><h3 class="module-title "><span>Rights</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p style="text-align: left;">&nbsp;&nbsp;<a href="https://creativecommons.org/licenses/by-nc/3.0/"><img src="../_assets/b0e99d439c44.png" alt="88x31" /></a></p>
+<p style="text-align: left;"><img src="../_assets/fe2636cdea5c.png" alt="open source logo" width="180" height="38" /></p>
+<p style="text-align: left;"><img src="../_assets/8281c4ec3a3b.png" alt="open hardware logo" width="180" height="38" /></p>
+<p style="text-align: left;">&nbsp;</p></div>
+</div></div></div>
+							</div>
+			</div>
+<!-- SPOTLIGHT -->
+		</div>
+		<!-- //FOOTER SPOTLIGHT -->
+	
+	<section class="t3-copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 copyright ">
+					
+          <small>
+            <a href="http://twitter.github.io/bootstrap/" title="Bootstrap by Twitter" target="_blank">Bootstrap</a> is a front-end framework of Twitter, Inc. Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" title="MIT License" target="_blank">MIT License.</a>
+          </small>
+          <small>
+            <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> font licensed under <a href="http://scripts.sil.org/OFL">SIL OFL 1.1</a>.
+          </small>
+				</div>
+							</div>
+		</div>
+	</section>
+
+</footer>
+<!-- //FOOTER -->
+
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29544239-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

@@ -1,0 +1,733 @@
+
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr"
+	  class='com_content view-article itemid-491 j31 mm-hover '>
+
+<head>
+	<base href="../index/index.html" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="noisy, cricket, dano, beavisaudio, amp, amplifier, circuit, schematic, analysis, study, part, bom, diagram, voltage, gain, tone, volume, grit, mod, frequency, headphones," />
+	<meta name="rights" content="Creative Commons: Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0) " />
+	<meta name="author" content="JR" />
+	<meta name="description" content="Schematic Diagram, Input Buffer, Voltage Gain, Tone/Volume Circuit, Grit Mod, Stabilization Techniques, Frequency Response, Mods - Headphones Plug" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>ElectroSmash - Noisy Cricket Analysis</title>
+	<link href="index.html" rel="canonical" />
+	<link href="../_assets/d87243966412.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="../_assets/26f5cf410b61.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/15ff046a2fe3.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../_assets/dd09f39c1b89.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"51a0bcf09659d5eed613cc4cb0952daf","system.paths":{"root":"","base":""}}</script>
+	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+	<script src="../_assets/323c609448d2.js" type="text/javascript"></script>
+	<script src="../_assets/b8bcbb2f005c.js" type="text/javascript" async="async"></script>
+	<script type="text/javascript">
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });	if(typeof acymailingModule == 'undefined'){
+				var acymailingModule = [];
+			}
+			
+			acymailingModule['emailRegex'] = /^[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+)*\@([a-z0-9-]+\.)+[a-z0-9]{2,10}$/i;
+
+			acymailingModule['NAMECAPTION'] = 'Name';
+			acymailingModule['NAME_MISSING'] = 'Please enter your name';
+			acymailingModule['EMAILCAPTION'] = 'example@email.com';
+			acymailingModule['VALID_EMAIL'] = 'Please enter a valid e-mail address';
+			acymailingModule['ACCEPT_TERMS'] = 'Please check the Terms and Conditions';
+			acymailingModule['CAPTCHA_MISSING'] = 'The captcha is invalid, please try again';
+			acymailingModule['NO_LIST_SELECTED'] = 'Please select the lists you want to subscribe to';
+		
+acymailingModule['excludeValuesformAcymailing21611'] = [];
+acymailingModule['excludeValuesformAcymailing21611']['name'] = 'Name';
+acymailingModule['excludeValuesformAcymailing21611']['email'] = 'example@email.com';
+window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });window.addEvent('domready', function() {
+            document.getElements('.latex').each(function(item, index) {
+                item.setStyle('display', '');
+            });
+        });
+	</script>
+
+	
+<!-- META FOR IOS & HANDHELD -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<style type="text/stylesheet">
+		@-webkit-viewport   { width: device-width; }
+		@-moz-viewport      { width: device-width; }
+		@-ms-viewport       { width: device-width; }
+		@-o-viewport        { width: device-width; }
+		@viewport           { width: device-width; }
+	</style>
+	<script type="text/javascript">
+		//<![CDATA[
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement("style");
+			msViewportStyle.appendChild(
+				document.createTextNode("@-ms-viewport{width:auto!important}")
+			);
+			document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+		}
+		//]]>
+	</script>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="apple-mobile-web-app-capable" content="YES"/>
+<!-- //META FOR IOS & HANDHELD -->
+
+
+
+
+<!-- Le HTML5 shim and media query for IE8 support -->
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script type="text/javascript" src="../_assets/010a3c86157d.js"></script>
+<![endif]-->
+
+<!-- You can add Google Analytics here or use T3 Injection feature -->
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="../_assets/76d3e1341c39.css" type="text/css" />
+<![endif]-->
+	</head>
+
+<body>
+
+<div class="t3-wrapper corporate"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
+
+	
+<!-- MAIN NAVIGATION -->
+<header id="t3-mainnav" class="wrap navbar navbar-default navbar-fixed-top t3-mainnav">
+
+	<!-- OFF-CANVAS -->
+		<!-- //OFF-CANVAS -->
+
+	<div class="container">
+
+		<!-- NAVBAR HEADER -->
+		<div class="navbar-header">
+
+			<!-- LOGO -->
+			<div class="logo logo-image">
+				<div class="logo-image">
+					<a href="/" title="ElectroSmash">
+													<img class="logo-img" src="../_assets/115794d6d5b8.png" alt="ElectroSmash" />
+						
+												
+						<span>ElectroSmash</span>
+					</a>
+				</div>
+			</div>
+			<!-- //LOGO -->
+
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-collapse">
+					<i class="fa fa-bars"></i>
+				</button>
+			
+	    
+		</div>
+		<!-- //NAVBAR HEADER -->
+
+		<!-- NAVBAR MAIN -->
+				<nav class="t3-navbar-collapse navbar-collapse collapse"></nav>
+		
+		<nav class="t3-navbar navbar-collapse collapse">
+			<div  class="t3-megamenu"  data-responsive="true">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav navbar-nav level0">
+<li itemprop='name'  data-id="435" data-level="1">
+<a itemprop='url' class=""  href="/"   data-target="#">Home </a>
+
+</li>
+<li itemprop='name' class="dropdown mega" data-id="510" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Chips<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="492" data-level="2">
+<a itemprop='url' class=""  href="../jrc4558-analysis/index.html"   data-target="#">JRC4558  </a>
+
+</li>
+<li itemprop='name'  data-id="519" data-level="2">
+<a itemprop='url' class=""  href="../mn3007-bucket-brigade-devices/index.html"   data-target="#">MN3007 BBDs </a>
+
+</li>
+<li itemprop='name'  data-id="468" data-level="2">
+<a itemprop='url' class=""  href="../lm386-analysis/index.html"   data-target="#">LM386 </a>
+
+</li>
+<li itemprop='name'  data-id="1643" data-level="2">
+<a itemprop='url' class=""  href="../pt2399-analysis/index.html"   data-target="#">PT2399 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="active dropdown mega" data-id="444" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Amps<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="993" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="489" data-level="2">
+<a itemprop='url' class=""  href="../little-gem-analysis/index.html"   data-target="#">Little Gem Amp </a>
+
+</li>
+<li itemprop='name'  data-id="526" data-level="2">
+<a itemprop='url' class=""  href="../marshall-mg10/index.html"   data-target="#">Marshall MG10 </a>
+
+</li>
+<li itemprop='name' class="current active" data-id="491" data-level="2">
+<a itemprop='url' class=""  href="index.html"   data-target="#">Noisy Cricket  </a>
+
+</li>
+<li itemprop='name'  data-id="490" data-level="2">
+<a itemprop='url' class=""  href="../ruby-amp-analysis/index.html"   data-target="#">Ruby Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="488" data-level="2">
+<a itemprop='url' class=""  href="../smokey-amp-analysis/index.html"   data-target="#">Smokey Amp  </a>
+
+</li>
+<li itemprop='name'  data-id="746" data-level="2">
+<a itemprop='url' class=""  href="http://www.electrosmash.com/schematics#amps"   data-target="#">Amps Schematics.</a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="511" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Pedals<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  style="width: 600px"  data-width="600"><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="515" data-level="2">
+<a itemprop='url' class=""  href="../back-talk-analysis/index.html"   data-target="#">Back Talk Reverse Delay </a>
+
+</li>
+<li itemprop='name'  data-id="518" data-level="2">
+<a itemprop='url' class=""  href="../big-muff-pi-analysis/index.html"   data-target="#">Big Muff Pi  </a>
+
+</li>
+<li itemprop='name'  data-id="524" data-level="2">
+<a itemprop='url' class=""  href="../boss-ce-2-analysis/index.html"   data-target="#">Boss CE-2 Chorus </a>
+
+</li>
+<li itemprop='name'  data-id="1088" data-level="2">
+<a itemprop='url' class=""  href="../boss-ds1-analysis/index.html"   data-target="#">Boss DS-1 Distortion </a>
+
+</li>
+<li itemprop='name'  data-id="1713" data-level="2">
+<a itemprop='url' class=""  href="../dallas-rangemaster/index.html"   data-target="#">Dallas Rangemaster </a>
+
+</li>
+<li itemprop='name'  data-id="905" data-level="2">
+<a itemprop='url' class=""  href="../crybaby-gcb-95/index.html"   data-target="#">Dunlop CryBaby GCB-95  </a>
+
+</li>
+<li itemprop='name'  data-id="842" data-level="2">
+<a itemprop='url' class=""  href="../fuzz-face/index.html"   data-target="#">Fuzz Face </a>
+
+</li>
+<li itemprop='name'  data-id="1664" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="512" data-level="2">
+<a itemprop='url' class=""  href="../tube-screamer-analysis/index.html"   data-target="#">Ibanez Tube Screamer </a>
+
+</li>
+<li itemprop='name'  data-id="1433" data-level="2">
+<a itemprop='url' class=""  href="../klon-centaur-analysis/index.html"   data-target="#">Klon Centaur </a>
+
+</li>
+</ul>
+</div></div>
+<div class="col-xs-6 mega-col-nav" data-width="6"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="548" data-level="2">
+<a itemprop='url' class=""  href="../mxr-microamp/index.html"   data-target="#">MXR MicroAmp </a>
+
+</li>
+<li itemprop='name'  data-id="1667" data-level="2">
+<a itemprop='url' class=""  href="../marshall-guvnor-analysis/index.html"   data-target="#">Marshall Guvnor </a>
+
+</li>
+<li itemprop='name'  data-id="1632" data-level="2">
+<a itemprop='url' class=""  href="../mxr-distortion-plus-analysis/index.html"   data-target="#">MXR Distortion + </a>
+
+</li>
+<li itemprop='name'  data-id="1244" data-level="2">
+<a itemprop='url' class=""  href="../mxr-dyna-comp-analysis/index.html"   data-target="#">MXR Dyna Comp </a>
+
+</li>
+<li itemprop='name'  data-id="573" data-level="2">
+<a itemprop='url' class=""  href="../mxr-phase90/index.html"   data-target="#">MXR Phase 90 </a>
+
+</li>
+<li itemprop='name'  data-id="553" data-level="2">
+<a itemprop='url' class=""  href="../proco-rat/index.html"   data-target="#">ProCo Rat </a>
+
+</li>
+<li itemprop='name'  data-id="520" data-level="2">
+<a itemprop='url' class=""  href="../sitar-swami-analysis/index.html"   data-target="#">Sitar Swami </a>
+
+</li>
+<li itemprop='name'  data-id="525" data-level="2">
+<a itemprop='url' class=""  href="../vox-v847-analysis/index.html"   data-target="#">Vox V847 Wah Wah </a>
+
+</li>
+<li itemprop='name'  data-id="547" data-level="2">
+<a itemprop='url' class=""  href="../emg81/index.html"   data-target="#">EMG81 Pickup </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name' class="dropdown mega" data-id="796" data-level="1">
+<a itemprop='url' class=" dropdown-toggle"  href="#"   data-target="#" data-toggle="dropdown">Projects<em class="caret"></em></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="mega-nav level1">
+<li itemprop='name'  data-id="1108" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-uno/index.html"   data-target="#">pedalSHIELD UNO </a>
+
+</li>
+<li itemprop='name'  data-id="797" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield/index.html"   data-target="#">pedalSHIELD DUE </a>
+
+</li>
+<li itemprop='name'  data-id="1437" data-level="2">
+<a itemprop='url' class=""  href="../pedalshield-mega/index.html"   data-target="#">pedalSHIELD MEGA </a>
+
+</li>
+<li itemprop='name'  data-id="1312" data-level="2">
+<a itemprop='url' class=""  href="../pedal-pi/index.html"   data-target="#">Pedal-Pi </a>
+
+</li>
+<li itemprop='name'  data-id="1662" data-level="2">
+<a itemprop='url' class=""  href="../1wamp/index.html"   data-target="#">1Wamp </a>
+
+</li>
+<li itemprop='name'  data-id="1663" data-level="2">
+<a itemprop='url' class=""  href="../germanium-fuzz/index.html"   data-target="#">Germanium Fuzz </a>
+
+</li>
+<li itemprop='name'  data-id="1668" data-level="2">
+<a itemprop='url' class=""  href="../time-manipulator/index.html"   data-target="#">Time Manipulator </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li itemprop='name'  data-id="745" data-level="1">
+<a itemprop='url' class=""  href="../forum-electrosmash/index.html"   data-target="#">Forum </a>
+
+</li>
+<li itemprop='name'  data-id="816" data-level="1">
+<a itemprop='url' class=""  href="../shop/index.html"   data-target="#">Shop</a>
+
+</li>
+</ul>
+</div>
+
+		</nav>
+    <!-- //NAVBAR MAIN -->
+
+	</div>
+</header>
+<!-- //MAIN NAVIGATION -->
+
+
+
+
+
+
+  
+
+
+  
+
+
+	
+<div id="t3-mainbody" class="container t3-mainbody">
+	<div class="row">
+
+		<!-- MAIN CONTENT -->
+		<div id="t3-content" class="t3-content col-xs-12 col-sm-8  col-md-9">
+						<div class="item-page clearfix">
+
+
+<!-- Article -->
+<article>
+	<meta itemprop="inLanguage" content="en-GB" />
+	<meta itemprop="url" content="index.html" />
+
+      
+<header class="article-header clearfix">
+	<h1 class="article-title" itemprop="headline">
+					<a href="index.html" itemprop="url" title="Noisy Cricket Analysis">
+				Noisy Cricket Analysis</a>
+			</h1>
+
+			</header>
+    
+    
+  <!-- Aside -->
+    <!-- //Aside -->
+
+  
+  
+  
+	
+  
+	
+	<section class="article-content clearfix">
+		<p style="text-align: left;"><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">The Noisy Cricket by <a href="http://www.beavisaudio.com/">BeavisAudioResearch</a> is a 1/2W guitar amplifier based on JRC/LM386 chip.&nbsp;</span>It is an evolution of the <a href="../ruby-amp-analysis/index.html">Ruby Amp by Runoffgroove</a>, keeping the <span style="color: #333333; font-size: 10pt;">circuit core idea and introducing new features like a tone control and an overdrive boost switch.</span><span style="color: #333333; font-size: 10pt;"><br /></span></span></p>
+<p style="text-align: right;"><a href="../_assets/9448be435a81.png"><span style="font-family: verdana, geneva;"><img src="../_assets/9448be435a81.png" alt="Noisy Cricket by BeavisAudioResearch" width="302" height="165" style="display: block; margin-left: auto; margin-right: auto;" /></span></a></p>
+ 
+<h1><span style="font-family: verdana, geneva;"><strong><span style="color: #000000; font-size: 14pt;">Table of Contents</span></strong></span></h1>
+<p style="padding-left: 30px;"><span style="font-size: 10pt; color: #0000ff; font-family: verdana, geneva;"><a href="/noisy-cricket-analysis#schematic"><span style="color: #0000ff;">1. Noisy Cricket Schematic Diagram.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff; font-family: verdana, geneva;">&nbsp;<a href="/noisy-cricket-analysis#input"><span style="color: #0000ff;">1.1 Input Buffer.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff; font-family: verdana, geneva;">&nbsp;<a href="/noisy-cricket-analysis#gain"><span style="color: #0000ff;">1.2 Voltage Gain.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff; font-family: verdana, geneva;">&nbsp;<a href="/noisy-cricket-analysis#tone"><span style="color: #0000ff;">1.3 Tone/Volume Circuit.</span></a>&nbsp;</span><br /><span style="font-size: 10pt; color: #0000ff; font-family: verdana, geneva;">&nbsp;<a href="/noisy-cricket-analysis#grit"><span style="color: #0000ff;">1.4 Grit Mod</span></a>.</span><br /><span style="font-size: 10pt; color: #0000ff; font-family: verdana, geneva;">&nbsp;<a href="/noisy-cricket-analysis#stabilization"><span style="color: #0000ff;">1.5 Stabilization Techniques. </span></a></span><br /><span style="font-size: 10pt; color: #0000ff; font-family: verdana, geneva;"><a href="/noisy-cricket-analysis#frequency"><span style="color: #0000ff;">2. Frequency Response.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff; font-family: verdana, geneva;"><a href="/noisy-cricket-analysis#mods"><span style="color: #0000ff;">3. Mods - Headphones Plug.</span></a></span><br /><span style="font-size: 10pt; color: #0000ff; font-family: verdana, geneva;"><a href="/noisy-cricket-analysis#resources"><span style="color: #0000ff;">4. Resources.</span></a></span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<h1><span style="color: #ff00ff; font-size: 14pt; font-family: verdana, geneva;"><a id="schematic" name="schematic"></a><span style="color: #000000;"><strong>1. Noisy Cricket Schematic Diagram.</strong></span></span></h1>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The Noisy Cricket circuit keeps the basic configuration of the previous Ruby Amp:</span></p>
+<ul>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">A similar <em>Jack Orman</em>&nbsp;Input Buffer.</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Same Gain setting (VR2), Zobel network(R4, C7), Output Cap (C8) and Stabilization Techniques.</span></li>
+</ul>
+<p><span style="font-size: 10pt; font-family: verdana, geneva;"><span style="color: #333333;">The improvements by BeavisAudioResearch are the boost switch also called "Grit mod" (SW) and a new tone circuit&nbsp;</span>(VR3, C5).</span><br /><span style="font-size: 10pt; font-family: verdana, geneva;"><a href="../_assets/92948fd48334.gif"><img src="../_assets/becff225d801.gif" alt="Noisy Cricket Schematic Diagram" width="718" height="286" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<p><strong><span style="font-size: 10pt; color: #000000; font-family: verdana, geneva;">Noisy Cricket Bill of Materials / Parts List</span></strong></p>
+<p style="margin-left: 30px;"><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">R1 - 1M</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">R2 - 3K3</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">R3 - 4K7</span><br /><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">R4 - 10</span><span style="font-size: 10pt;"><span class="st">&Omega;</span></span></span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">C1 - 220uF electrolytic.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">C2 - 47nF poly film.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">C3 - 100nF poly film. </span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">C4 - 100nF poly film.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">C5 - 100nF poly film.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">C6 - 100nF poly film.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">C7 - 47nF poly film</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">C8 - 220uF electrolytic.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">SW1 - SPST toggle.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">VR1 - 10K Linear.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">VR2 - 100K Linear.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">VR3 - 1K Linear.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Q1 - MPF102 </span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">LM386</span></p>
+<h2><strong><span style="font-size: 12pt; color: #000000; font-family: verdana, geneva;"><a id="input" name="input"></a>1.1 Noisy Cricket Input Buffer</span></strong></h2>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The Input Buffer is a unity gain JFET common drain transistor amplifier, inspired by <a href="http://www.muzique.com/lab/buffers.htm">Jack Orman designs</a>.</span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">It prevents loading by presenting a high input impedance, avoiding tone-sucking (degraded high harmonics)</span><span style="font-size: 10pt;">.</span><a href="../_assets/c31e2151c378.gif"><img src="../_assets/c31e2151c378.gif" alt="Noisy Cricket Input Buffer" width="283" height="230" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<ul>
+<li><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">The input impedance of the Noisy Cricket is determined by the value of R<sub>1</sub>, so it is 1M. The value of R2 is not too critical and may be any value from 3.3k to 10k without </span><span style="font-size: 10pt;">much change in the tone. It is better to use lower values since this allows more drive on the negative portion of the audio cycle where the only pull-down&nbsp;</span><span style="font-size: 10pt;">is the source resistor.</span></span></li>
+</ul>
+<ul>
+<li><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">The output impedance of the buffer will depend on the Jfet but is on the order of a few hundred ohms.</span></li>
+</ul>
+<h2><strong><span style="color: #000000; font-size: 12pt; font-family: verdana, geneva;"><a id="gain" name="gain"></a>1.2 Noisy Cricket Gain Circuit</span></strong></h2>
+<p><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">The 1K logarithmic potentiometer (VR2) is placed between pins 1 and 8 to adjust the voltage gain from 41 (28dB) to 200 (46db), similar to the Ruby Amp. </span><span style="color: #333333; font-size: 10pt;">The Gain is calculated following the general LM386 formula:</span>&nbsp;</span></p>
+<p><span style="font-family: verdana, geneva;"></span></p>
+<p style="padding-left: 30px;"><span style="font-family: verdana, geneva;"><img src="http://latex.codecogs.com/gif.latex?%7BG%7D_%7Bv%5C:%20min%7D=%5Cfrac%7B%7BV%7D_%7Bout%7D%7D%7B%7BV%7D_%7Bin%7D%7D=2%5Cfrac%7B%7BZ%7D_%7B1-5%7D%7D%7B150%20+%20%7BZ%7D_%7B1-8%7D%7D=2%5Cfrac%7B15K%7D%7B150%20+%20%281.35K%7C%7C1K%29%29%7D=%2041%20%5C:%20%2828dB%29" alt="" title="%7BG%7D_%7Bv\: min%7D=%5Cfrac%7B%7BV%7D_%7Bout%7D%7D%7B%7BV%7D_%7Bin%7D%7D=2%5Cfrac%7B%7BZ%7D_%7B1-5%7D%7D%7B150%20+%20%7BZ%7D_%7B1-8%7D%7D=2\frac{15K}{150 + (1.35K||1K))}= 41 \: (28dB)" /></span></p>
+<p style="padding-left: 30px;"><span style="font-family: verdana, geneva;"><img src="http://latex.codecogs.com/gif.latex?%7BG%7D_%7Bv%5C:%20max%7D=%5Cfrac%7B%7BV%7D_%7Bout%7D%7D%7B%7BV%7D_%7Bin%7D%7D=2%5Cfrac%7B%7BZ%7D_%7B1-5%7D%7D%7B150%20+%20%7BZ%7D_%7B1-8%7D%7D=2%5Cfrac%7B15K%7D%7B150%20+%200%7D=%20200%20%5C:%20%2846dB%29" alt="" title="%7BG%7D_%7Bv\: max%7D=%5Cfrac%7B%7BV%7D_%7Bout%7D%7D%7B%7BV%7D_%7Bin%7D%7D=2%5Cfrac%7B%7BZ%7D_%7B1-5%7D%7D%7B150%20+%20%7BZ%7D_%7B1-8%7D%7D=2\frac{15K}{150 + 0}= 200 \: (46dB)" /></span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"></span></p>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Where Z<sub>1-5</sub> and Z<sub>1-8</sub> are the impedances between the respective pins. Note that Z<sub>1-5</sub> internal resistance is 15K and Z<sub>1-8</sub> is 1.35K.</span></p>
+<h2><span style="color: #000000; font-size: 12pt; font-family: verdana, geneva;"><a id="tone" name="tone"></a><strong>1.3 Noisy Cricket Tone/Volume Circuit.</strong></span></h2>
+<p><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">The new Tone control placed between the Volume pot and the LM386 is the main contribution to the original Ruby Schematic. </span></span></p>
+<p><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">It is a new idea because in the past all LM386 based circuits tone mods ( <a href="/ruby-amp-analysis#link4">like Bassman or Hiwatt</a> ) tried to shape the frequency response using&nbsp;</span><span style="font-size: 10pt;">a high-pass filter: emphasizing the treble and removing the bass.</span></span><br /><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;">Noisy Cricket Tone control introduces a passive low-pass filter that will wipe out treble harmonics and preserve the bass.</span></p>
+<p><span style="font-size: 10pt; color: #333333; font-family: verdana, geneva;"><img src="../_assets/034c0a6e74cb.png" alt="Noisy Cricket Tone Response" width="700" height="238" style="display: block; margin-left: auto; margin-right: auto;" /></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">As you can see in the above graph, the goal of the tone control is to provide compensatory sonic adjustment, </span><span style="color: #333333; font-size: 10pt;">rather than a tonal overhaul. The advantage of this one knob tone circuit is its simplicity but there are also some cons:</span></span></p>
+<ul>
+<li><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">The volume &amp; tone pots are slightly interactive</span>.</span></li>
+<li><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">The response of the circuit is limited to some values of the tone pot, meaning that only some range of the tone pot will produce a change in frequency response:</span><em><span style="color: #333333; font-size: 10pt;"> "I have the tone pot in mine and in fact it does very little for most of the pots' rotation then</span></em><em><span style="color: #333333; font-size: 10pt;"> at the end some of the upper frequencies are attenuated [...]" by </span><span style="font-size: 10pt; color: #333333;"><span style="color: #333333;"><a href="http://www.diystompboxes.com/smfforum/index.php?topic=62471.0;wap2">captntasty in DIYstompboxes.</a></span></span></em></span></li>
+</ul>
+<h2><span style="color: #ff0000; font-size: 12pt; font-family: verdana, geneva;"><a id="grit" name="grit"></a><strong><span style="color: #000000;">1.4 Noisy Cricket Grit Mod.</span></strong></span></h2>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">The <em>Grit Mod</em> is the switch from pins 5 to 7 in the LM386. It drives the circuit a little harder, giving it a little extra edge/breakup. </span><br /><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">The pin 7 in LM386 sets the DC idle output voltage to half the power supply. This voltage reference point must be as stable as possible, </span><span style="color: #333333; font-size: 10pt;">that is the reason why the cap C<sub>3</sub> is placed from pin 7 to ground: to remove the hum/noise from the Power supply line</span><span style="color: #333333; font-size: 10pt;">.</span></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">With the switch on, there is a feedback loop between the output (pin 5) and the DC voltage reference (pin 7), this point will be affected by the audible&nbsp;</span><span style="color: #333333; font-size: 10pt;">output signal, sagging the DC point and there will be some buzz on the voltage reference. Any distortion or trembling feedbacked signal in pin 7 will be </span><span style="color: #333333; font-size: 10pt;">added to the input signal an amplified giving a subtle distortion or extra break. If you want to learn more about this part, check the <a href="../lm386-analysis/index.html">LM386 Internal Circuit Analysis</a>.</span></span><span style="font-family: verdana, geneva;"></span></p>
+<h2><span style="font-size: 12pt; color: #000000; background-color: #ffffff; font-family: verdana, geneva;"><a id="stabilization" name="stabilization"></a><strong>1.5 Noisy Cricket Stabilization Techniques.</strong></span></h2>
+<p><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;">Following the LM386 application notes, some measures should be taken to increase the stability and prevent signal degradation:</span></p>
+<ul>
+<li><span style="font-family: verdana, geneva;"><span style="color: #000000; font-size: 10pt;"><strong>Cap on pin 7</strong>:</span><span style="color: #333333; font-size: 10pt;"> Like the Ruby Amp, the Noisy Cricket includes a 100nF C<sub>3</sub> capacitor from pin 7 to ground in the 386 IC. It is used to avoid the power supply noise to be amplified and reach the output. In this way, the high-gain input stage of the chip is isolated from the supply noise hum, transients, etc.</span></span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"><span style="color: #000000;"><strong>Power Supply Cap</strong>:</span> The supply pin 6 is bypassed to ground with a 220uF C<sub>1</sub> capacitor to avoid oscillation. It should be placed as close to the chip as possible.</span></li>
+<li><span style="color: #333333; font-size: 10pt; font-family: verdana, geneva;"><span style="color: #000000;"><strong>Zobel Network</strong>:</span> Placed from the 386 output to ground in order to stabilize the amp and restore the clean tones wiping some spurs. The RC network is a compensating circuit for the load (speaker), not for the amplifier. It is formed by a generic 10<span class="st">&Omega;</span> R<sub>4</sub> resistor and a 47nF C<sub>7</sub> cap. For more info, check the <a href="/little-gem-analysis#link12">similar design used in the Little Gem Amp</a>.</span></li>
+</ul>
+<h1><span style="color: #000000; font-size: 14pt; font-family: verdana, geneva;"><a id="frequency" name="frequency"></a><strong>2. Noisy Cricket Frequency Response.</strong></span></h1>
+<p><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;">The frequency response is tailored by the Bass Cut filter formed by the output cap C<sub>8</sub> and the load (speaker) and the filters of </span><span style="font-size: 10pt;">the Volume/Tone circuit previously seen:</span></span></p>
+<p><span style="color: #333333; font-family: verdana, geneva;"><span style="font-size: 10pt;"><img src="../_assets/ed4058f3c4d8.png" alt="Noisy Cricket Frequency Response" width="700" height="238" style="display: block; margin-left: auto; margin-right: auto;" /></span></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">The Tone/Volume circuit together with the bass-cut filter (C8) create a subtle mid-hump which means that the circuit accentuates frequencies&nbsp;</span><span style="color: #333333; font-size: 10pt;">between the bass and treble ranges (mid-frequencies). A lot of well know overdrive pedals also use this mid-hump equalization around </span><span style="color: #333333; font-size: 10pt;">1KHz to keep the guitar sound from getting lost in the overall mix of the band (<a href="/tube-screamer-analysis#frequency">TubeScreamer mid-hump is around 720Hz</a>). </span></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">This frequency response is also very interesting if you are intended to drive a small speaker because they have a better behaviour when&nbsp;</span><span style="color: #333333; font-size: 10pt;">reproducing a small range of frequencies. The low amount of bass keeps the speaker away from farting out and the smooth treble makes the tone </span><span style="color: #333333; font-size: 10pt;">less shrill.</span></span></p>
+<h1><span style="color: #333333; font-size: 14pt; font-family: verdana, geneva;"><a id="mods" name="mods"></a><span style="color: #000000;"><strong><span style="color: #000000;">3. Noisy Cricket Mods.</span></strong></span></span></h1>
+<p><span style="font-family: verdana, geneva;"><strong><span style="color: #333333; font-size: 10pt;">Output Headphone Plug:</span></strong><span style="color: #333333; font-size: 10pt;"> The solution is similar to the RunoffGroove Ruby Headphone Mod, to </span><span style="color: #333333; font-size: 10pt;">place an auxiliary output headphone plug wired as in the image:</span></span><br /><span style="font-family: verdana, geneva;"><a href="../_assets/8d4d2e2f3fe5.png"><img src="../_assets/b360c2e9622d.png" alt="Noisy Cricket Headphones Mod Schematic" width="815" height="289" style="display: block; margin-left: auto; margin-right: auto;" /></a></span></p>
+<p><br /><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">The resistor R is used to attenuate the output level, otherwise, it will be too loud. The reference value for this resistor is 10<span class="st">&Omega;</span> but it can be adjusted to </span><span style="color: #333333; font-size: 10pt;">meet the user taste and headphones sensibility. This resistor is placed from the sleeve of the connector </span><span style="color: #333333; font-size: 10pt;">to ground. It is important to use isolating washers for this jack or use a plastic jack </span><span style="color: #333333; font-size: 10pt;">to avoid shortcutting the R between two grounds. </span></span></p>
+<p><span style="font-family: verdana, geneva;"><span style="color: #333333; font-size: 10pt;">Should be mentioned that using a different load (headphones instead of the of 8ohm speaker), the cut-off frequency of the bass cut filter </span><span style="color: #333333; font-size: 10pt;">formed by C<sub>8</sub> and the load will be slightly shifted down, depending on the headphones impedance + resistor (R) combination. However, this </span><span style="color: #333333; font-size: 10pt;">change is about some inappreciable tens of hertz.</span></span></p>
+<h1><span style="color: #000000; font-size: 14pt; font-family: verdana, geneva;"><a id="resources" name="resources"></a><strong>4. Resources.</strong></span></h1>
+<p><span style="color: #000000; font-size: 10pt; font-family: verdana, geneva;"><a href="http://beavisaudio.com/">Noisy Cricket by BeavisAudioResearch. </a><br /><a href="http://amps.zugster.net/articles/tone-stacks#OneKnob">Adam's Amplifiers Tone Stacks.</a><br /><a href="http://stuffbillhasdone.blogspot.com/2010/06/guitar-tone-circuit-analysis.html">Guitar Tone Circuit Analysis.</a><br /><a href="http://www.diystompboxes.com/smfforum/index.php?topic=45678.0">Inception thread of Noisy Cricket</a> in DIYstompboxes.<br /><a href="http://www.thatraymond.com/downloads/solidstate_guitar_amplifiers_teemu_kyttala_v1.0.pdf">Teemuk Kyttala Solid State Guitar Amplifiers</a>, the Holy Scripture.</span></p>
+<p>&nbsp;</p>
+<p><span style="color: #000000; font-size: 10pt; font-family: verdana, geneva;"><span style="font-size: 10pt; color: #333333;">Thanks for reading, all feedback is appreciated</span></span></p>
+<p><img src="../_assets/26a349a17744.jpg" alt="jr(at)ElectroSmash.com " style="float: left;" /></p>
+<p><span style="color: #000000; font-size: 10pt; font-family: verdana, geneva;"></span></p>
+<p>&nbsp;</p>	</section>
+  
+  <!-- footer -->
+    <!-- //footer -->
+
+			<hr class="divider-vertical" /><ul class="pager pagenav">
+	<li class="next">
+		<a class="hasTooltip" title="Ruby Amp Analysis" aria-label="Next article: Ruby Amp Analysis" href="../ruby-amp-analysis/index.html" rel="next">
+			<span aria-hidden="true">Next</span> <span class="icon-chevron-right" aria-hidden="true"></span>		</a>
+	</li>
+</ul>
+	
+	
+	</article>
+<!-- //Article -->
+
+
+</div><div><a href="http://www.artio.net" style="font-size: 8px; visibility: visible; display: inline;" title="Web development, Joomla, CMS, CRM, Online shop software, databases">Joomla SEF URLs by Artio</a></div>
+		</div>
+		<!-- //MAIN CONTENT -->
+
+		<!-- SIDEBAR RIGHT -->
+		<div class="t3-sidebar t3-sidebar-right col-xs-12 col-sm-4  col-md-3 ">
+			<div class="t3-module module " id="Mod28"><div class="module-inner"><h3 class="module-title "><span>New Updates</span></h3><div class="module-ct"><ul class="latestnews mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../arduino-audio-meter/index.html" itemprop="url">
+			<span itemprop="name">
+				Arduino Audio Meter			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../dallas-rangemaster/index.html" itemprop="url">
+			<span itemprop="name">
+				Dallas Rangemaster Treble Booster Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../time-manipulator/index.html" itemprop="url">
+			<span itemprop="name">
+				Time Manipulator - Arduino Delay/Echo/Reverb			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../marshall-guvnor-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Marshall The Guvnor Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../germanium-fuzz/index.html" itemprop="url">
+			<span itemprop="name">
+				You Can Build the Perfect Germanium Fuzz			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../mxr-distortion-plus-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				MXR Distortion + Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod29"><div class="module-inner"><h3 class="module-title "><span>Most Visited</span></h3><div class="module-ct"><ul class="mostread mod-list">
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../tube-screamer-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Tube Screamer Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../fuzz-face/index.html" itemprop="url">
+			<span itemprop="name">
+				Fuzz Face Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../proco-rat/index.html" itemprop="url">
+			<span itemprop="name">
+				Pro Co Rat Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../boss-ds1-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Boss DS-1 Distortion Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../klon-centaur-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Klon Centaur Analysis			</span>
+		</a>
+	</li>
+	<li itemscope itemtype="https://schema.org/Article">
+		<a href="../big-muff-pi-analysis/index.html" itemprop="url">
+			<span itemprop="name">
+				Big Muff Pi Analysis			</span>
+		</a>
+	</li>
+</ul>
+</div></div></div><div class="t3-module module " id="Mod184"><div class="module-inner"><h3 class="module-title "><span>Follow us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><span style="font-size: 10pt; color: #333333;">You can also follow us on:</span></p>
+<p><a href="https://www.facebook.com/ElectroSmash"><img src="../_assets/df34a2b41b54.png" alt="facebook" /></a>&nbsp;&nbsp; <a href="https://plus.google.com/+Electrosmash/about"><img src="../_assets/3ffc52860091.png" alt="google" /></a>&nbsp;&nbsp; <a href="https://www.instagram.com/electro.smash/"><img src="../_assets/45b0b0fe2d4b.png" alt="instagram" /></a></p>
+<p><a href="https://www.pinterest.com/electrosmash/"><img src="../_assets/05310d9fcf2a.png" alt="pinterest" /></a>&nbsp;&nbsp; <a href="https://www.youtube.com/user/ElectroSmashTV"><img src="../_assets/d920883b3613.png" alt="youtube" /></a>&nbsp;&nbsp; <a href="https://twitter.com/electro_smash"><img src="../_assets/52581f7264eb.png" alt="twitter" /></a></p></div>
+</div></div></div>
+		</div>
+		<!-- //SIDEBAR RIGHT -->
+
+	</div>
+</div> 
+
+
+
+  
+
+
+  
+
+
+	
+<!-- BACK TOP TOP BUTTON -->
+<div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top hidden-xs hidden-sm affix-top">
+  <button class="btn btn-primary" title="Back to Top"><i class="fa fa-caret-up"></i></button>
+</div>
+<script type="text/javascript">
+(function($) {
+	// Back to top
+	$('#back-to-top').on('click', function(){
+		$("html, body").animate({scrollTop: 0}, 500);
+		return false;
+	});
+    $(window).on('load', function(){
+        // hide button to top if the document height not greater than window height*2;using window load for more accurate calculate.    
+        if ((parseInt($(window).height())*2)>(parseInt($(document).height()))) {
+            $('#back-to-top').hide();
+        } 
+    });
+})(jQuery);
+</script>
+<!-- BACK TO TOP BUTTON -->
+
+<!-- FOOTER -->
+<footer id="t3-footer" class="wrap t3-footer">
+
+			<!-- FOOTER SPOTLIGHT -->
+		<div class="container hidden-xs">
+				<!-- SPOTLIGHT -->
+	<div class="t3-spotlight t3-footer-sl  row">
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod185"><div class="module-inner"><h3 class="module-title "><span>About us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../about-us/index.html">&nbsp;&nbsp;<img src="../_assets/420f9f181bc0.jpg" alt="smash electro" /></a></p>
+<p><a href="../about-us/index.html"><span style="font-size: 10pt; color: #333333;">Smashing audio electronics since MMXIII</span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod183"><div class="module-inner"><h3 class="module-title "><span>Email Newsletter</span></h3><div class="module-ct"><div class="acymailing_module" id="acymailing_module_formAcymailing21611">
+	<div class="acymailing_fulldiv" id="acymailing_fulldiv_formAcymailing21611"  >
+		<form id="formAcymailing21611" action="index.html" onsubmit="return submitacymailingform('optin','formAcymailing21611')" method="post" name="formAcymailing21611"  >
+		<div class="acymailing_module_form" >
+						<table class="acymailing_form">
+				<tr>
+												<td class="acyfield_email acy_requiredField">
+								<input id="user_email_formAcymailing21611"  onfocus="if(this.value == 'example@email.com') this.value = '';" onblur="if(this.value=='') this.value='example@email.com';" class="inputbox" type="text" name="user[email]" style="width:90%" value="example@email.com" title="example@email.com"/>
+							</td> </tr><tr>
+					
+					<td  class="acysubbuttons">
+												<input class="button subbutton btn btn-primary" type="submit" value="Subscribe" name="Submit" onclick="try{ return submitacymailingform('optin','formAcymailing21611'); }catch(err){alert('The form could not be submitted '+err);return false;}"/>
+											</td>
+				</tr>
+			</table>
+						<input type="hidden" name="ajax" value="0" />
+			<input type="hidden" name="acy_source" value="module_183" />
+			<input type="hidden" name="ctrl" value="sub"/>
+			<input type="hidden" name="task" value="notask"/>
+			<input type="hidden" name="redirect" value="https%3A%2F%2Fwww.electrosmash.com%2Fnoisy-cricket-analysis"/>
+			<input type="hidden" name="redirectunsub" value="https%3A%2F%2Fwww.electrosmash.com%2Fnoisy-cricket-analysis"/>
+			<input type="hidden" name="option" value="com_acymailing"/>
+						<input type="hidden" name="hiddenlists" value="1"/>
+			<input type="hidden" name="acyformname" value="formAcymailing21611" />
+									</div>
+		</form>
+	</div>
+	</div>
+
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod186"><div class="module-inner"><h3 class="module-title "><span>Contact us</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p><a href="../contact-us/index.html"><span style="font-size: 10pt; color: #333333;">e-mail us at <span id="cloakcbf2eb181de474753066fe1921542b89">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
+				document.getElementById('cloakcbf2eb181de474753066fe1921542b89').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addycbf2eb181de474753066fe1921542b89 = '&#105;nf&#111;' + '&#64;';
+				addycbf2eb181de474753066fe1921542b89 = addycbf2eb181de474753066fe1921542b89 + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';
+				var addy_textcbf2eb181de474753066fe1921542b89 = '&#105;nf&#111;' + '&#64;' + '&#101;l&#101;ctr&#111;sm&#97;sh' + '&#46;' + 'c&#111;m';document.getElementById('cloakcbf2eb181de474753066fe1921542b89').innerHTML += '<a ' + path + '\'' + prefix + ':' + addycbf2eb181de474753066fe1921542b89 + '\'>'+addy_textcbf2eb181de474753066fe1921542b89+'<\/a>';
+		</script></span></a></p>
+<p>&nbsp;</p></div>
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
+								<div class="t3-module module " id="Mod188"><div class="module-inner"><h3 class="module-title "><span>Rights</span></h3><div class="module-ct">
+
+<div class="custom"  >
+	<p style="text-align: left;">&nbsp;&nbsp;<a href="https://creativecommons.org/licenses/by-nc/3.0/"><img src="../_assets/b0e99d439c44.png" alt="88x31" /></a></p>
+<p style="text-align: left;"><img src="../_assets/fe2636cdea5c.png" alt="open source logo" width="180" height="38" /></p>
+<p style="text-align: left;"><img src="../_assets/8281c4ec3a3b.png" alt="open hardware logo" width="180" height="38" /></p>
+<p style="text-align: left;">&nbsp;</p></div>
+</div></div></div>
+							</div>
+			</div>
+<!-- SPOTLIGHT -->
+		</div>
+		<!-- //FOOTER SPOTLIGHT -->
+	
+	<section class="t3-copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 copyright ">
+					
+          <small>
+            <a href="http://twitter.github.io/bootstrap/" title="Bootstrap by Twitter" target="_blank">Bootstrap</a> is a front-end framework of Twitter, Inc. Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" title="MIT License" target="_blank">MIT License.</a>
+          </small>
+          <small>
+            <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> font licensed under <a href="http://scripts.sil.org/OFL">SIL OFL 1.1</a>.
+          </small>
+				</div>
+							</div>
+		</div>
+	</section>
+
+</footer>
+<!-- //FOOTER -->
+
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29544239-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
